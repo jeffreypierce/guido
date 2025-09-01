@@ -1,0 +1,236 @@
+{
+  "I": {
+    "be": [],
+    "ag": ["Liber_Usualis:2850", "Liber_Usualis:2977"],
+    "gl": ["Liber_Usualis:2659", "Liber_Usualis:2980"],
+    "cr": ["Liber_Usualis:344"],
+    "sa": ["Liber_Usualis:2816", "Liber_Usualis:300"],
+    "ky": ["Liber_Usualis:1143", "Liber_Usualis:2993"],
+    "it": []
+  },
+  "II": {
+    "be": ["Liber_Usualis:16096"],
+    "ag": ["Liber_Usualis:2851", "Liber_Usualis:555"],
+    "gl": ["Liber_Usualis:2685", "Liber_Usualis:862"],
+    "cr": ["Liber_Usualis:2983"],
+    "sa": ["Liber_Usualis:1279", "Liber_Usualis:2820"],
+    "ky": ["Liber_Usualis:2021", "Liber_Usualis:309"],
+    "it": []
+  },
+  "III": {
+    "be": [],
+    "ag": ["Liber_Usualis:578"],
+    "gl": ["Liber_Usualis:2707", "Liber_Usualis:71"],
+    "cr": ["Liber_Usualis:749"],
+    "sa": ["Liber_Usualis:2849", "Liber_Usualis:566"],
+    "ky": ["Liber_Usualis:2237", "Liber_Usualis:825"],
+    "it": []
+  },
+  "IV": {
+    "be": ["Liber_Usualis:2856"],
+    "ag": ["Liber_Usualis:264"],
+    "gl": ["Liber_Usualis:2978"],
+    "cr": ["Liber_Usualis:678"],
+    "sa": ["Liber_Usualis:2518"],
+    "ky": ["Liber_Usualis:1061", "Liber_Usualis:2254"],
+    "it": ["Liber_Usualis:353"]
+  },
+  "V": {
+    "be": [],
+    "ag": ["Liber_Usualis:1241"],
+    "gl": ["Liber_Usualis:337"],
+    "cr": ["Liber_Usualis:955"],
+    "sa": ["Liber_Usualis:2984"],
+    "ky": ["Liber_Usualis:2261", "Liber_Usualis:474"],
+    "it": ["Liber_Usualis:1006"]
+  },
+  "VI": {
+    "be": [],
+    "ag": ["Liber_Usualis:387"],
+    "gl": ["Liber_Usualis:321"],
+    "cr": ["Liber_Usualis:2934"],
+    "sa": ["Liber_Usualis:431"],
+    "ky": ["Liber_Usualis:2269", "Liber_Usualis:2903"],
+    "it": ["Liber_Usualis:1160"]
+  },
+  "VII": {
+    "be": [],
+    "ag": ["Liber_Usualis:2985"],
+    "gl": ["Liber_Usualis:721"],
+    "cr": [],
+    "sa": ["Liber_Usualis:1089"],
+    "ky": ["Liber_Usualis:1262", "Liber_Usualis:2363"],
+    "it": ["Liber_Usualis:31"]
+  },
+  "VIII": {
+    "be": ["Liber_Usualis:2901"],
+    "ag": ["Liber_Usualis:2760"],
+    "gl": ["Liber_Usualis:961"],
+    "cr": [],
+    "sa": ["Liber_Usualis:1384"],
+    "ky": ["Liber_Usualis:1184", "Liber_Usualis:2468"],
+    "it": ["Liber_Usualis:832"]
+  },
+  "IX": {
+    "be": ["Liber_Usualis:2902"],
+    "ag": ["Liber_Usualis:707"],
+    "gl": ["Liber_Usualis:2771"],
+    "cr": [],
+    "sa": ["Liber_Usualis:587"],
+    "ky": ["Liber_Usualis:2599", "Liber_Usualis:2976"],
+    "it": ["Liber_Usualis:2989"]
+  },
+  "X": {
+    "be": [],
+    "ag": ["Liber_Usualis:2981"],
+    "gl": ["Liber_Usualis:1204"],
+    "cr": [],
+    "sa": ["Liber_Usualis:2770"],
+    "ky": ["Liber_Usualis:2604", "Liber_Usualis:795"],
+    "it": []
+  },
+  "XI": {
+    "be": ["Liber_Usualis:2920"],
+    "ag": ["Liber_Usualis:1243"],
+    "gl": ["Liber_Usualis:303"],
+    "cr": [],
+    "sa": ["Liber_Usualis:1106"],
+    "ky": ["Liber_Usualis:2614", "Liber_Usualis:2982"],
+    "it": ["Liber_Usualis:856"]
+  },
+  "XII": {
+    "be": [],
+    "ag": ["Liber_Usualis:759"],
+    "gl": ["Liber_Usualis:2114"],
+    "cr": [],
+    "sa": ["Liber_Usualis:1062"],
+    "ky": ["Liber_Usualis:2068"],
+    "it": ["Liber_Usualis:37"]
+  },
+  "XIII": {
+    "be": ["Liber_Usualis:2952"],
+    "ag": ["Liber_Usualis:2886"],
+    "gl": ["Liber_Usualis:2107"],
+    "cr": [],
+    "sa": ["Liber_Usualis:1067"],
+    "ky": ["Liber_Usualis:137"],
+    "it": ["Liber_Usualis:878"]
+  },
+  "XIV": {
+    "be": [],
+    "ag": ["Liber_Usualis:2076"],
+    "gl": ["Liber_Usualis:908"],
+    "cr": [],
+    "sa": ["Liber_Usualis:2979"],
+    "ky": ["Liber_Usualis:441"],
+    "it": ["Liber_Usualis:2986"]
+  },
+  "XV": {
+    "be": [],
+    "ag": ["Liber_Usualis:959"],
+    "gl": ["Liber_Usualis:2975"],
+    "cr": [],
+    "sa": ["Liber_Usualis:386"],
+    "ky": ["Liber_Usualis:393"],
+    "it": ["Liber_Usualis:620"]
+  },
+  "XVI": {
+    "be": [],
+    "ag": ["Liber_Usualis:1336"],
+    "gl": [],
+    "cr": [],
+    "sa": ["Liber_Usualis:2990"],
+    "ky": ["Liber_Usualis:545"],
+    "it": []
+  },
+  "XVII": {
+    "be": [],
+    "ag": ["Liber_Usualis:1137"],
+    "gl": [],
+    "cr": [],
+    "sa": ["Liber_Usualis:871"],
+    "ky": ["Liber_Usualis:168", "Liber_Usualis:272"],
+    "it": []
+  },
+  "XVIII": {
+    "be": [],
+    "ag": ["Liber_Usualis:2412"],
+    "gl": [],
+    "cr": [],
+    "sa": ["Liber_Usualis:298"],
+    "ky": ["Liber_Usualis:2522"],
+    "it": []
+  },
+  "Requiem": {
+    "be": [],
+    "ag": [],
+    "gl": [],
+    "cr": [],
+    "sa": [],
+    "ky": [],
+    "it": []
+  },
+  "AdLib": {
+    "be": [],
+    "ag": [],
+    "gl": [],
+    "cr": [],
+    "sa": [],
+    "ky": [],
+    "it": []
+  },
+  "AdLib_I": {
+    "be": [],
+    "ag": [],
+    "gl": [],
+    "cr": [],
+    "sa": [],
+    "ky": [],
+    "it": []
+  },
+  "AdLib_II": {
+    "be": [],
+    "ag": [],
+    "gl": [],
+    "cr": [],
+    "sa": [],
+    "ky": [],
+    "it": []
+  },
+  "AdLib_III": {
+    "be": [],
+    "ag": [],
+    "gl": [],
+    "cr": [],
+    "sa": [],
+    "ky": [],
+    "it": []
+  },
+  "AdLib_IV": {
+    "be": [],
+    "ag": [],
+    "gl": [],
+    "cr": [],
+    "sa": [],
+    "ky": [],
+    "it": []
+  },
+  "AdLib_V": {
+    "be": [],
+    "ag": [],
+    "gl": [],
+    "cr": [],
+    "sa": [],
+    "ky": [],
+    "it": []
+  },
+  "AdLib_VI": {
+    "be": [],
+    "ag": [],
+    "gl": [],
+    "cr": [],
+    "sa": [],
+    "ky": [],
+    "it": []
+  }
+}

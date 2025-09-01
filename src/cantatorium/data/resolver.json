@@ -1,0 +1,37 @@
+{
+  "version": "v5",
+  "precedence": [
+    {
+      "name": "Liber Usualis",
+      "path": "liber_usualis.json",
+      "type": "baseline"
+    },
+    {
+      "name": "Graduale Romanum 1974",
+      "path": "graduale_romanum_1974.json",
+      "type": "diff"
+    },
+    {
+      "name": "Graduale Romanum",
+      "path": "graduale_romanum.json",
+      "type": "diff"
+    },
+    {
+      "name": "Liber Hymnarius",
+      "path": "liber_hymnarius.json",
+      "type": "diff"
+    }
+  ],
+  "id_aliases": "id_aliases.json",
+  "lookups": {
+    "1962": {
+      "feasts": "propers_1962/feasts.v5.min.json",
+      "commons": "propers_1962/commons.v5.min.json"
+    },
+    "1974": {
+      "feasts": "propers_1974/feasts.v5.min.json",
+      "commons": "propers_1974/commons.v5.min.json"
+    }
+  },
+  "notes": "Resolver should prefer LU ids via id_aliases; if a lookup returns a non-LU id, try resolving in GR1974 diff (for regime 1974), then GR diff, then LH diff."
+}
