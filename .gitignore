@@ -1,0 +1,15 @@
+# OS
+.DS_Store
+# Node
+node_modules/
+.pnpm-store/
+# Build/output
+dist/
+coverage/
+*.map
+examples/out/
+# Data scratch
+data/tmp/
+# Artifacts
+*.mid
+*.zip
