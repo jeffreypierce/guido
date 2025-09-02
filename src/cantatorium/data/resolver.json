@@ -22,7 +22,7 @@
       "type": "diff"
     }
   ],
-  "id_aliases": "id_aliases.json",
+  "id_aliases": "aliases.json",
   "lookups": {
     "1962": {
       "feasts": "propers_1962/feasts.v5.min.json",

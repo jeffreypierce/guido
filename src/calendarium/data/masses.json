@@ -1,0 +1,260 @@
+{
+  "masses": {
+    "I": {
+      "mass": 1,
+      "title": "Lux et origo",
+      "seasons": ["pt"],
+      "ranks": ["s"],
+      "days": ["dominica", "feria"],
+      "bvm": false,
+      "credos": ["I", "III"],
+      "aliases": [],
+      "notes": "Eastertide (esp. Octave)."
+    },
+    "II": {
+      "mass": 2,
+      "title": "Kyrie fons bonitatis",
+      "seasons": ["ad", "ct", "lt", "ot", "pt"],
+      "ranks": ["s", "f"],
+      "days": ["dominica", "feria"],
+      "bvm": false,
+      "credos": ["I", "III"],
+      "aliases": [],
+      "notes": "For apostles & certain solemnities."
+    },
+    "III": {
+      "mass": 3,
+      "title": "Kyrie Deus sempiterne",
+      "seasons": ["ct", "ot", "pt"],
+      "ranks": ["s", "f"],
+      "days": ["dominica", "feria"],
+      "bvm": false,
+      "credos": ["I", "III"],
+      "aliases": [],
+      "notes": "Major feasts of the Lord (Christmas/Epiphany, etc.)."
+    },
+    "IV": {
+      "mass": 4,
+      "title": "Cunctipotens Genitor Deus",
+      "seasons": ["ad", "ct", "lt", "ot", "pt"],
+      "ranks": ["s", "f"],
+      "days": ["dominica", "feria"],
+      "bvm": false,
+      "credos": ["I", "III"],
+      "aliases": [],
+      "notes": "Often used for apostles/high feasts."
+    },
+    "V": {
+      "mass": 5,
+      "title": "Kyrie magnae Deus potentiae",
+      "seasons": ["ad", "ct", "lt", "ot", "pt"],
+      "ranks": ["f", "m"],
+      "days": ["dominica", "feria"],
+      "bvm": false,
+      "credos": ["III"],
+      "aliases": [],
+      "notes": "Feasts of apostles/saints."
+    },
+    "VI": {
+      "mass": 6,
+      "title": "Kyrie Rex Genitor",
+      "seasons": ["ad", "ct", "lt", "ot", "pt"],
+      "ranks": ["f", "m"],
+      "days": ["dominica", "feria"],
+      "bvm": false,
+      "credos": ["III"],
+      "aliases": [],
+      "notes": "Confessors & higher-rank saints."
+    },
+    "VII": {
+      "mass": 7,
+      "title": "Kyrie Rex splendens",
+      "seasons": ["ad", "ct", "lt", "ot", "pt"],
+      "ranks": ["f", "m"],
+      "days": ["dominica", "feria"],
+      "bvm": false,
+      "credos": ["III"],
+      "aliases": [],
+      "notes": "Martyrs’ feasts."
+    },
+    "VIII": {
+      "mass": 8,
+      "title": "De Angelis",
+      "seasons": ["ot", "pt"],
+      "ranks": ["f", "m"],
+      "days": ["dominica", "feria"],
+      "bvm": false,
+      "credos": ["III"],
+      "aliases": [],
+      "notes": "Common parish Sunday setting."
+    },
+    "IX": {
+      "mass": 9,
+      "title": "Cum jubilo",
+      "seasons": ["ad", "ct", "lt", "ot", "pt"],
+      "ranks": ["s", "f"],
+      "days": ["dominica", "feria"],
+      "bvm": true,
+      "credos": ["I", "III"],
+      "aliases": ["Missa Regina"],
+      "notes": "B.V.M. feasts & Saturdays."
+    },
+    "X": {
+      "mass": 10,
+      "title": "Alme Pater",
+      "seasons": ["ad", "ct", "lt", "ot", "pt"],
+      "ranks": ["f", "m", "o"],
+      "days": ["dominica", "feria"],
+      "bvm": true,
+      "credos": ["III"],
+      "aliases": [],
+      "notes": "Lower-rank Marian feasts."
+    },
+    "XI": {
+      "mass": 11,
+      "title": "Orbis factor",
+      "seasons": ["ot", "ct", "pt"],
+      "ranks": ["s", "f", "m"],
+      "days": ["dominica"],
+      "bvm": false,
+      "credos": ["I", "III"],
+      "aliases": [],
+      "notes": "Sundays per annum."
+    },
+    "XII": {
+      "mass": 12,
+      "title": "Pater cuncta",
+      "seasons": ["ot"],
+      "ranks": ["o"],
+      "days": ["dominica", "feria"],
+      "bvm": false,
+      "credos": [],
+      "aliases": [],
+      "notes": "Simpler Ordinary Time Sundays."
+    },
+    "XIII": {
+      "mass": 13,
+      "title": "Stelliferi Conditor orbis",
+      "seasons": ["ot"],
+      "ranks": ["o"],
+      "days": ["dominica", "feria"],
+      "bvm": false,
+      "credos": [],
+      "aliases": [],
+      "notes": "Simpler Ordinary Time Sundays."
+    },
+    "XIV": {
+      "mass": 14,
+      "title": "Jesu Redemptor",
+      "seasons": ["ot", "pt"],
+      "ranks": ["m", "o"],
+      "days": ["dominica", "feria"],
+      "bvm": false,
+      "credos": [],
+      "aliases": [],
+      "notes": "Lower feasts of the Lord."
+    },
+    "XV": {
+      "mass": 15,
+      "title": "Dominator Deus",
+      "seasons": ["ct", "ot"],
+      "ranks": ["f", "m"],
+      "days": ["dominica"],
+      "bvm": false,
+      "credos": [],
+      "aliases": [],
+      "notes": "Confessors (non-bishops)."
+    },
+    "XVI": {
+      "mass": 16,
+      "title": "Ferial",
+      "seasons": ["ot"],
+      "ranks": ["f", "m", "o"],
+      "days": ["feria"],
+      "bvm": false,
+      "credos": [],
+      "aliases": ["Feriale"],
+      "notes": "Weekdays per annum."
+    },
+    "XVII": {
+      "mass": 17,
+      "title": "(Sundays in Advent & Lent)",
+      "seasons": ["ad", "lt"],
+      "ranks": ["s"],
+      "days": ["dominica"],
+      "bvm": false,
+      "credos": ["I", "III"],
+      "aliases": [],
+      "notes": "Sundays of Advent and Lent."
+    },
+    "XVIII": {
+      "mass": 18,
+      "title": "Deus Genitor alme",
+      "seasons": ["ad", "lt"],
+      "ranks": ["m", "o"],
+      "days": ["feria"],
+      "bvm": false,
+      "credos": [],
+      "aliases": [],
+      "notes": "Ferias of Advent/Lent; Ember days."
+    }
+  },
+  "adlib": {
+    "ky": [
+      {
+        "roman": "I",
+        "title": "Clemens Rector"
+      },
+      {
+        "roman": "II",
+        "title": "Summe Deus"
+      },
+      {
+        "roman": "III",
+        "title": "Rector cosmi pie"
+      },
+      {
+        "roman": "IV",
+        "title": "Kyrie altissime"
+      },
+      {
+        "roman": "V",
+        "title": "Conditor Kyrie omnium"
+      },
+      {
+        "roman": "VI",
+        "title": "Te Christe Rex supplices"
+      },
+      {
+        "roman": "VII",
+        "title": "Splendor aeterne"
+      },
+      {
+        "roman": "VIII",
+        "title": "Firmator sancte"
+      },
+      {
+        "roman": "IX",
+        "title": "O Pater excelse"
+      },
+      {
+        "roman": "X",
+        "title": "Orbis factor (ad libitum)"
+      },
+      {
+        "roman": "XI",
+        "title": "Kyrie Salve"
+      }
+    ],
+    "gl": [
+      {
+        "roman": "IV",
+        "title": "Ambrosian"
+      }
+    ],
+    "sa": [],
+    "ag": [],
+    "it": [],
+    "be": []
+  }
+}

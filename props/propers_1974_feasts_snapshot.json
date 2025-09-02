@@ -1,0 +1,151 @@
+{
+  "feria_v_in_cena_domini": {
+    "in": [
+      "Liber_Usualis:359",
+      "Liber_Usualis:374",
+      "Graduale_Romanum:359",
+      "Graduale_Romanum:374"
+    ],
+    "gr": [
+      "Liber_Usualis:1230",
+      "Graduale_Romanum_1974:1230",
+      "Graduale_Romanum:1230"
+    ],
+    "al": [],
+    "tr": [],
+    "se": [],
+    "of": [
+      "Liber_Usualis:47",
+      "Liber_Usualis:448",
+      "Graduale_Romanum:47",
+      "Graduale_Romanum:448"
+    ],
+    "co": [
+      "Liber_Usualis:726",
+      "Graduale_Romanum:726"
+    ]
+  },
+  "feria_vi_in_passione_domini": {
+    "in": [],
+    "gr": [],
+    "al": [],
+    "tr": [],
+    "se": [],
+    "of": [],
+    "co": []
+  },
+  "sabbato_sancto": {
+    "in": [],
+    "gr": [],
+    "al": [],
+    "tr": [],
+    "se": [],
+    "of": [
+      "Liber_Usualis:47",
+      "Liber_Usualis:448",
+      "Graduale_Romanum:47",
+      "Graduale_Romanum:448"
+    ],
+    "co": [
+      "Liber_Usualis:952",
+      "Graduale_Romanum:952"
+    ]
+  },
+  "feria_ii_paschae": {
+    "in": [
+      "Liber_Usualis:1315",
+      "Graduale_Romanum:1315"
+    ],
+    "gr": [
+      "Liber_Usualis:416",
+      "Liber_Usualis:975",
+      "Liber_Usualis:1075",
+      "Liber_Usualis:1150",
+      "Liber_Usualis:1188",
+      "Liber_Usualis:1305",
+      "Graduale_Romanum:416",
+      "Graduale_Romanum:975",
+      "Graduale_Romanum:1075",
+      "Graduale_Romanum:1150",
+      "Graduale_Romanum:1188",
+      "Graduale_Romanum:1305"
+    ],
+    "al": [
+      "Liber_Usualis:761",
+      "Graduale_Romanum_1974:7350",
+      "Graduale_Romanum:761"
+    ],
+    "tr": [],
+    "se": [],
+    "of": [
+      "Liber_Usualis:789",
+      "Graduale_Romanum:789"
+    ],
+    "co": [
+      "Liber_Usualis:952",
+      "Graduale_Romanum:952"
+    ]
+  },
+  "feria_iii_paschae": {
+    "in": [],
+    "gr": [],
+    "al": [],
+    "tr": [],
+    "se": [],
+    "of": [],
+    "co": []
+  },
+  "feria_iv_paschae": {
+    "in": [],
+    "gr": [],
+    "al": [],
+    "tr": [],
+    "se": [],
+    "of": [],
+    "co": []
+  },
+  "feria_v_paschae": {
+    "in": [],
+    "gr": [],
+    "al": [],
+    "tr": [],
+    "se": [],
+    "of": [],
+    "co": []
+  },
+  "feria_vi_paschae": {
+    "in": [],
+    "gr": [],
+    "al": [],
+    "tr": [],
+    "se": [],
+    "of": [],
+    "co": []
+  },
+  "sabbato_in_albis": {
+    "in": [],
+    "gr": [],
+    "al": [],
+    "tr": [],
+    "se": [],
+    "of": [],
+    "co": []
+  },
+  "feria_viii_paschae": {
+    "in": [
+      "Liber_Usualis:25",
+      "Graduale_Romanum:25"
+    ],
+    "gr": [],
+    "al": [],
+    "tr": [],
+    "se": [],
+    "of": [],
+    "co": [
+      "Liber_Usualis:589",
+      "Liber_Usualis:953",
+      "Graduale_Romanum:589",
+      "Graduale_Romanum:953"
+    ]
+  }
+}
