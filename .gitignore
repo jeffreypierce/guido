@@ -13,3 +13,4 @@ data/tmp/
 # Artifacts
 *.mid
 *.zip
+src/cantatorium/.DS_Store
