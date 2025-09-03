@@ -1,0 +1,57 @@
+.
+├── etc
+│   └── Guido.pdf
+├── gregobase
+│   ├── chant_sources.json
+│   ├── Graduale_Romanum_1974.json
+│   ├── Graduale_Romanum.json
+│   ├── Liber_Hymnarius.json
+│   ├── Liber_Usualis.json
+│   └── sources.json
+├── package.json
+├── README.md
+├── src
+│   ├── aux
+│   │   └── aux.js
+│   ├── cantus
+│   │   ├── data
+│   │   │   ├── aliases.json
+│   │   │   ├── constanst.js
+│   │   │   ├── graduale_romanum_1974.json
+│   │   │   ├── graduale_romanum.json
+│   │   │   ├── kyriale.json
+│   │   │   ├── liber_hymnarius.json
+│   │   │   └── liber_usualis.json
+│   │   └── index.js
+│   ├── festum
+│   │   ├── data
+│   │   │   ├── calendar.json
+│   │   │   ├── constanst.js
+│   │   │   └── masses.json
+│   │   └── index.js
+│   ├── grogory.js
+│   ├── notae
+│   │   ├── data
+│   │   │   ├── constanst.js
+│   │   │   ├── hand.json
+│   │   │   └── modes.js
+│   │   ├── index.js
+│   │   ├── midi
+│   │   │   └── index.js
+│   │   ├── reliquum
+│   │   │   └── index.js
+│   │   ├── schola
+│   │   │   └── index.js
+│   │   ├── tabula
+│   │   │   └── index.js
+│   │   └── verbum
+│   │       └── index.js
+│   └── temperamentum
+│       ├── data
+│       │   └── constanst.js
+│       └── index.js
+├── structure.txt
+├── tests
+└── tools
+
+20 directories, 35 files
