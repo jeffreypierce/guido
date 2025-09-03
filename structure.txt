@@ -16,7 +16,7 @@
 │   ├── cantus
 │   │   ├── data
 │   │   │   ├── aliases.json
-│   │   │   ├── constanst.js
+│   │   │   ├── constants.js
 │   │   │   ├── graduale_romanum_1974.json
 │   │   │   ├── graduale_romanum.json
 │   │   │   ├── kyriale.json
@@ -26,13 +26,13 @@
 │   ├── festum
 │   │   ├── data
 │   │   │   ├── calendar.json
-│   │   │   ├── constanst.js
+│   │   │   ├── constants.js
 │   │   │   └── masses.json
 │   │   └── index.js
-│   ├── grogory.js
+│   ├── guido.js
 │   ├── notae
 │   │   ├── data
-│   │   │   ├── constanst.js
+│   │   │   ├── constants.js
 │   │   │   ├── hand.json
 │   │   │   └── modes.js
 │   │   ├── index.js
@@ -48,7 +48,7 @@
 │   │       └── index.js
 │   └── temperamentum
 │       ├── data
-│       │   └── constanst.js
+│       │   └── constants.js
 │       └── index.js
 ├── structure.txt
 ├── tests
