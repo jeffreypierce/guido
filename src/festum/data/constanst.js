@@ -1,49 +1,46 @@
-// Re-export small JSON indices here later.
-// export { default as calendar } from "./calendar.json" assert { type: "json" };
+// src/festum/data/constants.js
 
-const rank = new Map([
-  ["t", "Triduum"],
-  ["s", "Solemnity"],
-  ["f", "Feast"],
-  ["m", "Memorial"],
-  ["o", "Optional Memorial"],
-]);
+export const RANKS_1962 = Object.freeze({
+  t: "Triduum",
+  s: "Solemnity (I class)",
+  f: "Feast (II class)",
+  m: "Memorial (III class)",
+  o: "Commemoration / Optional Memorial",
+});
 
-const seasons = new Map([
-  ["ad", "Advent"],
-  ["ct", "Christmastide"],
-  ["lt", "Lent"],
-  ["ot", "Ordinary Time"],
-  ["ot2", "Ordinary Time"],
-  ["pt", "Paschaltide"],
-  ["hw", "Holy Week"],
-  ["tr", "Tridumm"],
-]);
-const office = new Map([
-  ["an", "Antiphona"],
-  ["al", "Allelulia"],
-  ["ca", "Canticum"],
-  ["co", "Communio"],
-  ["gr", "Graduale"],
-  ["hy", "Hymnus"],
-  ["in", "Introitus"],
-  ["ky", "Kyriale"],
-  ["of", "Offertorium"],
-  ["ps", "Psalmus"],
-  ["re", "Responsorium"],
-  ["rb", "Responsorium breve"],
-  ["se", "Sequentia"],
-  ["tr", "Tractus"],
-  ["tp", "Tropa"],
-  ["or", "Toni Communes"],
-]);
+export const SEASONS_1962 = Object.freeze({
+  ad: "Advent",
+  ct: "Christmastide",
+  ot2: "Time after Epiphany",
+  sg: "Septuagesima",
+  lt: "Lent",
+  ea: "Eastertide",
+  ap: "Time after Pentecost",
+});
 
-const ordinary = new Map([
-  ["ke", "Kyrie eleison"],
-  ["gl", "Gloria"],
-  ["cr", "Credo"],
-  ["sa", "Sanctus"],
-  ["ad", "Agnus Dei"],
-  ["be", "Benedicamus"],
-  ["it", "Ite missa est"],
-]);
+export const RANKS_1974 = Object.freeze({
+  t: "Sacred Triduum",
+  s: "Solemnity",
+  f: "Feast",
+  m: "Memorial",
+  o: "Optional Memorial",
+});
+
+export const SEASONS_1974 = Object.freeze({
+  ad: "Advent",
+  ct: "Christmastide",
+  ot: "Ordinary Time",
+  lt: "Lent",
+  ea: "Eastertide",
+});
+
+export function rankLabel(code, form = "1962") {
+  const map = form === "1974" ? RANKS_1974 : RANKS_1962;
+  return map[code] || code;
+}
+
+export function seasonLabel(code, form = "1962") {
+  const map = form === "1974" ? SEASONS_1974 : SEASONS_1962;
+  if (form === "1974" && (code === "ot1" || code === "ot2")) code = "ot";
+  return map[code] || code;
+}

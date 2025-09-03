@@ -3,7 +3,7 @@
  * @param {any} parsed
  * @returns {any}
  */
-export function residue(_parsed) {
+export function reliquum(_parsed) {
   // TODO (Step 10)
   return null;
 }
