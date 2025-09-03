@@ -1,12 +1,11 @@
-// src/festum/index.js
-
-// If you already placed calendarium_romanum elsewhere, adjust this import.
-import { datum } from "./datum.js";
-import { normalizeSeason } from "./tempus.js";
+// src/festum/festum.js  (or index.js if you prefer)
+import { toUTC } from "../aux/aux.js";
+import { calendarium } from "./calendarium.js";
 import MASSES from "./data/masses.json" assert { type: "json" };
+import { seasonNormalize } from "./tempus.js";
 
-function normalizeMasses(obj) {
-  return Object.entries(obj).map(([key, v]) => ({
+function selectMasses(row, weekday, bvmFlag) {
+  const Masses = Object.entries(MASSES.masses || {}).map(([key, v]) => ({
     key,
     mass: Number(v.mass),
     title: v.title,
@@ -18,14 +17,13 @@ function normalizeMasses(obj) {
     aliases: v.aliases || [],
     notes: v.notes || "",
   }));
-}
-const Masses = normalizeMasses(MASSES);
 
-function selectMasses(row, weekday, bvmFlag, form) {
-  const seasonForMass = normalizeSeason(row.season);
+  const exact = row.season;
+  const generic = seasonNormalize(exact);
+
   let candidates = Masses.filter(
     (m) =>
-      (m.seasons.includes(row.season) || m.seasons.includes(seasonForMass)) &&
+      (m.seasons.includes(exact) || m.seasons.includes(generic)) &&
       m.ranks.includes(row.rank) &&
       m.days.includes(weekday) &&
       (!bvmFlag || m.bvm === true)
@@ -34,7 +32,7 @@ function selectMasses(row, weekday, bvmFlag, form) {
   if (bvmFlag && candidates.length === 0) {
     candidates = MASSES.filter(
       (m) =>
-        (m.seasons.includes(row.season) || m.seasons.includes(seasonForMass)) &&
+        (m.seasons.includes(exact) || m.seasons.includes(generic)) &&
         m.ranks.includes(row.rank) &&
         m.days.includes(weekday)
     );
@@ -46,59 +44,43 @@ function selectMasses(row, weekday, bvmFlag, form) {
 }
 
 /**
- * Return celebration details for the given date.
- * Deterministic, UTC-safe, form-aware (1962/1974).
+ * Return celebration details for the given date & form.
  * @param {Date|string|number} date
- * @param {{ form?: "1962"|"1974" }} [options]
- * @returns {Feast}
+ * @param {{ form?: "1962"|"1974", splitOrdinary?: boolean }} [options]
  */
 export function festum(date, options = {}) {
   const form = options.form ?? "1962";
   const day = toUTC(date);
   const year = day.getUTCFullYear();
 
-  // 1) Lookups (shared Easter core + EF/OF differences)
-  const landmarks =
-    form === "1974" ? lookup1974(year, { transfer }) : lookup1962(year);
+  // Build year calendar for the selected form
+  const cr = calendarium(year, {
+    form,
+    splitOrdinary: !!options.splitOrdinary,
+    transfer: !!options.transfer,
+  });
 
-  // 2) Season code (EF/OF aware)
-  const season =
-    form === "1974"
-      ? season1974(day, landmarks, { splitOrdinary })
-      : season1962(day, landmarks);
-
-  const weekday = new Date(row.ts).getUTCDay() === 0 ? "dominica" : "feria";
-  const bvm = /(^|_)bvm(_|$)/i.test(row.id);
-
-  // TODO, build calendar here
-
-  // Find the row for this day (or the nearest day if you prefer that behavior)
+  // Pick the exact (or nearest) row
   const ts = day.getTime();
   const closest = cr.reduce(
     (best, row) =>
       Math.abs(row.ts - ts) < Math.abs(best.ts - ts) ? row : best,
     cr[0]
   );
-  const { best, candidates } = selectMasses(row, weekday, bvm, form);
 
-  // Map the calendar row to the Feast shape
+  const weekday = new Date(closest.ts).getUTCDay() === 0 ? "dominica" : "feria";
+  const bvm = /(^|_)bvm(_|$)/i.test(closest.id);
+
+  const candidates = selectMasses(closest, weekday, bvm);
+
   return {
     feastId: closest.id,
     title: closest.title,
-    rank: closest.rank, // short code e.g. 's'
-    season, // code per form
+    rank: closest.rank, // code
+    season: closest.season, // code
     form,
     weekday,
     bvm,
-    ordinary: best
-      ? { key: best.key, mass: best.mass, title: best.title }
-      : null,
-    ordinary_all: candidates.map((c) => ({
-      key: c.key,
-      mass: c.mass,
-      title: c.title,
-    })),
+    masses: candidates.map((c) => c.mass),
   };
 }
-
-/* ───────────────────────── helpers ───────────────────────── */

@@ -1,5 +1,4 @@
 // src/festum/data/constants.js
-
 export const RANKS_1962 = Object.freeze({
   t: "Triduum",
   s: "Solemnity (I class)",
@@ -29,9 +28,9 @@ export const RANKS_1974 = Object.freeze({
 export const SEASONS_1974 = Object.freeze({
   ad: "Advent",
   ct: "Christmastide",
-  ot: "Ordinary Time",
   lt: "Lent",
   ea: "Eastertide",
+  ot: "Ordinary Time",
 });
 
 export function rankLabel(code, form = "1962") {
@@ -41,6 +40,7 @@ export function rankLabel(code, form = "1962") {
 
 export function seasonLabel(code, form = "1962") {
   const map = form === "1974" ? SEASONS_1974 : SEASONS_1962;
-  if (form === "1974" && (code === "ot1" || code === "ot2")) code = "ot";
+  if (form === "1974" && (code === "ot1" || code === "ot2"))
+    return "Ordinary Time";
   return map[code] || code;
 }
