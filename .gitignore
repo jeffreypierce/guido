@@ -1,16 +1,19 @@
 # OS
 .DS_Store
+
 # Node
 node_modules/
 .pnpm-store/
-# Build/output
+
+# Build & coverage
 dist/
 coverage/
 *.map
+
+# Examples & artifacts
 examples/out/
-# Data scratch
-data/tmp/
-# Artifacts
 *.mid
 *.zip
-src/cantatorium/.DS_Store
+
+# Data scratch
+data/tmp/

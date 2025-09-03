@@ -1,0 +1,14 @@
+{
+  "name": "guido",
+  "version": "0.0.0",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "lint": "echo \"(add eslint later)\"",
+    "test": "echo \"(add vitest later)\" && exit 0",
+    "typecheck": "echo \"(enable //@ts-check later)\" && exit 0"
+  },
+  "exports": {
+    ".": "./src/guido.js"
+  }
+}
