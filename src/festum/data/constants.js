@@ -1,3 +1,4 @@
+
 // src/festum/data/constants.js
 export const RANKS_1962 = Object.freeze({
   t: "Triduum",
