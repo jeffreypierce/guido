@@ -78,11 +78,8 @@ function parsePageHints(str) {
 async function main() {
   await fs.mkdir(outDir, { recursive: true });
   const dayIndexJsonPath = path.join(outDir, 'dayIndex.json');
-  const chantIndexJsonPath = path.join(outDir, 'chantIndex.json');
   const dayIndexJsPath = path.join(outDir, 'dayIndex.js');
-  const chantIndexJsPath = path.join(outDir, 'chantIndex.js');
   const potIndexJsPath = path.join(outDir, 'potIndex.js');
-  const commonsIndexJsPath = path.join(outDir, 'commonsIndex.js');
   const EMIT_JSON = process.argv.includes('--emit-json') || process.env.EMIT_JSON === '1';
 
   header('Build: Indices');
@@ -316,21 +313,6 @@ async function main() {
     await writeModuleIfChanged(potIndexJsPath, { _meta: { generatedAt: new Date().toISOString() }, pages: POT_MAP });
   } catch (e) {
     console.warn(`${warn} skip LU_proper_of_time: ${e?.message || e}`);
-  }
-
-  // Commons of Saints — bake a minimal index (placeholder for pages per category)
-  try {
-    const commonsPath = path.join(etcDir, 'LU_common_of_saints.json');
-    const commons = await readJSON(commonsPath);
-    index._meta.sources.push({ id: 'LU_common_of_saints', path: path.relative(repoRoot, commonsPath) });
-    const outCommons = {
-      _meta: { generatedAt: new Date().toISOString() },
-      pages: { },
-      notes: commons?.common_of_saints || {},
-    };
-    await writeModuleIfChanged(commonsIndexJsPath, outCommons);
-  } catch (e) {
-    console.warn(`${warn} skip LU_common_of_saints: ${e?.message || e}`);
   }
 
   // Write indices (idempotent)
@@ -736,10 +718,8 @@ async function main() {
 
   if (EMIT_JSON) {
     await writeIfChanged(dayIndexJsonPath, index);
-    await writeIfChanged(chantIndexJsonPath, { _meta: { generatedAt: index._meta.generatedAt }, index: {} });
   } else {
     await writeModuleIfChanged(dayIndexJsPath, index);
-    await writeModuleIfChanged(chantIndexJsPath, { _meta: { generatedAt: index._meta.generatedAt }, index: {} });
   }
 }
 
