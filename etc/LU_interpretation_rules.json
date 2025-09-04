@@ -1,0 +1,273 @@
+{
+  "metadata": {
+    "title": "Liber Usualis — Rules for Interpretation",
+    "edition": "1961",
+    "section": "Rules for Interpretation (text + figures)",
+    "compiled_at_utc": "2025-09-04T11:44:07.026497Z",
+    "notes": [
+      "A practical, machine-readable summary of the didactic section covering notation, neumes, rhythm, psalmody, and Latin diction.",
+      "Pitch is relative; this JSON encodes rules and definitions but not absolute musical values."
+    ]
+  },
+  "rules_for_interpretation": {
+    "notation": {
+      "stave": {
+        "lines": 4,
+        "leger_lines": "single ledger line above/below if needed",
+        "counting_direction": "upwards for lines and spaces"
+      },
+      "clefs": {
+        "types": [
+          {
+            "name": "Doh Clef",
+            "symbol": "C",
+            "common_lines": [
+              2,
+              3,
+              4
+            ]
+          },
+          {
+            "name": "Fah Clef",
+            "symbol": "F",
+            "common_lines": [
+              3
+            ],
+            "rare_lines": [
+              4
+            ]
+          }
+        ],
+        "purpose": "place movable clef to keep melody on 4-line staff; relative pitch only"
+      },
+      "guide": {
+        "name": "custos/guide",
+        "usage": [
+          "End of staff line indicates first pitch of next line",
+          "Also used mid-line around clef changes to show continuity of actual pitch"
+        ]
+      },
+      "accidentals": {
+        "flat_b": {
+          "scope_rules": [
+            "Valid for a whole word",
+            "Or until the next bar line (even quarter-bar)",
+            "Cancelled by a natural",
+            "Reset by a new word or any bar line"
+          ],
+          "key_signature_like": "In some pieces placed near the clef for each system; affects all Bs unless cancelled"
+        }
+      },
+      "modes_and_pitch": {
+        "modes": {
+          "summary": "Chant uses diatonic material but modal tonics can be any degree; 8-mode theory is an approximation",
+          "contrast_to_modern": "Not limited to major/minor; characteristic intervals and finals define modality"
+        },
+        "pitch_choice": "Relative, chosen for singers/space/piece; clefs do not imply absolute pitch"
+      },
+      "bar_lines": {
+        "presence": "No modern meter bars; chant uses free rhythm",
+        "function": "Marks phrasing and pauses, not recurring strong beats",
+        "types": [
+          "quarter-bar",
+          "half-bar",
+          "full bar",
+          "double bar"
+        ]
+      }
+    },
+    "neumes": {
+      "single_notes": [
+        {
+          "name": "punctum",
+          "shape": "square",
+          "value": "unit note"
+        },
+        {
+          "name": "virga",
+          "shape": "upright",
+          "value": "unit note"
+        },
+        {
+          "name": "bivirga",
+          "shape": "double virga",
+          "value": "two units (often tied/crochet equivalent)"
+        },
+        {
+          "name": "distropha",
+          "shape": "two strophici",
+          "value": "two units (gentle repercussion)"
+        },
+        {
+          "name": "tristropha",
+          "shape": "three strophici",
+          "value": "three units (gentle repercussion)"
+        }
+      ],
+      "two_note_groups": [
+        {
+          "name": "podatus",
+          "motion": "up",
+          "execution": "lower note first; upper lightly rounded; accent drives first note when on accented syllable"
+        },
+        {
+          "name": "clivis",
+          "motion": "down"
+        }
+      ],
+      "three_note_groups": [
+        {
+          "name": "scandicus",
+          "motion": "ascending compound"
+        },
+        {
+          "name": "salicus",
+          "motion": "ascending; vertical episema marks inner note to lengthen/emphasize"
+        },
+        {
+          "name": "climacus",
+          "motion": "descending; each diamond equals a unit note (no sliding)"
+        },
+        {
+          "name": "torculus",
+          "motion": "up then down; three equal values; top rounded"
+        },
+        {
+          "name": "porrectus",
+          "motion": "down then up; first two define oblique stroke endpoints"
+        }
+      ],
+      "compound_groups": [
+        "porrectus flexus",
+        "torculus resupinus",
+        "scandicus flexus",
+        "climacus resupinus",
+        "subbipunctis",
+        "subtripunctis"
+      ],
+      "special_neumes": {
+        "liquescents": {
+          "description": "Smaller notes at diphthongs/consonant clusters or to introduce semivowel; sing lightly",
+          "common_contexts": [
+            "au, eu",
+            "gn, ll, nd, mj for j/i-glide",
+            "hosanna, tollis"
+          ]
+        },
+        "oriscus": "Light terminal note, often forming a double with previous; treated delicately",
+        "pressus": {
+          "patterns": [
+            "punctum immediately before a group on same pitch",
+            "juxtaposed neumes sharing boundary pitch (e.g., clivis + clivis)"
+          ],
+          "execution": "two adjacent notes combine to double length; ictus on the first"
+        },
+        "quilisma": {
+          "shape": "jagged",
+          "rule": "preceding note noticeably lengthened and most emphasized of the group; quilisma itself light"
+        }
+      }
+    },
+    "rhythm_and_breathing": {
+      "fundamentals": [
+        "All simple notes are equal in time value (unit beats); dotted = doubled length",
+        "Free rhythm: interlacing binary and ternary groups guided by text and melody",
+        "Maintain precise relative values across simple/double/triple notes; avoid clipping in transitions"
+      ],
+      "episema": {
+        "vertical": "marks ictus/beginning of compound beat or a notable internal landing",
+        "horizontal": "slight lengthening of the note or group; use with discretion to preserve group unity"
+      },
+      "ictus_rules": [
+        "Rule 1: ictus on all notes with a vertical episema",
+        "Rule 2: ictus on sustained/doubled elements (distropha, tristropha, bivirga, pressus, oriscus, dotted, pre-quilisma)",
+        "Rule 3: ictus on the first note of each group unless displaced by Rule 1 or Rule 2"
+      ],
+      "grouping_and_subdivision": {
+        "default": "prefer 2- or 3-note groups between ictus points",
+        "overflow": "if >3 simple notes between ictus, insert a subdivision ictus (2+2 or 2+3 / 3+2) according to melody/text"
+      },
+      "breathing_and_pauses": {
+        "phrase_end_soften": "last note(s) lengthened and softened; no fresh impulse on the final of a group",
+        "short_phrases": "no breath—only slight softening",
+        "section_end": "half bar; take breath lightly without breaking movement (often shorten dotted note slightly)",
+        "period_end": "full/double bar; clear pause; in alternatim, double bar = choir change",
+        "comma": "rapid sip of breath within value of prior note",
+        "flex": "in psalmody, bend to lower doubled note; may breathe if needed without breaking flow"
+      },
+      "text_vs_rhythm": {
+        "latin_accent": "light/arsic; may fall off the ictus; avoid forcing ictus to accented syllables",
+        "diction_rule": "never breathe just before a fresh syllable of a word"
+      }
+    },
+    "psalmody": {
+      "structure": {
+        "parts": [
+          "intonation",
+          "tenor_reciting",
+          "mediation",
+          "final_cadence"
+        ],
+        "flex": "subdivision mark (†) in long first halves; drop to lower doubled note"
+      },
+      "intonation": {
+        "adaption": "2-note intonations fit first 2 syllables; 3-note fit first 3 syllables",
+        "usage": "normally for the first verse only (unless explicitly repeated, e.g., Magnificat)"
+      },
+      "tenor_reciting": {
+        "execution": "steady pitch with lively phrasing; avoid monotony; no cuts until cadence"
+      },
+      "cadences": {
+        "types": [
+          "one-accent",
+          "two-accent"
+        ],
+        "antepenult_extra_note": "when the accent is on the antepenult and a clivis follows, insert extra note before clivis for smoothness",
+        "selection": "determined by the antiphon and rubric indications at each psalm head",
+        "solemn_tones": {
+          "reference": "Magnificat tone models",
+          "note": "Certain cadences may be treated ad libitum as one-accent with three preparatory syllables for consistency"
+        },
+        "tonus_peregrinus": "Permits an added preparatory note before the accented pitch in mediation ad libitum"
+      }
+    },
+    "latin_pronunciation_and_diction": {
+      "principles": [
+        "Plainsong is vocal Latin; understand text and phrasing before melody",
+        "Accented syllable is arsic (lifted/rounded), final & penult are softer (thetic)",
+        "Interlacing of 2- and 3-syllable words creates larger verbal rhythm"
+      ],
+      "vowels": {
+        "a": "as in 'father' (keep open even before m/n)",
+        "e": "as in 'red' (no diphthonging)",
+        "i": "as 'ee' in 'feet'",
+        "o": "as in 'for'",
+        "u": "as 'oo' in 'moon'",
+        "y": "treat as i",
+        "ae_oe": "pronounced like a single 'e' sound",
+        "au_eu_ai": "single syllable; first vowel receives primary color; if many notes, vocalize on first vowel and touch second at the end",
+        "exceptions": {
+          "hei": "interjection treated as one syllable"
+        }
+      },
+      "consonants": {
+        "c_before_ei": "ch (church)",
+        "cc_before_ei": "tch",
+        "sc_before_ei": "sh",
+        "g_before_ei": "soft g as in 'generous'",
+        "g_elsewhere": "hard g",
+        "gn": "ny (Italian/French value)",
+        "h": "mute except 'nihil'/'mihi' and compounds where h = k",
+        "j_or_i_consonantal": "y (forms one sound with following vowel)",
+        "r": "slightly rolled; do not alter preceding vowel quality",
+        "s": "hard 's'; slightly softened between vowels",
+        "ti_plus_vowel": "tsee (unless after s, x, or t)",
+        "th": "t",
+        "x": "ks (softened between vowels); 'xc' before e/ae/oe/i/y = ksh",
+        "z": "dz",
+        "double_consonants": "pronounce both distinctly"
+      },
+      "never_breathe_rule": "Never take breath just before a fresh syllable of a word"
+    }
+  }
+}

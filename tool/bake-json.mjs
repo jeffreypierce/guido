@@ -5,6 +5,15 @@
 import fs from 'node:fs/promises';
 import path from 'node:path';
 
+// pretty logging
+const TTY = process.stdout.isTTY || process.env.FORCE_COLOR === '1';
+const C = (code) => (s) => (TTY ? `\x1b[${code}m${s}\x1b[0m` : String(s));
+const bold = C(1), green = C(32), cyan = C(36), yellow = C(33), gray = C(90);
+const check = green('✓');
+const warn = yellow('!');
+const bullet = cyan('•');
+function header(title){ const line = gray('─'.repeat(Math.max(3, 60 - title.length))); console.log(`${bold(title)} ${line}`); }
+
 async function* walk(dir) {
   for (const entry of await fs.readdir(dir, { withFileTypes: true })) {
     const p = path.join(dir, entry.name);
@@ -29,12 +38,13 @@ async function main() {
   const root = path.resolve(process.cwd(), 'src');
   const targets = [];
   for await (const p of walk(root)) {
-    if (!/\bdata\b/.test(p)) continue;
+    if (!/(\bdata\b|\bindex\b)/.test(p)) continue;
     if (!p.endsWith('.json')) continue;
     targets.push(p);
   }
+  header('Bake: JSON → ESM');
   if (!targets.length) {
-    console.log('[bake-json] No JSON files found under src/**/data');
+    console.log(`${warn} no JSON files found under src/**/{data,index}`);
     return;
   }
 
@@ -79,10 +89,11 @@ async function main() {
       : parsed && typeof parsed === 'object'
         ? `object(${Object.keys(parsed).length})`
         : typeof parsed;
-    console.log(`[bake-json] ${status.toUpperCase()} ${relJs} ← ${relJson} — ${kind} — json ${fmtBytes(Buffer.byteLength(raw))}, js ${fmtBytes(jsBytes)}`);
+    const label = status === 'created' ? cyan('CREATED') : status === 'updated' ? cyan('UPDATED') : gray('UNCHANGED');
+    console.log(`${label} ${gray(relJs)} ← ${gray(relJson)} — ${kind} — json ${fmtBytes(Buffer.byteLength(raw))}, js ${fmtBytes(jsBytes)}`);
   }
 
-  console.log(`\n[bake-json] Summary: ${created} created, ${updated} updated, ${unchanged} unchanged — json ${fmtBytes(totalJsonBytes)}, js ${fmtBytes(totalJsBytes)}`);
+  console.log(`\n${check} summary: ${cyan(created)} created, ${cyan(updated)} updated, ${cyan(unchanged)} unchanged — json ${fmtBytes(totalJsonBytes)}, js ${fmtBytes(totalJsBytes)}`);
 }
 
 main().catch((e) => {

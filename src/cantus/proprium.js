@@ -2,6 +2,10 @@
 
 // Data via search across corpora (Graduale, LU, LH)
 import { cantus as search } from "./cantus.js";
+import DAY_INDEX from "./index/dayIndex.js";
+import POT_INDEX from "./index/potIndex.js";
+import LU from "./data/liber_usualis.js";
+import COMMONS from "./index/commonsIndex.js";
 import { norm, tokens, isPenitential } from "../aux/aux.js";
 
 /**
@@ -232,10 +236,114 @@ export function findPropersCandidates(festum, office, opts = {}) {
  */
 export function proprium(ctx, opts = {}) {
   const { festum } = ctx;
-  const offices = propriumOffices1962(festum);
+  const useIndex = opts.useIndex !== false; // default true
+  const baseOffices = propriumOffices1962(festum);
   const items = [];
 
-  for (const office of offices) {
+  // Build a quick LU page -> rows index once (module-level cache)
+  if (!proprium._luByPage) {
+    const toNum = (s) => {
+      const m = String(s).match(/\d{1,4}/);
+      return m ? Number(m[0]) : null;
+    };
+    const MASS_OFFICES = new Set(["in","gr","al","tr","of","co","se"]);
+    const byPage = new Map();
+    for (const r of LU) {
+      const code = String(r?.office?.code || '').toLowerCase();
+      if (!MASS_OFFICES.has(code)) continue;
+      const pages = (r?.meta?.pages || []).map((p)=>toNum(p?.page)).filter(Number.isFinite);
+      for (const n of pages) {
+        const arr = byPage.get(n) || [];
+        arr.push(r);
+        byPage.set(n, arr);
+      }
+    }
+    proprium._luByPage = byPage;
+  }
+
+  function resolvePagesToCandidates(pages, office) {
+    const byPage = proprium._luByPage;
+    const ids = new Set();
+    const rows = [];
+    for (const p of pages || []) {
+      const list = byPage.get(p) || [];
+      for (const r of list) {
+        const oc = String(r?.office?.code || '').toLowerCase();
+        if (office && oc !== office) continue;
+        if (!ids.has(r.id)) { ids.add(r.id); rows.push(r); }
+      }
+    }
+    // sort by proximity to hint pages
+    const score = (row) => {
+      const toNum = (s) => { const m = String(s).match(/\d{1,4}/); return m?Number(m[0]):null; };
+      const rowPages = (row?.meta?.pages || []).map((p)=>toNum(p?.page)).filter(Number.isFinite);
+      let best = 1e9;
+      for (const rp of rowPages) for (const hp of (pages||[])) best = Math.min(best, Math.abs(rp - hp));
+      return best;
+    };
+    return rows.sort((a,b)=>score(a)-score(b));
+  }
+
+  function findIndexPropersByFeast(f) {
+    // Try direct by feastId in dayIndex (scan small table)
+    const F = DAY_INDEX?.EF || {};
+    for (const k of Object.keys(F)) {
+      const v = F[k];
+      const arr = Array.isArray(v) ? v : [v];
+      for (const rec of arr) {
+        if (rec.feastId && rec.feastId === f.feastId && rec.propers && Object.keys(rec.propers).length) {
+          return rec.propers;
+        }
+      }
+    }
+    // Next: use POT landmark mapping by feastId
+    const pages = POT_INDEX?.pages?.[f.feastId] || [];
+    if (pages && pages.length) {
+      // Slight expansion: include +/-1 neighbors to be resilient
+      const windowPages = Array.from(new Set(pages.flatMap((p)=>[p, p-1, p+1]).filter((n)=>Number.isFinite(n) && n>0)));
+      const byOff = {};
+      for (const off of baseOffices) {
+        const cands = resolvePagesToCandidates(windowPages, off).slice(0, 4);
+        if (cands.length) byOff[off] = cands.map((r)=>r.id);
+      }
+      if (Object.keys(byOff).length) return byOff;
+    }
+    return null;
+  }
+
+  // Precompute LU id -> row map for fast lookups
+  if (!proprium._luById) {
+    const map = new Map();
+    for (const r of LU) map.set(String(r.id), r);
+    proprium._luById = map;
+  }
+
+  const indexByOffice = useIndex ? findIndexPropersByFeast(festum) : null;
+  const unionOffices = new Set(baseOffices);
+  if (indexByOffice) for (const k of Object.keys(indexByOffice)) unionOffices.add(k);
+
+  for (const office of unionOffices) {
+    let indexCandidates = [];
+    if (useIndex && indexByOffice && indexByOffice[office]) {
+      const ids = indexByOffice[office].map(String);
+      for (const id of ids) {
+        const row = proprium._luById.get(id);
+        if (row && String(row?.office?.code || '').toLowerCase() === office) indexCandidates.push(row);
+      }
+    }
+    // Commons fallback (category-based pages, if/when available)
+    let commonsCandidates = [];
+    if ((!indexCandidates || indexCandidates.length === 0) && COMMONS && COMMONS.pages) {
+      const cats = categoryTags(festum);
+      const pages = new Set();
+      for (const c of cats) {
+        const byOff = COMMONS.pages[c]?.[office];
+        if (Array.isArray(byOff)) for (const p of byOff) if (Number.isFinite(p)) pages.add(p);
+      }
+      if (pages.size) {
+        commonsCandidates = resolvePagesToCandidates(Array.from(pages), office).slice(0, 4);
+      }
+    }
     // Special-case: Sequence selection by fixed ID map
     if (office === "se") {
       const q = pickSequenceQuery(festum);
@@ -253,9 +361,20 @@ export function proprium(ctx, opts = {}) {
       }
     }
 
-    const candidates = findPropersCandidates(festum, office, opts);
-    const selected = selectProper(festum, office, candidates, opts);
-    items.push({ office, selected, candidates });
+    const fallbackCandidates = findPropersCandidates(festum, office, opts);
+    // Merge with dedupe: index first, then commons, then fallback
+    const seen = new Set(indexCandidates.map((r) => String(r.id)));
+    const merged = indexCandidates.slice();
+    for (const r of commonsCandidates) {
+      const k = String(r.id);
+      if (!seen.has(k)) { seen.add(k); merged.push(r); }
+    }
+    for (const r of fallbackCandidates) {
+      const k = String(r.id);
+      if (!seen.has(k)) { seen.add(k); merged.push(r); }
+    }
+    const selected = selectProper(festum, office, merged, opts);
+    items.push({ office, selected, candidates: merged });
   }
 
   return items;

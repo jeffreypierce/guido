@@ -1,0 +1,501 @@
+{
+  "source": "Liber Usualis 1961 — Introductory Rubrics (1960 reform)",
+  "version": "v1.0",
+  "scope": [
+    "precedence/competition rules",
+    "season boundaries",
+    "sunday/feria/vigil/feast/octave classes",
+    "commemorations limits",
+    "office rubrics affecting chant",
+    "mass rubrics affecting chant",
+    "calendar changes that affect availability/class of feasts"
+  ],
+  "precedence": {
+    "terms": {
+      "occurrence": "multiple offices on the same calendar day",
+      "concurrence": "Vespers of one day coincides with I Vespers of the next"
+    },
+    "sundays": {
+      "class_I": {
+        "examples": [
+          "Advent (4 Sundays)",
+          "Lent (first 4 Sundays)",
+          "Passion (2 Sundays)",
+          "Easter Day",
+          "Low Sunday",
+          "Pentecost"
+        ],
+        "takes_precedence_over": [
+          "all_feasts"
+        ],
+        "exceptions": [
+          {
+            "if": "Dec 8 is Sunday",
+            "then": "Immaculate Conception replaces the Sunday"
+          }
+        ],
+        "octaves": [
+          "Easter",
+          "Pentecost"
+        ]
+      },
+      "class_II": {
+        "takes_precedence_over": [
+          "class_II_feasts"
+        ],
+        "yields_to": [
+          "Our Lord feasts class_I",
+          "Our Lord feasts class_II (e.g., Transfiguration Aug 6)"
+        ],
+        "notes": [
+          "Takes precedence over All Souls."
+        ]
+      },
+      "office_window": {
+        "begins": "Sat I Vespers",
+        "ends": "Sun Compline"
+      },
+      "fixed_sunday_feasts": [
+        {
+          "feast": "Holy Name of Jesus",
+          "when": "Sun between Jan 2–5; else Jan 2"
+        },
+        {
+          "feast": "Holy Family",
+          "when": "1st Sunday after Epiphany"
+        },
+        {
+          "feast": "Trinity",
+          "when": "Sunday after Pentecost"
+        },
+        {
+          "feast": "Christ the King",
+          "when": "last Sunday of October"
+        },
+        {
+          "rule": "These replace the occurring Sunday; no commem. of Sunday."
+        }
+      ]
+    },
+    "vespers_concurrence": [
+      {
+        "if": "I/II Vespers of class I/II Sunday concur with class I/II feast",
+        "rule": "II Vespers of the concurrent office of the same degree prevails; the other is commemorated"
+      },
+      {
+        "example": "Dec 8 Sat → Vespers of feast w/ commem. of Sunday; Dec 8 Mon → Dec 7 Vespers of Sunday w/ commem. of feast"
+      },
+      {
+        "example": "Transfiguration (class II) on Sat → Vespers of feast; no commem. of class II Sunday"
+      }
+    ],
+    "sunday_excludes_permanent_sunday_feasts_except": [
+      "Holy Name",
+      "Holy Family",
+      "Trinity",
+      "Christ the King",
+      "I-class feasts of Our Lord assigned to class II Sundays in local calendars"
+    ]
+  },
+  "days_and_classes": {
+    "ferias": {
+      "class_I": [
+        "Ash Wednesday",
+        "Holy Week (Mon–Sat)"
+      ],
+      "class_II": [
+        "Advent Dec 17–23",
+        "Ember days of Advent, Lent, September"
+      ],
+      "class_III": [
+        "Lent/Passion weekdays not otherwise listed (Ash Wed–Palm Sat)",
+        "Advent weekdays to Dec 16 not otherwise listed"
+      ],
+      "class_IV": [
+        "All other ferias"
+      ],
+      "priority_rules": [
+        {
+          "I": "override any feast; allow only privileged commemoration"
+        },
+        {
+          "II": "yield to class II feast of universal Church; then commemorated"
+        },
+        {
+          "II_local": "II-class feria takes precedence over II-class local feast (which is only commemorated)"
+        },
+        {
+          "III_Lent_Passion": "do not allow III-class feasts"
+        },
+        {
+          "III_Advent": "allow III-class feasts; if displaced, commemorated"
+        },
+        {
+          "IV": "if displaced, not commemorated"
+        }
+      ],
+      "office_window": {
+        "feria": "Matins → Compline",
+        "Saturday": "ends at None (except Holy Saturday)"
+      }
+    },
+    "vigils": {
+      "class_I": [
+        "Christmas",
+        "Pentecost"
+      ],
+      "class_II": [
+        "Ascension",
+        "Assumption",
+        "Nativity of St John Baptist",
+        "SS Peter & Paul"
+      ],
+      "class_III": [
+        "St Lawrence"
+      ],
+      "rules": [
+        {
+          "I": "precede all; no commemorations"
+        },
+        {
+          "II": "precede I/II-class days; if not kept, commemorated"
+        },
+        {
+          "III": "precede IV-class; if not kept, commemorated"
+        },
+        {
+          "general": "II/III-class vigils are omitted on Sundays or I-class feasts, or if the feast is transferred/reduced"
+        }
+      ],
+      "office_window": "Matins → until following Office begins"
+    },
+    "feasts": {
+      "class_I": {
+        "vespers": "have I Vespers"
+      },
+      "class_II": {
+        "vespers": "normally Matins–Compline"
+      },
+      "class_III": {
+        "vespers": "normally Matins–Compline"
+      },
+      "notes": [
+        "II-class feasts of Our Lord have I Vespers when kept on a Sunday they displace"
+      ]
+    },
+    "octaves": {
+      "kept": [
+        "Christmas (class II; octave day Jan 1 = class I)",
+        "Easter (class I)",
+        "Pentecost (class I)"
+      ],
+      "excluded": "all others",
+      "christmas_octave_special": [
+        "Dec 26 St Stephen (II)",
+        "Dec 27 St John (II)",
+        "Dec 28 Holy Innocents (II)",
+        "Dec 29 Commemoration of St Thomas",
+        "Dec 31 Commemoration of St Silvester",
+        "Non-universal feasts only if I class matching those saints; others after octave"
+      ]
+    }
+  },
+  "seasons": {
+    "advent": {
+      "start": "I Vespers 1st Sunday Advent",
+      "end": "Christmas Eve None"
+    },
+    "christmas_season": {
+      "start": "Christmas I Vespers",
+      "end": "Jan 13",
+      "subseasons": [
+        {
+          "nativity": "Christmas I Vespers → Jan 5 None"
+        },
+        {
+          "epiphany": "Epiphany I Vespers → Jan 13"
+        }
+      ]
+    },
+    "septuagesima": {
+      "start": "I Vespers of Septuagesima",
+      "end": "Tuesday after Quinquagesima Compline"
+    },
+    "lent": {
+      "start": "Ash Wednesday Matins",
+      "end": "Easter Vigil Mass (exclusive)",
+      "sub": [
+        {
+          "lent_proper": "Ash Wed → None Saturday before Passion Sunday"
+        },
+        {
+          "passiontide": "I Vespers Passion Sunday → Easter Vigil (exclusive)"
+        },
+        {
+          "holy_week": "Palm Sunday → Holy Saturday"
+        }
+      ]
+    },
+    "paschal_time": {
+      "start": "Easter Vigil Mass",
+      "end": "Whit Saturday None",
+      "sub": [
+        {
+          "easter_season": "Easter Vigil Mass → Wed before Ascension None"
+        },
+        {
+          "ascension_season": "Ascension I Vespers → Whit Eve None"
+        },
+        {
+          "whit_octave": "Whit Eve Mass → following Saturday None"
+        }
+      ]
+    },
+    "per_annum": {
+      "block_1": "Jan 14 → Saturday before Septuagesima",
+      "block_2": "Trinity Sunday I Vespers → Saturday before 1st Sunday of Advent None"
+    }
+  },
+  "commemorations": {
+    "types": {
+      "privileged": [
+        "Sunday",
+        "I-class days",
+        "Christmas octave days",
+        "September Ember days",
+        "Advent/Lent/Passion ferias",
+        "Greater Litanies (Mass)"
+      ],
+      "ordinary": "all others"
+    },
+    "limits": [
+      {
+        "I_class_or_nonconventual_sung": "one privileged only"
+      },
+      {
+        "II_class_sunday": "one commem (II-class feast); omit if a privileged commem is required"
+      },
+      {
+        "II_class_day": "one commem (privileged or ordinary)"
+      },
+      {
+        "III_IV_class": "max two commemorations"
+      }
+    ],
+    "mutual_exclusions": [
+      "Feast/mystery of one Divine Person excludes another of same Person",
+      "Sunday vs a feast/mystery of Our Lord are mutually exclusive",
+      "Seasonal commem excludes another of the same season",
+      "BVM/Saint commem excludes another invoking the same person (except Sunday/feria prayers mentioning that Saint)"
+    ],
+    "ordering": [
+      "Season first",
+      "then per table of precedence"
+    ]
+  },
+  "office_rubrics_affecting_chant": {
+    "hymns": {
+      "general": [
+        "Hymns at each Hour as printed; omitted from Matins of Maundy Thu → None of Easter Saturday; and in the Office of the Dead.",
+        "At lesser Hours + Compline use the assigned hymn (Terce on Pentecost day & octave may differ).",
+        "Proper hymn at an Hour is never transferred.",
+        "Seasonal/feast doxology swaps generally discontinued; follow LU notes where explicit."
+      ],
+      "melody_changes_summary": [
+        "Some Paschal-time and seasonal alternates disappear alongside fixed doxologies.",
+        "Seasonal melody guidance for lesser Hours kept per intro notes."
+      ]
+    },
+    "antiphons": [
+      "Said before/after psalms/canticles at all Hours (but omitted at lesser Hours & Compline: last 3 days of Holy Week, Easter Day & its Octave, Office of the Dead on Nov 2).",
+      "Always said entire before and after.",
+      "In Paschal time, append 'alleluia' if not present; from Septuagesima until Easter Eve, omit final 'alleluia'.",
+      "If psalm begins with antiphon incipit, start psalm from next word (unless adding Paschal 'alleluia')."
+    ],
+    "psalms": [
+      "Do not transfer a psalm to another Hour; omit if it cannot be said.",
+      "Gloria Patri omitted on last three days of Holy Week.",
+      "Office of the Dead uses 'Requiem aeternam' instead of 'Gloria Patri'."
+    ],
+    "athanasian_creed": [
+      "Prime only on Trinity Sunday"
+    ]
+  },
+  "mass_rubrics_affecting_chant": {
+    "intro_rites_omitted_on": [
+      "Purification after procession",
+      "Ash Wednesday after blessing/imposition of ashes",
+      "Palm Sunday after blessing/procession",
+      "Easter Vigil",
+      "Rogation processions (Greater/Lesser Litanies)",
+      "After certain consecrations per Pontifical"
+    ],
+    "judica_psalm_omitted_in": [
+      "Seasonal Masses from Passion Sunday → Maundy Thu Evening Mass",
+      "Masses of the Dead"
+    ],
+    "additional_prayers_limits": [
+      "Sung Mass (non-conventual): prayer of the day + at most one privileged commem.",
+      "II-class Sundays: only commem of a II-class feast; omitted if a privileged commem must be made.",
+      "Other II-class days: one commem (privileged or ordinary).",
+      "III/IV-class days: max two extra prayers; absolute cap three total."
+    ],
+    "ember_saturdays_lessons": {
+      "conventual/ordination": "all lessons with versicles & prayers",
+      "others": "first collect (with Flectamus if indicated) + first lesson + grad/alleluia; then straight to last lesson/Epistle (Whit Sat: include sequence)"
+    },
+    "creed_rules": {
+      "say_on": [
+        "All Sundays (even when replaced, or II-class votive on Sunday)",
+        "I-class feasts & I-class votives",
+        "II-class feasts of Our Lord and of Our Lady",
+        "Octaves of Christmas, Easter, Pentecost (even if a feast/votive occurs)",
+        "Apostles/Evangelists, Chair of St Peter, St Barnabas"
+      ],
+      "omit_on": [
+        "Maundy Thu Mass, Easter Vigil",
+        "II-class feasts not in 'say_on' list",
+        "II-class votives",
+        "III/IV-class festive/votive Masses",
+        "Masses of the Dead"
+      ]
+    },
+    "alleluia_or_tract": {
+      "offertory_communion": "If antiphon’s text includes 'alleluia', sing year-round except Septuagesima→Easter (omit 'alleluia')."
+    },
+    "communion_distribution": {
+      "preferred_time": "After celebrant’s Communion",
+      "form": "Ecce Agnus Dei + thrice Domine non sum dignus; no Confiteor/absolutio"
+    },
+    "dismissal_last_gospel": {
+      "normal": {
+        "dismissal": "Ite, missa est (Mass XV tone allowed widely)",
+        "last_gospel": "John 1:1–14"
+      },
+      "exceptions": [
+        {
+          "Benedicamus Domino": [
+            "Maundy Thu evening Mass followed by deposition procession",
+            "Masses with processions (e.g., Corpus Christi)"
+          ]
+        },
+        {
+          "Easter_Octave": "Ite, missa est with double alleluia"
+        },
+        {
+          "Requiem": "Requiescant in pace"
+        },
+        {
+          "omit_last_gospel": [
+            "when Benedicamus Domino is used",
+            "third Christmas Mass",
+            "Palm Sunday after blessing/procession",
+            "Easter Vigil",
+            "Requiem with Absolution at catafalque",
+            "After certain consecrations per Pontifical"
+          ]
+        },
+        {
+          "Palm_Sunday_no_procession": "proper last gospel"
+        }
+      ]
+    }
+  },
+  "litanies_processions": {
+    "greater": {
+      "date": "Apr 25 (→ Tue if Easter Sun/Mon)",
+      "office": "no office observance; at Mass only",
+      "music": "Litany of Saints (petitions not doubled) during procession or appointed prayers",
+      "mass": "Rogation Mass follows procession/prayers"
+    },
+    "lesser": {
+      "dates": "3 days before Ascension (or another 3-day block by Ordinary)",
+      "rules": "as for Greater Litanies"
+    }
+  },
+  "calendar_changes_affecting_selection": {
+    "reclassified": {
+      "former_double_I": "now class I",
+      "former_double_II": "now class II",
+      "double_major_doubles_semi_doubles": "now class III",
+      "former_simples_since_1955_commemorations": "remain commemorations"
+    },
+    "reduced_to_commem_only": [
+      "St George (Apr 23)",
+      "Our Lady of Mt Carmel (Jul 16)",
+      "St Alexis (Jul 17)",
+      "SS Cyriacus, Largus, Smaragdus (Aug 8)",
+      "Stigmata of St Francis (Sep 17)",
+      "St Eustace & Companions (Sep 20)",
+      "Our Lady of Ransom (Sep 24)",
+      "St Thomas Becket (Dec 29)",
+      "St Silvester I (Dec 31)",
+      "Seven Sorrows (Fri after Passion I)"
+    ],
+    "new_class_I_days": [
+      "Octave Day of Christmas (Jan 1)",
+      "All Souls (Nov 2; yields to Sunday if occurs)"
+    ],
+    "new_class_II_days": [
+      "Holy Family (Sun after Epiphany)",
+      "Chair of St Peter (Feb 22)",
+      "Exaltation of Holy Cross (Sep 14)"
+    ],
+    "suppressed": [
+      "Chair of St Peter at Rome (Jan 18)",
+      "Finding of the Holy Cross (May 3)",
+      "St John before the Latin Gate (May 6)",
+      "Apparition of St Michael (May 8)",
+      "St Leo II (Jul 3)",
+      "St Anacletus (Jul 13)",
+      "Peter’s Chains (Aug 1)",
+      "Finding of St Stephen (Aug 3)",
+      "Commemoration of St Vitalis (Apr 28)"
+    ],
+    "added": [
+      "Commemoration of Our Lord’s Baptism (Jan 13, class II)",
+      "St Gregory Barbarigo (Jun 17, class III)",
+      "St Anthony Mary Claret (Oct 23, class III)"
+    ],
+    "transferred": [
+      {
+        "St Irenaeus": "Jun 28 → Jul 3"
+      },
+      {
+        "St John Mary Vianney": "Aug 9 → Aug 8"
+      }
+    ],
+    "retitled": [
+      {
+        "Jan 1": "Octave Day of Christmas (formerly Circumcision)"
+      },
+      {
+        "Feb 22": "Chair of St Peter (formerly at Antioch)"
+      },
+      {
+        "Oct 7": "Our Lady of the Rosary (formerly Most Holy Rosary)"
+      }
+    ]
+  },
+  "selector_hints": {
+    "alleluia_vs_tract": [
+      {
+        "period": "Septuagesima → Easter Vigil",
+        "use": "Tract replaces Alleluia; omit alleluia in antiphons"
+      },
+      {
+        "period": "Paschal time",
+        "use": "Add/sing Alleluia wherever applicable"
+      }
+    ],
+    "ordinary_settings": [
+      "Pick Kyriale per LU tables; enforce Creed/Gloria flags via these rules."
+    ],
+    "fallbacks": [
+      "If proper missing for a Saint, use Commons by class/season (Eastertide uses Alleluia×2; outside uses Gradual+Tract)."
+    ],
+    "commem_order": [
+      "Seasonal commem first, then by precedence; enforce caps per day class."
+    ]
+  }
+}

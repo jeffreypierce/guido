@@ -1,0 +1,897 @@
+[
+  {
+    "label": "Patricii",
+    "pages": [
+      354
+    ]
+  },
+  {
+    "label": "Pauli & Petri",
+    "pages": [
+      388
+    ]
+  },
+  {
+    "label": "Pauli conversio",
+    "pages": [
+      342
+    ]
+  },
+  {
+    "label": "Pauli a Cruce",
+    "pages": [
+      458
+    ]
+  },
+  {
+    "label": "Pauli Mihi & soc.",
+    "pages": [
+      350
+    ]
+  },
+  {
+    "label": "Paulini Nolani",
+    "pages": [
+      382
+    ]
+  },
+  {
+    "label": "Pentecostes",
+    "pages": [
+      96
+    ]
+  },
+  {
+    "label": "Perpetuae & Felicitatis",
+    "pages": [
+      354
+    ]
+  },
+  {
+    "label": "Petri & Pauli",
+    "pages": [
+      388
+    ]
+  },
+  {
+    "label": "Petri cathedra",
+    "pages": [
+      351
+    ]
+  },
+  {
+    "label": "Petri & Marcellini",
+    "pages": [
+      379
+    ]
+  },
+  {
+    "label": "Petri Canisii",
+    "pages": [
+      478
+    ]
+  },
+  {
+    "label": "Petri Celestini",
+    "pages": [
+      566
+    ],
+    "flag": "*"
+  },
+  {
+    "label": "Petri Chanel",
+    "pages": [
+      367
+    ]
+  },
+  {
+    "label": "Petri Chrysologi",
+    "pages": [
+      405
+    ]
+  },
+  {
+    "label": "Petri Damiani",
+    "pages": [
+      350
+    ]
+  },
+  {
+    "label": "Petri Venerabilis & abb. Clun.",
+    "pages": [
+      561
+    ],
+    "flag": "*"
+  },
+  {
+    "label": "Roberti Bellarmino",
+    "pages": [
+      439
+    ]
+  },
+  {
+    "label": "Romualdi",
+    "pages": [
+      382,
+      578
+    ],
+    "flag": "* on 578"
+  },
+  {
+    "label": "Rosae de Lima",
+    "pages": [
+      422
+    ]
+  },
+  {
+    "label": "Sabbae",
+    "pages": [
+      601
+    ],
+    "flag": "*"
+  },
+  {
+    "label": "Scholasticae",
+    "pages": [
+      350,
+      548
+    ],
+    "flag": "* on 548"
+  },
+  {
+    "label": "Sebastiani",
+    "pages": [
+      339
+    ]
+  },
+  {
+    "label": "Silvestri",
+    "pages": [
+      601
+    ],
+    "flag": "*"
+  },
+  {
+    "label": "Silvestri I",
+    "pages": [
+      485
+    ]
+  },
+  {
+    "label": "Simonis & Iudae",
+    "pages": [
+      459
+    ]
+  },
+  {
+    "label": "Stanislaï",
+    "pages": [
+      364
+    ]
+  },
+  {
+    "label": "Stephani",
+    "pages": [
+      478
+    ]
+  },
+  {
+    "label": "Stephani, Roberti & Alberici",
+    "pages": [
+      547
+    ],
+    "flag": "*"
+  },
+  {
+    "label": "Stephani Hungariae",
+    "pages": [
+      418
+    ]
+  },
+  {
+    "label": "Teresiae de Avila",
+    "pages": [
+      455
+    ]
+  },
+  {
+    "label": "Teresiae a Iesu Infante",
+    "pages": [
+      448
+    ]
+  },
+  {
+    "label": "Theodori Studitae",
+    "pages": [
+      595
+    ],
+    "flag": "*"
+  },
+  {
+    "label": "Thomae",
+    "pages": [
+      394
+    ]
+  },
+  {
+    "label": "Thomae de Aquino",
+    "pages": [
+      344
+    ]
+  },
+  {
+    "label": "Thomae Becket",
+    "pages": [
+      485
+    ]
+  },
+  {
+    "label": "Achillei & Nerei",
+    "pages": [
+      373
+    ]
+  },
+  {
+    "label": "Adalberti",
+    "pages": [
+      96
+    ]
+  },
+  {
+    "label": "Agathae",
+    "pages": [
+      349
+    ]
+  },
+  {
+    "label": "Agnetis",
+    "pages": [
+      349
+    ]
+  },
+  {
+    "label": "Alberici & abb. cist.",
+    "pages": [
+      547
+    ]
+  },
+  {
+    "label": "Alberti Magni",
+    "pages": [
+      460
+    ]
+  },
+  {
+    "label": "Alfonsi-Mariae de Liguori",
+    "pages": [
+      407
+    ]
+  },
+  {
+    "label": "Aloysii Gonzagae",
+    "pages": [
+      382
+    ]
+  },
+  {
+    "label": "Ambrosii",
+    "pages": [
+      373
+    ]
+  },
+  {
+    "label": "Ambrosii Chevreux & soc.",
+    "pages": [
+      592
+    ],
+    "flag": "*"
+  },
+  {
+    "label": "Andreae",
+    "pages": [
+      422
+    ]
+  },
+  {
+    "label": "Angelae Merici",
+    "pages": [
+      344
+    ]
+  },
+  {
+    "label": "Angelorum custodum",
+    "pages": [
+      444
+    ]
+  },
+  {
+    "label": "Annae & Ioachim",
+    "pages": [
+      401,
+      585
+    ],
+    "flag": "* on 585"
+  },
+  {
+    "label": "Anselmi",
+    "pages": [
+      364,
+      585
+    ],
+    "flag": "* on 585"
+  },
+  {
+    "label": "Hugonis & abb. Clun.",
+    "pages": [
+      561
+    ]
+  },
+  {
+    "label": "Iacobi mai.",
+    "pages": [
+      400
+    ]
+  },
+  {
+    "label": "Iacobi min.",
+    "pages": [
+      372
+    ]
+  },
+  {
+    "label": "Ianuarii",
+    "pages": [
+      440
+    ]
+  },
+  {
+    "label": "Iesu Christi — Annuntiatio",
+    "pages": [
+      360
+    ],
+    "group": "Iesu Christi"
+  },
+  {
+    "label": "Iesu Christi — Ascensio",
+    "pages": [
+      88
+    ],
+    "group": "Iesu Christi"
+  },
+  {
+    "label": "Iesu Christi — Baptisma",
+    "pages": [
+      43
+    ],
+    "group": "Iesu Christi"
+  },
+  {
+    "label": "Iesu Christi — Corpus & Sanguis",
+    "pages": [
+      110
+    ],
+    "group": "Iesu Christi"
+  },
+  {
+    "label": "Iesu Christi — Epiphania",
+    "pages": [
+      36
+    ],
+    "group": "Iesu Christi"
+  },
+  {
+    "label": "Iesu Christi — Nativitas",
+    "pages": [
+      14
+    ],
+    "group": "Iesu Christi"
+  },
+  {
+    "label": "Iesu Christi — Praesentatio",
+    "pages": [
+      345
+    ],
+    "group": "Iesu Christi"
+  },
+  {
+    "label": "Iesu Christi — Resurrectio",
+    "pages": [
+      74
+    ],
+    "group": "Iesu Christi"
+  },
+  {
+    "label": "Iesu Christi — Regina",
+    "pages": [
+      122
+    ],
+    "group": "Iesu Christi"
+  },
+  {
+    "label": "Iesu Christi — Transfiguratio",
+    "pages": [
+      407
+    ],
+    "group": "Iesu Christi"
+  },
+  {
+    "label": "Ignatii Antiocheni",
+    "pages": [
+      456
+    ]
+  },
+  {
+    "label": "Ignatii de Loyola",
+    "pages": [
+      407
+    ]
+  },
+  {
+    "label": "Innocentium",
+    "pages": [
+      484
+    ]
+  },
+  {
+    "label": "Ioachim & Annae",
+    "pages": [
+      401,
+      585
+    ],
+    "flag": "* on 585"
+  },
+  {
+    "label": "Ioannae Arcensis",
+    "pages": [
+      569
+    ]
+  },
+  {
+    "label": "Ioannae Franciscae de Chantal",
+    "pages": [
+      478
+    ]
+  },
+  {
+    "label": "Ioannis Chrysostom",
+    "pages": [
+      430
+    ]
+  },
+  {
+    "label": "Ioannis Baptistae",
+    "pages": [
+      382
+    ]
+  },
+  {
+    "label": "Ioannis Bosco",
+    "pages": [
+      344
+    ]
+  },
+  {
+    "label": "Ioannis de Brebeuf & Soc.",
+    "pages": [
+      458
+    ]
+  },
+  {
+    "label": "Ioannis de Capestrano",
+    "pages": [
+      458
+    ]
+  },
+  {
+    "label": "Ioannis a Cruce",
+    "pages": [
+      473
+    ]
+  },
+  {
+    "label": "Ioannis Damasceni",
+    "pages": [
+      473
+    ]
+  },
+  {
+    "label": "Ioannis a Deo",
+    "pages": [
+      353
+    ]
+  },
+  {
+    "label": "Ioannis Eudes",
+    "pages": [
+      403
+    ]
+  },
+  {
+    "label": "Ioannis Fisher & Thomae More",
+    "pages": [
+      382
+    ]
+  },
+  {
+    "label": "Ioannis Gualberti",
+    "pages": [
+      585
+    ],
+    "flag": "*"
+  },
+  {
+    "label": "Ioannis de Kenty",
+    "pages": [
+      478
+    ]
+  },
+  {
+    "label": "Ioannis Leonardi",
+    "pages": [
+      456
+    ]
+  },
+  {
+    "label": "Ioannnis-Marie Vianney",
+    "pages": [
+      407
+    ]
+  },
+  {
+    "label": "Iosaphat",
+    "pages": [
+      467
+    ]
+  },
+  {
+    "label": "Ioseph",
+    "pages": [
+      355
+    ]
+  },
+  {
+    "label": "Ioseph opificis",
+    "pages": [
+      440
+    ]
+  },
+  {
+    "label": "Ioseph de Calasanz",
+    "pages": [
+      424
+    ]
+  },
+  {
+    "label": "Irenaei",
+    "pages": [
+      387
+    ]
+  },
+  {
+    "label": "Isaac Jogues & soc.",
+    "pages": [
+      387
+    ]
+  },
+  {
+    "label": "Isidori",
+    "pages": [
+      360
+    ]
+  },
+  {
+    "label": "Iudae & Simonis",
+    "pages": [
+      459
+    ]
+  },
+  {
+    "label": "Iuliani Cenomanensis",
+    "pages": [
+      601
+    ]
+  },
+  {
+    "label": "Iustini",
+    "pages": [
+      379
+    ]
+  },
+  {
+    "label": "Laurentii",
+    "pages": [
+      397
+    ]
+  },
+  {
+    "label": "Laurentii de Brindisi",
+    "pages": [
+      397
+    ]
+  },
+  {
+    "label": "Leoni Magni",
+    "pages": [
+      465
+    ]
+  },
+  {
+    "label": "Lazari & sororum",
+    "pages": [
+      587
+    ]
+  },
+  {
+    "label": "Lucae",
+    "pages": [
+      452
+    ]
+  },
+  {
+    "label": "Ludovici",
+    "pages": [
+      423,
+      596
+    ]
+  },
+  {
+    "label": "Lud. B. de La Touche & soc.",
+    "pages": [
+      592
+    ],
+    "flag": "*"
+  },
+  {
+    "label": "Maioli & abb. Cluniac.",
+    "pages": [
+      561
+    ],
+    "flag": "*"
+  },
+  {
+    "label": "Marcellini & Petri",
+    "pages": [
+      379
+    ]
+  },
+  {
+    "label": "Marci",
+    "pages": [
+      365
+    ]
+  },
+  {
+    "label": "Margaritae Scotiae",
+    "pages": [
+      468
+    ]
+  },
+  {
+    "label": "Margaritae-Mariae Alacoque",
+    "pages": [
+      456
+    ]
+  },
+  {
+    "label": "Mariae — Assumptio",
+    "pages": [
+      414
+    ]
+  },
+  {
+    "label": "Mariae — Conceptio immaculata",
+    "pages": [
+      475
+    ]
+  },
+  {
+    "label": "Mariae — Cor immaculatum",
+    "pages": [
+      378
+    ]
+  },
+  {
+    "label": "Mariae — de Lourdes",
+    "pages": [
+      350,
+      552
+    ]
+  },
+  {
+    "label": "Mariae — Matris Providentiae",
+    "pages": [
+      579
+    ]
+  },
+  {
+    "label": "Mariae — de Monte Carmelo",
+    "pages": [
+      397
+    ]
+  },
+  {
+    "label": "Mariae — Nativitas",
+    "pages": [
+      428
+    ]
+  },
+  {
+    "label": "Mariae — Perdolentis",
+    "pages": [
+      433
+    ]
+  },
+  {
+    "label": "Mariae — Praesentatio",
+    "pages": [
+      470
+    ]
+  },
+  {
+    "label": "Mariae — Regina",
+    "pages": [
+      419
+    ]
+  },
+  {
+    "label": "Mariae — a Rosario",
+    "pages": [
+      419
+    ]
+  },
+  {
+    "label": "Mariae — a Visitatione",
+    "pages": [
+      31
+    ]
+  },
+  {
+    "label": "Mariae — Visitantia",
+    "pages": [
+      375
+    ]
+  },
+  {
+    "label": "Mariae, Martha & Lazari",
+    "pages": [
+      587
+    ],
+    "flag": "*"
+  },
+  {
+    "label": "Marie-Bernarda Soubirous",
+    "pages": [
+      555
+    ]
+  },
+  {
+    "label": "Mariae Goretti",
+    "pages": [
+      322
+    ]
+  },
+  {
+    "label": "Mariae Magdalenae",
+    "pages": [
+      398
+    ]
+  },
+  {
+    "label": "Mariae-Magdalenae de Pazzi",
+    "pages": [
+      375
+    ]
+  },
+  {
+    "label": "Marthae",
+    "pages": [
+      403,
+      587
+    ]
+  },
+  {
+    "label": "Martini",
+    "pages": [
+      364
+    ]
+  },
+  {
+    "label": "Martini de Porres",
+    "pages": [
+      465
+    ]
+  },
+  {
+    "label": "Martini Turonensis",
+    "pages": [
+      465,
+      595
+    ]
+  },
+  {
+    "label": "Matthaei",
+    "pages": [
+      275
+    ]
+  },
+  {
+    "label": "Matthiae",
+    "pages": [
+      373
+    ]
+  },
+  {
+    "label": "Mauri & Placidii",
+    "pages": [
+      454
+    ]
+  },
+  {
+    "label": "Mechtildis",
+    "pages": [
+      598
+    ]
+  },
+  {
+    "label": "Methodii & Cyrilli",
+    "pages": [
+      451
+    ]
+  },
+  {
+    "label": "Michaelis, Gabriëlis & Raphaëlis",
+    "pages": [
+      442
+    ]
+  },
+  {
+    "label": "Monicae",
+    "pages": [
+      424
+    ]
+  },
+  {
+    "label": "Nerei & Achillei",
+    "pages": [
+      373
+    ]
+  },
+  {
+    "label": "Norberti",
+    "pages": [
+      379
+    ]
+  },
+  {
+    "label": "Odilonis & abb. Cluniac.",
+    "pages": [
+      573
+    ],
+    "flag": "*"
+  },
+  {
+    "label": "Omnium sanctorum",
+    "pages": [
+      460
+    ]
+  },
+  {
+    "label": "Pacomii",
+    "pages": [
+      566
+    ]
+  },
+  {
+    "label": "Pancratii",
+    "pages": [
+      373
+    ]
+  },
+  {
+    "label": "Paschasii Radberti",
+    "pages": [
+      566
+    ],
+    "flag": "*"
+  }
+]

@@ -9,8 +9,9 @@
   
   "scripts": {
     "test": "node --experimental-json-modules tests/run.js",
+    "build:indices": "node tool/build-indices.mjs",
     "build:data": "node tool/build-cantus-data.mjs",
     "build:esm-data": "node tool/bake-json.mjs",
-    "build": "npm run build:data && npm run build:esm-data"
+    "build": "npm run build:data && npm run build:indices && npm run build:esm-data"
   }
 }

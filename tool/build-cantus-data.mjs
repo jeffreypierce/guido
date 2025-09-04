@@ -12,6 +12,15 @@ import crypto from 'node:crypto';
 const __dirname = path.dirname(url.fileURLToPath(import.meta.url));
 const repoRoot = path.resolve(__dirname, '..');
 
+// pretty logging
+const TTY = process.stdout.isTTY || process.env.FORCE_COLOR === '1';
+const C = (code) => (s) => (TTY ? `\x1b[${code}m${s}\x1b[0m` : String(s));
+const bold = C(1), green = C(32), cyan = C(36), yellow = C(33), gray = C(90);
+const check = green('✓');
+const warn = yellow('!');
+const bullet = cyan('•');
+function header(title){ const line = gray('─'.repeat(Math.max(3, 60 - title.length))); console.log(`${bold(title)} ${line}`); }
+
 async function readJSON(p) {
   const txt = await fs.readFile(p, 'utf8');
   return JSON.parse(txt);
@@ -30,7 +39,8 @@ async function buildAll() {
   await fs.mkdir(outDir, { recursive: true });
 
   const entries = await fs.readdir(gbDir);
-  console.log(`[build:data] Found ${entries.length} entries in /gregobase`);
+  header('Build: Cantus Data');
+  console.log(`${bullet} gregobase entries: ${cyan(entries.length)}`);
   const normName = (s) => String(s).toLowerCase().replace(/[^a-z0-9]+/g, '');
   const findFileToken = (token) => entries.find((e) => normName(e).includes(token));
 
@@ -55,10 +65,20 @@ async function buildAll() {
   const corpusRows = { AM: [], LH: [], LU: [], GR: [], GR74: [] };
 
   // Generic processor factory
+  function findSourceEntryByTitle(sources, title) {
+    const normTitle = (s='') => norm(String(s).replace(/^the\s+/, ''));
+    const w = normTitle(title);
+    // exact or contains match
+    let best = sources.find((s) => normTitle(s.title) === w);
+    if (!best) best = sources.find((s) => normTitle(s.title).includes(w));
+    if (!best) best = sources.find((s) => w.includes(normTitle(s.title)));
+    return best || null;
+  }
+
   function makeProcessor({ rawFile, sourceTitle, outFile, defaultOffice = 'in', corpusKey }) {
     return async () => {
       const raw = await readJSON(path.join(gbDir, rawFile));
-      const srcEntry = sources.find((s) => norm(s.title) === norm(sourceTitle));
+      const srcEntry = findSourceEntryByTitle(sources, sourceTitle);
       const SRC_ID = srcEntry ? Number(srcEntry.id) : null;
       const pagesByChant = new Map();
       if (SRC_ID != null) {
@@ -87,9 +107,10 @@ async function buildAll() {
           meta: { pages: pagesByChant.get(idNum) || [] },
         };
       });
-      const outPath = path.join(outDir, outFile);
-      await fs.writeFile(outPath, JSON.stringify(out, null, 2) + '\n', 'utf8');
-      console.log(`Wrote ${out.length} rows to ${path.relative(repoRoot, outPath)}`);
+      const outPath = path.join(outDir, outFile.replace(/\.json$/i, '.js'));
+      const modSrc = 'export default ' + JSON.stringify(out, null, 2) + '\n';
+      await fs.writeFile(outPath, modSrc, 'utf8');
+      console.log(`${check} wrote ${cyan(out.length)} rows → ${gray(path.relative(repoRoot, outPath))}`);
       // accumulate for merging
       if (corpusKey && Array.isArray(corpusRows[corpusKey])) corpusRows[corpusKey].push(...out);
       return { file: outPath, rows: out.length, corpus: corpusKey };
@@ -99,7 +120,7 @@ async function buildAll() {
   // Antiphonale Monasticum → antiphonale_monasticum.json
   {
     const f = findFileToken('antiphonalemonasticum') || entries.find((e)=>normName(e)==='amjson');
-    console.log(`[build:data] AM token match: ${f || 'none'}`);
+    console.log(`${bullet} AM token: ${f ? green(f) : gray('none')}`);
     if (f) {
     processors.push(makeProcessor({
       rawFile: f,
@@ -113,8 +134,9 @@ async function buildAll() {
 
   // Liber Hymnarius → liber_hymnarius.json
   {
-    const f = findFileToken('liberhymnarius') || entries.find((e)=>normName(e)==='lhjson');
-    console.log(`[build:data] LH token match: ${f || 'none'}`);
+    const f = entries.find((e)=>/\.json$/i.test(e) && normName(e).includes('liberhymnarius'))
+            || entries.find((e)=> normName(e) === 'lhjson');
+    console.log(`${bullet} LH token: ${f ? green(f) : gray('none')}`);
     if (f) {
     processors.push(makeProcessor({
       rawFile: f,
@@ -129,7 +151,7 @@ async function buildAll() {
   // Liber Usualis → liber_usualis.json
   {
     const f = findFileToken('liberusualis') || entries.find((e)=>normName(e)==='lujson');
-    console.log(`[build:data] LU token match: ${f || 'none'}`);
+    console.log(`${bullet} LU token: ${f ? green(f) : gray('none')}`);
     if (f) {
     processors.push(makeProcessor({
       rawFile: f,
@@ -145,7 +167,7 @@ async function buildAll() {
   {
     // Prefer GR (not GR74)
     const f = findFileToken('gradualeromanum') || entries.find((e)=> normName(e)==='grjson');
-    console.log(`[build:data] GR token match: ${f || 'none'}`);
+    console.log(`${bullet} GR token: ${f ? green(f) : gray('none')}`);
     if (f) {
     processors.push(makeProcessor({
       rawFile: f,
@@ -160,7 +182,7 @@ async function buildAll() {
   // Graduale Romanum 1974 → graduale_romanum_1974.json
   {
     const f = findFileToken('gradualeromanum1974') || entries.find((e)=> normName(e)==='gr74json');
-    console.log(`[build:data] GR1974 token match: ${f || 'none'}`);
+    console.log(`${bullet} GR1974 token: ${f ? green(f) : gray('none')}`);
     if (f) {
     processors.push(makeProcessor({
       rawFile: f,
@@ -183,10 +205,10 @@ async function buildAll() {
   }
   const total = results.reduce((a, r) => a + (r.rows || 0), 0);
   if (results.length) {
-    console.log(`\nBuild complete: ${results.length} dataset(s), ${total} total rows.`);
-    for (const r of results) console.log(`  ✓ ${path.relative(repoRoot, r.file)} (${r.rows})`);
+    console.log(`\n${check} build complete: ${cyan(results.length)} dataset(s), ${cyan(total)} total rows`);
+    for (const r of results) console.log(`  ${check} ${gray(path.relative(repoRoot, r.file))} (${cyan(r.rows)})`);
   } else {
-    console.log('No datasets processed — check /gregobase for raw files.');
+    console.log(`${warn} no datasets processed — check /gregobase for raw files`);
   }
 
   // Merge: LU > GR > GR74 > LH > AM — produce flat alias map
@@ -215,15 +237,15 @@ async function buildAll() {
       }
     }
   }
-  const aliasPath = path.join(outDir, 'aliases.json');
-  await fs.writeFile(aliasPath, JSON.stringify(alias, null, 2) + '\n', 'utf8');
-  console.log(`Aliases written: ${Object.keys(alias).length} → ${path.relative(repoRoot, aliasPath)}`);
+  const aliasPath = path.join(outDir, 'aliases.js');
+  await fs.writeFile(aliasPath, 'export default ' + JSON.stringify(alias, null, 2) + '\n', 'utf8');
+  console.log(`${check} aliases: ${cyan(Object.keys(alias).length)} → ${gray(path.relative(repoRoot, aliasPath))}`);
 
-  // Kyriale canonicalization: remap IDs in existing kyriale.json via alias, report changes
-  const kyrPath = path.join(repoRoot, 'src', 'cantus', 'data', 'kyriale.json');
+  // Kyriale canonicalization (JS module): remap IDs in kyriale.js via alias, report changes
+  const kyrPathJs = path.join(repoRoot, 'src', 'cantus', 'data', 'kyriale.js');
   try {
-    const kyTxt = await fs.readFile(kyrPath, 'utf8');
-    const ky = JSON.parse(kyTxt);
+    const kyMod = await import(url.pathToFileURL(kyrPathJs).href);
+    const ky = kyMod.default || {};
     let changes = 0, totalIds = 0;
     const remapList = (arr=[]) => Array.from(new Set(arr.map((id)=> alias[id] || id)));
     const outKy = {};
@@ -239,21 +261,22 @@ async function buildAll() {
     }
     const changed = JSON.stringify(ky) !== JSON.stringify(outKy);
     if (changed) {
-      await fs.writeFile(kyrPath, JSON.stringify(outKy, null, 2) + '\n', 'utf8');
-      console.log(`Kyriale canonicalized (${changes} part list(s) updated, ${totalIds} ids scanned).`);
+      const modSrc = 'export default ' + JSON.stringify(outKy, null, 2) + '\n';
+      await fs.writeFile(kyrPathJs, modSrc, 'utf8');
+      console.log(`${check} kyriale canonicalized (${cyan(changes)} part list(s)), scanned ${cyan(totalIds)} ids`);
     } else {
-      console.log('Kyriale already canonical w.r.t alias map.');
+      console.log(gray('kyriale already canonical w.r.t alias map'));
     }
   } catch (e) {
-    console.log('Kyriale file not found or invalid; skipped canonicalization.');
+    console.log(gray('kyriale not found or invalid; skipped canonicalization'));
   }
 
   // Rewrite canonical-only outputs for non-LU corpora (drop aliased rows)
   const fileMap = {
-    GR: 'graduale_romanum.json',
-    GR74: 'graduale_romanum_1974.json',
-    LH: 'liber_hymnarius.json',
-    AM: 'antiphonale_monasticum.json',
+    GR: 'graduale_romanum.js',
+    GR74: 'graduale_romanum_1974.js',
+    LH: 'liber_hymnarius.js',
+    AM: 'antiphonale_monasticum.js',
   };
   for (const key of Object.keys(fileMap)) {
     const list = corpusRows[key];
@@ -264,37 +287,11 @@ async function buildAll() {
       return can && can.id === r.id;
     });
     const outPath = path.join(outDir, fileMap[key]);
-    await fs.writeFile(outPath, JSON.stringify(kept, null, 2) + '\n', 'utf8');
+    await fs.writeFile(outPath, 'export default ' + JSON.stringify(kept, null, 2) + '\n', 'utf8');
     console.log(`Canonical-only rewrite: ${path.relative(repoRoot, outPath)} (${kept.length}/${list.length})`);
   }
 
-  // Normalize LH English adaptation rules (drop translator/alternate_text/source)
-  try {
-    const rulesPath = path.join(repoRoot, 'etc', 'liber_hymnarius_english_adaptation.json');
-    const txt = await fs.readFile(rulesPath, 'utf8');
-    const rows = JSON.parse(txt);
-    const normalizeOffice = (s='') => {
-      const t = String(s).toUpperCase().trim();
-      if (t.includes('I VESPERS')) return 'vespers1';
-      if (t.includes('II VESPERS')) return 'vespers2';
-      if (t.includes('VESPERS')) return 'vespers';
-      if (t.includes('LAUDS')) return 'lauds';
-      if (t.includes('OFFICE OF READINGS') || t.includes('MATINS')) return 'readings';
-      return s.toLowerCase();
-    };
-    const normRules = rows.map(r => ({
-      incipit: r.incipit || '',
-      season: r.season || '',
-      feast: r.feast || '',
-      office: normalizeOffice(r.office || ''),
-      author: r.author || ''
-    }));
-    const outRulesPath = path.join(outDir, 'hymn_rules_lh.json');
-    await fs.writeFile(outRulesPath, JSON.stringify(normRules, null, 2) + '\n', 'utf8');
-    console.log(`Normalized LH rules → ${path.relative(repoRoot, outRulesPath)} (${normRules.length})`);
-  } catch (e) {
-    console.log('[build:data] LH adaptation rules not found or invalid; skipped.');
-  }
+  // LH English adaptation rules removed from build (no longer used)
 }
 
 async function main() {

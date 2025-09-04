@@ -1,0 +1,2301 @@
+{
+  "schema": "liber_calendar.v1",
+  "generated_from": "liber_calendar_full_raw.json",
+  "entries": [
+    {
+      "month": "January",
+      "day": 4,
+      "title": "5 C o m m e m o r a t i o n of S t . T e l e s p h o r u s P o p e and M a r t y r . . . .",
+      "class_rank": null,
+      "raw_class": null,
+      "type_hint": null,
+      "commemorations": [],
+      "pages": [],
+      "raw_text": "5 C o m m e m o r a t i o n of S t . T e l e s p h o r u s P o p e and M a r t y r . . . ."
+    },
+    {
+      "month": "January",
+      "day": 4,
+      "title": "6THE EPIPHANY OF OUR LORD,  455 Sunday after the Epiphany \u2014 THE HOLY FAMILY, / / cl. . . . 467 g A",
+      "class_rank": "I",
+      "raw_class": "Id",
+      "type_hint": "Sunday",
+      "commemorations": [],
+      "pages": [
+        "455",
+        "467"
+      ],
+      "raw_text": "6THE EPIPHANY OF OUR LORD, Id 455 Sunday after the Epiphany \u2014 THE HOLY FAMILY, / / cl. . . . 467 g A"
+    },
+    {
+      "month": "January",
+      "day": 11,
+      "title": "Commemoration of St. Htyginus Pope and Mart",
+      "class_rank": null,
+      "raw_class": null,
+      "type_hint": "Commemoration",
+      "commemorations": [
+        "St"
+      ],
+      "pages": [
+        "483"
+      ],
+      "raw_text": "Commemoration of St. Htyginus Pope and Mart 483"
+    },
+    {
+      "month": "January",
+      "day": 12,
+      "title": "13 COMMEMORATION OF BAPTISM OF OUR LORD JESUS CHRIST",
+      "class_rank": "II",
+      "raw_class": "II cl",
+      "type_hint": "Commemoration",
+      "commemorations": [
+        "BAPTISM OF OUR LORD JESUS CHRIST"
+      ],
+      "pages": [
+        "483"
+      ],
+      "raw_text": "13 COMMEMORATION OF BAPTISM OF OUR LORD JESUS CHRIST, II cl. . 483"
+    },
+    {
+      "month": "January",
+      "day": 14,
+      "title": "St. Hilary, Bp. of Poitiers, Conf. and Doctor, / / / cl Commemoration of St. Felix Priest and Mart",
+      "class_rank": null,
+      "raw_class": null,
+      "type_hint": "Commemoration",
+      "commemorations": [
+        "St"
+      ],
+      "pages": [],
+      "raw_text": "St. Hilary, Bp. of Poitiers, Conf. and Doctor, / / / cl Commemoration of St. Felix Priest and Mart"
+    },
+    {
+      "month": "January",
+      "day": 15,
+      "title": "St. Paul, the first Hermit, Conf., Ill cl Commemoration of St. Maurus Abbot",
+      "class_rank": null,
+      "raw_class": null,
+      "type_hint": "Commemoration",
+      "commemorations": [
+        "St"
+      ],
+      "pages": [],
+      "raw_text": "St. Paul, the first Hermit, Conf., Ill cl Commemoration of St. Maurus Abbot"
+    },
+    {
+      "month": "January",
+      "day": 16,
+      "title": "St. Marcellus I Pope and Mart., Ill cl",
+      "class_rank": null,
+      "raw_class": null,
+      "type_hint": null,
+      "commemorations": [],
+      "pages": [],
+      "raw_text": "St. Marcellus I Pope and Mart., Ill cl"
+    },
+    {
+      "month": "January",
+      "day": 17,
+      "title": "St. Anthony Abbot, / / / cl",
+      "class_rank": null,
+      "raw_class": null,
+      "type_hint": null,
+      "commemorations": [],
+      "pages": [],
+      "raw_text": "St. Anthony Abbot, / / / cl"
+    },
+    {
+      "month": "January",
+      "day": 18,
+      "title": "Commemoration of St. Prisca Virg. and Mart",
+      "class_rank": null,
+      "raw_class": null,
+      "type_hint": "Commemoration",
+      "commemorations": [
+        "St"
+      ],
+      "pages": [],
+      "raw_text": "Commemoration of St. Prisca Virg. and Mart"
+    },
+    {
+      "month": "January",
+      "day": 19,
+      "title": "Commemoration of Ss. Marius, Martha, Audifax and Abaclmm, Mm. . 1335 Commemoration of St. Canute, King, Mart",
+      "class_rank": null,
+      "raw_class": null,
+      "type_hint": "Commemoration",
+      "commemorations": [
+        "Ss",
+        "St"
+      ],
+      "pages": [
+        "1335"
+      ],
+      "raw_text": "Commemoration of Ss. Marius, Martha, Audifax and Abaclmm, Mm. . 1335 Commemoration of St. Canute, King, Mart"
+    },
+    {
+      "month": "January",
+      "day": 20,
+      "title": "Ss. Fabian Pope, and Sebastian Mm., / / / cl",
+      "class_rank": null,
+      "raw_class": null,
+      "type_hint": null,
+      "commemorations": [],
+      "pages": [],
+      "raw_text": "Ss. Fabian Pope, and Sebastian Mm., / / / cl"
+    },
+    {
+      "month": "January",
+      "day": 21,
+      "title": "St. Agnes Virgin and Mart., / / / cl",
+      "class_rank": null,
+      "raw_class": null,
+      "type_hint": null,
+      "commemorations": [],
+      "pages": [],
+      "raw_text": "St. Agnes Virgin and Mart., / / / cl"
+    },
+    {
+      "month": "January",
+      "day": 22,
+      "title": "Ss. Vincent and Anastasius Mm., / / / cl.",
+      "class_rank": null,
+      "raw_class": null,
+      "type_hint": null,
+      "commemorations": [],
+      "pages": [],
+      "raw_text": "Ss. Vincent and Anastasius Mm., / / / cl."
+    },
+    {
+      "month": "January",
+      "day": 23,
+      "title": "St. Raymund of Pennafort Conf., Ill cl Commemoration of St. Etnerentiana Virgin and Mart",
+      "class_rank": null,
+      "raw_class": null,
+      "type_hint": "Commemoration",
+      "commemorations": [
+        "St"
+      ],
+      "pages": [],
+      "raw_text": "St. Raymund of Pennafort Conf., Ill cl Commemoration of St. Etnerentiana Virgin and Mart"
+    },
+    {
+      "month": "January",
+      "day": 24,
+      "title": "St. Timothy Bp. and Mart., Ill cl",
+      "class_rank": null,
+      "raw_class": null,
+      "type_hint": null,
+      "commemorations": [],
+      "pages": [],
+      "raw_text": "St. Timothy Bp. and Mart., Ill cl"
+    },
+    {
+      "month": "January",
+      "day": 25,
+      "title": "Conversion of St. Paul Ap., Ill cl Commemoration of St. Peter Ap",
+      "class_rank": null,
+      "raw_class": null,
+      "type_hint": "Commemoration",
+      "commemorations": [
+        "St"
+      ],
+      "pages": [],
+      "raw_text": "Conversion of St. Paul Ap., Ill cl Commemoration of St. Peter Ap"
+    },
+    {
+      "month": "January",
+      "day": 26,
+      "title": "St. Polycarp Bp. and Mart, / / / cl.",
+      "class_rank": null,
+      "raw_class": null,
+      "type_hint": null,
+      "commemorations": [],
+      "pages": [],
+      "raw_text": "St. Polycarp Bp. and Mart, / / / cl."
+    },
+    {
+      "month": "January",
+      "day": 27,
+      "title": "St. John Chrysostom Bp., Conf. and Doctor., / / / cl",
+      "class_rank": null,
+      "raw_class": null,
+      "type_hint": null,
+      "commemorations": [],
+      "pages": [],
+      "raw_text": "St. John Chrysostom Bp., Conf. and Doctor., / / / cl"
+    },
+    {
+      "month": "January",
+      "day": 28,
+      "title": "St. Peter Nolasco Conf., / / / cl Commemoration of St. Agnes Virgin and Mart, (second feast) . .",
+      "class_rank": null,
+      "raw_class": null,
+      "type_hint": "Commemoration",
+      "commemorations": [
+        "St"
+      ],
+      "pages": [
+        "135lv"
+      ],
+      "raw_text": "St. Peter Nolasco Conf., / / / cl Commemoration of St. Agnes Virgin and Mart, (second feast) . . 135lv"
+    },
+    {
+      "month": "January",
+      "day": 29,
+      "title": "St. Francis of Sales Bp., Conf. and Doctor., / / / cl",
+      "class_rank": null,
+      "raw_class": null,
+      "type_hint": null,
+      "commemorations": [],
+      "pages": [],
+      "raw_text": "St. Francis of Sales Bp., Conf. and Doctor., / / / cl"
+    },
+    {
+      "month": "January",
+      "day": 30,
+      "title": "St. Martin Virgin and Mart. Ill cl 3llst. John Bos Conf., / / / cl",
+      "class_rank": null,
+      "raw_class": null,
+      "type_hint": null,
+      "commemorations": [],
+      "pages": [
+        "1328",
+        "1328",
+        "1329",
+        "1329",
+        "1330",
+        "1330",
+        "1331",
+        "1336",
+        "1336",
+        "1338",
+        "1342",
+        "1342",
+        "1342",
+        "1342",
+        "1343",
+        "1343",
+        "1350",
+        "1351",
+        "1351",
+        "135lv",
+        "1352",
+        "1352"
+      ],
+      "raw_text": "St. Martin Virgin and Mart. Ill cl 3llst. John Bos Conf., / / / cl 1328 1328 1329 1329 1330 1330 1331 1336 1336 1338 1342 1342 1342 1342 1343 1343 1350 1351 1351 135lv 1352 1352"
+    },
+    {
+      "month": "February",
+      "day": 1,
+      "title": "St. Ignatius Bp. and Mart., Ill cl 1354 e",
+      "class_rank": null,
+      "raw_class": null,
+      "type_hint": null,
+      "commemorations": [],
+      "pages": [
+        "1354"
+      ],
+      "raw_text": "St. Ignatius Bp. and Mart., Ill cl 1354 e"
+    },
+    {
+      "month": "February",
+      "day": 2,
+      "title": "PURIFICATION OF THE B. V. M., . 1355 f",
+      "class_rank": "II",
+      "raw_class": "II cl",
+      "type_hint": null,
+      "commemorations": [],
+      "pages": [
+        "1355"
+      ],
+      "raw_text": "PURIFICATION OF THE B. V. M., II cl. 1355 f"
+    },
+    {
+      "month": "February",
+      "day": 3,
+      "title": "Commemoration of St. Blaise Bp. and Mart. 1367 g",
+      "class_rank": null,
+      "raw_class": null,
+      "type_hint": "Commemoration",
+      "commemorations": [
+        "St"
+      ],
+      "pages": [
+        "1367"
+      ],
+      "raw_text": "Commemoration of St. Blaise Bp. and Mart. 1367 g"
+    },
+    {
+      "month": "February",
+      "day": 4,
+      "title": "St. Andrew Corsini Bp. and Conf., Ill cl 1367 A",
+      "class_rank": null,
+      "raw_class": null,
+      "type_hint": null,
+      "commemorations": [],
+      "pages": [
+        "1367"
+      ],
+      "raw_text": "St. Andrew Corsini Bp. and Conf., Ill cl 1367 A"
+    },
+    {
+      "month": "February",
+      "day": 5,
+      "title": "St. Agatha Virgin and M a r t ,  . 1368 b",
+      "class_rank": "III",
+      "raw_class": "III cl",
+      "type_hint": null,
+      "commemorations": [],
+      "pages": [
+        "1368"
+      ],
+      "raw_text": "St. Agatha Virgin and M a r t , III cl . 1368 b"
+    },
+    {
+      "month": "February",
+      "day": 6,
+      "title": "St. Titus Bp. and Conf., Ill cl. . , 1373 Commemoration of St. Dorothy Virgin and Mart 1373 c",
+      "class_rank": null,
+      "raw_class": null,
+      "type_hint": "Commemoration",
+      "commemorations": [
+        "St"
+      ],
+      "pages": [
+        "1373",
+        "1373"
+      ],
+      "raw_text": "St. Titus Bp. and Conf., Ill cl. . , 1373 Commemoration of St. Dorothy Virgin and Mart 1373 c"
+    },
+    {
+      "month": "February",
+      "day": 7,
+      "title": "St. Romuald Abbot,  1373 d",
+      "class_rank": "III",
+      "raw_class": "III cl",
+      "type_hint": null,
+      "commemorations": [],
+      "pages": [
+        "1373"
+      ],
+      "raw_text": "St. Romuald Abbot, III cl 1373 d"
+    },
+    {
+      "month": "February",
+      "day": 8,
+      "title": "St. John of Matha Conf., Ill cl 1373 e",
+      "class_rank": null,
+      "raw_class": null,
+      "type_hint": null,
+      "commemorations": [],
+      "pages": [
+        "1373"
+      ],
+      "raw_text": "St. John of Matha Conf., Ill cl 1373 e"
+    },
+    {
+      "month": "February",
+      "day": 9,
+      "title": "St. Cyril Bp. of Alexandria, Conf. and Doctor, / / / cl. . . . 1374 Commemoration of St. Apollonia Virgin and Mart 1374 f lOSt. Scholastica Virgin,  1374 g",
+      "class_rank": "III",
+      "raw_class": "III cl",
+      "type_hint": "Commemoration",
+      "commemorations": [
+        "St"
+      ],
+      "pages": [
+        "1374",
+        "1374",
+        "1374"
+      ],
+      "raw_text": "St. Cyril Bp. of Alexandria, Conf. and Doctor, / / / cl. . . . 1374 Commemoration of St. Apollonia Virgin and Mart 1374 f lOSt. Scholastica Virgin, III cl 1374 g"
+    },
+    {
+      "month": "February",
+      "day": 11,
+      "title": "Apparition of the B. V. M. at Lourdes, / / / cl. . . . . . 1375 A",
+      "class_rank": null,
+      "raw_class": null,
+      "type_hint": null,
+      "commemorations": [],
+      "pages": [
+        "1375"
+      ],
+      "raw_text": "Apparition of the B. V. M. at Lourdes, / / / cl. . . . . . 1375 A"
+    },
+    {
+      "month": "February",
+      "day": 12,
+      "title": "The Seven Holy Founders of the Servites, Conf., Ill cl. . . . 1384 b",
+      "class_rank": null,
+      "raw_class": null,
+      "type_hint": null,
+      "commemorations": [],
+      "pages": [
+        "1384"
+      ],
+      "raw_text": "The Seven Holy Founders of the Servites, Conf., Ill cl. . . . 1384 b"
+    },
+    {
+      "month": "February",
+      "day": 13,
+      "title": ". c 14 Commemoration of St. Valentine Priest and Mart. . . . . 1390 d",
+      "class_rank": null,
+      "raw_class": null,
+      "type_hint": "Commemoration",
+      "commemorations": [
+        "St"
+      ],
+      "pages": [
+        "1390"
+      ],
+      "raw_text": ". c 14 Commemoration of St. Valentine Priest and Mart. . . . . 1390 d"
+    },
+    {
+      "month": "February",
+      "day": 15,
+      "title": "Commemoration of Ss. Faustinus and Jovita, Mm 1390 e",
+      "class_rank": null,
+      "raw_class": null,
+      "type_hint": "Commemoration",
+      "commemorations": [
+        "Ss"
+      ],
+      "pages": [
+        "1390"
+      ],
+      "raw_text": "Commemoration of Ss. Faustinus and Jovita, Mm 1390 e"
+    },
+    {
+      "month": "February",
+      "day": 16,
+      "title": "f 17 . g",
+      "class_rank": null,
+      "raw_class": null,
+      "type_hint": null,
+      "commemorations": [],
+      "pages": [],
+      "raw_text": "f 17 . g"
+    },
+    {
+      "month": "February",
+      "day": 18,
+      "title": "Commemoration of St. Simeon Bp. and Mart. . . . . . 1390 A",
+      "class_rank": null,
+      "raw_class": null,
+      "type_hint": "Commemoration",
+      "commemorations": [
+        "St"
+      ],
+      "pages": [
+        "1390"
+      ],
+      "raw_text": "Commemoration of St. Simeon Bp. and Mart. . . . . . 1390 A"
+    },
+    {
+      "month": "February",
+      "day": 21,
+      "title": "22 ST. PETER'S CHAIR,  Commemoration of S t . Paul A p",
+      "class_rank": "II",
+      "raw_class": "II cl",
+      "type_hint": "Commemoration",
+      "commemorations": [
+        "S t"
+      ],
+      "pages": [],
+      "raw_text": "22 ST. PETER'S CHAIR, II cl Commemoration of S t . Paul A p"
+    },
+    {
+      "month": "February",
+      "day": 2,
+      "title": "3 j S t . P e t e r D a m i a n B p . , C o n f . a n d D o c t o r , / / / cl.",
+      "class_rank": null,
+      "raw_class": null,
+      "type_hint": null,
+      "commemorations": [],
+      "pages": [],
+      "raw_text": "3 j S t . P e t e r D a m i a n B p . , C o n f . a n d D o c t o r , / / / cl."
+    },
+    {
+      "month": "February",
+      "day": 2,
+      "title": "4 S T . M A T T H I A S A P . , I",
+      "class_rank": "I",
+      "raw_class": "I cl",
+      "type_hint": null,
+      "commemorations": [],
+      "pages": [
+        "1331"
+      ],
+      "raw_text": "4 S T . M A T T H I A S A P . , I I cl 1331"
+    },
+    {
+      "month": "February",
+      "day": 6,
+      "title": "27 S t . G a b r i e l o f O u r L a d y o f S o r r o w s C o n f . , / / / cl. . . . .",
+      "class_rank": null,
+      "raw_class": null,
+      "type_hint": null,
+      "commemorations": [],
+      "pages": [],
+      "raw_text": "27 S t . G a b r i e l o f O u r L a d y o f S o r r o w s C o n f . , / / / cl. . . . ."
+    },
+    {
+      "month": "March",
+      "day": 3,
+      "title": "4 St. Casimir Conf., / / / cl Commemoration of St. Lucius I Pope and Mart",
+      "class_rank": null,
+      "raw_class": null,
+      "type_hint": "Commemoration",
+      "commemorations": [
+        "St"
+      ],
+      "pages": [
+        "1396",
+        "1396"
+      ],
+      "raw_text": "4 St. Casimir Conf., / / / cl Commemoration of St. Lucius I Pope and Mart 1396 1396"
+    },
+    {
+      "month": "March",
+      "day": 6,
+      "title": "Ss. Perpetua and Felicity Mm., Ill cl",
+      "class_rank": null,
+      "raw_class": null,
+      "type_hint": null,
+      "commemorations": [],
+      "pages": [],
+      "raw_text": "Ss. Perpetua and Felicity Mm., Ill cl"
+    },
+    {
+      "month": "March",
+      "day": 7,
+      "title": "St. Thomas of Aquin Conf. and Doctor, / / / cl",
+      "class_rank": null,
+      "raw_class": null,
+      "type_hint": null,
+      "commemorations": [],
+      "pages": [],
+      "raw_text": "St. Thomas of Aquin Conf. and Doctor, / / / cl"
+    },
+    {
+      "month": "March",
+      "day": 8,
+      "title": "St. John of God Conf., / / / cl. . . . . . . . .",
+      "class_rank": null,
+      "raw_class": null,
+      "type_hint": null,
+      "commemorations": [],
+      "pages": [
+        "1398"
+      ],
+      "raw_text": "St. John of God Conf., / / / cl. . . . . . . . . 1398"
+    },
+    {
+      "month": "March",
+      "day": 9,
+      "title": "St. Frances of Rome Widow",
+      "class_rank": "III",
+      "raw_class": "III cl",
+      "type_hint": null,
+      "commemorations": [],
+      "pages": [],
+      "raw_text": "St. Frances of Rome Widow, III cl"
+    },
+    {
+      "month": "March",
+      "day": 10,
+      "title": "The Forty Martyrs",
+      "class_rank": "III",
+      "raw_class": "III cl",
+      "type_hint": null,
+      "commemorations": [],
+      "pages": [
+        "1396",
+        "1397",
+        "1398",
+        "1398"
+      ],
+      "raw_text": "The Forty Martyrs, III cl. .. 1396 1397 1398 1398"
+    },
+    {
+      "month": "March",
+      "day": 11,
+      "title": "12 St. Gregory I Pope, Conf. and Doctor,. Ill cl. . . . . .",
+      "class_rank": null,
+      "raw_class": null,
+      "type_hint": null,
+      "commemorations": [],
+      "pages": [
+        "139"
+      ],
+      "raw_text": "12 St. Gregory I Pope, Conf. and Doctor,. Ill cl. . . . . . 139"
+    },
+    {
+      "month": "March",
+      "day": 17,
+      "title": "St. Patrick Bp. and Conf., Ill cl",
+      "class_rank": null,
+      "raw_class": null,
+      "type_hint": null,
+      "commemorations": [],
+      "pages": [],
+      "raw_text": "St. Patrick Bp. and Conf., Ill cl"
+    },
+    {
+      "month": "March",
+      "day": 18,
+      "title": "St. Cyril Bp. of Jerusalem, Conf. and Doctor, / / / cl",
+      "class_rank": null,
+      "raw_class": null,
+      "type_hint": null,
+      "commemorations": [],
+      "pages": [
+        "1399",
+        "1399"
+      ],
+      "raw_text": "St. Cyril Bp. of Jerusalem, Conf. and Doctor, / / / cl 1399 1399"
+    },
+    {
+      "month": "March",
+      "day": 19,
+      "title": "ST. JOSEPH, SPOUSE OF THE B. V. M. Patron of the Universal Church, Conf",
+      "class_rank": "I",
+      "raw_class": "Id",
+      "type_hint": "Feast",
+      "commemorations": [],
+      "pages": [
+        "1400"
+      ],
+      "raw_text": "ST. JOSEPH, SPOUSE OF THE B. V. M. Patron of the Universal Church, Conf., Id 1400"
+    },
+    {
+      "month": "March",
+      "day": 20,
+      "title": "21 St. Benedict Abbot, 111 cl",
+      "class_rank": null,
+      "raw_class": null,
+      "type_hint": null,
+      "commemorations": [],
+      "pages": [
+        "111"
+      ],
+      "raw_text": "21 St. Benedict Abbot, 111 cl"
+    },
+    {
+      "month": "March",
+      "day": 24,
+      "title": "St. Gabriel, Archangel",
+      "class_rank": "III",
+      "raw_class": "III cl",
+      "type_hint": null,
+      "commemorations": [],
+      "pages": [],
+      "raw_text": "St. Gabriel, Archangel, III cl"
+    },
+    {
+      "month": "March",
+      "day": 25,
+      "title": "THE ANNUNCIATION OF THE B. V. M",
+      "class_rank": "I",
+      "raw_class": "Id",
+      "type_hint": null,
+      "commemorations": [],
+      "pages": [],
+      "raw_text": "THE ANNUNCIATION OF THE B. V. M., Id"
+    },
+    {
+      "month": "March",
+      "day": 26,
+      "title": "27 St. John Damascene Conf. and Doct, / / / d",
+      "class_rank": null,
+      "raw_class": null,
+      "type_hint": null,
+      "commemorations": [],
+      "pages": [],
+      "raw_text": "27 St. John Damascene Conf. and Doct, / / / d"
+    },
+    {
+      "month": "March",
+      "day": 28,
+      "title": "St. John Capistran Conf., Ill cl.",
+      "class_rank": null,
+      "raw_class": null,
+      "type_hint": null,
+      "commemorations": [],
+      "pages": [],
+      "raw_text": "St. John Capistran Conf., Ill cl."
+    },
+    {
+      "month": "March",
+      "day": 31,
+      "title": "Friday after Passion Sunday \u2014 Commemoration of Seven Sorrows of the B.V.M",
+      "class_rank": null,
+      "raw_class": null,
+      "type_hint": "Sunday",
+      "commemorations": [
+        "Seven Sorrows of the B"
+      ],
+      "pages": [
+        "1422"
+      ],
+      "raw_text": "Friday after Passion Sunday \u2014 Commemoration of Seven Sorrows of the B.V.M 1422"
+    },
+    {
+      "month": "April",
+      "day": 1,
+      "title": "2 St. Francis of Paula Conf., Ill cl",
+      "class_rank": null,
+      "raw_class": null,
+      "type_hint": null,
+      "commemorations": [],
+      "pages": [],
+      "raw_text": "2 St. Francis of Paula Conf., Ill cl"
+    },
+    {
+      "month": "April",
+      "day": 3,
+      "title": "4 St. Isidore Bp., Conf. and Doctor",
+      "class_rank": "III",
+      "raw_class": "III cl",
+      "type_hint": null,
+      "commemorations": [],
+      "pages": [],
+      "raw_text": "4 St. Isidore Bp., Conf. and Doctor, III cl"
+    },
+    {
+      "month": "April",
+      "day": 5,
+      "title": "St. Vincent Ferrer Conf., Ill cl",
+      "class_rank": null,
+      "raw_class": null,
+      "type_hint": null,
+      "commemorations": [],
+      "pages": [
+        "1425",
+        "1426",
+        "1426"
+      ],
+      "raw_text": "St. Vincent Ferrer Conf., Ill cl 1425 1426 1426"
+    },
+    {
+      "month": "April",
+      "day": 9,
+      "title": "10 St. Leo I Pope, Conf. and Doctor, 111 cl",
+      "class_rank": null,
+      "raw_class": null,
+      "type_hint": null,
+      "commemorations": [],
+      "pages": [
+        "111",
+        "1426"
+      ],
+      "raw_text": "10 St. Leo I Pope, Conf. and Doctor, 111 cl 1426"
+    },
+    {
+      "month": "April",
+      "day": 12,
+      "title": "13 St. Hermenegild Mart., Ill cl",
+      "class_rank": null,
+      "raw_class": null,
+      "type_hint": null,
+      "commemorations": [],
+      "pages": [],
+      "raw_text": "13 St. Hermenegild Mart., Ill cl"
+    },
+    {
+      "month": "April",
+      "day": 14,
+      "title": "St. Justin Mart., Ill cl 1426 1427 Commemoration of Ss. Tiburiius, Valerian, and Maximus, Mm. . .",
+      "class_rank": null,
+      "raw_class": null,
+      "type_hint": "Commemoration",
+      "commemorations": [
+        "Ss"
+      ],
+      "pages": [
+        "1426",
+        "1427",
+        "1427"
+      ],
+      "raw_text": "St. Justin Mart., Ill cl 1426 1427 Commemoration of Ss. Tiburiius, Valerian, and Maximus, Mm. . . 1427"
+    },
+    {
+      "month": "April",
+      "day": 1,
+      "title": "7 Commemoration of S t . Anicelus I Pope and Mart. . . . .",
+      "class_rank": null,
+      "raw_class": null,
+      "type_hint": "Commemoration",
+      "commemorations": [
+        "S t"
+      ],
+      "pages": [],
+      "raw_text": "7 Commemoration of S t . Anicelus I Pope and Mart. . . . ."
+    },
+    {
+      "month": "April",
+      "day": 21,
+      "title": "St. Anselm Bp. Conf. and Doctor., Ill cl",
+      "class_rank": null,
+      "raw_class": null,
+      "type_hint": null,
+      "commemorations": [],
+      "pages": [],
+      "raw_text": "St. Anselm Bp. Conf. and Doctor., Ill cl"
+    },
+    {
+      "month": "April",
+      "day": 22,
+      "title": "Ss. Soter and Caius Popes, Mm., Ill cl",
+      "class_rank": null,
+      "raw_class": null,
+      "type_hint": null,
+      "commemorations": [],
+      "pages": [],
+      "raw_text": "Ss. Soter and Caius Popes, Mm., Ill cl"
+    },
+    {
+      "month": "April",
+      "day": 23,
+      "title": "Commemoration of St. George Mart",
+      "class_rank": null,
+      "raw_class": null,
+      "type_hint": "Commemoration",
+      "commemorations": [
+        "St"
+      ],
+      "pages": [],
+      "raw_text": "Commemoration of St. George Mart"
+    },
+    {
+      "month": "April",
+      "day": 24,
+      "title": "St. Fidelis of Sigmaringen Mart., / / / cl",
+      "class_rank": null,
+      "raw_class": null,
+      "type_hint": null,
+      "commemorations": [],
+      "pages": [],
+      "raw_text": "St. Fidelis of Sigmaringen Mart., / / / cl"
+    },
+    {
+      "month": "April",
+      "day": 25,
+      "title": "The Greater Litanies ST. MARK EVANGELIST",
+      "class_rank": "II",
+      "raw_class": "II cl",
+      "type_hint": "Feast",
+      "commemorations": [],
+      "pages": [],
+      "raw_text": "The Greater Litanies ST. MARK EVANGELIST, II cl"
+    },
+    {
+      "month": "April",
+      "day": 26,
+      "title": "Ss. Cletus and Marcellinus, Popes and Mm, / / / cl",
+      "class_rank": null,
+      "raw_class": null,
+      "type_hint": null,
+      "commemorations": [],
+      "pages": [],
+      "raw_text": "Ss. Cletus and Marcellinus, Popes and Mm, / / / cl"
+    },
+    {
+      "month": "April",
+      "day": 27,
+      "title": "St. Peter Canisius Conf. and Doctor",
+      "class_rank": "III",
+      "raw_class": "III cl",
+      "type_hint": null,
+      "commemorations": [],
+      "pages": [],
+      "raw_text": "St. Peter Canisius Conf. and Doctor, III cl"
+    },
+    {
+      "month": "April",
+      "day": 28,
+      "title": "St. Paul of the Cross Conf., Ill cl. _",
+      "class_rank": null,
+      "raw_class": null,
+      "type_hint": null,
+      "commemorations": [],
+      "pages": [],
+      "raw_text": "St. Paul of the Cross Conf., Ill cl. _"
+    },
+    {
+      "month": "April",
+      "day": 12,
+      "title": "9 St. Peter Mart., Ill cl A",
+      "class_rank": null,
+      "raw_class": null,
+      "type_hint": null,
+      "commemorations": [],
+      "pages": [],
+      "raw_text": "9 St. Peter Mart., Ill cl A"
+    },
+    {
+      "month": "April",
+      "day": 13,
+      "title": "0 St. Catherine of Siena Virgin,  1430 1431 1431 1431",
+      "class_rank": "III",
+      "raw_class": "III cl",
+      "type_hint": null,
+      "commemorations": [],
+      "pages": [
+        "1430",
+        "1431",
+        "1431",
+        "1431"
+      ],
+      "raw_text": "0 St. Catherine of Siena Virgin, III cl 1430 1431 1431 1431 ."
+    },
+    {
+      "month": "May",
+      "day": 5,
+      "title": "T. JOSEPH, SPOUSE OF THE B. V. M., WORKMAN, . . 1437 t. Athanagius Bp., Conf. and Doct., /// cl 1452 Commemoration of Ss. Alexander, Eventius and Theodulus, Mm., and Juvenal Bp. and Conf. t. Monica Widow, III cl St. Pius V Pope a n d Conf., / / / cl: 1461 1462 t. Stanislaus, B p . a n d Mart., / / / cl 1463 it. Gregory Nazianzen, B p . , Conf. a n d Doctor, / / / cl. . . . 1465 it. A n t o n i n u s , B p . a n d Conf., / / / cl 1465 Commemoration of Ss. Gordian and Epimachus, Mm. Ss. PHILIP AND JAMES APOSTLES, II cl 1465A Ss. Nereus, Achilleus, and Domitilla Virgin, and Pancras, Mm. / / / cl. St. Robert Bellarmine, Bp., Conf. and Doctor, / / / cl.'. '. . . 1466 Commemoration of St. Boniface Mart St. John Baptist de la Salle Conf., Ill cl St. Ubald Bp. and Conf., Ill cl",
+      "class_rank": "I",
+      "raw_class": "Id",
+      "type_hint": "Commemoration",
+      "commemorations": [
+        "Ss",
+        "Ss",
+        "St"
+      ],
+      "pages": [
+        "1437",
+        "1452",
+        "1461",
+        "1462",
+        "1463",
+        "1465",
+        "1465",
+        "1465A",
+        "1466"
+      ],
+      "raw_text": "T. JOSEPH, SPOUSE OF THE B. V. M., WORKMAN, Id. . 1437 t. Athanagius Bp., Conf. and Doct., /// cl 1452 Commemoration of Ss. Alexander, Eventius and Theodulus, Mm., and Juvenal Bp. and Conf. t. Monica Widow, III cl St. Pius V Pope a n d Conf., / / / cl: 1461 1462 t. Stanislaus, B p . a n d Mart., / / / cl 1463 it. Gregory Nazianzen, B p . , Conf. a n d Doctor, / / / cl. . . . 1465 it. A n t o n i n u s , B p . a n d Conf., / / / cl 1465 Commemoration of Ss. Gordian and Epimachus, Mm. Ss. PHILIP AND JAMES APOSTLES, II cl 1465A Ss. Nereus, Achilleus, and Domitilla Virgin, and Pancras, Mm. / / / cl. St. Robert Bellarmine, Bp., Conf. and Doctor, / / / cl.'. '. . . 1466 Commemoration of St. Boniface Mart St. John Baptist de la Salle Conf., Ill cl St. Ubald Bp. and Conf., Ill cl"
+    },
+    {
+      "month": "May",
+      "day": 17,
+      "title": "St. Pascal Baylon, Conf., / / / cl.",
+      "class_rank": null,
+      "raw_class": null,
+      "type_hint": null,
+      "commemorations": [],
+      "pages": [],
+      "raw_text": "St. Pascal Baylon, Conf., / / / cl."
+    },
+    {
+      "month": "May",
+      "day": 18,
+      "title": "St. Venantius Mart., Ill cl St. Peter Celestine Pope and Conf., Ill cl Commemoration of St. Pudentiana Virg 1468 1469 1469 1469 1469 1471 1471 St. Bernardihe of Siena Conf., / / / cl. . . . . . . .",
+      "class_rank": null,
+      "raw_class": null,
+      "type_hint": "Commemoration",
+      "commemorations": [
+        "St"
+      ],
+      "pages": [
+        "1468",
+        "1469",
+        "1469",
+        "1469",
+        "1469",
+        "1471",
+        "1471",
+        "1471"
+      ],
+      "raw_text": "St. Venantius Mart., Ill cl St. Peter Celestine Pope and Conf., Ill cl Commemoration of St. Pudentiana Virg 1468 1469 1469 1469 1469 1471 1471 St. Bernardihe of Siena Conf., / / / cl. . . . . . . . 1471"
+    },
+    {
+      "month": "May",
+      "day": 27,
+      "title": "St. Gregory VII Pope and Conf., Ill cl Commemoration of St. Urban I Pope and Mart St hil p St. Philip Neri Conf., Ill cl Commemoration of St. Eleutherius Pope and Mart St. Bede the Venerable, Conf. and Doctor, / / / cl Commemoration of St. John I Pope and M",
+      "class_rank": null,
+      "raw_class": null,
+      "type_hint": "Commemoration",
+      "commemorations": [
+        "St",
+        "St",
+        "St"
+      ],
+      "pages": [],
+      "raw_text": "St. Gregory VII Pope and Conf., Ill cl Commemoration of St. Urban I Pope and Mart St hil p St. Philip Neri Conf., Ill cl Commemoration of St. Eleutherius Pope and Mart St. Bede the Venerable, Conf. and Doctor, / / / cl Commemoration of St. John I Pope and M"
+    },
+    {
+      "month": "May",
+      "day": 28,
+      "title": "St. Augustine Bp. and Conf., / / / cl. St. Mary Magdalen Pazzi, Virgin, 77/ 'cl. Commemoration of St. Felix I, Pope and Mart THE BLESSED VIRGIN MARY THE QUEEN.  Commemoration of St. Petronilla Virg",
+      "class_rank": "II",
+      "raw_class": "II cl",
+      "type_hint": "Commemoration",
+      "commemorations": [
+        "St",
+        "St"
+      ],
+      "pages": [],
+      "raw_text": "St. Augustine Bp. and Conf., / / / cl. St. Mary Magdalen Pazzi, Virgin, 77/ 'cl. Commemoration of St. Felix I, Pope and Mart THE BLESSED VIRGIN MARY THE QUEEN. II cl Commemoration of St. Petronilla Virg."
+    },
+    {
+      "month": "June",
+      "day": 6,
+      "title": "St. Norbert Bp. and Conf., / / / cl. ,. 1477 1481 1485 Commemoration of Ss. Primus and Felician, Mm St. Margaret Queen, Widow,  St. Barnabas Ap., Ill cl",
+      "class_rank": "III",
+      "raw_class": "III cl",
+      "type_hint": "Commemoration",
+      "commemorations": [
+        "Ss"
+      ],
+      "pages": [
+        "1477",
+        "1481",
+        "1485",
+        "1485",
+        "1486",
+        "1486"
+      ],
+      "raw_text": "St. Norbert Bp. and Conf., / / / cl. ,. 1477 1481 1485 Commemoration of Ss. Primus and Felician, Mm St. Margaret Queen, Widow, III cl St. Barnabas Ap., Ill cl. . . 1485 1486 1486"
+    },
+    {
+      "month": "June",
+      "day": 12,
+      "title": "St. John of San Facundo Conf., Ill cl Commemoration of Ss. Basilides, Cyrinus, Nabor and Nazarius, Mm. .",
+      "class_rank": null,
+      "raw_class": null,
+      "type_hint": "Commemoration",
+      "commemorations": [
+        "Ss"
+      ],
+      "pages": [
+        "1488"
+      ],
+      "raw_text": "St. John of San Facundo Conf., Ill cl Commemoration of Ss. Basilides, Cyrinus, Nabor and Nazarius, Mm. . 1488"
+    },
+    {
+      "month": "June",
+      "day": 13,
+      "title": "St. Anthony of Padua Conf. and Doctor, / / / cl",
+      "class_rank": null,
+      "raw_class": null,
+      "type_hint": null,
+      "commemorations": [],
+      "pages": [],
+      "raw_text": "St. Anthony of Padua Conf. and Doctor, / / / cl"
+    },
+    {
+      "month": "June",
+      "day": 14,
+      "title": "St. Basil the Great, Bp., Conf. and Doctor, / / / cl",
+      "class_rank": null,
+      "raw_class": null,
+      "type_hint": null,
+      "commemorations": [],
+      "pages": [
+        "1488",
+        "1489",
+        "1489"
+      ],
+      "raw_text": "St. Basil the Great, Bp., Conf. and Doctor, / / / cl 1488 1489 1489"
+    },
+    {
+      "month": "June",
+      "day": 15,
+      "title": "Commemoration of Ss. Vitus (or Guy), Modestus and Crescentia, Mm. .",
+      "class_rank": null,
+      "raw_class": null,
+      "type_hint": "Commemoration",
+      "commemorations": [
+        "Ss"
+      ],
+      "pages": [
+        "1490"
+      ],
+      "raw_text": "Commemoration of Ss. Vitus (or Guy), Modestus and Crescentia, Mm. . 1490"
+    },
+    {
+      "month": "June",
+      "day": 16,
+      "title": "17 St. Gregory Barbarigo Bp. and Conf., / / / cl",
+      "class_rank": null,
+      "raw_class": null,
+      "type_hint": null,
+      "commemorations": [],
+      "pages": [],
+      "raw_text": "17 St. Gregory Barbarigo Bp. and Conf., / / / cl"
+    },
+    {
+      "month": "June",
+      "day": 18,
+      "title": "St. Ephraem the Syrian, Deacon, Conf. and Doctor, / / / cl.. Commemoration of Ss. Mark and Marcellian, Mm",
+      "class_rank": null,
+      "raw_class": null,
+      "type_hint": "Commemoration",
+      "commemorations": [
+        "Ss"
+      ],
+      "pages": [],
+      "raw_text": "St. Ephraem the Syrian, Deacon, Conf. and Doctor, / / / cl.. Commemoration of Ss. Mark and Marcellian, Mm"
+    },
+    {
+      "month": "June",
+      "day": 19,
+      "title": "St. Juliana Falconieri Virgin,  C o m m e m o r a t i o n of S s . G e r v a s e and P r o t a s e , M m",
+      "class_rank": "III",
+      "raw_class": "III cl",
+      "type_hint": null,
+      "commemorations": [],
+      "pages": [],
+      "raw_text": "St. Juliana Falconieri Virgin, III cl C o m m e m o r a t i o n of S s . G e r v a s e and P r o t a s e , M m . . . . ."
+    },
+    {
+      "month": "June",
+      "day": 20,
+      "title": "Commemoration of St. Silverius Pope and Mart",
+      "class_rank": null,
+      "raw_class": null,
+      "type_hint": "Commemoration",
+      "commemorations": [
+        "St"
+      ],
+      "pages": [],
+      "raw_text": "Commemoration of St. Silverius Pope and Mart"
+    },
+    {
+      "month": "June",
+      "day": 21,
+      "title": "St. Aloysius Gonzaga, Conf., Ill cl",
+      "class_rank": null,
+      "raw_class": null,
+      "type_hint": null,
+      "commemorations": [],
+      "pages": [],
+      "raw_text": "St. Aloysius Gonzaga, Conf., Ill cl"
+    },
+    {
+      "month": "June",
+      "day": 22,
+      "title": "St. Paulinus Bp. and Conf., Ill cl 1490 . .",
+      "class_rank": null,
+      "raw_class": null,
+      "type_hint": null,
+      "commemorations": [],
+      "pages": [
+        "1490",
+        "1491",
+        "1491",
+        "1491"
+      ],
+      "raw_text": "St. Paulinus Bp. and Conf., Ill cl 1490 . . 1491 1491 1491"
+    },
+    {
+      "month": "June",
+      "day": 23,
+      "title": "VIGIL OF ST. JOHN THE BAPTIST, / / cl.",
+      "class_rank": null,
+      "raw_class": null,
+      "type_hint": "Vigil",
+      "commemorations": [],
+      "pages": [],
+      "raw_text": "VIGIL OF ST. JOHN THE BAPTIST, / / cl."
+    },
+    {
+      "month": "June",
+      "day": 24,
+      "title": "NATIVITY OF ST. JOHN THE BAPTIST",
+      "class_rank": "I",
+      "raw_class": "I cl",
+      "type_hint": "Feast",
+      "commemorations": [],
+      "pages": [],
+      "raw_text": "NATIVITY OF ST. JOHN THE BAPTIST, I cl"
+    },
+    {
+      "month": "June",
+      "day": 25,
+      "title": "St. William Abbot",
+      "class_rank": "III",
+      "raw_class": "III cl",
+      "type_hint": null,
+      "commemorations": [],
+      "pages": [],
+      "raw_text": "St. William Abbot, III cl"
+    },
+    {
+      "month": "June",
+      "day": 26,
+      "title": "Ss. John and Paul Mm., Ill cl",
+      "class_rank": null,
+      "raw_class": null,
+      "type_hint": null,
+      "commemorations": [],
+      "pages": [
+        "1496",
+        "1506",
+        "1506"
+      ],
+      "raw_text": "Ss. John and Paul Mm., Ill cl 1496 1506 1506"
+    },
+    {
+      "month": "June",
+      "day": 27,
+      "title": "28 VIGIL OF ST. PETER AND PAUL",
+      "class_rank": "II",
+      "raw_class": "II cl",
+      "type_hint": "Vigil",
+      "commemorations": [],
+      "pages": [],
+      "raw_text": "28 VIGIL OF ST. PETER AND PAUL, II cl"
+    },
+    {
+      "month": "June",
+      "day": 29,
+      "title": "SS. PETER AND PAUL, AP",
+      "class_rank": "I",
+      "raw_class": "Id",
+      "type_hint": "Feast",
+      "commemorations": [],
+      "pages": [],
+      "raw_text": "SS. PETER AND PAUL, AP., Id"
+    },
+    {
+      "month": "June",
+      "day": 30,
+      "title": "Commemoration of Ss. Paul Ap., Ill cl 1511 1515 1526 Commemoration of St. Peter Apostle.",
+      "class_rank": null,
+      "raw_class": null,
+      "type_hint": "Commemoration",
+      "commemorations": [
+        "Ss",
+        "St"
+      ],
+      "pages": [
+        "1511",
+        "1515",
+        "1526"
+      ],
+      "raw_text": "Commemoration of Ss. Paul Ap., Ill cl 1511 1515 1526 Commemoration of St. Peter Apostle."
+    },
+    {
+      "month": "July",
+      "day": 1,
+      "title": "THE MOST PRECIOUS BLOOD OF OUR LORD",
+      "class_rank": "I",
+      "raw_class": "Id",
+      "type_hint": null,
+      "commemorations": [],
+      "pages": [],
+      "raw_text": "THE MOST PRECIOUS BLOOD OF OUR LORD, Id."
+    },
+    {
+      "month": "July",
+      "day": 2,
+      "title": "VISITATION OF THE B. V. M.,  Commemoration of Ss. Processus and Martinianus, Mm",
+      "class_rank": "II",
+      "raw_class": "II cl",
+      "type_hint": "Commemoration",
+      "commemorations": [
+        "Ss"
+      ],
+      "pages": [],
+      "raw_text": "VISITATION OF THE B. V. M., II cl Commemoration of Ss. Processus and Martinianus, Mm."
+    },
+    {
+      "month": "July",
+      "day": 3,
+      "title": "St. Irenaeus Bp. and Mart, / / / cl",
+      "class_rank": null,
+      "raw_class": null,
+      "type_hint": null,
+      "commemorations": [],
+      "pages": [],
+      "raw_text": "St. Irenaeus Bp. and Mart, / / / cl"
+    },
+    {
+      "month": "July",
+      "day": 4,
+      "title": "5 St. Anthony Mary Zaccaria Conf., Ill cl",
+      "class_rank": null,
+      "raw_class": null,
+      "type_hint": null,
+      "commemorations": [],
+      "pages": [],
+      "raw_text": "5 St. Anthony Mary Zaccaria Conf., Ill cl"
+    },
+    {
+      "month": "July",
+      "day": 6,
+      "title": "7 Ss. Cyril and Methodius Bpp. and Conf., / / / cl",
+      "class_rank": null,
+      "raw_class": null,
+      "type_hint": null,
+      "commemorations": [],
+      "pages": [],
+      "raw_text": "7 Ss. Cyril and Methodius Bpp. and Conf., / / / cl"
+    },
+    {
+      "month": "July",
+      "day": 8,
+      "title": "St. Elizabeth Queen, Widow",
+      "class_rank": "III",
+      "raw_class": "III cl",
+      "type_hint": null,
+      "commemorations": [],
+      "pages": [],
+      "raw_text": "St. Elizabeth Queen, Widow, III cl"
+    },
+    {
+      "month": "July",
+      "day": 9,
+      "title": "10 The Seven Holy Brothers, Mm., and Ss. Rufina and Secunda, Virgins, Commemoratio of St. Pius I Pope and Mart Mm., Ill cl St. John Gualbert Abbot,  Commemoration of Ss. Nabor and Felix Mm",
+      "class_rank": "III",
+      "raw_class": "III cl",
+      "type_hint": "Commemoration",
+      "commemorations": [
+        "Ss"
+      ],
+      "pages": [],
+      "raw_text": "10 The Seven Holy Brothers, Mm., and Ss. Rufina and Secunda, Virgins, Commemoratio of St. Pius I Pope and Mart Mm., Ill cl St. John Gualbert Abbot, III cl Commemoration of Ss. Nabor and Felix Mm"
+    },
+    {
+      "month": "July",
+      "day": 13,
+      "title": "14 St. Bonaventure Bp., Conf. and Doctor, / / / cl",
+      "class_rank": null,
+      "raw_class": null,
+      "type_hint": null,
+      "commemorations": [],
+      "pages": [],
+      "raw_text": "14 St. Bonaventure Bp., Conf. and Doctor, / / / cl"
+    },
+    {
+      "month": "July",
+      "day": 15,
+      "title": "St. Henry Emperor, Conf., / / / cl",
+      "class_rank": null,
+      "raw_class": null,
+      "type_hint": null,
+      "commemorations": [],
+      "pages": [],
+      "raw_text": "St. Henry Emperor, Conf., / / / cl"
+    },
+    {
+      "month": "July",
+      "day": 16,
+      "title": "Commemoration of Our Blessed Lady of Mt. Carmel. . . .",
+      "class_rank": null,
+      "raw_class": null,
+      "type_hint": "Commemoration",
+      "commemorations": [
+        "Our Blessed Lady of Mt"
+      ],
+      "pages": [],
+      "raw_text": "Commemoration of Our Blessed Lady of Mt. Carmel. . . ."
+    },
+    {
+      "month": "July",
+      "day": 17,
+      "title": "Commemoration of St. Alexius Conf",
+      "class_rank": null,
+      "raw_class": null,
+      "type_hint": "Commemoration",
+      "commemorations": [
+        "St"
+      ],
+      "pages": [],
+      "raw_text": "Commemoration of St. Alexius Conf"
+    },
+    {
+      "month": "July",
+      "day": 18,
+      "title": "St. Camillus of Lellis Conf., Ill cl Commemoration of St. Symphorosa and her seven sons, Mm.",
+      "class_rank": null,
+      "raw_class": null,
+      "type_hint": "Commemoration",
+      "commemorations": [
+        "St"
+      ],
+      "pages": [],
+      "raw_text": "St. Camillus of Lellis Conf., Ill cl Commemoration of St. Symphorosa and her seven sons, Mm."
+    },
+    {
+      "month": "July",
+      "day": 19,
+      "title": "St. Vincent de Paul, Conf., Ill cl",
+      "class_rank": null,
+      "raw_class": null,
+      "type_hint": null,
+      "commemorations": [],
+      "pages": [],
+      "raw_text": "St. Vincent de Paul, Conf., Ill cl"
+    },
+    {
+      "month": "July",
+      "day": 20,
+      "title": "St. Jerome \u00c6milian Conf., Ill cl Commemoration of St. Margaret Virg., Mart.",
+      "class_rank": null,
+      "raw_class": null,
+      "type_hint": "Commemoration",
+      "commemorations": [
+        "St"
+      ],
+      "pages": [],
+      "raw_text": "St. Jerome \u00c6milian Conf., Ill cl Commemoration of St. Margaret Virg., Mart."
+    },
+    {
+      "month": "July",
+      "day": 21,
+      "title": "St. Lawrence of Brindisi Conf. and Doctor, / / / cl Commemoration of St. Praxedes Virg.",
+      "class_rank": null,
+      "raw_class": null,
+      "type_hint": "Commemoration",
+      "commemorations": [
+        "St"
+      ],
+      "pages": [],
+      "raw_text": "St. Lawrence of Brindisi Conf. and Doctor, / / / cl Commemoration of St. Praxedes Virg."
+    },
+    {
+      "month": "July",
+      "day": 22,
+      "title": "St. Mary Magdalen Penitent",
+      "class_rank": "III",
+      "raw_class": "III cl",
+      "type_hint": null,
+      "commemorations": [],
+      "pages": [],
+      "raw_text": "St. Mary Magdalen Penitent, III cl"
+    },
+    {
+      "month": "July",
+      "day": 23,
+      "title": "St. Apollinaris Bp. and Mart., Ill cl [Commemoration of St. Liborius Bp. and Conf Commemoration of St. Christina Virg., Mart T. JAMES APOSTLE,  Commemoration of S. Christopher, Mart. T. ANNE, MOTHER OF THE B. V. M.,  Commemoration of St. Pantaleon Mart. Ss. Nazarius and Celsus Mm., Victor I Pope and Mart., and Innocent I Pope and Conf., Ill cl. . . . St. Martha Virgin, I Commemoration of Ss. Felix, Simplicius, Faustinus and Beatrice, Mm. Commemoration of Ss. Abdon and Sennen Mm t. Ignatius Conf., Ill cl",
+      "class_rank": "II",
+      "raw_class": "II cl",
+      "type_hint": "Commemoration",
+      "commemorations": [
+        "St",
+        "St",
+        "S",
+        "St",
+        "Ss",
+        "Ss"
+      ],
+      "pages": [],
+      "raw_text": "St. Apollinaris Bp. and Mart., Ill cl [Commemoration of St. Liborius Bp. and Conf Commemoration of St. Christina Virg., Mart T. JAMES APOSTLE, II cl Commemoration of S. Christopher, Mart. T. ANNE, MOTHER OF THE B. V. M., II cl Commemoration of St. Pantaleon Mart. Ss. Nazarius and Celsus Mm., Victor I Pope and Mart., and Innocent I Pope and Conf., Ill cl. . . . St. Martha Virgin, III cl Commemoration of Ss. Felix, Simplicius, Faustinus and Beatrice, Mm. Commemoration of Ss. Abdon and Sennen Mm t. Ignatius Conf., Ill cl"
+    },
+    {
+      "month": "August",
+      "day": 5,
+      "title": "Dedication of Church of St. Mary of the Snow, / / / cl. . .",
+      "class_rank": null,
+      "raw_class": null,
+      "type_hint": null,
+      "commemorations": [],
+      "pages": [],
+      "raw_text": "Dedication of Church of St. Mary of the Snow, / / / cl. . ."
+    },
+    {
+      "month": "August",
+      "day": 6,
+      "title": "TRANSFIGURATION OF OUR LORD,  Commemoration of Ss. Sixtus II Pope, Felicissimus and Agapitus, Mm. St. Cajetan Conf., Ill cl Commemoration of St. Donatus Bp. and Mart St John Mary Vianney Conf., Ill cl Commemoration of Ss. Cyriac, Largus and Smaragdas Mm. Vigil of St. Lawrence, / / / cl. Commemoration of St. Romanus Mart ST. LAWRENCE MART.,  Commemoration of Ss. Tiburtius and Susanna Virgin, Mm. St. Clare Virgin, I Commemoration of Ss. Hippolytus and Cassian Mm VIGIL OF THE ASSUMPTION, / / cl. Commemoration of St. Eusebius Conf ASSUMPTION OF THE B. V. M., I cl",
+      "class_rank": "II",
+      "raw_class": "II cl",
+      "type_hint": "Vigil",
+      "commemorations": [
+        "Ss",
+        "St",
+        "Ss",
+        "St",
+        "Ss",
+        "Ss",
+        "St"
+      ],
+      "pages": [],
+      "raw_text": "TRANSFIGURATION OF OUR LORD, II cl Commemoration of Ss. Sixtus II Pope, Felicissimus and Agapitus, Mm. St. Cajetan Conf., Ill cl Commemoration of St. Donatus Bp. and Mart St John Mary Vianney Conf., Ill cl Commemoration of Ss. Cyriac, Largus and Smaragdas Mm. Vigil of St. Lawrence, / / / cl. Commemoration of St. Romanus Mart ST. LAWRENCE MART., II cl Commemoration of Ss. Tiburtius and Susanna Virgin, Mm. St. Clare Virgin, III cl Commemoration of Ss. Hippolytus and Cassian Mm VIGIL OF THE ASSUMPTION, / / cl. Commemoration of St. Eusebius Conf ASSUMPTION OF THE B. V. M., I cl"
+    },
+    {
+      "month": "August",
+      "day": 16,
+      "title": "ST. JOACHIM, FATHER OF THE B. V. M., CONF",
+      "class_rank": "II",
+      "raw_class": "II cl",
+      "type_hint": "Feast",
+      "commemorations": [],
+      "pages": [],
+      "raw_text": "ST. JOACHIM, FATHER OF THE B. V. M., CONF., II cl."
+    },
+    {
+      "month": "August",
+      "day": 17,
+      "title": "St. Hyacinth Conf., Ill cl",
+      "class_rank": null,
+      "raw_class": null,
+      "type_hint": null,
+      "commemorations": [],
+      "pages": [],
+      "raw_text": "St. Hyacinth Conf., Ill cl"
+    },
+    {
+      "month": "August",
+      "day": 18,
+      "title": "Commemoration of St. Agapitus Mart",
+      "class_rank": null,
+      "raw_class": null,
+      "type_hint": "Commemoration",
+      "commemorations": [
+        "St"
+      ],
+      "pages": [],
+      "raw_text": "Commemoration of St. Agapitus Mart"
+    },
+    {
+      "month": "August",
+      "day": 19,
+      "title": "St. John Eudes Conf., / / / cl",
+      "class_rank": null,
+      "raw_class": null,
+      "type_hint": null,
+      "commemorations": [],
+      "pages": [],
+      "raw_text": "St. John Eudes Conf., / / / cl"
+    },
+    {
+      "month": "August",
+      "day": 20,
+      "title": "St. Bernard Abbot, Conf. and Doctor, / / / cl b",
+      "class_rank": null,
+      "raw_class": null,
+      "type_hint": null,
+      "commemorations": [],
+      "pages": [],
+      "raw_text": "St. Bernard Abbot, Conf. and Doctor, / / / cl b"
+    },
+    {
+      "month": "August",
+      "day": 21,
+      "title": "St. Jane Frances Fremiot de Chantal Widow, / / / cl IMMACULATE HEART OF MARY, . Commemoration of Ss. Timothy, Hippolytus and Symphorian Martyrs. St. Philip Benizi Conf., Ill cl",
+      "class_rank": "II",
+      "raw_class": "II cl",
+      "type_hint": "Commemoration",
+      "commemorations": [
+        "Ss"
+      ],
+      "pages": [],
+      "raw_text": "St. Jane Frances Fremiot de Chantal Widow, / / / cl IMMACULATE HEART OF MARY, II cl. Commemoration of Ss. Timothy, Hippolytus and Symphorian Martyrs. St. Philip Benizi Conf., Ill cl"
+    },
+    {
+      "month": "August",
+      "day": 24,
+      "title": "ST. BARTHOLOMEW AP",
+      "class_rank": "II",
+      "raw_class": "II cl",
+      "type_hint": "Feast",
+      "commemorations": [],
+      "pages": [],
+      "raw_text": "ST. BARTHOLOMEW AP., II cl"
+    },
+    {
+      "month": "August",
+      "day": 25,
+      "title": "St. Louis King, Conf., Ill cl",
+      "class_rank": null,
+      "raw_class": null,
+      "type_hint": null,
+      "commemorations": [],
+      "pages": [],
+      "raw_text": "St. Louis King, Conf., Ill cl"
+    },
+    {
+      "month": "August",
+      "day": 26,
+      "title": "Commemoration of St. Zephyrinus Pope and Mart",
+      "class_rank": null,
+      "raw_class": null,
+      "type_hint": "Commemoration",
+      "commemorations": [
+        "St"
+      ],
+      "pages": [],
+      "raw_text": "Commemoration of St. Zephyrinus Pope and Mart"
+    },
+    {
+      "month": "August",
+      "day": 27,
+      "title": "St. Joseph Calasanctius Conf., Ill cl",
+      "class_rank": null,
+      "raw_class": null,
+      "type_hint": null,
+      "commemorations": [],
+      "pages": [],
+      "raw_text": "St. Joseph Calasanctius Conf., Ill cl"
+    },
+    {
+      "month": "August",
+      "day": 28,
+      "title": "St. Augustine Bp., Conf. and Doctor, . Commemoration of St. Hermes Mart",
+      "class_rank": "III",
+      "raw_class": "III cl",
+      "type_hint": "Commemoration",
+      "commemorations": [
+        "St"
+      ],
+      "pages": [],
+      "raw_text": "St. Augustine Bp., Conf. and Doctor, III cl. Commemoration of St. Hermes Mart"
+    },
+    {
+      "month": "August",
+      "day": 29,
+      "title": "Beheading of St. John the Baptist,  Commemoration of St. Sabina Mart",
+      "class_rank": "III",
+      "raw_class": "III cl",
+      "type_hint": "Commemoration",
+      "commemorations": [
+        "St"
+      ],
+      "pages": [],
+      "raw_text": "Beheading of St. John the Baptist, III cl Commemoration of St. Sabina Mart"
+    },
+    {
+      "month": "August",
+      "day": 30,
+      "title": "St. Rose of Lima Virg., Ill cl. Commemoration of Ss. Felix and Adauctus Mm",
+      "class_rank": null,
+      "raw_class": null,
+      "type_hint": "Commemoration",
+      "commemorations": [
+        "Ss"
+      ],
+      "pages": [],
+      "raw_text": "St. Rose of Lima Virg., Ill cl. Commemoration of Ss. Felix and Adauctus Mm"
+    },
+    {
+      "month": "August",
+      "day": 31,
+      "title": "St. Raymund Nonnatus Conf., Ill cl",
+      "class_rank": null,
+      "raw_class": null,
+      "type_hint": null,
+      "commemorations": [],
+      "pages": [],
+      "raw_text": "St. Raymund Nonnatus Conf., Ill cl"
+    },
+    {
+      "month": "September",
+      "day": 2,
+      "title": "St. Stephen King, Conf., Ill cl",
+      "class_rank": null,
+      "raw_class": null,
+      "type_hint": null,
+      "commemorations": [],
+      "pages": [],
+      "raw_text": "St. Stephen King, Conf., Ill cl"
+    },
+    {
+      "month": "September",
+      "day": 3,
+      "title": "St. Pius X, Pope and Conf",
+      "class_rank": "III",
+      "raw_class": "III cl",
+      "type_hint": null,
+      "commemorations": [],
+      "pages": [],
+      "raw_text": "St. Pius X, Pope and Conf., III cl"
+    },
+    {
+      "month": "September",
+      "day": 5,
+      "title": "St. Lawrence Justinian, Bp. and Conf., / / / cl",
+      "class_rank": null,
+      "raw_class": null,
+      "type_hint": null,
+      "commemorations": [],
+      "pages": [],
+      "raw_text": "St. Lawrence Justinian, Bp. and Conf., / / / cl"
+    },
+    {
+      "month": "September",
+      "day": 8,
+      "title": "THE NATIVITY OF THE B. V. M.,  Commemoration of St. Adrian, Mart. Commemoration of St. Gorgonius Mart. St. Nicholas of Tolentino Conf., Ill cl Commemoration of Ss. Protus and Hyacinth Mm. The Most Holy Name of Mary, I EXALTATION OF THE HOLY CROSS,  THE SEVEN DOLOURS OF THE B. V. M.,  Commemoration of S. Nicomedes, Mart. Ss. Cornelius Pope and Cyprian Bp., Mm., / / / cl Commemoration of Ss. EuphemiaVirg., Lucy and Genninianus Mm. Commemoration of Imprinting of the Holy Stigmata of St. Francis Conf. St. Joseph of Cupertino Conf., Ill cl. St. Januarius Bp. and his companions, Mm., / / / cl Commemoration of St. Eustace and his companions, Mm.. ST. MATTHEW AP. AND EVANG.,  St. Thomas of Villanova Bp. and Conf., / / / cl Commemoration of Ss. Maurice and his companions, Mm. St. Linus Pope and M., Ill cl Commemoration of St. Thecla, Virgin and Mart Commemoration of Our Lady of Ransom Commemoration of Ss. Cyprian and Justina Virgin, Mm. Ss. Cosmas and Damian Mm., / / / cl St. Wenceslaus Duke, Mart., Ill cl DEDICATION OF THE CHURCH OF ST. MICHAEL, THE ARCHANGEL, I cl St. Jerome Priest, Conf. and Doctor, / / / cl",
+      "class_rank": "II",
+      "raw_class": "II cl",
+      "type_hint": "Commemoration",
+      "commemorations": [
+        "St",
+        "St",
+        "Ss",
+        "S",
+        "Ss",
+        "Imprinting of the Holy Stigmata of St",
+        "St",
+        "Ss",
+        "St",
+        "Our Lady of Ransom Commemoration of Ss"
+      ],
+      "pages": [],
+      "raw_text": "THE NATIVITY OF THE B. V. M., II cl Commemoration of St. Adrian, Mart. Commemoration of St. Gorgonius Mart. St. Nicholas of Tolentino Conf., Ill cl Commemoration of Ss. Protus and Hyacinth Mm. The Most Holy Name of Mary, III cl EXALTATION OF THE HOLY CROSS, II cl THE SEVEN DOLOURS OF THE B. V. M., II cl Commemoration of S. Nicomedes, Mart. Ss. Cornelius Pope and Cyprian Bp., Mm., / / / cl Commemoration of Ss. EuphemiaVirg., Lucy and Genninianus Mm. Commemoration of Imprinting of the Holy Stigmata of St. Francis Conf. St. Joseph of Cupertino Conf., Ill cl. St. Januarius Bp. and his companions, Mm., / / / cl Commemoration of St. Eustace and his companions, Mm.. ST. MATTHEW AP. AND EVANG., II cl St. Thomas of Villanova Bp. and Conf., / / / cl Commemoration of Ss. Maurice and his companions, Mm. St. Linus Pope and M., Ill cl Commemoration of St. Thecla, Virgin and Mart Commemoration of Our Lady of Ransom Commemoration of Ss. Cyprian and Justina Virgin, Mm. Ss. Cosmas and Damian Mm., / / / cl St. Wenceslaus Duke, Mart., Ill cl DEDICATION OF THE CHURCH OF ST. MICHAEL, THE ARCHANGEL, I cl St. Jerome Priest, Conf. and Doctor, / / / cl"
+    },
+    {
+      "month": "November",
+      "day": 1,
+      "title": "ALL SAINTS",
+      "class_rank": "I",
+      "raw_class": "Id",
+      "type_hint": null,
+      "commemorations": [],
+      "pages": [
+        "1721"
+      ],
+      "raw_text": "ALL SAINTS, Id 1721"
+    },
+    {
+      "month": "November",
+      "day": 2,
+      "title": "ALL SOULS' DAY, OR COMMEMORATION OF ALL THE FAITHFUL DEPARTED",
+      "class_rank": "I",
+      "raw_class": "Id",
+      "type_hint": "Commemoration",
+      "commemorations": [
+        "ALL THE FAITHFUL DEPARTED"
+      ],
+      "pages": [
+        "1732"
+      ],
+      "raw_text": "ALL SOULS' DAY, OR COMMEMORATION OF ALL THE FAITHFUL DEPARTED, Id 1732"
+    },
+    {
+      "month": "November",
+      "day": 4,
+      "title": "St. Charles Borromeo Bp. and Conf., Ill cl. . . . . . 1745 Commemoratio of Ss. Vitalis and Agricola Mm",
+      "class_rank": null,
+      "raw_class": null,
+      "type_hint": null,
+      "commemorations": [],
+      "pages": [
+        "1745",
+        "1745"
+      ],
+      "raw_text": "St. Charles Borromeo Bp. and Conf., Ill cl. . . . . . 1745 Commemoratio of Ss. Vitalis and Agricola Mm 1745"
+    },
+    {
+      "month": "November",
+      "day": 7,
+      "title": "8 Commemoration of Ss. Four Crowned Martyrs",
+      "class_rank": null,
+      "raw_class": null,
+      "type_hint": "Commemoration",
+      "commemorations": [
+        "Ss"
+      ],
+      "pages": [
+        "1745"
+      ],
+      "raw_text": "8 Commemoration of Ss. Four Crowned Martyrs 1745"
+    },
+    {
+      "month": "November",
+      "day": 9,
+      "title": "DEDICATION OF THE ARCH-BASILICA OF OUR SAVIOUR, / / cl. . . 1746 Commemoration of S. Theodore Mart.",
+      "class_rank": null,
+      "raw_class": null,
+      "type_hint": "Commemoration",
+      "commemorations": [
+        "S"
+      ],
+      "pages": [
+        "1746"
+      ],
+      "raw_text": "DEDICATION OF THE ARCH-BASILICA OF OUR SAVIOUR, / / cl. . . 1746 Commemoration of S. Theodore Mart."
+    },
+    {
+      "month": "November",
+      "day": 10,
+      "title": "St. Andrew Avellino Conf., Ill cl Commemoration of Ss. Tryphon, Respicius and Nympha Virg., Mm. .",
+      "class_rank": null,
+      "raw_class": null,
+      "type_hint": "Commemoration",
+      "commemorations": [
+        "Ss"
+      ],
+      "pages": [
+        "1746"
+      ],
+      "raw_text": "St. Andrew Avellino Conf., Ill cl Commemoration of Ss. Tryphon, Respicius and Nympha Virg., Mm. . 1746"
+    },
+    {
+      "month": "November",
+      "day": 11,
+      "title": "St. Martin Bp. and Conf., Ill cl Commemoration of St. Menna Mart",
+      "class_rank": null,
+      "raw_class": null,
+      "type_hint": "Commemoration",
+      "commemorations": [
+        "St"
+      ],
+      "pages": [],
+      "raw_text": "St. Martin Bp. and Conf., Ill cl Commemoration of St. Menna Mart"
+    },
+    {
+      "month": "November",
+      "day": 12,
+      "title": "St. Martin I Pope and M., Ill cl",
+      "class_rank": null,
+      "raw_class": null,
+      "type_hint": null,
+      "commemorations": [],
+      "pages": [],
+      "raw_text": "St. Martin I Pope and M., Ill cl"
+    },
+    {
+      "month": "November",
+      "day": 13,
+      "title": "St. Didacus Conf., Ill cl",
+      "class_rank": null,
+      "raw_class": null,
+      "type_hint": null,
+      "commemorations": [],
+      "pages": [],
+      "raw_text": "St. Didacus Conf., Ill cl"
+    },
+    {
+      "month": "November",
+      "day": 14,
+      "title": "St. Josaphat Bp. and M., Ill cl d",
+      "class_rank": null,
+      "raw_class": null,
+      "type_hint": null,
+      "commemorations": [],
+      "pages": [],
+      "raw_text": "St. Josaphat Bp. and M., Ill cl d"
+    },
+    {
+      "month": "November",
+      "day": 15,
+      "title": "St. Albert the Great Bp., Conf. and Doctor, / / / cl e",
+      "class_rank": null,
+      "raw_class": null,
+      "type_hint": null,
+      "commemorations": [],
+      "pages": [],
+      "raw_text": "St. Albert the Great Bp., Conf. and Doctor, / / / cl e"
+    },
+    {
+      "month": "November",
+      "day": 16,
+      "title": "St. Gertrude Virgin,  f",
+      "class_rank": "III",
+      "raw_class": "III cl",
+      "type_hint": null,
+      "commemorations": [],
+      "pages": [],
+      "raw_text": "St. Gertrude Virgin, III cl f"
+    },
+    {
+      "month": "November",
+      "day": 17,
+      "title": "St. Gregory the Wonder-Worker Bp. and Conf., / / / cl. g",
+      "class_rank": null,
+      "raw_class": null,
+      "type_hint": null,
+      "commemorations": [],
+      "pages": [],
+      "raw_text": "St. Gregory the Wonder-Worker Bp. and Conf., / / / cl. g"
+    },
+    {
+      "month": "November",
+      "day": 18,
+      "title": "Dedication of the Basilicas of Ss. Peter and Paul Apostles, / / / cl. A",
+      "class_rank": null,
+      "raw_class": null,
+      "type_hint": null,
+      "commemorations": [],
+      "pages": [],
+      "raw_text": "Dedication of the Basilicas of Ss. Peter and Paul Apostles, / / / cl. A"
+    },
+    {
+      "month": "November",
+      "day": 19,
+      "title": "St. Elizabeth Widow, / / / cl. . Commemoration of St. Pontianus Pope and M",
+      "class_rank": null,
+      "raw_class": null,
+      "type_hint": "Commemoration",
+      "commemorations": [
+        "St"
+      ],
+      "pages": [],
+      "raw_text": "St. Elizabeth Widow, / / / cl. . Commemoration of St. Pontianus Pope and M"
+    },
+    {
+      "month": "November",
+      "day": 20,
+      "title": "St. Felix of Valois Conf., Ill cl",
+      "class_rank": null,
+      "raw_class": null,
+      "type_hint": null,
+      "commemorations": [],
+      "pages": [],
+      "raw_text": "St. Felix of Valois Conf., Ill cl"
+    },
+    {
+      "month": "November",
+      "day": 21,
+      "title": "Presentation of the B. V. M., Ill cl",
+      "class_rank": null,
+      "raw_class": null,
+      "type_hint": null,
+      "commemorations": [],
+      "pages": [],
+      "raw_text": "Presentation of the B. V. M., Ill cl"
+    },
+    {
+      "month": "November",
+      "day": 22,
+      "title": "St. Cecilia Virgin and Mart., Ill cl",
+      "class_rank": null,
+      "raw_class": null,
+      "type_hint": null,
+      "commemorations": [],
+      "pages": [],
+      "raw_text": "St. Cecilia Virgin and Mart., Ill cl"
+    },
+    {
+      "month": "November",
+      "day": 23,
+      "title": "St. Clement I Pope and Mart., Ill cl Commemoration of St. Felicity Mart",
+      "class_rank": null,
+      "raw_class": null,
+      "type_hint": "Commemoration",
+      "commemorations": [
+        "St"
+      ],
+      "pages": [],
+      "raw_text": "St. Clement I Pope and Mart., Ill cl Commemoration of St. Felicity Mart"
+    },
+    {
+      "month": "November",
+      "day": 24,
+      "title": "St. John of the Cross Conf. and Doctor, / / / cl Commemoration of St. Chrysogonus Mart",
+      "class_rank": null,
+      "raw_class": null,
+      "type_hint": "Commemoration",
+      "commemorations": [
+        "St"
+      ],
+      "pages": [],
+      "raw_text": "St. John of the Cross Conf. and Doctor, / / / cl Commemoration of St. Chrysogonus Mart"
+    },
+    {
+      "month": "November",
+      "day": 25,
+      "title": "St. Catherine Virgin and Mart., Ill cl",
+      "class_rank": null,
+      "raw_class": null,
+      "type_hint": null,
+      "commemorations": [],
+      "pages": [],
+      "raw_text": "St. Catherine Virgin and Mart., Ill cl"
+    },
+    {
+      "month": "November",
+      "day": 26,
+      "title": "St. Sylvester Abbot,  Commemoration of St. Peter of Alexandria Bp. and Mart",
+      "class_rank": "III",
+      "raw_class": "III cl",
+      "type_hint": "Commemoration",
+      "commemorations": [
+        "St"
+      ],
+      "pages": [],
+      "raw_text": "St. Sylvester Abbot, III cl Commemoration of St. Peter of Alexandria Bp. and Mart."
+    },
+    {
+      "month": "November",
+      "day": 29,
+      "title": "Commemoration of St. Saturninus Mart",
+      "class_rank": null,
+      "raw_class": null,
+      "type_hint": "Commemoration",
+      "commemorations": [
+        "St"
+      ],
+      "pages": [],
+      "raw_text": "Commemoration of St. Saturninus Mart"
+    },
+    {
+      "month": "November",
+      "day": 30,
+      "title": "ST. ANDREW APOSTLE",
+      "class_rank": "II",
+      "raw_class": "II cl",
+      "type_hint": "Feast",
+      "commemorations": [],
+      "pages": [
+        "1303"
+      ],
+      "raw_text": "ST. ANDREW APOSTLE, II cl . 1303"
+    },
+    {
+      "month": "December",
+      "day": 2,
+      "title": "St. Bibiana Virgin and Mart., Ill cl",
+      "class_rank": null,
+      "raw_class": null,
+      "type_hint": null,
+      "commemorations": [],
+      "pages": [],
+      "raw_text": "St. Bibiana Virgin and Mart., Ill cl"
+    },
+    {
+      "month": "December",
+      "day": 3,
+      "title": "St. Francis Xavier Conf., Ill cl",
+      "class_rank": null,
+      "raw_class": null,
+      "type_hint": null,
+      "commemorations": [],
+      "pages": [],
+      "raw_text": "St. Francis Xavier Conf., Ill cl"
+    },
+    {
+      "month": "December",
+      "day": 4,
+      "title": "St. Peter Chrysologus Bp., Conf. and Doctor, / / / cl Commemoration of St. Barbara Virg. and Mart",
+      "class_rank": null,
+      "raw_class": null,
+      "type_hint": "Commemoration",
+      "commemorations": [
+        "St"
+      ],
+      "pages": [],
+      "raw_text": "St. Peter Chrysologus Bp., Conf. and Doctor, / / / cl Commemoration of St. Barbara Virg. and Mart"
+    },
+    {
+      "month": "December",
+      "day": 5,
+      "title": "Commemoration of St. Sabbas Abbot",
+      "class_rank": null,
+      "raw_class": null,
+      "type_hint": "Commemoration",
+      "commemorations": [
+        "St"
+      ],
+      "pages": [],
+      "raw_text": "Commemoration of St. Sabbas Abbot"
+    },
+    {
+      "month": "December",
+      "day": 6,
+      "title": "St. Nicholas Bp. and Conf., / / / cl",
+      "class_rank": null,
+      "raw_class": null,
+      "type_hint": null,
+      "commemorations": [],
+      "pages": [],
+      "raw_text": "St. Nicholas Bp. and Conf., / / / cl"
+    },
+    {
+      "month": "December",
+      "day": 7,
+      "title": "St. Ambrose Bp., Conf. and Doctor",
+      "class_rank": "III",
+      "raw_class": "III cl",
+      "type_hint": null,
+      "commemorations": [],
+      "pages": [
+        "1309"
+      ],
+      "raw_text": "St. Ambrose Bp., Conf. and Doctor, III cl 1309"
+    },
+    {
+      "month": "December",
+      "day": 8,
+      "title": "THE IMMACULATE CONCEPTION OF THE B. V. M",
+      "class_rank": "I",
+      "raw_class": "I cl",
+      "type_hint": null,
+      "commemorations": [],
+      "pages": [
+        "1313"
+      ],
+      "raw_text": "THE IMMACULATE CONCEPTION OF THE B. V. M., I cl. . 1313"
+    },
+    {
+      "month": "December",
+      "day": 10,
+      "title": "Commemoration of St. Melchiades, Pope and Mart",
+      "class_rank": null,
+      "raw_class": null,
+      "type_hint": "Commemoration",
+      "commemorations": [
+        "St"
+      ],
+      "pages": [],
+      "raw_text": "Commemoration of St. Melchiades, Pope and Mart"
+    },
+    {
+      "month": "December",
+      "day": 11,
+      "title": "St. Damasus I Pope and Conf., Ill cl",
+      "class_rank": null,
+      "raw_class": null,
+      "type_hint": null,
+      "commemorations": [],
+      "pages": [
+        "1322"
+      ],
+      "raw_text": "St. Damasus I Pope and Conf., Ill cl 1322"
+    },
+    {
+      "month": "December",
+      "day": 13,
+      "title": "S. Lucy Virgin and Mart., Ill cl",
+      "class_rank": null,
+      "raw_class": null,
+      "type_hint": null,
+      "commemorations": [],
+      "pages": [
+        "1322"
+      ],
+      "raw_text": "S. Lucy Virgin and Mart., Ill cl 1322"
+    },
+    {
+      "month": "December",
+      "day": 16,
+      "title": "St. Eusebius Bp. and Mart., / / / cl",
+      "class_rank": null,
+      "raw_class": null,
+      "type_hint": null,
+      "commemorations": [],
+      "pages": [
+        "1325"
+      ],
+      "raw_text": "St. Eusebius Bp. and Mart., / / / cl 1325"
+    },
+    {
+      "month": "December",
+      "day": 20,
+      "title": "S. THOMAS APOSTLE",
+      "class_rank": "II",
+      "raw_class": "II cl",
+      "type_hint": null,
+      "commemorations": [],
+      "pages": [
+        "1326"
+      ],
+      "raw_text": "S. THOMAS APOSTLE, II cl. 1326"
+    },
+    {
+      "month": "December",
+      "day": 24,
+      "title": "VIGIL OF CHRISTMAS",
+      "class_rank": "I",
+      "raw_class": "Id",
+      "type_hint": "Vigil",
+      "commemorations": [],
+      "pages": [
+        "358"
+      ],
+      "raw_text": "VIGIL OF CHRISTMAS, Id 358"
+    },
+    {
+      "month": "December",
+      "day": 25,
+      "title": "CHRISTMAS DAY. THE NATIVITY OF OUR LORD JESUS CHRIST, ., with Octave 364 Commemoration of St. Anastasia Mart., at Mass of Dawn",
+      "class_rank": "I",
+      "raw_class": "I cl",
+      "type_hint": "Octave",
+      "commemorations": [
+        "St"
+      ],
+      "pages": [
+        "364",
+        "404"
+      ],
+      "raw_text": "CHRISTMAS DAY. THE NATIVITY OF OUR LORD JESUS CHRIST, I cl., with Octave 364 Commemoration of St. Anastasia Mart., at Mass of Dawn . . . 404"
+    },
+    {
+      "month": "December",
+      "day": 26,
+      "title": "Second day within the octave of the Nativity \u2014 S. STEPHEN FIRST MARTYR",
+      "class_rank": "II",
+      "raw_class": "II cl",
+      "type_hint": "Octave",
+      "commemorations": [],
+      "pages": [
+        "414"
+      ],
+      "raw_text": "Second day within the octave of the Nativity \u2014 S. STEPHEN FIRST MARTYR, II cl. 414"
+    },
+    {
+      "month": "December",
+      "day": 27,
+      "title": "Third day within the octave of the Nativity \u2014 ST. JOHN APOSTLE AND EVANG",
+      "class_rank": "II",
+      "raw_class": "II cl",
+      "type_hint": "Octave",
+      "commemorations": [],
+      "pages": [
+        "421"
+      ],
+      "raw_text": "Third day within the octave of the Nativity \u2014 ST. JOHN APOSTLE AND EVANG., II cl 421"
+    },
+    {
+      "month": "December",
+      "day": 28,
+      "title": "Fourth day within the octave of the Nativity \u2014 THE HOLY INNOCENTS MM",
+      "class_rank": "II",
+      "raw_class": "II cl",
+      "type_hint": "Octave",
+      "commemorations": [],
+      "pages": [
+        "427"
+      ],
+      "raw_text": "Fourth day within the octave of the Nativity \u2014 THE HOLY INNOCENTS MM., II cl 427"
+    },
+    {
+      "month": "December",
+      "day": 29,
+      "title": "Fifth day within the octave of the Nativity, . \u2014 Commemoration of St. Thomas of Canterbury Bp. and Mart",
+      "class_rank": "II",
+      "raw_class": "II cl",
+      "type_hint": "Octave",
+      "commemorations": [
+        "St"
+      ],
+      "pages": [
+        "439"
+      ],
+      "raw_text": "Fifth day within the octave of the Nativity, II cl. \u2014 Commemoration of St. Thomas of Canterbury Bp. and Mart 439"
+    },
+    {
+      "month": "December",
+      "day": 30,
+      "title": "Sixth day within the octave of the Nativity",
+      "class_rank": "II",
+      "raw_class": "II cl",
+      "type_hint": "Octave",
+      "commemorations": [],
+      "pages": [
+        "437"
+      ],
+      "raw_text": "Sixth day within the octave of the Nativity, II cl 437"
+    },
+    {
+      "month": "December",
+      "day": 31,
+      "title": "Seventh day within the octave of the Nativity, . \u2014 Commemoration of St. Silvester I Pope and Conf",
+      "class_rank": "II",
+      "raw_class": "II cl",
+      "type_hint": "Octave",
+      "commemorations": [
+        "St"
+      ],
+      "pages": [
+        "440"
+      ],
+      "raw_text": "Seventh day within the octave of the Nativity, II cl. \u2014 Commemoration of St. Silvester I Pope and Conf. 440"
+    }
+  ]
+}

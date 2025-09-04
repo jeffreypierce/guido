@@ -6,6 +6,7 @@ import LU from './data/liber_usualis.js';
 import LH from './data/liber_hymnarius.js';
 import AM from './data/antiphonale_monasticum.js';
 import ALIASES from './data/aliases.js';
+import DAY_INDEX from './index/dayIndex.js';
 
 const ALL = [...GR, ...GR74, ...LU, ...LH, ...AM];
 // Build a fast id->row index for canonicalization
@@ -158,3 +159,34 @@ export { default as ordo } from './ordo.js';
 
 // Hymns: heuristic selection (LH/AM)
 export { default as hymnus, hymnus as hymn } from './hymnus.js';
+
+/**
+ * Lookup pre-indexed selections by date. Accepts either a Date (UTC used),
+ * a YYYY-MM-DD string, or an object with { ymd }.
+ * Uses full YMD first, then MM-DD fallback. Form defaults to EF.
+ * Returns a plain record from the baked index, or null if none.
+ */
+export function byDay(day, { form = 'EF' } = {}) {
+  const F = String(form).toUpperCase() === 'OF' ? 'OF' : 'EF';
+  let ymd;
+  if (typeof day === 'string') {
+    ymd = day;
+  } else if (day && typeof day === 'object' && typeof day.ymd === 'string') {
+    ymd = day.ymd;
+  } else if (day instanceof Date) {
+    const d = new Date(Date.UTC(day.getUTCFullYear(), day.getUTCMonth(), day.getUTCDate()));
+    const mm = (d.getUTCMonth() + 1).toString().padStart(2, '0');
+    const dd = d.getUTCDate().toString().padStart(2, '0');
+    ymd = `${d.getUTCFullYear()}-${mm}-${dd}`;
+  } else {
+    return null;
+  }
+  const mmdd = ymd.slice(5);
+  const table = DAY_INDEX?.[F] || {};
+  return table[ymd] || table[mmdd] || null;
+}
+
+/** Reverse lookup placeholder (future). */
+export function byChant(_id) {
+  return null;
+}

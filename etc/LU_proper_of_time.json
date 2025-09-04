@@ -1,0 +1,799 @@
+{
+  "schema": {
+    "title": "Proper of the Time (Merged)",
+    "description": "Merged content from Advent→Christmas, Lent→Ascension, and Ascension→End; deep-merged with provenance.",
+    "version": "1.0",
+    "merge_strategy": "dicts merged per key; lists concatenated with dedupe; scalar conflicts converted to lists preserving both values"
+  },
+  "provenance": [
+    {
+      "path": "/mnt/data/proper_time_advent_christmas_21cb8128.json",
+      "size_bytes": 10329
+    },
+    {
+      "path": "/mnt/data/proper_time_lent_to_ascension_8ad23e21.json",
+      "size_bytes": 4127
+    },
+    {
+      "path": "/mnt/data/proper_time_ascension_to_end_0adda948.json",
+      "size_bytes": 4688
+    }
+  ],
+  "proper_time": {
+    "proper_of_time": {
+      "version": [
+        "1961 Liber Usualis (per 1960 rubrics)",
+        "1961 Liber Usualis (1960 rubrics)"
+      ],
+      "last_updated": [
+        "2025-09-04T12:51:22.295494Z",
+        "2025-09-04T12:53:25.143034Z",
+        "2025-09-04T12:55:31.616081Z"
+      ],
+      "sections": {
+        "advent": {
+          "notes": [
+            "Hymn melodies at lesser Hours per Ordinary rules (see doxology rules)."
+          ],
+          "sundays": {
+            "class": "I",
+            "precedence": {
+              "gives_way_only_to": [
+                "Immaculate Conception"
+              ],
+              "if_I_class_feast_on_saturday": "II Vespers of feast with commemoration of the Sunday.",
+              "other_I_class_feasts": "Transferred to Monday; commemorated at Sunday Vespers.",
+              "II_III_class_feasts_on_sunday": "Not commemorated; not transferred."
+            }
+          },
+          "weekdays": {
+            "dec_17_23_and_ember_days": {
+              "class": "II feria",
+              "precedence": "Give way to II class feasts of the universal Church (e.g., St. Thomas Apostle).",
+              "commemoration": "Feria commemorated at all Masses and at Vespers of feasts."
+            },
+            "until_dec_16": {
+              "class": "III feria",
+              "precedence": "Give way to III class feasts.",
+              "commemoration": "Feria commemorated at all Masses and at Vespers of feasts."
+            },
+            "hymns": "Follow Advent melodies per Ordinary notes."
+          },
+          "christmas_eve": {
+            "class": "I",
+            "precedence": "Gives way to no feast and allows no commemoration.",
+            "if_on_IV_sunday_of_advent": {
+              "IV_sunday": "Gives way and is not commemorated; retains its I Vespers."
+            },
+            "lesser_hours": "As in Liber Usualis with Sunday psalms (Prime: set III)."
+          }
+        },
+        "christmas_season": {
+          "christmas_day": {
+            "class": "I",
+            "changes": {
+              "matins": "Psalm 88 (Misericordias Domini) at start of III Nocturn now only vv. 1–36; then Gloria Patri immediately.",
+              "lesser_hours_hymns": "Keep Christmas melodies; use common doxology.",
+              "third_mass_last_gospel": "Omitted.",
+              "vespers_commem": "No commemoration of St. Stephen at Vespers except where St. Stephen is I class (see below)."
+            }
+          },
+          "three_days_after_christmas": {
+            "overview": "Normally II class: St Stephen (Dec 26), St John (Dec 27), Holy Innocents (Dec 28).",
+            "normal_observance": {
+              "lesser_hours": {
+                "hymns": "Christmas melodies; common doxology.",
+                "antiphons_psalms": "Of the weekday (LU pp. 279A–279V).",
+                "prime_short_resp_versicle": "Use Christmas versicle."
+              },
+              "mass_of_holy_innocents": {
+                "gloria": true,
+                "alleluia": true
+              },
+              "vespers": {
+                "st_stephen": "Use hymn per LU p.1126 or 1127; doxology as printed; commemorate only Octave of Christmas (on Saturday, only the Sunday).",
+                "st_john": "Use hymn per LU p.1115 or 1116; doxology as printed; same commemoration rule."
+              },
+              "if_sunday_occurs_on_dec26_28": {
+                "office_mass": "Use Sunday (LU 435–437).",
+                "commemorations": "Only the feast of the day at Lauds and (if conventual) at sung Mass."
+              }
+            },
+            "when_feast_is_I_class": {
+              "examples": "Titular church, cathedral in diocese of the Saint, etc.",
+              "vespers_I": {
+                "st_john": {
+                  "antiphons_psalms": "Of Christmas (LU p.412)",
+                  "chapter": "Qui timet Deum (p.425)",
+                  "hymn": "Exsultet orbis (p.1115/1116)",
+                  "versicle": "Valde honorandus (p.426)",
+                  "magnificat_ant": "Iste est Ioannes (p.420)",
+                  "magnificat_tone": "Ig (LU p.207 or 213)",
+                  "commem": "Of Christmas (p.413) or of the Sunday (p.433)"
+                },
+                "holy_innocents": {
+                  "antiphons_psalms": "Of Christmas (p.412)",
+                  "chapter": "Vidi supra montem",
+                  "hymn": "Salvete, flores (p.431)",
+                  "versicle": "Herodes iratus est",
+                  "magnificat_ant": "Hi sunt (p.426)",
+                  "magnificat_tone": "Ia3 (p.207 or 213)",
+                  "commem": "Of Christmas (p.413) or Sunday"
+                }
+              },
+              "lesser_hours": "Christmas hymn melodies; antiphons of feast with Sunday psalms (Prime set III); Prime versicle of Christmas.",
+              "masses": "Commemoration of Christmas only (or of the occurring Sunday).",
+              "vespers_II": "Hymns as above; commemorate Christmas only (or the Sunday if it occurs).",
+              "if_on_sunday": "Sunday is only commemorated.",
+              "adjacent_I_class_feast": "If a I class feast is on the day before/after, at I or II Vespers only that feast (or the occurring Sunday) is commemorated."
+            }
+          },
+          "sunday_in_octave_of_christmas": {
+            "rules": [
+              "If Christmas Day is Sunday: this Sunday is not kept and is not transferred.",
+              "From Dec 26–31 the Sunday outranks any feast not of I class (from Matins to Compline).",
+              "I Vespers gives way to a II class feast, with only commemoration of the Sunday.",
+              "If coincident with a I class feast: Sunday is commemorated."
+            ],
+            "observance": {
+              "vespers_and_mass": "No commemoration of Christmas. At non‑conventual sung Mass: no commemoration; at conventual Mass: only of an occurring II class feast.",
+              "lesser_hours": "Antiphons and psalms of Sunday (Prime set I)."
+            }
+          },
+          "days_in_octave_of_christmas": {
+            "note": "St Thomas (Dec 29) and St Sylvester (Dec 31) reduced to commemorations.",
+            "last_three_days": {
+              "class": "II",
+              "lauds": "As on Christmas Day (with commemoration of St Thomas or St Sylvester).",
+              "lesser_hours": "Antiphons & psalms of the occurring weekday (pp.279ff); rest as Christmas Day.",
+              "vespers": "Except Dec 31: Antiphons & psalms of II Vespers of Christmas; from chapter use that of the feast unless they are I Vespers of Sunday or a I class feast.",
+              "compline": "Of Sunday.",
+              "mass": "LU p.439; at sung Mass no commemoration unless conventual.",
+              "dec_29_31_commems": "Commemoration of the respective Saint in the sung Mass of the octave, if conventual.",
+              "where_sylvester_is_I_class": "At II Vespers: antiphons/psalms of Christmas; chapter from Common of Confessor Pontiff; prayer LU p.440; add commemoration of the following Octave Day."
+            }
+          },
+          "octave_day_of_christmas": {
+            "date": "January 1",
+            "class": "I",
+            "observance": "As in LU pp. 440–444."
+          },
+          "holy_name_of_jesus": {
+            "class": "II (I if proper)",
+            "when_kept": "On the Sunday Jan 2–5; if none, on Jan 2.",
+            "vespers": "Has I Vespers on Sunday dates (Jan 3–5); none when on weekday.",
+            "lesser_hours": "Antiphons & psalms of the weekday; rest of feast. Where I class: use proper antiphons (p.445).",
+            "commemorations": "At non‑conventual sung Mass and at both Vespers: none.",
+            "compline": "Of Sunday.",
+            "if_on_jan_5": "Not commemorated at I Vespers of Epiphany."
+          },
+          "jan_2_to_5": {
+            "type": "Ferias of the Nativity season",
+            "ferial_office": {
+              "antiphons_psalms": "Of the weekday throughout; other parts (incl. Prime versicle in short responsory) as for Christmas."
+            },
+            "mass": "Use Jan 1 Mass with Gloria and Christmas Preface; no Creed; no proper Communicantes.",
+            "feasts_on_these_days": "Use Christmas versicle in Prime short responsory unless a proper versicle is assigned; feria not commemorated."
+          },
+          "epiphany": {
+            "class": "I",
+            "observance": "As in LU; at lesser Hours keep Epiphany melodies with common doxology (Praesta, Pater piissime) until Jan 13 inclusive.",
+            "exterior_solemnity_note": "If the external solemnity is on the Sunday following Jan 6, there is no commemoration of the Holy Family nor of the Sunday."
+          },
+          "holy_family": {
+            "rank": "II class (First Sunday after Epiphany)",
+            "vespers": "Has I Vespers (p.467), except when on Jan 7 (day after Epiphany).",
+            "lesser_hours": "Antiphons & psalms of Sunday (Prime set I); rest of feast.",
+            "former_commemorations": "The two commemorations formerly given at Mass and both Vespers are no longer made."
+          },
+          "jan_7_to_12": {
+            "type": "Ferias of the Epiphany season",
+            "ferial_office": {
+              "antiphons_psalms": "Of the weekday at all Hours.",
+              "other_parts": "As on Epiphany, incl. Prime versicle and short responsory, and the prayer; except after the First Sunday after Epiphany, when the prayer is of that Sunday (Vota, quaesumus, p.478).",
+              "vespers_magnificat_antiphons": {
+                "Jan 7": "Videntes stellam magi (p.481)",
+                "Jan 8": "Lux de luce (p.482)",
+                "Jan 9": "Interrogabat (p.482)",
+                "Jan 10": "Omnes de Saba (p.482)",
+                "Jan 11": "Admoniti magi (p.483)",
+                "Jan 12": "Tribus miraculis (p.466)"
+              }
+            },
+            "mass": "Use Epiphany Mass; after the First Sunday, use Sunday Mass (p.477) without Creed or proper Communicantes; no commemoration of Epiphany.",
+            "feasts_on_these_days": "Prime short responsory versicle of Epiphany (unless proper); no commemoration of Epiphany."
+          },
+          "baptism_of_our_lord": {
+            "date": "Jan 13",
+            "class": "II",
+            "lauds_vespers": "As on Epiphany except proper prayer (p.483).",
+            "lesser_hours": "Antiphons of the weekday (pp.279A ff.); rest as on Epiphany except prayer. Compline of Sunday.",
+            "mass": "Per LU p.483.",
+            "if_on_saturday": "Vespers of the feast without commemoration of the following Sunday.",
+            "if_on_first_sunday_after_epiphany": "Office is of Holy Family only; no commemoration of Baptism or of the Sunday."
+          }
+        }
+      },
+      "section": [
+        "Lent_to_Ascension",
+        "Ascension_to_End"
+      ],
+      "lent": {
+        "ash_wednesday": {
+          "class": "I feria",
+          "rules": [
+            "Gives way to no feast.",
+            "Allows only of a privileged commemoration.",
+            "If coinciding with a I class feast, that feast is transferred to the next free day and commemorated at Wednesday Vespers."
+          ],
+          "mass_notes": "Prayers at the foot of the altar omitted (see Rubrics for Mass, p.LXIII)."
+        },
+        "sundays": {
+          "class": "I",
+          "notes": "Same rules as Sundays of Advent (see Proper of Time, Advent)."
+        },
+        "ember_days": {
+          "class": "II ferias",
+          "rules": "Have same privileges as Ember Days of Advent."
+        },
+        "other_ferias": {
+          "class": "III ferias",
+          "timeframe": "Thursday after Ash Wednesday through Saturday before Palm Sunday inclusive (except Ember Days).",
+          "rules": [
+            "Give way only to I and II class feasts.",
+            "If Office cannot be said, they are commemorated."
+          ]
+        },
+        "friday_after_I_sunday_of_passion": {
+          "note": "Customary devotions in honour of the Sorrows of Our Lady may still take place.",
+          "masses": "Two festive Masses of Our Lady's Sorrows are allowed."
+        },
+        "holy_week": {
+          "class": "I ferias",
+          "rules": [
+            "All weekdays are I class.",
+            "Feasts of the I class occurring Palm Sunday → Low Sunday are transferred to after Low Sunday.",
+            "Other feasts omitted."
+          ],
+          "observance": "From Palm Sunday (LU p.578) until Easter Vigil inclusive (LU p.776): no changes made."
+        }
+      },
+      "paschal_time": {
+        "overview": {
+          "easter_day": {
+            "class": "I Sunday & I class feast with octave"
+          },
+          "whit_sunday": {
+            "class": "I Sunday & I class feast with octave"
+          },
+          "octaves": {
+            "days": "All days within Easter & Pentecost octaves are I class.",
+            "rules": "Octaves exclude all feasts; allow only privileged commemorations."
+          },
+          "hours": {
+            "note": "On Easter & Whit Sundays and octave days: psalms of Sunday at lesser Hours; at Prime: psalms 53, 118i, 118ii."
+          }
+        },
+        "low_sunday": {
+          "class": "I",
+          "observance": [
+            "As LU pp.808–815.",
+            "No feast may be kept.",
+            "At Vespers: I class feast falling next day may be commemorated (e.g., Annunciation moved to Monday)."
+          ]
+        },
+        "feasts_of_saints_in_paschal_time": {
+          "hymn_changes": [
+            "Apostles' hymn 'Tristes erant Apostoli' (p.1121): unchanged melody/text; doxology Deo Patri sit gloria is retained Ascension–Pentecost.",
+            "'Deus tuorum militum': Paschal-time melodies disappear; use melody from p.1126/1127 with its doxology year-round.",
+            "'Rex gloriose Martyrum' (Common of Martyrs): new melody and doxology (p.1144).",
+            "'Iesu corona Virginum': sung year-round with melody p.1211 & its doxology; melodies on p.1213 disappear.",
+            "'Fortem virili pectore': sung year-round with melody at top of p.1234; other melodies (bottom of page) disappear."
+          ]
+        }
+      },
+      "rogation_days": {
+        "greater_and_lesser": {
+          "reference": "See Rubrics, p.LVII.",
+          "rules": [
+            "Rogation Mass is a II class votive Mass.",
+            "Cannot be celebrated on I class feasts, Sundays, ferias, vigils.",
+            "Considered part of liturgical action; must be celebrated immediately after procession or prayers.",
+            "At start of Mass: omit Judica, Confiteor, absolution, versicles, Aufer a nobis, Oramus te Domine."
+          ],
+          "note": "Liber Usualis has been altered accordingly."
+        }
+      },
+      "ascension_eve": {
+        "class": "II vigil",
+        "rules": [
+          "Gives way only to I or II class feasts.",
+          "If it cannot be kept, it is commemorated according to rubrics."
+        ]
+      },
+      "ascension_season": {
+        "ascension_day": {
+          "class": "I",
+          "observance": "As LU pp.844–853 without change; hymns at lesser Hours follow rules at p.LXIX.",
+          "vespers": "II Vespers allow only commemoration of a I class feast of BVM or Saint on Friday."
+        },
+        "ferias_after_ascension": {
+          "days": "Friday after Ascension until Whitsun Eve exclusive.",
+          "ferial_office": {
+            "antiphons_psalms": "Of weekday (LU pp.279A ff).",
+            "short_responsory_prime": "As on Ascension Day."
+          },
+          "mass": "Mass of Ascension with Gloria, Preface of Ascension; no Creed or proper Communicantes.",
+          "feasts": "If a feast occurs: use Ascension versicle at Prime unless proper one; feria not commemorated."
+        },
+        "sunday_after_ascension": {
+          "observance": {
+            "vespers_I": "Saturday psalms with Paschal antiphons; no commemoration of Ascension.",
+            "compline": "Of Saturday.",
+            "prime": "Antiphons & psalms of Sunday (Paschal Time); rest as Ascension Day.",
+            "terce_sext_none": "Antiphons & psalms of Sunday.",
+            "mass": "No commemoration of Ascension.",
+            "vespers_II": "Antiphons & psalms of Sunday (Paschal Time); no commemoration of Ascension."
+          }
+        },
+        "whitsun_eve": {
+          "class": "I vigil",
+          "rules": [
+            "Gives way to no feast; allows no commemoration.",
+            "Lesser Hours: antiphons & psalms of Saturday (LU pp.279R ff).",
+            "Other parts as Ascension Day (LU pp.846ff) with Sunday prayer (p.855).",
+            "Conventual Mass sung after None (LU pp.859–861)."
+          ]
+        },
+        "whitsun_octave": {
+          "class": "I",
+          "rules": [
+            "All days are I class.",
+            "Same rules as Easter octave.",
+            "Lesser Hours: psalms of Sunday (Prime: psalms 53, 118i, 118ii).",
+            "Hymns at Prime, Sext, None, Compline: melody LU p.862 with common doxology."
+          ]
+        },
+        "trinity_sunday": {
+          "class": "I",
+          "observance": {
+            "as_in_LU": "LU pp.907–916.",
+            "omit_commem": "No commemoration of Sunday at Vespers, Lauds, Mass.",
+            "last_gospel": "Prologue of St John.",
+            "prime_short_lesson": "Dominus autem (p.233).",
+            "vespers_II": "Commemoration only of a I class feast of BVM or Saint on following day."
+          }
+        },
+        "corpus_christi": {
+          "class": "I",
+          "observance": {
+            "LU": "pp.917–959 with modifications.",
+            "compline_lesser_hours": "Hymns no.2 of Sunday.",
+            "prime": "Versicle Qui sedes ad dexteram Patris; short lesson Dominus autem (p.233).",
+            "mass": "Common Preface; on Sunday, Preface of Trinity (except where Preface of Blessed Sacrament authorised).",
+            "procession": "If procession follows Mass, see LU p.LXVI.",
+            "vespers_II": "Commemoration only of a I class feast of BVM or Saint next day.",
+            "octave": "No longer kept as before. Sundays/ferias treated as per annum.",
+            "devotions": "Customary devotions may continue. Where procession occurs: two II class votive Masses of Blessed Sacrament permitted."
+          }
+        },
+        "sacred_heart": {
+          "class": "I",
+          "observance": {
+            "as_in_LU": "LU pp.965ff with modifications.",
+            "compline_lesser_hours": "Hymns no.2 of Sunday.",
+            "vespers_II": "Commemoration only of I class feast of BVM or Saint next day."
+          }
+        },
+        "sundays_after_pentecost": {
+          "II_and_III": {
+            "masses": {
+              "II": "LU pp.961–964",
+              "III": "LU pp.981–984",
+              "notes": "No commemoration of preceding feast; Preface of Trinity."
+            },
+            "lesser_hours": "As on other Sundays; Collect is Collect of Mass.",
+            "vespers": "As on other Sundays, except Magnificat antiphons & prayers LU pp.960/964 and 980/985.",
+            "special_permission": "On II Sunday (if Corpus Christi not obligation) and III Sunday: one sung Mass and one/two low Masses of preceding feast allowed; with Gloria & Creed.",
+            "commemorations": [
+              "No commemoration of Sunday or oratio imperata at conventual Masses.",
+              "At a low Mass: one other commemoration may be made.",
+              "If I class feast falls on II or III Sunday: add prayers of Blessed Sacrament or Sacred Heart under one conclusion; no commemoration of Sunday."
+            ]
+          }
+        }
+      }
+    }
+  },
+  "sources": {
+    "proper_time_advent_christmas_21cb8128": {
+      "proper_of_time": {
+        "version": "1961 Liber Usualis (per 1960 rubrics)",
+        "last_updated": "2025-09-04T12:51:22.295494Z",
+        "sections": {
+          "advent": {
+            "notes": [
+              "Hymn melodies at lesser Hours per Ordinary rules (see doxology rules)."
+            ],
+            "sundays": {
+              "class": "I",
+              "precedence": {
+                "gives_way_only_to": [
+                  "Immaculate Conception"
+                ],
+                "if_I_class_feast_on_saturday": "II Vespers of feast with commemoration of the Sunday.",
+                "other_I_class_feasts": "Transferred to Monday; commemorated at Sunday Vespers.",
+                "II_III_class_feasts_on_sunday": "Not commemorated; not transferred."
+              }
+            },
+            "weekdays": {
+              "dec_17_23_and_ember_days": {
+                "class": "II feria",
+                "precedence": "Give way to II class feasts of the universal Church (e.g., St. Thomas Apostle).",
+                "commemoration": "Feria commemorated at all Masses and at Vespers of feasts."
+              },
+              "until_dec_16": {
+                "class": "III feria",
+                "precedence": "Give way to III class feasts.",
+                "commemoration": "Feria commemorated at all Masses and at Vespers of feasts."
+              },
+              "hymns": "Follow Advent melodies per Ordinary notes."
+            },
+            "christmas_eve": {
+              "class": "I",
+              "precedence": "Gives way to no feast and allows no commemoration.",
+              "if_on_IV_sunday_of_advent": {
+                "IV_sunday": "Gives way and is not commemorated; retains its I Vespers."
+              },
+              "lesser_hours": "As in Liber Usualis with Sunday psalms (Prime: set III)."
+            }
+          },
+          "christmas_season": {
+            "christmas_day": {
+              "class": "I",
+              "changes": {
+                "matins": "Psalm 88 (Misericordias Domini) at start of III Nocturn now only vv. 1–36; then Gloria Patri immediately.",
+                "lesser_hours_hymns": "Keep Christmas melodies; use common doxology.",
+                "third_mass_last_gospel": "Omitted.",
+                "vespers_commem": "No commemoration of St. Stephen at Vespers except where St. Stephen is I class (see below)."
+              }
+            },
+            "three_days_after_christmas": {
+              "overview": "Normally II class: St Stephen (Dec 26), St John (Dec 27), Holy Innocents (Dec 28).",
+              "normal_observance": {
+                "lesser_hours": {
+                  "hymns": "Christmas melodies; common doxology.",
+                  "antiphons_psalms": "Of the weekday (LU pp. 279A–279V).",
+                  "prime_short_resp_versicle": "Use Christmas versicle."
+                },
+                "mass_of_holy_innocents": {
+                  "gloria": true,
+                  "alleluia": true
+                },
+                "vespers": {
+                  "st_stephen": "Use hymn per LU p.1126 or 1127; doxology as printed; commemorate only Octave of Christmas (on Saturday, only the Sunday).",
+                  "st_john": "Use hymn per LU p.1115 or 1116; doxology as printed; same commemoration rule."
+                },
+                "if_sunday_occurs_on_dec26_28": {
+                  "office_mass": "Use Sunday (LU 435–437).",
+                  "commemorations": "Only the feast of the day at Lauds and (if conventual) at sung Mass."
+                }
+              },
+              "when_feast_is_I_class": {
+                "examples": "Titular church, cathedral in diocese of the Saint, etc.",
+                "vespers_I": {
+                  "st_john": {
+                    "antiphons_psalms": "Of Christmas (LU p.412)",
+                    "chapter": "Qui timet Deum (p.425)",
+                    "hymn": "Exsultet orbis (p.1115/1116)",
+                    "versicle": "Valde honorandus (p.426)",
+                    "magnificat_ant": "Iste est Ioannes (p.420)",
+                    "magnificat_tone": "Ig (LU p.207 or 213)",
+                    "commem": "Of Christmas (p.413) or of the Sunday (p.433)"
+                  },
+                  "holy_innocents": {
+                    "antiphons_psalms": "Of Christmas (p.412)",
+                    "chapter": "Vidi supra montem",
+                    "hymn": "Salvete, flores (p.431)",
+                    "versicle": "Herodes iratus est",
+                    "magnificat_ant": "Hi sunt (p.426)",
+                    "magnificat_tone": "Ia3 (p.207 or 213)",
+                    "commem": "Of Christmas (p.413) or Sunday"
+                  }
+                },
+                "lesser_hours": "Christmas hymn melodies; antiphons of feast with Sunday psalms (Prime set III); Prime versicle of Christmas.",
+                "masses": "Commemoration of Christmas only (or of the occurring Sunday).",
+                "vespers_II": "Hymns as above; commemorate Christmas only (or the Sunday if it occurs).",
+                "if_on_sunday": "Sunday is only commemorated.",
+                "adjacent_I_class_feast": "If a I class feast is on the day before/after, at I or II Vespers only that feast (or the occurring Sunday) is commemorated."
+              }
+            },
+            "sunday_in_octave_of_christmas": {
+              "rules": [
+                "If Christmas Day is Sunday: this Sunday is not kept and is not transferred.",
+                "From Dec 26–31 the Sunday outranks any feast not of I class (from Matins to Compline).",
+                "I Vespers gives way to a II class feast, with only commemoration of the Sunday.",
+                "If coincident with a I class feast: Sunday is commemorated."
+              ],
+              "observance": {
+                "vespers_and_mass": "No commemoration of Christmas. At non‑conventual sung Mass: no commemoration; at conventual Mass: only of an occurring II class feast.",
+                "lesser_hours": "Antiphons and psalms of Sunday (Prime set I)."
+              }
+            },
+            "days_in_octave_of_christmas": {
+              "note": "St Thomas (Dec 29) and St Sylvester (Dec 31) reduced to commemorations.",
+              "last_three_days": {
+                "class": "II",
+                "lauds": "As on Christmas Day (with commemoration of St Thomas or St Sylvester).",
+                "lesser_hours": "Antiphons & psalms of the occurring weekday (pp.279ff); rest as Christmas Day.",
+                "vespers": "Except Dec 31: Antiphons & psalms of II Vespers of Christmas; from chapter use that of the feast unless they are I Vespers of Sunday or a I class feast.",
+                "compline": "Of Sunday.",
+                "mass": "LU p.439; at sung Mass no commemoration unless conventual.",
+                "dec_29_31_commems": "Commemoration of the respective Saint in the sung Mass of the octave, if conventual.",
+                "where_sylvester_is_I_class": "At II Vespers: antiphons/psalms of Christmas; chapter from Common of Confessor Pontiff; prayer LU p.440; add commemoration of the following Octave Day."
+              }
+            },
+            "octave_day_of_christmas": {
+              "date": "January 1",
+              "class": "I",
+              "observance": "As in LU pp. 440–444."
+            },
+            "holy_name_of_jesus": {
+              "class": "II (I if proper)",
+              "when_kept": "On the Sunday Jan 2–5; if none, on Jan 2.",
+              "vespers": "Has I Vespers on Sunday dates (Jan 3–5); none when on weekday.",
+              "lesser_hours": "Antiphons & psalms of the weekday; rest of feast. Where I class: use proper antiphons (p.445).",
+              "commemorations": "At non‑conventual sung Mass and at both Vespers: none.",
+              "compline": "Of Sunday.",
+              "if_on_jan_5": "Not commemorated at I Vespers of Epiphany."
+            },
+            "jan_2_to_5": {
+              "type": "Ferias of the Nativity season",
+              "ferial_office": {
+                "antiphons_psalms": "Of the weekday throughout; other parts (incl. Prime versicle in short responsory) as for Christmas."
+              },
+              "mass": "Use Jan 1 Mass with Gloria and Christmas Preface; no Creed; no proper Communicantes.",
+              "feasts_on_these_days": "Use Christmas versicle in Prime short responsory unless a proper versicle is assigned; feria not commemorated."
+            },
+            "epiphany": {
+              "class": "I",
+              "observance": "As in LU; at lesser Hours keep Epiphany melodies with common doxology (Praesta, Pater piissime) until Jan 13 inclusive.",
+              "exterior_solemnity_note": "If the external solemnity is on the Sunday following Jan 6, there is no commemoration of the Holy Family nor of the Sunday."
+            },
+            "holy_family": {
+              "rank": "II class (First Sunday after Epiphany)",
+              "vespers": "Has I Vespers (p.467), except when on Jan 7 (day after Epiphany).",
+              "lesser_hours": "Antiphons & psalms of Sunday (Prime set I); rest of feast.",
+              "former_commemorations": "The two commemorations formerly given at Mass and both Vespers are no longer made."
+            },
+            "jan_7_to_12": {
+              "type": "Ferias of the Epiphany season",
+              "ferial_office": {
+                "antiphons_psalms": "Of the weekday at all Hours.",
+                "other_parts": "As on Epiphany, incl. Prime versicle and short responsory, and the prayer; except after the First Sunday after Epiphany, when the prayer is of that Sunday (Vota, quaesumus, p.478).",
+                "vespers_magnificat_antiphons": {
+                  "Jan 7": "Videntes stellam magi (p.481)",
+                  "Jan 8": "Lux de luce (p.482)",
+                  "Jan 9": "Interrogabat (p.482)",
+                  "Jan 10": "Omnes de Saba (p.482)",
+                  "Jan 11": "Admoniti magi (p.483)",
+                  "Jan 12": "Tribus miraculis (p.466)"
+                }
+              },
+              "mass": "Use Epiphany Mass; after the First Sunday, use Sunday Mass (p.477) without Creed or proper Communicantes; no commemoration of Epiphany.",
+              "feasts_on_these_days": "Prime short responsory versicle of Epiphany (unless proper); no commemoration of Epiphany."
+            },
+            "baptism_of_our_lord": {
+              "date": "Jan 13",
+              "class": "II",
+              "lauds_vespers": "As on Epiphany except proper prayer (p.483).",
+              "lesser_hours": "Antiphons of the weekday (pp.279A ff.); rest as on Epiphany except prayer. Compline of Sunday.",
+              "mass": "Per LU p.483.",
+              "if_on_saturday": "Vespers of the feast without commemoration of the following Sunday.",
+              "if_on_first_sunday_after_epiphany": "Office is of Holy Family only; no commemoration of Baptism or of the Sunday."
+            }
+          }
+        }
+      }
+    },
+    "proper_time_lent_to_ascension_8ad23e21": {
+      "proper_of_time": {
+        "section": "Lent_to_Ascension",
+        "version": "1961 Liber Usualis (1960 rubrics)",
+        "last_updated": "2025-09-04T12:53:25.143034Z",
+        "lent": {
+          "ash_wednesday": {
+            "class": "I feria",
+            "rules": [
+              "Gives way to no feast.",
+              "Allows only of a privileged commemoration.",
+              "If coinciding with a I class feast, that feast is transferred to the next free day and commemorated at Wednesday Vespers."
+            ],
+            "mass_notes": "Prayers at the foot of the altar omitted (see Rubrics for Mass, p.LXIII)."
+          },
+          "sundays": {
+            "class": "I",
+            "notes": "Same rules as Sundays of Advent (see Proper of Time, Advent)."
+          },
+          "ember_days": {
+            "class": "II ferias",
+            "rules": "Have same privileges as Ember Days of Advent."
+          },
+          "other_ferias": {
+            "class": "III ferias",
+            "timeframe": "Thursday after Ash Wednesday through Saturday before Palm Sunday inclusive (except Ember Days).",
+            "rules": [
+              "Give way only to I and II class feasts.",
+              "If Office cannot be said, they are commemorated."
+            ]
+          },
+          "friday_after_I_sunday_of_passion": {
+            "note": "Customary devotions in honour of the Sorrows of Our Lady may still take place.",
+            "masses": "Two festive Masses of Our Lady's Sorrows are allowed."
+          },
+          "holy_week": {
+            "class": "I ferias",
+            "rules": [
+              "All weekdays are I class.",
+              "Feasts of the I class occurring Palm Sunday → Low Sunday are transferred to after Low Sunday.",
+              "Other feasts omitted."
+            ],
+            "observance": "From Palm Sunday (LU p.578) until Easter Vigil inclusive (LU p.776): no changes made."
+          }
+        },
+        "paschal_time": {
+          "overview": {
+            "easter_day": {
+              "class": "I Sunday & I class feast with octave"
+            },
+            "whit_sunday": {
+              "class": "I Sunday & I class feast with octave"
+            },
+            "octaves": {
+              "days": "All days within Easter & Pentecost octaves are I class.",
+              "rules": "Octaves exclude all feasts; allow only privileged commemorations."
+            },
+            "hours": {
+              "note": "On Easter & Whit Sundays and octave days: psalms of Sunday at lesser Hours; at Prime: psalms 53, 118i, 118ii."
+            }
+          },
+          "low_sunday": {
+            "class": "I",
+            "observance": [
+              "As LU pp.808–815.",
+              "No feast may be kept.",
+              "At Vespers: I class feast falling next day may be commemorated (e.g., Annunciation moved to Monday)."
+            ]
+          },
+          "feasts_of_saints_in_paschal_time": {
+            "hymn_changes": [
+              "Apostles' hymn 'Tristes erant Apostoli' (p.1121): unchanged melody/text; doxology Deo Patri sit gloria is retained Ascension–Pentecost.",
+              "'Deus tuorum militum': Paschal-time melodies disappear; use melody from p.1126/1127 with its doxology year-round.",
+              "'Rex gloriose Martyrum' (Common of Martyrs): new melody and doxology (p.1144).",
+              "'Iesu corona Virginum': sung year-round with melody p.1211 & its doxology; melodies on p.1213 disappear.",
+              "'Fortem virili pectore': sung year-round with melody at top of p.1234; other melodies (bottom of page) disappear."
+            ]
+          }
+        },
+        "rogation_days": {
+          "greater_and_lesser": {
+            "reference": "See Rubrics, p.LVII.",
+            "rules": [
+              "Rogation Mass is a II class votive Mass.",
+              "Cannot be celebrated on I class feasts, Sundays, ferias, vigils.",
+              "Considered part of liturgical action; must be celebrated immediately after procession or prayers.",
+              "At start of Mass: omit Judica, Confiteor, absolution, versicles, Aufer a nobis, Oramus te Domine."
+            ],
+            "note": "Liber Usualis has been altered accordingly."
+          }
+        },
+        "ascension_eve": {
+          "class": "II vigil",
+          "rules": [
+            "Gives way only to I or II class feasts.",
+            "If it cannot be kept, it is commemorated according to rubrics."
+          ]
+        }
+      }
+    },
+    "proper_time_ascension_to_end_0adda948": {
+      "proper_of_time": {
+        "section": "Ascension_to_End",
+        "version": "1961 Liber Usualis (1960 rubrics)",
+        "last_updated": "2025-09-04T12:55:31.616081Z",
+        "ascension_season": {
+          "ascension_day": {
+            "class": "I",
+            "observance": "As LU pp.844–853 without change; hymns at lesser Hours follow rules at p.LXIX.",
+            "vespers": "II Vespers allow only commemoration of a I class feast of BVM or Saint on Friday."
+          },
+          "ferias_after_ascension": {
+            "days": "Friday after Ascension until Whitsun Eve exclusive.",
+            "ferial_office": {
+              "antiphons_psalms": "Of weekday (LU pp.279A ff).",
+              "short_responsory_prime": "As on Ascension Day."
+            },
+            "mass": "Mass of Ascension with Gloria, Preface of Ascension; no Creed or proper Communicantes.",
+            "feasts": "If a feast occurs: use Ascension versicle at Prime unless proper one; feria not commemorated."
+          },
+          "sunday_after_ascension": {
+            "observance": {
+              "vespers_I": "Saturday psalms with Paschal antiphons; no commemoration of Ascension.",
+              "compline": "Of Saturday.",
+              "prime": "Antiphons & psalms of Sunday (Paschal Time); rest as Ascension Day.",
+              "terce_sext_none": "Antiphons & psalms of Sunday.",
+              "mass": "No commemoration of Ascension.",
+              "vespers_II": "Antiphons & psalms of Sunday (Paschal Time); no commemoration of Ascension."
+            }
+          },
+          "whitsun_eve": {
+            "class": "I vigil",
+            "rules": [
+              "Gives way to no feast; allows no commemoration.",
+              "Lesser Hours: antiphons & psalms of Saturday (LU pp.279R ff).",
+              "Other parts as Ascension Day (LU pp.846ff) with Sunday prayer (p.855).",
+              "Conventual Mass sung after None (LU pp.859–861)."
+            ]
+          },
+          "whitsun_octave": {
+            "class": "I",
+            "rules": [
+              "All days are I class.",
+              "Same rules as Easter octave.",
+              "Lesser Hours: psalms of Sunday (Prime: psalms 53, 118i, 118ii).",
+              "Hymns at Prime, Sext, None, Compline: melody LU p.862 with common doxology."
+            ]
+          },
+          "trinity_sunday": {
+            "class": "I",
+            "observance": {
+              "as_in_LU": "LU pp.907–916.",
+              "omit_commem": "No commemoration of Sunday at Vespers, Lauds, Mass.",
+              "last_gospel": "Prologue of St John.",
+              "prime_short_lesson": "Dominus autem (p.233).",
+              "vespers_II": "Commemoration only of a I class feast of BVM or Saint on following day."
+            }
+          },
+          "corpus_christi": {
+            "class": "I",
+            "observance": {
+              "LU": "pp.917–959 with modifications.",
+              "compline_lesser_hours": "Hymns no.2 of Sunday.",
+              "prime": "Versicle Qui sedes ad dexteram Patris; short lesson Dominus autem (p.233).",
+              "mass": "Common Preface; on Sunday, Preface of Trinity (except where Preface of Blessed Sacrament authorised).",
+              "procession": "If procession follows Mass, see LU p.LXVI.",
+              "vespers_II": "Commemoration only of a I class feast of BVM or Saint next day.",
+              "octave": "No longer kept as before. Sundays/ferias treated as per annum.",
+              "devotions": "Customary devotions may continue. Where procession occurs: two II class votive Masses of Blessed Sacrament permitted."
+            }
+          },
+          "sacred_heart": {
+            "class": "I",
+            "observance": {
+              "as_in_LU": "LU pp.965ff with modifications.",
+              "compline_lesser_hours": "Hymns no.2 of Sunday.",
+              "vespers_II": "Commemoration only of I class feast of BVM or Saint next day."
+            }
+          },
+          "sundays_after_pentecost": {
+            "II_and_III": {
+              "masses": {
+                "II": "LU pp.961–964",
+                "III": "LU pp.981–984",
+                "notes": "No commemoration of preceding feast; Preface of Trinity."
+              },
+              "lesser_hours": "As on other Sundays; Collect is Collect of Mass.",
+              "vespers": "As on other Sundays, except Magnificat antiphons & prayers LU pp.960/964 and 980/985.",
+              "special_permission": "On II Sunday (if Corpus Christi not obligation) and III Sunday: one sung Mass and one/two low Masses of preceding feast allowed; with Gloria & Creed.",
+              "commemorations": [
+                "No commemoration of Sunday or oratio imperata at conventual Masses.",
+                "At a low Mass: one other commemoration may be made.",
+                "If I class feast falls on II or III Sunday: add prayers of Blessed Sacrament or Sacred Heart under one conclusion; no commemoration of Sunday."
+              ]
+            }
+          }
+        }
+      }
+    }
+  }
+}

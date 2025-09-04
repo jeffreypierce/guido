@@ -1,0 +1,700 @@
+{
+  "source": {
+    "work": "Liber Usualis",
+    "decree": "Rubricae Breviarii et Missalis Romani",
+    "decree_date": "1960-07-25",
+    "section_range": "General Rubrics A–C (Sundays, Ferias, Vigils)"
+  },
+  "sections": [
+    {
+      "id": "A",
+      "title": "Sundays",
+      "classes": [
+        "I",
+        "II"
+      ],
+      "class_I": {
+        "includes": [
+          "Four Sundays of Advent",
+          "First four Sundays of Lent",
+          "Two Sundays of the Passion",
+          "Easter Day",
+          "Low Sunday",
+          "Whit Sunday (Pentecost)"
+        ],
+        "also_feasts_with_octave": [
+          "Easter Day",
+          "Whit Sunday (Pentecost)"
+        ]
+      },
+      "class_II": {
+        "includes": [
+          "All other Sundays"
+        ]
+      },
+      "office_timing": [
+        "Sunday's Office begins on Saturday at I Vespers and ends with Compline on Sunday"
+      ],
+      "precedence": [
+        "A I class Sunday takes precedence of any feast whatever occurring that day; exception: if December 8 falls on Sunday, the feast of the Immaculate Conception is kept in place of the Sunday.",
+        "A II class Sunday takes precedence of a II class feast occurring the same day."
+      ],
+      "special_cases": [
+        "A feast of Our Lord of the I class (e.g., Precious Blood, July 1) or of the II class (e.g., Transfiguration, Aug. 6) coinciding with a II class Sunday takes the place of the Sunday with all rights and privileges; no commemoration of the Sunday.",
+        "A II class Sunday takes precedence of the Commemoration of All the Faithful Departed (All Souls)."
+      ],
+      "concurrence_rules": [
+        "If I or II Vespers of a I or II class Sunday concur with Vespers of a I or II class feast, the II Vespers of the concurrent Office of the same degree has precedence; the other Office is only commemorated.",
+        "If Dec. 8 falls on Saturday: Vespers are of the feast with commemoration of Sunday.",
+        "If Dec. 8 falls on Monday: Vespers on Dec. 7 are of Sunday with commemoration of the feast.",
+        "If the Transfiguration (II class) falls on Saturday: Vespers that day are of the feast, without commemoration of the (II class) Sunday."
+      ],
+      "perpetual_sunday_exceptions": {
+        "note": "The Sunday Office excludes any feast that would be kept perpetually on Sunday, except the following which replace the Sunday (no commemoration of the Sunday):",
+        "feasts": [
+          "Holy Name of Jesus (Sunday between Jan. 2–5; if no Sunday, Jan. 2)",
+          "Holy Family, Jesus, Mary and Joseph (I Sunday after the Epiphany)",
+          "Blessed Trinity (I Sunday after Pentecost)",
+          "Christ the King (last Sunday of October)",
+          "I class feasts of Our Lord which in diocesan or religious calendars are at present kept on II class Sundays"
+        ]
+      }
+    },
+    {
+      "id": "B",
+      "title": "Ferias",
+      "definition": "Every day of the week except Sunday.",
+      "office_timing": [
+        "The Office of a feria begins with Matins and ends with Compline.",
+        "The Office of Saturday (except Holy Saturday) ends with None."
+      ],
+      "classes": [
+        {
+          "class": "I",
+          "includes": [
+            "Ash Wednesday",
+            "All weekdays of Holy Week"
+          ],
+          "precedence": "Takes precedence of any feast whatever, and only allows of a privileged commemoration."
+        },
+        {
+          "class": "II",
+          "includes": [
+            "Weekdays of Advent from Dec. 17–23",
+            "Ember days of Advent, Lent, and September"
+          ],
+          "precedence": [
+            "Give way to a II class feast of the universal Church and are then only commemorated (e.g., St. Thomas Apostle, Dec. 21; St. Matthew, Sept. 21 if coinciding with Ember day).",
+            "A II class feria takes precedence of a II class feast in a diocesan or religious calendar; the latter is only commemorated."
+          ]
+        },
+        {
+          "class": "III",
+          "includes": [
+            "Weekdays of Lent or Passiontide (from Ash Wednesday to Saturday before Palm Sunday inclusive) not mentioned above",
+            "Ferias of Advent to Dec. 16 inclusive not mentioned above"
+          ],
+          "celebration_rules": [
+            "Lenten/Passiontide ferias of III class do not allow celebration of III class feasts.",
+            "Advent ferias of III class allow the celebration of III class feasts."
+          ],
+          "commemoration": "If these ferias cannot be kept, they are commemorated."
+        },
+        {
+          "class": "IV",
+          "includes": [
+            "All other ferias not included above"
+          ],
+          "commemoration": "If they cannot be kept, they are not commemorated."
+        }
+      ]
+    },
+    {
+      "id": "C",
+      "title": "Vigils",
+      "definition": "Liturgical day preceding a feast and preparatory to it. The vigil of Easter, however, is not a liturgical day and is kept in a special way.",
+      "classes": [
+        {
+          "class": "I",
+          "includes": [
+            "Vigil of Christmas",
+            "Vigil of Whit Sunday (Pentecost)"
+          ],
+          "notes": [
+            "If Dec. 24 falls on Sunday, Office and Mass are of the vigil, without commemoration of the Sunday.",
+            "Take precedence of all feasts and allow of no commemoration."
+          ]
+        },
+        {
+          "class": "II",
+          "includes": [
+            "Vigil of the Ascension",
+            "Vigil of the Assumption",
+            "Vigil of the Nativity of St. John the Baptist",
+            "Vigil of SS. Peter and Paul"
+          ],
+          "precedence": "Take precedence of liturgical days of I or II class.",
+          "if_not_kept": "If they cannot be kept, they are commemorated according to the rubrics."
+        },
+        {
+          "class": "III",
+          "includes": [
+            "Vigil of St. Lawrence"
+          ],
+          "precedence": "Takes precedence of liturgical days of the IV class; if it cannot be kept, it is commemorated."
+        }
+      ],
+      "omission_rules": [
+        "Vigils of the II and III class are simply omitted on any Sunday and on a I class feast.",
+        "They are also omitted if the feast they would precede is transferred to another day or reduced to a simple commemoration."
+      ],
+      "office_timing": [
+        "The Office of a vigil begins with Matins and ends when the Office of the following day begins."
+      ]
+    },
+    {
+      "id": "D",
+      "title": "Feasts",
+      "definition": "A feast means a liturgical day when the Church's public worship honours a mystery of Our Lord, or venerates Our Lady, the Angels, Saints, or Blessed.",
+      "classes": [
+        {
+          "class": "I",
+          "notes": [
+            "Most solemn celebration.",
+            "Office begins with I Vespers on the previous day."
+          ]
+        },
+        {
+          "class": "II and III",
+          "notes": [
+            "Office normally extends from Matins to Compline of the same day."
+          ],
+          "special_case": "II class feasts of Our Lord have I Vespers whenever they are kept on a Sunday which they displace."
+        }
+      ]
+    },
+    {
+      "id": "E",
+      "title": "Octaves",
+      "definition": "An octave is the celebration of a greater feast continued for eight consecutive days.",
+      "kept_octaves": [
+        "Christmas",
+        "Easter",
+        "Whit Sunday"
+      ],
+      "classes": [
+        {
+          "class": "I",
+          "includes": [
+            "Octave of Easter",
+            "Octave of Whit Sunday"
+          ],
+          "rule": "All days within these octaves are I class."
+        },
+        {
+          "class": "II",
+          "includes": [
+            "Octave of Christmas"
+          ],
+          "rule": "Days within the octave are II class; the octave-day (Jan. 1) is I class."
+        }
+      ],
+      "special_rules_christmas_octave": [
+        "Dec. 26: St. Stephen (II class)",
+        "Dec. 27: St. John the Evangelist (II class)",
+        "Dec. 28: Holy Innocents (II class)",
+        "Dec. 29: Commemoration of St. Thomas, Bp. and Martyr",
+        "Dec. 31: Commemoration of St. Silvester, Pope and Conf.",
+        "Feasts not in universal calendar can only be kept if I class and in honour of saints already celebrated; others transferred after octave."
+      ],
+      "sunday_in_octave_rule": "Office of the Sunday in the octave of Christmas is said with commemoration of any feast, unless it coincides with a I class feast (then feast takes precedence with commemoration of Sunday)."
+    },
+    {
+      "id": "F",
+      "title": "Liturgical Seasons",
+      "seasons": [
+        {
+          "name": "Advent",
+          "start": "I Vespers of I Sunday of Advent",
+          "end": "None on Christmas Eve"
+        },
+        {
+          "name": "Christmas season (tempus natalicium)",
+          "start": "I Vespers of Christmas",
+          "end": "Jan. 13 inclusive",
+          "subseasons": [
+            {
+              "name": "Nativity",
+              "start": "I Vespers of Christmas",
+              "end": "None Jan. 5 inclusive"
+            },
+            {
+              "name": "Epiphany",
+              "start": "I Vespers of Epiphany",
+              "end": "Jan. 13 inclusive"
+            }
+          ]
+        },
+        {
+          "name": "Septuagesima",
+          "start": "I Vespers of Septuagesima Sunday",
+          "end": "Compline of Tuesday after Quinquagesima"
+        },
+        {
+          "name": "Lent (tempus quadragesimale)",
+          "start": "Matins of Ash Wednesday",
+          "end": "Mass of the Easter Vigil exclusive",
+          "subperiods": [
+            {
+              "name": "Lent",
+              "start": "Ash Wednesday",
+              "end": "None of Saturday before Passion Sunday"
+            },
+            {
+              "name": "Passiontide",
+              "start": "I Vespers of Passion Sunday",
+              "end": "Mass of Easter Vigil exclusive"
+            },
+            {
+              "name": "Holy Week",
+              "start": "Palm Sunday",
+              "end": "Holy Saturday",
+              "notes": "Last three days are the Triduum sacrum"
+            }
+          ]
+        },
+        {
+          "name": "Paschal Time (tempus paschale)",
+          "start": "Mass of the Easter Vigil",
+          "end": "None of Saturday after Whit Sunday",
+          "subperiods": [
+            {
+              "name": "Easter",
+              "start": "Easter Vigil Mass",
+              "end": "None of Wednesday vigil of Ascension"
+            },
+            {
+              "name": "Ascension",
+              "start": "I Vespers of Ascension",
+              "end": "None of Saturday vigil of Whit Sunday"
+            },
+            {
+              "name": "Octave of Whit Sunday",
+              "start": "Mass of Vigil",
+              "end": "None of following Saturday"
+            }
+          ]
+        },
+        {
+          "name": "Per annum",
+          "start": "Jan. 14",
+          "end": "None of Saturday before Septuagesima",
+          "resumes": "I Vespers of Trinity Sunday",
+          "ends_again": "None of Saturday before I Sunday of Advent"
+        }
+      ]
+    },
+    {
+      "id": "G",
+      "title": "Greater and Lesser Litanies",
+      "greater": {
+        "date": "April 25",
+        "transfer_rule": "If Easter Sunday or Monday, transferred to Tuesday.",
+        "celebration": "No Office celebration, only Mass.",
+        "procession": "Procession with Litany of the Saints (petitions not doubled) and prayers, or special prayers appointed by Ordinary if no procession possible.",
+        "rogation_mass": "Sung immediately after procession or special prayers, even if prayers are said in the evening."
+      },
+      "lesser": {
+        "default": "Three days preceding Ascension Day",
+        "transfer_rule": "Ordinary may transfer to other three days as convenient for region.",
+        "celebration": "No Office celebration, only Mass following procession or prayers.",
+        "rules": "Follow same rule as Greater Litanies for processions, prayers, and Mass/commemoration."
+      }
+    },
+    {
+      "id": "H",
+      "title": "Commemorations",
+      "definition": "Apply to both Mass and Office, in cases of occurrence or concurrence.",
+      "types": [
+        "Privileged",
+        "Ordinary"
+      ],
+      "privileged": {
+        "made_at": [
+          "Lauds",
+          "Vespers",
+          "All Masses"
+        ],
+        "examples": [
+          "Sunday",
+          "Liturgical day of I class",
+          "Days in octave of Christmas",
+          "September Ember days",
+          "Weekdays of Advent, Lent, Passion",
+          "Greater Litanies (at Mass)"
+        ]
+      },
+      "ordinary": {
+        "made_at": [
+          "Lauds",
+          "Conventual Masses",
+          "All Low Masses"
+        ]
+      },
+      "inseparable": {
+        "description": "In Office and Mass of St. Peter there is always a commemoration of St. Paul and vice versa; counted as one prayer.",
+        "rules": [
+          "Office of St. Peter/Paul: prayer of one Apostle followed by other under single conclusion, no antiphon/versicle.",
+          "Mass of St. Peter/Paul: prayer of other Apostle added under single conclusion.",
+          "Whenever one Apostle is commemorated, the other is added at once before any other commemorations."
+        ]
+      },
+      "limits": [
+        "I class days & non-conventual sung Masses: only one privileged commemoration.",
+        "II class Sundays: only one commemoration allowed (of a II class feast), omitted if privileged commemoration required.",
+        "Other II class days: only one commemoration allowed (privileged or ordinary).",
+        "III/IV class days: only two commemorations allowed."
+      ],
+      "exclusion_rules": [
+        "Office/Mass/commemoration of any feast/mystery of one divine Person excludes that of another of same Person.",
+        "Office/Mass/commemoration of a Sunday excludes that of a feast/mystery of Our Lord, and vice versa.",
+        "Office/Mass/commemoration of a season excludes another of the season.",
+        "Office/Mass/commemoration of BVM or any Saint excludes another of same BVM/Saint, except where named in Sunday/feria prayer."
+      ],
+      "ordering": "Seasonal commemoration comes first; others follow the decree's table of precedence.",
+      "overflow_rule": "Any commemoration exceeding the number allowed must be omitted."
+    }
+  ],
+  "section": "III",
+  "title": "Rubrics for the Office",
+  "source_notes": "Structured from user-provided text (Liber Usualis changes, 1960 rubrics), section II a–e.",
+  "generated_at": "2025-09-04T12:39:51.105150Z",
+  "subsections": [
+    {
+      "id": "a",
+      "title": "General Rules",
+      "canonical_hours": {
+        "greater_hours": [
+          "Matins",
+          "Lauds",
+          "Vespers"
+        ],
+        "lesser_hours": [
+          "Prime",
+          "Terce",
+          "Sext",
+          "None",
+          "Compline"
+        ],
+        "notes": [
+          "Compline is often treated separately in the rubrics."
+        ]
+      },
+      "forms_of_recitation": [
+        {
+          "form": "In choir",
+          "definition": "By a community bound by law to the Office in choir."
+        },
+        {
+          "form": "In common",
+          "definition": "By a community not bound to choir."
+        },
+        {
+          "form": "Alone",
+          "definition": "Private recitation."
+        }
+      ],
+      "applicability_rule": "Unless otherwise expressly noted, the following rules apply to Office in choir, in common (even if only 2–3 persons), and to private recitation."
+    },
+    {
+      "id": "b",
+      "title": "Time When the Canonical Hours Should Be Said",
+      "principle": "The Hours sanctify the times of the natural day; it is praiseworthy to recite them as near their true time as possible.",
+      "timing": {
+        "Matins": {
+          "norm": "May be said after midday of the preceding day, but not before 2:00 PM."
+        },
+        "Lauds": {
+          "norm": "Morning prayer; said in the morning in choir or in common; commendable likewise in private."
+        },
+        "Vespers": {
+          "norm": "Said after midday (also in Lent and Passiontide)."
+        },
+        "Compline": {
+          "norm": "Fittingly said as final night-prayers, even if for good reason Matins of the following day has already been said.",
+          "night_form": [
+            "Omit the Pater noster after the versicle 'Adjutorium nostrum'.",
+            "In choir or common: spend a reasonable time in examination of conscience; then say the Confiteor and continue as usual.",
+            "The same practice is commendable in private recitation."
+          ]
+        }
+      }
+    },
+    {
+      "id": "c",
+      "title": "Arrangement of the Divine Office",
+      "vespers_acquisition": "Feasts which have no I Vespers and acquire them under the new rubrics borrow everything from II Vespers, except items explicitly proper to I Vespers.",
+      "parts": {
+        "beginnings": {
+          "Matins": "℣. Domine, labia mea aperies.",
+          "Lauds_Terce_Sext_None_Vespers": "℣. Deus, in adiutorium meum intende.",
+          "Compline": "℣. Iube, domne, benedicere."
+        },
+        "endings": {
+          "Matins_if_Lauds_do_not_follow_immediately": "℣. Fidelium animae (prayer for the faithful departed).",
+          "Lauds_Terce_Sext_None_Vespers": "℣. Fidelium animae (prayer for the faithful departed).",
+          "Prime": "Benediction: Dominus nos benedicat.",
+          "Compline": "Benediction: Benedicat et custodiat."
+        },
+        "daily_conclusion": {
+          "norm": "After Compline: Antiphon of Our Lady with versicle and prayer, then 'Divinum auxilium'; except on the last three days of Holy Week and in the Office of the Dead.",
+          "indulgence_note": "The remission of faults and attached indulgences of 'Sacrosanctae' are connected to this final Antiphon of Our Lady."
+        },
+        "hymns": {
+          "general_rule": "Hymns are said at each Hour as provided.",
+          "omissions": [
+            "From Matins of Maundy Thursday until None of the Saturday in Easter Week.",
+            "In the Office of the Dead."
+          ],
+          "lesser_hours_and_compline": "Assigned hymns are always said, except at Terce on Whit Sunday and during its Octave.",
+          "non_transferability": "Proper hymns assigned to certain Hours are never transferred to another Hour.",
+          "conclusions_doxology": {
+            "default": "Unless stated otherwise in these rubrics, each hymn uses the usual conclusion as in the Liber Usualis, without seasonal/feast substitutions.",
+            "commemoration_note": "A commemoration never introduces a proper doxology to the hymns of the Office of the day."
+          }
+        },
+        "antiphons": {
+          "use": "Said before and after psalms and canticles at all Hours (number varies by Hour/Office).",
+          "omitted_at": [
+            "Lesser Hours and Compline on the last three days of Holy Week.",
+            "Lesser Hours and Compline on Easter Day and during its Octave.",
+            "Lesser Hours and Compline during the Office of the Dead on November 2."
+          ],
+          "integrity": "Antiphons are always said entire, before and after, at all Hours.",
+          "asterisk": "The asterisk after the incipit indicates the extent of the intonation.",
+          "non_transferability": "If proper antiphons assigned to certain Hours cannot be said, they are omitted, not transferred.",
+          "alleluia_rules": {
+            "paschal_time": "Add 'alleluia' at the end of antiphons if not already present.",
+            "septuagesima_to_easter_eve": "Omit any 'alleluia' at the end of antiphons."
+          }
+        },
+        "psalms_and_canticles": {
+          "incipit_overlap": "If a psalm/canticle begins with the same words as the antiphon, do not repeat; begin with the next word—provided no 'alleluia' is to be added to the antiphon.",
+          "no_reassignment": "A psalm that cannot be said at its proper Hour is not moved to another Hour; it is omitted.",
+          "gloria_patri": {
+            "rule": "At the end of psalms and canticles (except Benedicite), say 'Gloria Patri'.",
+            "omitted_on": "Last three days of Holy Week."
+          },
+          "office_of_the_dead": "In place of 'Gloria Patri' say 'Requiem aeternam'.",
+          "athanasian_creed": "Said only on Trinity Sunday, at Prime, after the psalms and before the repetition of the antiphon."
+        }
+      }
+    },
+    {
+      "id": "d",
+      "title": "Hymns (additional summary)",
+      "note": "Included under c) parts->hymns; this node retains a flat view for quick access.",
+      "omitted": [
+        "Triduum from Maundy Thursday Matins through Easter Saturday None",
+        "Office of the Dead"
+      ],
+      "exceptions": [
+        "Terce on Whit Sunday and during its Octave"
+      ]
+    },
+    {
+      "id": "e",
+      "title": "Antiphons, Psalms, and Canticles (additional summary)",
+      "note": "Included under c) parts->antiphons and parts->psalms_and_canticles; this node provides a flat view for indexers.",
+      "antiphons_omitted_at": [
+        "Lesser Hours & Compline on the last three days of Holy Week",
+        "Lesser Hours & Compline on Easter Day and during its Octave",
+        "Lesser Hours & Compline on Nov. 2 (Office of the Dead)"
+      ],
+      "alleluia": {
+        "add_in": "Paschal time",
+        "omit_in": "Septuagesima until Easter Eve"
+      },
+      "gloria_patri": {
+        "omit_on": "Last three days of Holy Week"
+      },
+      "office_of_the_dead": {
+        "instead_of_gloria_patri": "Requiem aeternam"
+      },
+      "athanasian_creed": {
+        "day": "Trinity Sunday",
+        "hour": "Prime",
+        "placement": "after psalms, before antiphon repetition"
+      }
+    },
+    {
+      "id": "A",
+      "title": "General Principles and Rules",
+      "definitions": {
+        "Mass_in_cantu": {
+          "definition": "Celebrant actually sings parts reserved to him by the rubrics.",
+          "subtypes": [
+            "Solemn (High) Mass — with sacred ministers.",
+            "Missa cantata — sung without sacred ministers."
+          ]
+        },
+        "Said_Mass": "Missa lecta; celebrant does not sing.",
+        "Pontifical_Mass": "High Mass celebrated by a Bishop (or other with right) with pontifical ceremonies."
+      },
+      "participation": {
+        "principle": "Those present should take part, each in his proper way.",
+        "reference": "Instruction on sacred music and the liturgy, S.R.C., 3 Sept 1958"
+      }
+    },
+    {
+      "id": "B",
+      "title": "Conventual Mass",
+      "rules": [
+        "Normally follows Terce.",
+        "For a serious reason the Superior may appoint Sext or None instead.",
+        "On Whitsun (Pentecost) Eve, conventual Mass follows None."
+      ]
+    },
+    {
+      "id": "C",
+      "title": "Various Parts of the Mass",
+      "parts": [
+        {
+          "id": 1,
+          "title": "Psalm 'Judica me, Deus', Confiteor, and Censing of the Altar",
+          "norm": "Said at the foot of the altar at every Mass (sung or said).",
+          "omit_entire_block_when_mass_follows_rite": [
+            "Purification of Our Lady — after blessing of candles and procession",
+            "Ash Wednesday — after blessing and imposition of ashes",
+            "Palm Sunday — after blessing of palms and procession",
+            "Paschal Vigil Mass",
+            "Rogation Mass — after Greater or Lesser Litanies procession",
+            "Masses following certain consecrations per the Roman Pontifical"
+          ],
+          "omit_psalm_only_additionally_in": [
+            "Seasonal Masses from the I Sunday of the Passion through the Evening Mass of Maundy Thursday",
+            "Masses of the Dead"
+          ],
+          "censing": "Censings obligatory at high Mass; permitted at all sung Masses."
+        },
+        {
+          "id": 2,
+          "title": "Prayers (Collects) at Sung Mass",
+          "general_limit": "After the Collect of the day: constraints on additional prayers apply; never more than three total.",
+          "sung_mass_non_conventual": {
+            "allow": "Only a single privileged commemoration under a single conclusion with the Collect.",
+            "applies_also_to": "Conventual Mass on I-class days and I-class votive Masses."
+          },
+          "class_based_rules": [
+            "II-class Sundays: only the commemoration of a II-class feast; omit if a privileged commemoration is required.",
+            "Other II-class days and II-class votive Masses: allow one commemoration (privileged OR ordinary).",
+            "III- or IV-class days or votive Masses: allow only two additional prayers total."
+          ],
+          "flectamus_genua": "Whenever 'Flectamus genua / Levate' appears, at high Mass the deacon says it; at other Masses, the celebrant. All kneel briefly, then rise at 'Levate' for the prayer.",
+          "missions_sunday": "On the penultimate Sunday of October (or Sunday appointed by the Bishop) add the Prayer for the Propagation of the Faith under a single conclusion."
+        },
+        {
+          "id": 3,
+          "title": "Lessons at Mass",
+          "ember_saturdays": {
+            "rule": "Five lessons precede the Epistle.",
+            "conventual_or_ordination_mass": "All lessons with versicles and prayers must be read.",
+            "other_masses": "Say only the first prayer (with Flectamus genua if prescribed), the first lesson with its gradual/alleluia; then Dominus vobiscum, Oremus, the second prayer (no Flectamus genua), and any commemorations. Omit the remaining intermediate lessons with their versicles/prayers; proceed directly to the last lesson or Epistle (and on Whit Saturday, the Sequence)."
+          },
+          "saturday_ordination_choice": "On Ember Saturday and the Saturday 'Sitientes', the Mass for conferring Holy Orders should be that of the Saturday, even if a I or II class feast is otherwise kept.",
+          "celebrant_omits_chanted_texts": "At sung Mass, anything proper to deacon, subdeacon, or lector, as part of their office, is not duplicated by the celebrant.",
+          "sermon": "After the Gospel, especially on Sundays and days of obligation, a short sermon should be preached if opportune. If preached by a priest other than the celebrant, it must not interrupt the celebrant's parts; the Mass is paused and then resumed."
+        },
+        {
+          "id": 4,
+          "title": "The Creed (Symbolum)",
+          "said_on": [
+            "Every Sunday (even if the Office is replaced or a II-class votive Mass is used)",
+            "I-class feasts and I-class votive Masses",
+            "II-class feasts of Our Lord and of Our Lady",
+            "During the Octaves of Christmas, Easter, and Whit Sunday (even with an occurring feast or a votive Mass)",
+            "Dies natalis of Apostles and Evangelists; feasts of St. Peter’s Chair and St. Barnabas"
+          ],
+          "not_said_on": [
+            "Maundy Thursday Mass (Evening)",
+            "Paschal Vigil Mass",
+            "Other II-class feasts (except those listed under 'said_on')",
+            "II-class votive Masses",
+            "III- or IV-class festive or votive Masses",
+            "Because of any mere commemoration at Mass",
+            "Masses of the Dead"
+          ]
+        },
+        {
+          "id": 5,
+          "title": "Offertory and Communion Antiphons",
+          "alleluia_rule": "If the printed antiphon itself concludes with 'alleluia', it is sung year-round except from Septuagesima through Holy Saturday. Example: Offertory 'Beata es, Virgo Maria' retains its alleluia outside that pre-Paschal period."
+        },
+        {
+          "id": 6,
+          "title": "Holy Communion of the Faithful",
+          "proper_time": "Immediately after the celebrant’s Communion at Mass.",
+          "minister": "Ordinarily by the celebrant himself; other priests may assist when numbers are large.",
+          "unfitting": "Another priest giving Communion at the same altar during Mass but not at the proper time.",
+          "outside_mass": "May be given immediately before/after Mass or apart from Mass using the Roman Ritual form.",
+          "formula_at_mass": "When Communion is given during Mass: after consuming the Precious Blood, and without a Confiteor or absolution, the celebrant says 'Ecce Agnus Dei' and thrice 'Domine, non sum dignus', then distributes Communion."
+        },
+        {
+          "id": 7,
+          "title": "Conclusion of Mass",
+          "dismissal": {
+            "ordinary": "Ite, missa est — response: Deo gratias.",
+            "kyriale_note": "In Kyriale Masses XVI, XVII, XVIII the Ite, missa est is taken from Mass XV; this is permitted also wherever the Ite is sung without alleluia."
+          },
+          "exceptions": [
+            {
+              "case": "Evening Mass of Maundy Thursday (followed by solemn deposition) and Masses followed by a procession (e.g., Corpus Christi)",
+              "formula": "Benedicamus Domino — response: Deo gratias — melodies per Mass II or XVI only."
+            },
+            {
+              "case": "During Easter Octave (seasonal Masses)",
+              "formula": "Ite, missa est with a double 'alleluia' appended."
+            },
+            {
+              "case": "Masses of the Dead",
+              "formula": "Requiescant in pace — response: Amen."
+            }
+          ],
+          "blessing": "After 'Placeat', the blessing is given; omitted only when Benedicamus Domino or Requiescant in pace is used.",
+          "last_gospel": {
+            "ordinary": "The Prologue of St. John (In principio) at every Mass.",
+            "palm_sunday_note": "At Masses NOT preceded by the blessing of palms and procession, say the proper last Gospel of the day instead.",
+            "omitted_entirely_when": [
+              "Masses with Benedicamus Domino",
+              "Third Mass of Christmas Day",
+              "Palm Sunday Mass following the blessing of palms and procession",
+              "Paschal Vigil Mass",
+              "Masses of the Dead followed by Absolution at the catafalque",
+              "Masses following certain consecrations per the Roman Pontifical"
+            ]
+          }
+        }
+      ]
+    }
+  ],
+  "version": "1960 Rubricae Breviarii et Missalis Romani — integrated summary",
+  "structure": {
+    "notes": [
+      "Mass is public worship offered in the name of Christ and the Church; avoid the term 'private Mass'.",
+      "Mass should ordinarily conform to the Office of the day; exceptions: votive Masses and Masses of the Dead.",
+      "Two kinds of Masses: in cantu (sung) and said (Missa lecta).",
+      "High (solemn) Mass: sung with sacred ministers; Missa cantata: sung without sacred ministers.",
+      "Pontifical Mass: high Mass by a Bishop (or entitled prelate) with pontifical ceremonies.",
+      "Active participation of the faithful is encouraged per S.R.C. Instruction on sacred music and liturgy (3 Sept 1958)."
+    ]
+  },
+  "metadata": {
+    "merged_at": "2025-09-04T14:17:28Z",
+    "source_files": [
+      "/mnt/data/rubrics_full.json",
+      "/mnt/data/rubrics_office_section_II_a-e.json",
+      "/mnt/data/rubrics_section_III_mass_f1d0348d.json"
+    ],
+    "merge_strategy": "deep_merge(dicts recursively; lists deduped with stable order; scalar conflicts prefer longer string or right-hand side)"
+  }
+}

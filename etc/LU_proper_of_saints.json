@@ -1,0 +1,1593 @@
+{
+  "proper_of_saints": {
+    "intro": {
+      "festive_office": {
+        "belongs_to": "I class feasts",
+        "structure": {
+          "I_vespers": "All from the Proper or Common",
+          "compline_after_I_vespers": "Of Sunday",
+          "matins": "All from the Proper or Common, with Te Deum",
+          "lauds": "All from the Proper or Common, with festive psalms p. 221",
+          "prime": "Antiphon of the feast; psalms 53, 118.1, 118.2; chapter and rest per rubrics (p. LXIX); short lesson of the season (p. LXX)",
+          "terce_sext_none": "Antiphons of feast, psalms of Sunday; rest from Proper or Common",
+          "II_vespers": "All from Proper or Common",
+          "compline": "Of Sunday"
+        }
+      },
+      "semi_festive_office": {
+        "belongs_to": "II class feasts",
+        "structure": {
+          "lauds_vespers": "All as for festive office",
+          "prime": "Antiphon and psalms of weekday (pp. 279A ff.); chapter and rest as per rubrics (p. LXIX); short lesson of season",
+          "terce_sext_none": "Antiphons and psalms of weekday occurring; rest of feast from Proper or Common",
+          "compline": "Of Sunday"
+        }
+      },
+      "ordinary_office": {
+        "belongs_to": "III class feasts",
+        "structure": {
+          "lesser_hours": "As for semi-festive office",
+          "vespers": "Antiphons and psalms of weekday occurring (pp. 280 ff.), unless feast has proper antiphons; rest from Proper or Common",
+          "compline": "Antiphons and psalms of weekday occurring (pp. 283 ff.); rest as on Sunday (p. 266)"
+        }
+      },
+      "note": "Mass rules concern sung Mass only, conventual or not."
+    },
+    "months": {
+      "January": [
+        {
+          "date": "Jan 14",
+          "feast": "St. Hilary, Bishop, Confessor, Doctor",
+          "class": "III",
+          "office": "Ordinary Office",
+          "prime": {
+            "short_lesson": "Dominus autem (used at every Office until Saturday after Ash Wednesday inclusive)"
+          },
+          "mass": {
+            "ref": "p.1328",
+            "creed": false,
+            "commemoration": "St. Felix (if conventual)"
+          }
+        },
+        {
+          "date": "Jan 15",
+          "feast": "St. Paul the First Hermit, Confessor",
+          "class": "III",
+          "office": "Ordinary Office",
+          "mass": {
+            "ref": "p.1329",
+            "commemoration": "St. Maurus (if conventual)"
+          }
+        },
+        {
+          "date": "Jan 16",
+          "feast": "St. Marcellus I, Pope & Martyr",
+          "class": "III",
+          "office": "Ordinary Office",
+          "mass": {
+            "ref": "p.1330",
+            "preface": "Common"
+          }
+        },
+        {
+          "date": "Jan 17",
+          "feast": "St. Anthony, Abbot",
+          "class": "III",
+          "office": "Ordinary Office",
+          "mass": {
+            "ref": "p.1330"
+          }
+        },
+        {
+          "date": "Jan 18",
+          "feast": "Feria (or St. Prisca, Virgin & Martyr)",
+          "class": "—",
+          "office": "Ferial; or Me exspectaverunt with proper prayers",
+          "mass": {
+            "ref": "p.1220",
+            "proper_prayers": "pp.1331, 1334"
+          }
+        },
+        {
+          "date": "Jan 19",
+          "feast": "Feria (or Holy Martyrs)",
+          "class": "—",
+          "office": "Ferial"
+        },
+        {
+          "date": "Jan 20",
+          "feast": "Ss. Fabian (Pope) & Sebastian, Martyrs",
+          "class": "III",
+          "office": "Ordinary Office",
+          "mass": {
+            "ref": "p.1336"
+          }
+        },
+        {
+          "date": "Jan 21",
+          "feast": "St. Agnes, Virgin & Martyr",
+          "class": "III",
+          "office": "Ordinary Office",
+          "mass": {
+            "ref": "p.1339"
+          },
+          "vespers": {
+            "ref": "p.1340"
+          }
+        },
+        {
+          "date": "Jan 22",
+          "feast": "Ss. Vincent & Anastasius, Martyrs",
+          "class": "III",
+          "office": "Ordinary Office",
+          "mass": {
+            "ref": "p.1342"
+          }
+        },
+        {
+          "date": "Jan 23",
+          "feast": "St. Raymond of Pennafort, Confessor",
+          "class": "III",
+          "office": "Ordinary Office",
+          "mass": {
+            "ref": "p.1342",
+            "commemoration": "St. Emerentiana (if conventual)"
+          }
+        },
+        {
+          "date": "Jan 24",
+          "feast": "St. Timothy, Bishop & Martyr",
+          "class": "III",
+          "office": "Ordinary Office",
+          "mass": {
+            "ref": "p.1342"
+          }
+        },
+        {
+          "date": "Jan 25",
+          "feast": "Conversion of St. Paul the Apostle",
+          "class": "III",
+          "office": "Ordinary Office",
+          "mass": {
+            "ref": "p.1343",
+            "creed": false
+          },
+          "vespers": {
+            "ref": "p.1348"
+          },
+          "notes": [
+            "Commemoration of St. Peter per general rule (see p. LVIII).",
+            "At Compline: antiphons & psalms of weekday (p.283 ff.)."
+          ]
+        },
+        {
+          "date": "Jan 26",
+          "feast": "St. Polycarp, Bishop & Martyr",
+          "class": "III",
+          "office": "Ordinary Office",
+          "mass": {
+            "ref": "p.1350"
+          }
+        },
+        {
+          "date": "Jan 27",
+          "feast": "St. John Chrysostom, Bishop, Confessor, Doctor",
+          "class": "III",
+          "office": "Ordinary Office",
+          "mass": {
+            "ref": "p.1351",
+            "creed": false
+          }
+        },
+        {
+          "date": "Jan 28",
+          "feast": "St. Peter Nolasco, Confessor",
+          "class": "III",
+          "office": "Ordinary Office",
+          "mass": {
+            "ref": "p.1351",
+            "commemoration": "St. Agnes (second feast) (if conventual, p.1351v)"
+          }
+        },
+        {
+          "date": "Jan 29",
+          "feast": "St. Francis de Sales, Bishop, Confessor, Doctor",
+          "class": "III",
+          "office": "Ordinary Office",
+          "mass": {
+            "ref": "p.1351v"
+          }
+        },
+        {
+          "date": "Jan 30",
+          "feast": "St. Martina, Virgin & Martyr",
+          "class": "III",
+          "office": "Ordinary Office",
+          "mass": {
+            "ref": "Loquebar p.1215"
+          }
+        },
+        {
+          "date": "Jan 31",
+          "feast": "St. John Bosco, Confessor",
+          "class": "III",
+          "office": "Ordinary Office",
+          "mass": {
+            "ref": "p.1352"
+          }
+        }
+      ],
+      "February": [
+        {
+          "date": "Feb 1",
+          "feast": "St. Ignatius, Bishop & Martyr",
+          "class": "III",
+          "office": "Ordinary Office",
+          "mass": {
+            "ref": "p.1354"
+          },
+          "vespers": {
+            "rule": "On Saturday: Vespers of following feast; no commemoration of Sunday or preceding feast."
+          }
+        },
+        {
+          "date": "Feb 2",
+          "feast": "Purification of the BVM (Presentation of the Lord)",
+          "class": "II (treated as feast of Our Lord)",
+          "office": "Semi-festive Office; kept on Feb 2 even on Sunday (including Septuagesima, Sexagesima, Quinquagesima) without commemoration of Sunday",
+          "vespers": {
+            "I_vespers": "p.1355; retained only if Feb 2 is Sunday or where feast is I class (Compline on Feb 1 is of Sunday)"
+          },
+          "lesser_hours": {
+            "hymns": "Sunday #1; antiphons & psalms of weekday (p.279A ff.); short lesson of the season; rest pp.1355, 1365",
+            "if_pre_lent_sunday": "If coincides with Septuagesima/Sexagesima/Quinquagesima Sunday: use antiphons as pp.1355 & 1365; at Prime use Sunday psalms 117, 118i, 118ii (p.225)."
+          },
+          "blessing_of_candles": {
+            "omissions": [
+              "Ant. Exsurge, Domine",
+              "versicle of the psalm",
+              "Gloria Patri",
+              "Flectamus genua"
+            ],
+            "before_prayer": "Only Dominus vobiscum and Oremus are said"
+          },
+          "mass": {
+            "ref": "pp.1361–1367",
+            "note": "At Mass following the procession, omit Judica, Confiteor with absolution, subsequent versicles, Aufer a nobis, and Oramus te."
+          }
+        },
+        {
+          "date": "Feb 3",
+          "feast": "Feria (or St. Blaise)",
+          "class": "—",
+          "mass": {
+            "ref": "p.1367"
+          }
+        },
+        {
+          "date": "Feb 4",
+          "feast": "St. Andrew Corsini, Bishop & Confessor",
+          "class": "III",
+          "office": "Ordinary Office",
+          "mass": {
+            "ref": "p.1367"
+          }
+        },
+        {
+          "date": "Feb 5",
+          "feast": "St. Agatha, Virgin & Martyr",
+          "class": "III",
+          "office": "Ordinary Office",
+          "mass_vespers": {
+            "ref": "pp.1368–1372"
+          }
+        },
+        {
+          "date": "Feb 6",
+          "feast": "St. Titus, Bishop & Confessor",
+          "class": "III",
+          "office": "Ordinary Office",
+          "mass": {
+            "ref": "p.1373",
+            "commemoration": "St. Dorothy (if conventual)"
+          }
+        },
+        {
+          "date": "Feb 7",
+          "feast": "St. Romuald, Abbot",
+          "class": "III",
+          "office": "Ordinary Office",
+          "mass": {
+            "ref": "p.1373"
+          }
+        },
+        {
+          "date": "Feb 8",
+          "feast": "St. John of Matha, Confessor",
+          "class": "III",
+          "office": "Ordinary Office",
+          "mass": {
+            "ref": "p.1373"
+          }
+        },
+        {
+          "date": "Feb 9",
+          "feast": "St. Cyril of Alexandria, Bishop, Confessor, Doctor",
+          "class": "III",
+          "office": "Ordinary Office",
+          "mass": {
+            "ref": "p.1374",
+            "creed": false,
+            "commemoration": "St. Apollonia (if conventual)"
+          }
+        },
+        {
+          "date": "Feb 10",
+          "feast": "St. Scholastica, Virgin",
+          "class": "III",
+          "office": "Ordinary Office",
+          "mass": {
+            "ref": "p.1374"
+          }
+        },
+        {
+          "date": "Feb 11",
+          "feast": "Apparition of Our Lady at Lourdes",
+          "class": "III (I in some places)",
+          "office": "Ordinary Office (Festive if I class)",
+          "lesser_hours": {
+            "hymns": "Sunday #1",
+            "ant_psalms": "weekday (p.279A ff.)",
+            "rest": "pp.1375 ff.",
+            "prayer": "p.1376"
+          },
+          "mass": {
+            "ref": "p.1376",
+            "creed": false
+          },
+          "vespers": {
+            "ref": "p.1380"
+          },
+          "compline": {
+            "of_day": true,
+            "ref": "p.283 ff.",
+            "hymn": "Sunday #1 (p.266)"
+          }
+        },
+        {
+          "date": "Feb 12",
+          "feast": "Seven Holy Founders of the Servite Order, Confessors",
+          "class": "III",
+          "office": "Ordinary Office (no I Vespers)",
+          "mass": {
+            "ref": "p.1384"
+          },
+          "vespers": {
+            "ant_psalms": "of day (p.280 ff.)",
+            "rest": "p.1388"
+          }
+        },
+        {
+          "date": "Feb 14",
+          "feast": "Feria (or St. Valentine, Priest & Martyr)",
+          "class": "—",
+          "mass": {
+            "ref": "In virtute p.1135",
+            "prayers": "p.1390"
+          }
+        },
+        {
+          "date": "Feb 15",
+          "feast": "Feria (or Ss. Faustinus & Jovita, Martyrs)",
+          "class": "—",
+          "mass": {
+            "ref": "Salus autem p.1169"
+          }
+        },
+        {
+          "date": "Feb 18",
+          "feast": "Feria (or St. Simeon, Bishop & Martyr)",
+          "class": "—",
+          "mass": {
+            "ref": "Statuit p.1129"
+          }
+        },
+        {
+          "date": "Feb 22",
+          "feast": "St. Peter’s Chair",
+          "class": "II",
+          "office": "Semi-festive Office",
+          "lesser_hours": {
+            "ant_psalms": "weekday (p.279A ff.)",
+            "rest": "Common of Confessor Bishop (pp.1174–1175), prayer Deus, qui beato Petro (p.1331)"
+          },
+          "mass": {
+            "ref": "p.1331",
+            "creed": true,
+            "no_commem": "St. Prisca"
+          },
+          "commem_st_paul": "At Mass & Vespers per general rule (p. LVIII); in Lent, precedes feria commem.",
+          "vespers": {
+            "ref": "p.1334"
+          },
+          "compline": "Of Sunday"
+        },
+        {
+          "date": "Feb 23",
+          "feast": "St. Peter Damian, Bishop, Confessor, Doctor",
+          "class": "III",
+          "office": "Ordinary Office",
+          "mass": {
+            "ref": "p.1390",
+            "creed": false
+          }
+        },
+        {
+          "date": "Feb 24",
+          "feast": "St. Matthias, Apostle",
+          "class": "II",
+          "office": "Semi-festive Office",
+          "lesser_hours": {
+            "ant_psalms": "weekday (pp.279A ff.)",
+            "rest": "Common (p.1112) except prayer"
+          },
+          "mass": {
+            "ref": "p.1391"
+          },
+          "vespers": {
+            "ref": "Common p.1114 except prayer p.1391"
+          },
+          "compline": "Of Sunday"
+        },
+        {
+          "date": "Feb 27",
+          "feast": "St. Gabriel of Our Lady of Sorrows, Confessor",
+          "class": "III",
+          "office": "Ordinary Office",
+          "mass": {
+            "ref": "p.1392"
+          }
+        }
+      ],
+      "March": [
+        {
+          "date": "Mar 4",
+          "feast": "St. Casimir, Confessor",
+          "class": "III",
+          "office": "Ordinary Office",
+          "mass": {
+            "ref": "p.1396",
+            "commemoration": "St. Lucius (if conventual)"
+          }
+        },
+        {
+          "date": "Mar 6",
+          "feast": "Ss. Perpetua & Felicity, Martyrs",
+          "class": "III",
+          "office": "Ordinary Office",
+          "mass": {
+            "ref": "p.1396"
+          }
+        },
+        {
+          "date": "Mar 7",
+          "feast": "St. Thomas Aquinas, Confessor & Doctor",
+          "class": "III",
+          "office": "Ordinary Office",
+          "mass": {
+            "ref": "p.1397",
+            "creed": false
+          }
+        },
+        {
+          "date": "Mar 8",
+          "feast": "St. John of God, Confessor",
+          "class": "III",
+          "office": "Ordinary Office",
+          "mass": {
+            "ref": "p.1398"
+          }
+        },
+        {
+          "date": "Mar 9",
+          "feast": "St. Frances of Rome, Widow",
+          "class": "III",
+          "office": "Ordinary Office",
+          "mass": {
+            "ref": "p.1398"
+          }
+        },
+        {
+          "date": "Mar 19",
+          "feast": "St. Joseph, Spouse of the BVM, Confessor, Patron of the Universal Church",
+          "class": "I",
+          "office": "Festive Office",
+          "general": "All as pp.1400–1407 except as below",
+          "prime": {
+            "short_lesson": "Seasonal",
+            "mass_commem": "Commemoration of feria at every Mass"
+          },
+          "lesser_hours": {
+            "hymns": "Melody of the season or solemn-feast Sunday melodies"
+          },
+          "vespers": {
+            "if_saturday": "Vespers of feast with commemoration of Sunday; Compline of Sunday",
+            "if_sunday": "Feast transferred to Monday; on Sunday: Vespers of Sunday with commemoration of feast (ant. Exsurges Joseph p.1402; v. Constituit; prayer Sanctissimae)"
+          }
+        },
+        {
+          "date": "Mar 25",
+          "feast": "Annunciation of the BVM",
+          "class": "I",
+          "office": "Festive Office",
+          "general": "All as pp.1414–1418 except as below",
+          "lesser_hours": {
+            "hymns": "Melody of the season or solemn-feast Sunday melodies",
+            "prime_short_lesson": "Seasonal"
+          },
+          "vespers": {
+            "if_saturday": "Vespers of feast with commemoration of Sunday; Compline of Sunday",
+            "if_sunday_non_palm": "Transferred to Monday; on Sunday: Vespers of Sunday with commemoration of feast (ant. Spiritus sanctus p.1414; v. Ave Maria p.1417; prayer Deus, qui de beatae p.1415)",
+            "if_palm_week": "If on Palm Sunday or during Holy Week, transferred to Monday after Low Sunday (follows beyond provided text)."
+          }
+        }
+      ],
+      "April": [
+        {
+          "date": "Apr 2",
+          "feast": "St. Francis of Paola, Confessor",
+          "class": "III",
+          "office": "Ordinary",
+          "mass": "p.1425"
+        },
+        {
+          "date": "Apr 4",
+          "feast": "St. Isidore, Bishop, Confessor, Doctor",
+          "class": "III",
+          "office": "Ordinary",
+          "mass": "p.1426",
+          "creed": false
+        },
+        {
+          "date": "Apr 5",
+          "feast": "St. Vincent Ferrer, Confessor",
+          "class": "III",
+          "office": "Ordinary",
+          "mass": "p.1426"
+        },
+        {
+          "date": "Apr 11",
+          "feast": "St. Leo I, Pope, Confessor, Doctor",
+          "class": "III",
+          "office": "Ordinary",
+          "mass": "p.1426",
+          "creed": false
+        },
+        {
+          "date": "Apr 13",
+          "feast": "St. Hermenegild, Martyr",
+          "class": "III",
+          "office": "Ordinary",
+          "mass": {
+            "introit": "Protexisti p.1146",
+            "prayers": "p.1426",
+            "gospel": "Si quis venit p.1131"
+          }
+        },
+        {
+          "date": "Apr 14",
+          "feast": "St. Justin, Martyr",
+          "class": "III",
+          "office": "Ordinary",
+          "mass": "p.1427",
+          "commemoration": "of other martyrs if conventual"
+        },
+        {
+          "date": "Apr 17",
+          "feast": "St. Anicetus, Pope, Martyr (or feria)",
+          "mass": "Si diligis me p.1122¹"
+        },
+        {
+          "date": "Apr 21",
+          "feast": "St. Anselm, Bishop, Confessor, Doctor",
+          "class": "III",
+          "office": "Ordinary",
+          "mass": "p.1430",
+          "creed": false
+        },
+        {
+          "date": "Apr 22",
+          "feast": "Ss. Soter & Caius, Popes, Martyrs",
+          "class": "III",
+          "office": "Ordinary",
+          "mass": "Si diligis me p.1122¹ with collect p.1431"
+        },
+        {
+          "date": "Apr 23",
+          "feast": "St. George, Martyr (or feria)",
+          "class": "III",
+          "office": "Ordinary",
+          "mass": "p.1431",
+          "special": "Where I class: Festive Office from Common p.1141, with Creed"
+        },
+        {
+          "date": "Apr 24",
+          "feast": "St. Fidelis of Sigmaringen, Martyr",
+          "class": "III",
+          "office": "Ordinary",
+          "mass": "p.1431"
+        },
+        {
+          "date": "Apr 25",
+          "feast": "St. Mark, Evangelist",
+          "class": "II",
+          "office": "Semi-festive",
+          "mass": "p.1431",
+          "vespers": "Common p.1120 with prayer Deus qui beato p.1432",
+          "notes": "Greater Litanies also observed"
+        },
+        {
+          "date": "Apr 26",
+          "feast": "Ss. Cletus & Marcellinus, Popes, Martyrs",
+          "class": "III",
+          "office": "Ordinary",
+          "mass": "Si diligis me p.1122¹ with prayer p.1432"
+        },
+        {
+          "date": "Apr 27",
+          "feast": "St. Peter Canisius, Confessor, Doctor",
+          "class": "III",
+          "office": "Ordinary",
+          "mass": "p.1432",
+          "creed": false
+        },
+        {
+          "date": "Apr 28",
+          "feast": "St. Paul of the Cross, Confessor",
+          "class": "III",
+          "office": "Ordinary",
+          "mass": "p.1433"
+        },
+        {
+          "date": "Apr 29",
+          "feast": "St. Peter of Verona (Martyr)",
+          "class": "III",
+          "office": "Ordinary",
+          "mass": "p.1436"
+        },
+        {
+          "date": "Apr 30",
+          "feast": "St. Catherine of Siena, Virgin",
+          "class": "III",
+          "office": "Ordinary",
+          "mass": "p.1437",
+          "vespers": "Of following feast"
+        }
+      ],
+      "May": [
+        {
+          "date": "May 1",
+          "feast": "St. Joseph the Workman",
+          "class": "I",
+          "office": "Festive",
+          "notes": "Commemoration of Sunday at Lauds, both Vespers, all Masses"
+        },
+        {
+          "date": "May 2",
+          "feast": "St. Athanasius, Bishop, Confessor, Doctor",
+          "class": "III",
+          "office": "Ordinary",
+          "mass": "p.1452",
+          "creed": false
+        },
+        {
+          "date": "May 3",
+          "feast": "Feria (or Ss. Alexander, Eventius & Theodulus, Martyrs, and St. Juvenal, Bishop Confessor)",
+          "mass": "Sancti tui p.1149"
+        },
+        {
+          "date": "May 4",
+          "feast": "St. Monica, Widow",
+          "class": "III",
+          "office": "Ordinary",
+          "mass": "p.1461"
+        },
+        {
+          "date": "May 5",
+          "feast": "St. Pius V, Pope, Confessor",
+          "class": "III",
+          "office": "Ordinary",
+          "mass": "p.1462"
+        },
+        {
+          "date": "May 7",
+          "feast": "St. Stanislaus, Bishop, Martyr",
+          "class": "III",
+          "office": "Ordinary",
+          "mass": "p.1463"
+        },
+        {
+          "date": "May 9",
+          "feast": "St. Gregory Nazianzen, Bishop, Confessor, Doctor",
+          "class": "III",
+          "office": "Ordinary",
+          "mass": "p.1465",
+          "creed": false
+        },
+        {
+          "date": "May 10",
+          "feast": "St. Antoninus, Bishop, Confessor",
+          "class": "III",
+          "office": "Ordinary",
+          "mass": "p.1465",
+          "commemoration": "of martyrs if conventual"
+        },
+        {
+          "date": "May 11",
+          "feast": "Ss. Philip & James, Apostles",
+          "class": "II",
+          "office": "Semi-festive",
+          "mass": "p.1465A",
+          "vespers": "p.1465E",
+          "notes": "If I class: Festive Office; commemoration of Sunday at Vespers & Masses"
+        },
+        {
+          "date": "May 12",
+          "feast": "Ss. Nereus, Achilleus, Domitilla (V.) & Pancras, Martyrs",
+          "class": "III",
+          "office": "Ordinary",
+          "mass": "Proper not in LU"
+        },
+        {
+          "date": "May 13",
+          "feast": "St. Robert Bellarmine, Bishop, Confessor, Doctor",
+          "class": "III",
+          "office": "Ordinary",
+          "mass": "p.1466",
+          "creed": false
+        },
+        {
+          "date": "May 14",
+          "feast": "Feria (or St. Boniface, Martyr)",
+          "mass": "Protexisti p.1146 with prayers p.1468"
+        },
+        {
+          "date": "May 15",
+          "feast": "St. John Baptist de la Salle, Confessor",
+          "class": "III",
+          "office": "Ordinary",
+          "mass": "p.1469"
+        },
+        {
+          "date": "May 16",
+          "feast": "St. Ubald, Bishop, Confessor",
+          "class": "III",
+          "office": "Ordinary",
+          "mass": "Statuit p.1182 except collect p.1469"
+        },
+        {
+          "date": "May 17",
+          "feast": "St. Paschal Baylon, Confessor",
+          "class": "III",
+          "office": "Ordinary",
+          "mass": "p.1469"
+        },
+        {
+          "date": "May 18",
+          "feast": "St. Venantius, Martyr",
+          "class": "III",
+          "office": "Ordinary",
+          "mass": "p.1471",
+          "vespers": "hymn p.1469"
+        },
+        {
+          "date": "May 19",
+          "feast": "St. Peter Celestine, Pope, Confessor",
+          "class": "III",
+          "office": "Ordinary",
+          "mass": "p.1471",
+          "commemoration": "St. Pudentiana if conventual"
+        },
+        {
+          "date": "May 20",
+          "feast": "St. Bernardine of Siena, Confessor",
+          "class": "III",
+          "office": "Ordinary",
+          "mass": "p.1471"
+        },
+        {
+          "date": "May 25",
+          "feast": "St. Gregory VII, Pope, Confessor",
+          "class": "III",
+          "office": "Ordinary",
+          "mass": "p.1472",
+          "commemoration": "St. Urban I if conventual"
+        },
+        {
+          "date": "May 26",
+          "feast": "St. Philip Neri, Confessor",
+          "class": "III",
+          "office": "Ordinary",
+          "mass": "p.1472",
+          "commemoration": "St. Eleutherius if conventual"
+        },
+        {
+          "date": "May 27",
+          "feast": "St. Bede the Venerable, Confessor, Doctor",
+          "class": "III",
+          "office": "Ordinary",
+          "mass": "p.1475",
+          "creed": false,
+          "commemoration": "St. John I if conventual"
+        },
+        {
+          "date": "May 28",
+          "feast": "St. Augustine, Bishop, Confessor",
+          "class": "III",
+          "office": "Ordinary",
+          "mass": "p.1475"
+        },
+        {
+          "date": "May 29",
+          "feast": "St. Mary Magdalen de Pazzi, Virgin",
+          "class": "III",
+          "office": "Ordinary",
+          "mass": "Dilexisti p.1225 except collect p.1476"
+        },
+        {
+          "date": "May 30",
+          "feast": "Feria (or St. Felix I, Pope, Martyr)",
+          "mass": "Si diligis me p.1122¹"
+        },
+        {
+          "date": "May 31",
+          "feast": "Our Lady the Queen",
+          "class": "II",
+          "office": "Semi-festive",
+          "mass": "pp.1476A ff.",
+          "notes": "No I Vespers; hymns #1 of Sunday at lesser Hours; Prime short lesson of season; conventual Mass commemorates St. Petronilla"
+        }
+      ],
+      "June": [
+        {
+          "date": "Jun 1",
+          "feast": "St. Angela Merici, Virgin",
+          "class": "III",
+          "office": "Ordinary",
+          "mass": "p.1477"
+        },
+        {
+          "date": "Jun 2",
+          "feast": "Feria (or Ss. Marcellinus, Peter & Erasmus, Martyrs)",
+          "office": "Ferial"
+        },
+        {
+          "date": "Jun 4",
+          "feast": "St. Francis Caracciolo, Confessor",
+          "class": "III",
+          "office": "Ordinary",
+          "mass": "p.1477"
+        },
+        {
+          "date": "Jun 5",
+          "feast": "St. Boniface, Bishop, Martyr",
+          "class": "III",
+          "office": "Ordinary",
+          "mass": "p.1481"
+        },
+        {
+          "date": "Jun 6",
+          "feast": "St. Norbert, Bishop, Confessor",
+          "class": "III",
+          "office": "Ordinary",
+          "mass": "p.1485"
+        },
+        {
+          "date": "Jun 9",
+          "feast": "Feria (or Ss. Primus & Felician, Martyrs)",
+          "office": "Ferial"
+        },
+        {
+          "date": "Jun 10",
+          "feast": "St. Margaret, Queen, Widow",
+          "class": "III",
+          "office": "Ordinary",
+          "mass": "Cognovi p.1239 except collect p.1486"
+        },
+        {
+          "date": "Jun 11",
+          "feast": "St. Barnabas, Apostle",
+          "class": "III",
+          "office": "Ordinary",
+          "mass": "p.1486",
+          "creed": true
+        },
+        {
+          "date": "Jun 12",
+          "feast": "St. John of San Facundo, Confessor",
+          "class": "III",
+          "office": "Ordinary",
+          "mass": "p.1488",
+          "commemoration": "of martyrs if conventual"
+        },
+        {
+          "date": "Jun 13",
+          "feast": "St. Anthony of Padua, Confessor, Doctor",
+          "class": "III",
+          "office": "Ordinary",
+          "mass": "p.1489",
+          "creed": false
+        },
+        {
+          "date": "Jun 14",
+          "feast": "St. Basil the Great, Bishop, Confessor, Doctor",
+          "class": "III",
+          "office": "Ordinary",
+          "mass": "p.1489",
+          "creed": false
+        },
+        {
+          "date": "Jun 15",
+          "feast": "Feria (or Ss. Vitus, Modestus & Crescentia, Martyrs)",
+          "office": "Ferial",
+          "note": "Mass not in Liber Usualis"
+        },
+        {
+          "date": "Jun 17",
+          "feast": "St. Gregory Barbarigo, Bishop, Confessor",
+          "class": "III",
+          "office": "Ordinary",
+          "mass": "p.1490"
+        },
+        {
+          "date": "Jun 18",
+          "feast": "St. Ephraem the Syrian, Deacon, Confessor, Doctor",
+          "class": "III",
+          "office": "Ordinary",
+          "mass": "p.1490",
+          "creed": false,
+          "commemoration": "of martyrs if conventual"
+        },
+        {
+          "date": "Jun 19",
+          "feast": "St. Juliana Falconieri, Virgin",
+          "class": "III",
+          "office": "Ordinary",
+          "mass": "p.1492",
+          "vespers": "hymn Caelestis Agni p.1491",
+          "commemoration": "of martyrs if conventual; where Ss. Gervase & Protase are I/II class, use Common of Martyrs p.1153, Creed if I class"
+        },
+        {
+          "date": "Jun 20",
+          "feast": "Feria (or St. Silverius, Pope, Martyr)",
+          "mass": "Si diligis me p.1122¹"
+        },
+        {
+          "date": "Jun 21",
+          "feast": "St. Aloysius Gonzaga, Confessor",
+          "class": "III",
+          "office": "Ordinary",
+          "mass": "p.1493"
+        },
+        {
+          "date": "Jun 22",
+          "feast": "St. Paulinus, Bishop, Confessor",
+          "class": "III",
+          "office": "Ordinary",
+          "mass": "p.1495"
+        },
+        {
+          "date": "Jun 24",
+          "feast": "Nativity of St. John the Baptist",
+          "class": "I",
+          "office": "Festive",
+          "mass": "pp.1496–1506",
+          "notes": "Prime short lesson of season; Creed at Mass; commemoration of Sunday at Lauds, Vespers, Masses; Compline of Sunday on 23 & 24"
+        },
+        {
+          "date": "Jun 25",
+          "feast": "St. William, Abbot",
+          "class": "III",
+          "office": "Ordinary",
+          "mass": "p.1506"
+        },
+        {
+          "date": "Jun 26",
+          "feast": "Ss. John & Paul, Martyrs",
+          "class": "III",
+          "office": "Ordinary",
+          "mass": "p.1507",
+          "vespers": "p.1509"
+        },
+        {
+          "date": "Jun 29",
+          "feast": "Ss. Peter & Paul, Apostles",
+          "class": "I",
+          "office": "Festive",
+          "mass": "p.1515 ff.",
+          "notes": "Prime short lesson of season; commemoration of Sunday at Lauds, Vespers, Masses"
+        },
+        {
+          "date": "Jun 30",
+          "feast": "Commemoration of St. Paul, Apostle",
+          "class": "III (I if solemn)",
+          "office": "Ordinary",
+          "mass": "p.1526",
+          "creed": false,
+          "notes": "At all Masses commemoration of St. Peter only; if I class: Festive with Creed, commemoration of St. Peter & Sunday"
+        }
+      ],
+      "July": [],
+      "August": [],
+      "September": [],
+      "October": [],
+      "November": [],
+      "December": []
+    },
+    "feasts_november": {
+      "30": {
+        "name": "St. Andrew, Apostle",
+        "class": "II",
+        "office": "Semi-festive",
+        "details": {
+          "lesser_hours": "Antiphons and psalms of weekday (p. 279A ff.), rest from Proper (pp. 1304, 1307)",
+          "mass": "p. 1304",
+          "vespers": "Proper p. 1307",
+          "compline": "Of Sunday",
+          "if_saturday": "Vespers of Sunday without commemoration of feast; Compline of Saturday",
+          "if_sunday": "Feast not kept that year",
+          "if_class_I": {
+            "vespers_I": "p. 1303 (except on Sunday)",
+            "lesser_hours": "Antiphons from pp. 1304, 1307 with psalms of Sunday (Prime n° III)",
+            "vespers_II": "Proper p. 1307, even on Saturday, with commemoration of Sunday (ant. Ecce nomen Domini, p. 317; vers. Rorate; prayer Excita, p. 326)",
+            "compline": "Of Sunday both days",
+            "if_sunday": "Feast transferred to Monday; on Sunday only commemoration (ant. Unus ex duobus, p. 1304; vers. In omnem terram, p. 1303; prayer Majestatem, p. 1305)"
+          }
+        }
+      }
+    },
+    "feasts_december": {
+      "2": {
+        "name": "St. Bibiana, V.M.",
+        "class": "III",
+        "office": "Ordinary",
+        "mass": "Me exspectaverunt, p. 1220 except collect p. 1309"
+      },
+      "3": {
+        "name": "St. Francis Xavier, Conf.",
+        "class": "III",
+        "office": "Ordinary",
+        "mass": "p. 1310",
+        "if_missions": "Principal patron of the Missions, I class; Festive Office; all from Common of Conf. not Bishop (p. 1193) except prayer p. 1310; transfer rules for Sunday or Saturday"
+      },
+      "4": {
+        "name": "St. Peter Chrysologus, Bp. Conf. Doct.",
+        "class": "III",
+        "office": "Ordinary",
+        "mass": "p. 1311, no Creed; commemoration of St. Barbara if conventual"
+      },
+      "6": {
+        "name": "St. Nicholas, Bp. Conf.",
+        "class": "III",
+        "office": "Ordinary",
+        "mass": "p. 1312"
+      },
+      "7": {
+        "name": "St. Ambrose, Bp. Conf. Doct.",
+        "class": "III",
+        "office": "Ordinary until None inclusive",
+        "mass": "p. 1313, no Creed",
+        "if_class_I": "Festive Office; all from Common Conf. Bishop (p. 1173); Creed at Mass; Vespers with commemoration of following only"
+      },
+      "8": {
+        "name": "Immaculate Conception of Our Lady",
+        "class": "I",
+        "office": "Festive",
+        "details": {
+          "lesser_hours": "Hymns to Advent melody (or of solemn feasts) with common doxology; at Prime short lesson of Advent",
+          "if_sunday": "Office and Mass of feast; commemoration of Sunday at Lauds, both Vespers, and all Masses",
+          "if_saturday": "II Vespers of feast with commemoration of Sunday (p. 327)",
+          "if_sunday_before": "On Dec. 7, Vespers of Sunday with commemoration of feast (ant. Beata me dicent, p. 1313; vers. Immaculata Conceptio, p. 1321; prayer Deus, qui per Immaculatam, p. 1317)",
+          "at_mass": "Commemoration of feria at every Mass"
+        }
+      },
+      "11": {
+        "name": "St. Damasus I, Pope and Conf.",
+        "class": "III",
+        "office": "Ordinary",
+        "mass": "Si diligis me, p. 1221, common preface"
+      },
+      "13": {
+        "name": "St. Lucy, V.M.",
+        "class": "III",
+        "office": "Ordinary",
+        "mass": "Liber Usualis pp. 1323-1325, no Creed; I Vespers only if feast is I class"
+      },
+      "16": {
+        "name": "St. Eusebius, Bp.",
+        "class": "III",
+        "office": "Ordinary",
+        "mass": "p. 1325"
+      },
+      "21": {
+        "name": "St. Thomas, Apostle",
+        "class": "II",
+        "office": "Semi-festive",
+        "details": {
+          "sources": "pp. 1326-1328",
+          "no_I_vespers": true,
+          "commemoration": "Of feria at all Masses and Vespers",
+          "if_sunday": "Feast not kept or commemorated; only transferred if it is I class"
+        }
+      },
+      "24-jan13": "See Proper of Time p. LXXII"
+    }
+  },
+  "_meta": {
+    "source_files": [
+      "proper_of_saints_intro_nov_dec.json",
+      "proper_of_saints_Jan_Feb_Mar.json",
+      "proper_of_saints_Apr_Jun.json",
+      "proper_of_saints_Jul_Aug.json",
+      "proper_of_saints_Sep_Nov.json"
+    ],
+    "schema_version": "1.0.0",
+    "notes": "Merged by ChatGPT from user-provided month JSONs; structure normalized to {proper_of_saints:{intro, months:{Month:[entries]}}}."
+  },
+  "months": {
+    "July": [
+      {
+        "date": "Jul 1",
+        "feast": "The Most Precious Blood of Our Lord",
+        "class": "I",
+        "office": "Festive",
+        "mass": "pp.1528–1538",
+        "notes": "No commemoration of the occurring Sunday at Lauds, either Vespers, or at Mass; Prime short lesson of the season."
+      },
+      {
+        "date": "Jul 2",
+        "feast": "Visitation of the B. V. Mary",
+        "class": "II (I in some places)",
+        "office": "Semi‑festive (Festive if I class)",
+        "mass": "p.1539",
+        "vespers": "p.1540",
+        "compline": "Sunday",
+        "notes": "At lesser Hours hymns no. 1 of Sunday; antiphons and psalms of the occurring weekday; Prime short lesson of season. If I class: commemoration at Precious Blood Vespers; little Hours antiphons proper with Sunday psalms (Prime no. III)."
+      },
+      {
+        "date": "Jul 3",
+        "feast": "St. Irenaeus, Bishop & Martyr",
+        "class": "III",
+        "office": "Ordinary",
+        "mass": "p.1511"
+      },
+      {
+        "date": "Jul 5",
+        "feast": "St. Anthony Mary Zaccaria, Confessor",
+        "class": "III",
+        "office": "Ordinary",
+        "mass": "p.1543",
+        "notes": "Without commemorations."
+      },
+      {
+        "date": "Jul 7",
+        "feast": "Ss. Cyril & Methodius, Bishops & Confessors",
+        "class": "III",
+        "office": "Ordinary",
+        "mass": "p.1550",
+        "vespers": "Ants./pss. of weekday; chap. Ecce sacerdos (p.1177); hymn/versicle/Magnificat antiphon p.1551."
+      },
+      {
+        "date": "Jul 8",
+        "feast": "St. Elizabeth, Queen, Widow",
+        "class": "III",
+        "office": "Ordinary",
+        "mass": "Cognovi p.1239; collect p.1553",
+        "vespers": "Weekday psalms; chap. Mulierem fortem (p.1233); hymn as in Common; versicle Ora pro nobis (p.1553); Magnificat antiphon & prayer follow."
+      },
+      {
+        "date": "Jul 10",
+        "feast": "The Seven Holy Brothers, Martyrs, and Ss. Rufina & Secunda, Virgins, Martyrs",
+        "class": "III",
+        "office": "Ordinary",
+        "mass": "Not in Liber Usualis"
+      },
+      {
+        "date": "Jul 12",
+        "feast": "St. John Gualbert, Abbot",
+        "class": "III",
+        "office": "Ordinary",
+        "mass": "p.1554",
+        "notes": "If conventual, commemoration of Ss. Martyrs."
+      },
+      {
+        "date": "Jul 14",
+        "feast": "St. Bonaventure, Bishop, Confessor & Doctor",
+        "class": "III",
+        "office": "Ordinary",
+        "mass": "p.1555",
+        "creed": false
+      },
+      {
+        "date": "Jul 15",
+        "feast": "St. Henry, Emperor, Confessor",
+        "class": "III",
+        "office": "Ordinary",
+        "mass": "p.1555"
+      },
+      {
+        "date": "Jul 16",
+        "feast": "Commemoration of Our Lady of Mount Carmel",
+        "class": "Commemoration",
+        "office": "—",
+        "mass": "p.1556",
+        "creed": false,
+        "notes": "If on Saturday, Mass may be of Our Lady on Saturday or the proper Mass."
+      },
+      {
+        "date": "Jul 17",
+        "feast": "Commemoration of St. Alexius, Confessor",
+        "class": "Commemoration",
+        "office": "—",
+        "mass": "Os iusti p.1200 (proper epistle); gospel of Abbots p.1208"
+      },
+      {
+        "date": "Jul 18",
+        "feast": "St. Camillus de Lellis, Confessor",
+        "class": "III",
+        "office": "Ordinary",
+        "mass": "p.1559",
+        "notes": "If conventual, commemoration of Ss. Martyrs."
+      },
+      {
+        "date": "Jul 19",
+        "feast": "St. Vincent de Paul, Confessor",
+        "class": "III",
+        "office": "Ordinary",
+        "mass": "p.1561"
+      },
+      {
+        "date": "Jul 20",
+        "feast": "St. Jerome Æmilian, Confessor",
+        "class": "III",
+        "office": "Ordinary",
+        "mass": "p.1561",
+        "notes": "If conventual, commemoration of St. Margaret."
+      },
+      {
+        "date": "Jul 21",
+        "feast": "St. Lawrence of Brindisi, Confessor & Doctor",
+        "class": "III",
+        "office": "Ordinary",
+        "mass": "p.1564",
+        "creed": false,
+        "notes": "If conventual, commemoration of St. Praxedes (Dilexisti p.1225)."
+      },
+      {
+        "date": "Jul 22",
+        "feast": "St. Mary Magdalen, Penitent",
+        "class": "III (I in some places)",
+        "office": "Ordinary (Festive if I class)",
+        "mass": "p.1556",
+        "creed": false,
+        "vespers": "Weekday psalms; chap. Mulierem (p.1233); hymn p.1565; versicle & Magnificat ant. p.1568; prayer from Mass.",
+        "notes": "If I class: Festive Office; little Hours antiphons from Common (p.1232) with Sunday psalms; Mass p.1566 with Creed; II Vespers from Common; Compline of Sunday both days."
+      },
+      {
+        "date": "Jul 23",
+        "feast": "St. Apollinaris, Bishop & Martyr",
+        "class": "III",
+        "office": "Ordinary",
+        "mass": "p.1568",
+        "notes": "If conventual, commemoration of St. Liborius."
+      },
+      {
+        "date": "Jul 24",
+        "feast": "Commemoration of St. Christina, Virgin & Martyr",
+        "class": "Commemoration",
+        "office": "—",
+        "mass": "Me exspectaverunt p.1220"
+      },
+      {
+        "date": "Jul 25",
+        "feast": "St. James, Apostle",
+        "class": "II (I in some places)",
+        "office": "Semi‑festive (Festive if I class)",
+        "mass": "p.1570",
+        "vespers": "Common p.1114 (prayer p.1570); Saturday add commemoration of Sunday.",
+        "compline": "Sunday",
+        "notes": "Little Hours: weekday psalms; rest from Common pp.1112–1113 (prayer p.1570). If I class: I & II Vespers from Common; little Hours from Common; Prime short lesson of season; Mass without commem. of the Martyr; Compline of Sunday both days; commemoration of Sunday at both Vespers and Masses."
+      },
+      {
+        "date": "Jul 26",
+        "feast": "St. Anne, Mother of the B. V. Mary",
+        "class": "II (I in some places)",
+        "office": "Semi‑festive (Festive if I class)",
+        "mass": "p.1571",
+        "vespers": "Common p.1232 (prayer p.1571; Sat. commem. of Sunday)",
+        "compline": "Sunday",
+        "notes": "Little Hours: weekday psalms; rest from Common p.1232; If I class: all Hours from Common; commemoration of Sunday at both Vespers and Masses."
+      },
+      {
+        "date": "Jul 27",
+        "feast": "Commemoration of St. Pantaleon, Martyr",
+        "class": "Commemoration",
+        "office": "—",
+        "mass": "Laetabitur p.1138"
+      },
+      {
+        "date": "Jul 28",
+        "feast": "Ss. Nazarius & Celsus, Martyrs; Victor I, Pope, Martyr; Innocent I, Pope, Confessor",
+        "class": "III",
+        "office": "Ordinary",
+        "mass": "Intret p.1162; prayers p.1572",
+        "notes": "Epistle not in Liber Usualis."
+      },
+      {
+        "date": "Jul 29",
+        "feast": "St. Martha, Virgin",
+        "class": "III",
+        "office": "Ordinary",
+        "mass": "p.1572",
+        "notes": "If conventual, commemoration of Ss. Martyrs."
+      },
+      {
+        "date": "Jul 30",
+        "feast": "Commemoration of Ss. Abdon & Sennen, Martyrs",
+        "class": "Commemoration",
+        "office": "—"
+      },
+      {
+        "date": "Jul 31",
+        "feast": "St. Ignatius of Loyola, Confessor",
+        "class": "III",
+        "office": "Ordinary",
+        "mass": "p.1574"
+      }
+    ],
+    "August": [
+      {
+        "date": "Aug 1",
+        "feast": "Commemoration of the Holy Machabees, Martyrs",
+        "class": "Commemoration",
+        "office": "—"
+      },
+      {
+        "date": "Aug 2",
+        "feast": "St. Alphonsus Mary de Liguori, Bishop, Confessor & Doctor",
+        "class": "III",
+        "office": "Ordinary",
+        "mass": "p.1579",
+        "creed": false,
+        "notes": "If conventual, commemoration of St. Stephen I, Pope, Martyr."
+      },
+      {
+        "date": "Aug 4",
+        "feast": "St. Dominic, Confessor",
+        "class": "III",
+        "office": "Ordinary",
+        "mass": "p.1583B"
+      },
+      {
+        "date": "Aug 5",
+        "feast": "Dedication of the Church of St. Mary of the Snow",
+        "class": "III",
+        "office": "Ordinary",
+        "mass": "Salve, sancta parens p.1263",
+        "creed": false,
+        "notes": "Little Hours & Compline: hymns no.1 of Sunday; weekday psalms; rest from Common p.1256. Vespers: weekday psalms; rest from Common p.1259. On Saturday: I Vespers of following (p.1584) without commem. of Sunday/preceding; Compline of Sunday (hymn no.1)."
+      },
+      {
+        "date": "Aug 6",
+        "feast": "Transfiguration of Our Lord",
+        "class": "II (I in some places)",
+        "office": "Semi‑festive (Festive if I class)",
+        "mass": "pp.1584–1591",
+        "vespers": "p.1588 (no commem. of Sunday)",
+        "compline": "Sunday",
+        "notes": "Feast of Our Lord. Little Hours: hymns no.1 of Sunday; weekday psalms; rest proper; Prime short lesson of season. At conventual weekday Mass: commemoration of Ss. Sixtus II (Pope), Felicissimus, Agapitus (prayers from Sapientiam p.1166); omit if I class. On Sunday: no commemoration; Preface of Holy Trinity; weekday: common Preface."
+      },
+      {
+        "date": "Aug 7",
+        "feast": "St. Cajetan, Confessor",
+        "class": "III",
+        "office": "Ordinary",
+        "mass": "p.1591",
+        "notes": "If conventual, commemoration of St. Donatus. Vespers Magnificat antiphon Quaerite primum (p.1591)."
+      },
+      {
+        "date": "Aug 8",
+        "feast": "St. John Mary Vianney, Confessor",
+        "class": "III",
+        "office": "Ordinary",
+        "mass": "as Aug 9 p.1592",
+        "notes": "If conventual, commemoration of Ss. Cyriacus, Largus & Smaragdus (Aug 8)."
+      },
+      {
+        "date": "Aug 9",
+        "feast": "Vigil of the Assumption",
+        "class": "Vigil",
+        "office": "—",
+        "notes": "If conventual, commemoration of St. Romanus."
+      },
+      {
+        "date": "Aug 10",
+        "feast": "St. Lawrence, Martyr",
+        "class": "II (I in some places)",
+        "office": "Semi‑festive (Festive if I class)",
+        "mass": "p.1593",
+        "vespers": "p.1596 (Sat. commemoration of Sunday)",
+        "compline": "Sunday",
+        "notes": "Little Hours: weekday psalms; rest proper pp.1593 & 1596; Prime short lesson of season. If I class: include I Vespers (p.1593); Mass with Creed; commemoration of Sunday at both Vespers; Compline of Sunday both days."
+      },
+      {
+        "date": "Aug 11",
+        "feast": "Commemoration of Ss. Tiburtius & Susanna, Martyrs",
+        "class": "Commemoration",
+        "office": "—",
+        "mass": "Salus autem p.1169; prayers p.1598; epistle Sancti per fidem p.1336"
+      },
+      {
+        "date": "Aug 12",
+        "feast": "St. Clare, Virgin",
+        "class": "III",
+        "office": "Ordinary",
+        "mass": "p.1599"
+      },
+      {
+        "date": "Aug 13",
+        "feast": "Commemoration of Ss. Hippolytus & Cassian, Martyrs",
+        "class": "Commemoration",
+        "office": "—",
+        "mass": "Salus autem p.1169; prayers p.1599"
+      },
+      {
+        "date": "Aug 14",
+        "feast": "Vigil of the Assumption",
+        "class": "Vigil",
+        "office": "—",
+        "notes": "If conventual, commemoration of St. Eusebius."
+      },
+      {
+        "date": "Aug 15",
+        "feast": "Assumption of the B. V. Mary",
+        "class": "I",
+        "office": "Festive",
+        "mass": "pp.1600–1607",
+        "notes": "Compline & lesser Hours: hymns no.2 of Sunday; Prime short lesson of season. At both Vespers, Lauds, and sung Mass: commemoration of Sunday if it occurs."
+      },
+      {
+        "date": "Aug 16",
+        "feast": "St. Joachim, Father of the B. V. Mary, Confessor",
+        "class": "II",
+        "office": "Semi‑festive",
+        "mass": "p.1607",
+        "creed": false,
+        "vespers": "p.1609 (Sat. commemoration of Sunday)",
+        "compline": "Sunday",
+        "notes": "Little Hours: weekday psalms; rest from Common pp.1194–1195 (prayer p.1608). Weekday Mass common Preface; Sunday Mass Preface of the Trinity."
+      },
+      {
+        "date": "Aug 17",
+        "feast": "St. Hyacinth, Confessor",
+        "class": "III",
+        "office": "Ordinary",
+        "mass": "p.1610",
+        "notes": "Without commemorations."
+      },
+      {
+        "date": "Aug 18",
+        "feast": "Commemoration of St. Agapitus, Martyr",
+        "class": "Commemoration",
+        "office": "—",
+        "mass": "Laetabitur p.1138; prayers p.1611; gospel Amen, amen, dico vobis p.1354v"
+      },
+      {
+        "date": "Aug 19",
+        "feast": "St. John Eudes, Confessor",
+        "class": "III",
+        "office": "Ordinary",
+        "mass": "p.1611"
+      },
+      {
+        "date": "Aug 20",
+        "feast": "St. Bernard, Abbot & Doctor",
+        "class": "III",
+        "office": "Ordinary",
+        "mass": "p.1611",
+        "creed": false
+      },
+      {
+        "date": "Aug 21",
+        "feast": "St. Jane Frances de Chantal, Widow",
+        "class": "III",
+        "office": "Ordinary",
+        "mass": "p.1612"
+      },
+      {
+        "date": "Aug 22",
+        "feast": "Immaculate Heart of Mary",
+        "class": "II",
+        "office": "Semi‑festive",
+        "mass": "p.16121",
+        "creed": true,
+        "vespers": "Common p.1258 (Magnificat ant. p.1612; prayer p.16121; Sat. commemoration of Sunday)",
+        "compline": "Sunday",
+        "notes": "Little Hours: hymns no.1 of Sunday; weekday psalms; rest from Common pp.1255 ff.; Prime short lesson of season."
+      },
+      {
+        "date": "Aug 23",
+        "feast": "St. Philip Benizi, Confessor",
+        "class": "III",
+        "office": "Ordinary",
+        "mass": "p.16124"
+      },
+      {
+        "date": "Aug 24",
+        "feast": "St. Bartholomew, Apostle",
+        "class": "II (I in some places)",
+        "office": "Semi‑festive (Festive if I class)",
+        "mass": "p.16124",
+        "vespers": "Common p.1114 (prayer from Mass; Sat. commemoration of Sunday)",
+        "compline": "Sunday",
+        "notes": "Little Hours: weekday psalms; rest from Common pp.1112–1113. If I class: Festive Office with commemoration of Sunday at both Vespers & Masses."
+      },
+      {
+        "date": "Aug 25",
+        "feast": "St. Louis, King, Confessor",
+        "class": "III",
+        "office": "Ordinary",
+        "mass": "p.1614"
+      },
+      {
+        "date": "Aug 26",
+        "feast": "Commemoration of St. Zephyrinus, Pope & Martyr",
+        "class": "Commemoration",
+        "office": "—",
+        "mass": "Si diligis me p.1122¹"
+      },
+      {
+        "date": "Aug 27",
+        "feast": "St. Joseph Calasanctius, Confessor",
+        "class": "III",
+        "office": "Ordinary",
+        "mass": "p.1615"
+      },
+      {
+        "date": "Aug 28",
+        "feast": "St. Augustine, Bishop, Confessor & Doctor",
+        "class": "III",
+        "office": "Ordinary",
+        "mass": "p.1617",
+        "creed": false,
+        "notes": "If conventual, commemoration of St. Hermes."
+      },
+      {
+        "date": "Aug 29",
+        "feast": "Beheading of St. John the Baptist",
+        "class": "III (I in some places)",
+        "office": "Ordinary (Festive if I class)",
+        "mass": "p.1618",
+        "vespers": "p.1620",
+        "notes": "Little Hours: weekday psalms; rest from Common of a Martyr pp.1124–1125; prayer from Mass. If I class: Festive with I & II Vespers; little Hours antiphons 1,2,3,5 of Vespers with Sunday psalms; Mass with Creed; commemoration of Sunday at both Vespers & Mass."
+      },
+      {
+        "date": "Aug 30",
+        "feast": "St. Rose of Lima, Virgin",
+        "class": "III",
+        "office": "Ordinary",
+        "mass": "p.1621",
+        "notes": "If conventual, commemoration of Ss. Martyrs."
+      },
+      {
+        "date": "Aug 31",
+        "feast": "St. Raymund Nonnatus, Confessor",
+        "class": "III",
+        "office": "Ordinary",
+        "mass": "p.1622"
+      }
+    ]
+  },
+  "source": "Liber Usualis (1961) – Proper of the Saints (Sep–Nov) per user transcription",
+  "generated_at": "2025-09-04T13:24:55.905416Z"
+}
