@@ -31,8 +31,8 @@ function findRowByYMD(rows, ymd){
 }
 
 it("movable feasts (Trinity, Corpus, Christ the King) map to exact dates", () => {
-  for (const form of ["1962","1974"]) {
-    const L = form==="1974" ? lookup1974(y) : lookup1962(y);
+for (const form of ["EF","OF"]) {
+    const L = form==="OF" ? lookup1974(y) : lookup1962(y);
     const rows = calendarium(y, { form });
 
     for (const id of ["holy_trinity","corpus_christi","christ_king"]) {
@@ -44,7 +44,7 @@ it("movable feasts (Trinity, Corpus, Christ the King) map to exact dates", () =>
 });
 
 it("fixed feasts from calendar.json appear on their month/day", () => {
-  const rows = calendarium(y, { form: "1974" });
+const rows = calendarium(y, { form: "OF" });
   // find any fixed entry present in your calendar.json to test
   const aFixed = cal.find(e => Number.isInteger(e.month) && Number.isInteger(e.day));
   if (!aFixed) { assert(true, "no fixed feasts present to test"); return; }
@@ -57,7 +57,7 @@ it("fixed feasts from calendar.json appear on their month/day", () => {
 
 it("movable overlay takes precedence over fixed feasts on same day", () => {
   const y = 2025;
-  const rows = calendarium(y, { form: "1974" });
+const rows = calendarium(y, { form: "OF" });
   // Build a quick lookup for rows by YMD
   const idx = new Map(rows.map(r => {
     const x = new Date(r.ts);

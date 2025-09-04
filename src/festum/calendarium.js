@@ -1,5 +1,5 @@
 // src/festum/calendarium.js
-import { toUTC } from "../aux/aux.js";
+import { toUTC, normalizeForm } from "../aux/aux.js";
 import calendar from "./data/calendar.json" with { type: "json" };
 import { lookup1962, lookup1974 } from "./datum.js";
 import { season1962, season1974 } from "./tempus.js";
@@ -24,14 +24,15 @@ const ymd = (d) =>
 /**
  * Build the calendar for a given year and form.
  * @param {number} year - Gregorian year in UTC.
- * @param {{ form?: '1962'|'1974', splitOrdinary?: boolean, transfer?: { epiphany?: boolean, ascension?: boolean, corpusChristi?: boolean } }} [opts]
+ * @param {{ form?: 'EF'|'OF'|'1962'|'1974', splitOrdinary?: boolean, transfer?: { epiphany?: boolean, ascension?: boolean, corpusChristi?: boolean } }} [opts]
  * @returns {CalendarRow[]} Array of day rows from Jan 1 to Dec 31.
  */
 export function calendarium(
   year,
-  { form = "1962", splitOrdinary = false, transfer = {} } = {}
+  { form = "EF", splitOrdinary = false, transfer = {} } = {}
 ) {
-  const L = form === "1974" ? lookup1974(year, { transfer }) : lookup1962(year);
+  const F = normalizeForm(form);
+  const L = F === "OF" ? lookup1974(year, { transfer }) : lookup1962(year);
 
   const fixedByMMDD = new Map();
   const movableByYMD = new Map();
@@ -63,8 +64,7 @@ export function calendarium(
   const end = new Date(Date.UTC(year, 11, 31));
   const days = [];
   for (let d = new Date(start); d <= end; d = new Date(d.getTime() + DAY)) {
-    const season =
-      form === "1974" ? season1974(d, L, { splitOrdinary }) : season1962(d, L);
+    const season = F === "OF" ? season1974(d, L, { splitOrdinary }) : season1962(d, L);
     const base = {
       ts: d.getTime(),
       id: "feria",

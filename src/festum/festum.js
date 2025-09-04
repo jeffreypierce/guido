@@ -1,5 +1,5 @@
 // src/festum/festum.js
-import { toUTC, stableJson } from "../aux/aux.js";
+import { toUTC, stableJson, normalizeForm } from "../aux/aux.js";
 import { calendarium } from "./calendarium.js";
 import MASSES from "./data/masses.json" with { type: "json" };
 import { seasonNormalize } from "./tempus.js";
@@ -127,7 +127,7 @@ function selectMasses(row, weekday, bvmFlag, opts = {}) {
  * @property {string} title - Title from the calendar overlay or "Feria".
  * @property {'t'|'s'|'f'|'m'|'o'} rank - Rank code (form-specific labels in constants).
  * @property {'ad'|'ct'|'lt'|'ea'|'ot'|'ot1'|'ot2'|'ap'|'sg'} season - Season code.
- * @property {'1962'|'1974'} form - Liturgical form used for classification.
+ * @property {'EF'|'OF'} form - Liturgical form used for classification.
  * @property {'dominica'|'feria'} weekday - Sunday vs weekday heuristic for selection.
  * @property {boolean} bvm - True if the day is identified as BVM-related (heuristic).
  * @property {MassId[]} masses - Sorted list of candidate mass IDs.
@@ -138,7 +138,7 @@ function selectMasses(row, weekday, bvmFlag, opts = {}) {
  * Return celebration details for the given date and form.
  * @param {Date|string|number} date - Any Date-like value; coerced to UTC-midnight.
  * @param {{
- *   form?: '1962'|'1974',
+ *   form?: 'EF'|'OF'|'1962'|'1974',
  *   splitOrdinary?: boolean,
  *   transfer?: { epiphany?: boolean, ascension?: boolean, corpusChristi?: boolean },
  *   bvmHeuristic?: boolean,      // broaden BVM detection (Marian IDs, EF Marian Saturdays)
@@ -148,7 +148,7 @@ function selectMasses(row, weekday, bvmFlag, opts = {}) {
  * @returns {Festum}
  */
 export function festum(date, options = {}) {
-  const form = options.form ?? "1962";
+  const form = normalizeForm(options.form ?? "EF");
   const day = toUTC(date);
   const year = day.getUTCFullYear();
 

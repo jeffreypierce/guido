@@ -36,23 +36,25 @@ export const SEASONS_1974 = Object.freeze({
 /**
  * Human label for a rank code in the given form.
  * @param {'t'|'s'|'f'|'m'|'o'} code
- * @param {'1962'|'1974'} [form='1962']
+ * @param {'EF'|'OF'|'1962'|'1974'} [form='EF']
  * @returns {string}
  */
-export function rankLabel(code, form = "1962") {
-  const map = form === "1974" ? RANKS_1974 : RANKS_1962;
+export function rankLabel(code, form = "EF") {
+  const F = String(form || '').toUpperCase();
+  const map = F === "OF" || F === "1974" ? RANKS_1974 : RANKS_1962;
   return map[code] || code;
 }
 
 /**
  * Human label for a season code in the given form.
  * @param {'ad'|'ct'|'lt'|'ea'|'ot'|'ot1'|'ot2'|'ap'|'sg'} code
- * @param {'1962'|'1974'} [form='1962']
+ * @param {'EF'|'OF'|'1962'|'1974'} [form='EF']
  * @returns {string}
  */
-export function seasonLabel(code, form = "1962") {
-  const map = form === "1974" ? SEASONS_1974 : SEASONS_1962;
-  if (form === "1974" && (code === "ot1" || code === "ot2"))
+export function seasonLabel(code, form = "EF") {
+  const F = String(form || '').toUpperCase();
+  const map = F === "OF" || F === "1974" ? SEASONS_1974 : SEASONS_1962;
+  if ((F === "OF" || F === "1974") && (code === "ot1" || code === "ot2"))
     return "Ordinary Time";
   return map[code] || code;
 }

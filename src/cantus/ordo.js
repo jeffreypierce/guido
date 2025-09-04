@@ -8,13 +8,19 @@ import ordinarium from './ordinarium.js';
  * Uses only `ctx.festum` and `ctx.forma` to decide penitential behavior and ordering.
  * Does not select specific chants; leaves room for higher-level modules to fill in.
  *
- * @param {{ festum: { season: string, weekday: 'dominica'|'feria' }, forma?: '1962'|'1974' }} ctx
+ * @param {{ festum: { season: string, weekday: 'dominica'|'feria' }, forma?: 'EF'|'OF'|'1962'|'1974' }} ctx
  * @param {{}} [opts]
  * @returns {{ mass_label?: string, ordinary: Array<{kind:'ordinary', office:string}>, propers: Array<{kind:'proper', office:string}>, sequence: Array<{kind:'ordinary'|'proper', office:string}> }}
  */
+/**
+ * Build a one-per-office ordo in traditional order.
+ * @param {{ festum: { season: string, weekday: 'dominica'|'feria', bvm?: boolean, id?: string, title?: string }, forma?: 'EF'|'OF'|'1962'|'1974' }} ctx
+ * @param {{ lenientSelection?: boolean, bvmHeuristic?: boolean, modes?: (string|number)[], source?: string|string[] }} [opts]
+ * @returns {{ mass_label?: string, sequence: Array<{ kind: 'ordinary'|'proper', office: string, id?: string }>, ordinary: Array<{ kind:'ordinary', office:string, id?: string }>, propers: Array<{ kind:'proper', office:string, id?: string }> }}
+ */
 export function ordo(ctx, opts = {}) {
   const fest = ctx?.festum || {};
-  const forma = ctx?.forma || "1962";
+  const forma = String(ctx?.forma || 'EF').toUpperCase();
 
   // Select ordinary and propers
   const ord = ordinarium(
@@ -34,12 +40,22 @@ export function ordo(ctx, opts = {}) {
   const gloria = !!ord.gloria;
   const credo = !!ord.credo;
   const isFeria = fest.weekday === "feria";
-  const penitential = forma === "1962" && (fest.season === "sg" || fest.season === "lt");
+  const penitential = (forma === "EF" || forma === "1962") && (fest.season === "sg" || fest.season === "lt");
 
   // Helpers to pick one of each
+  const CREDO_ID = { I: 'Liber_Usualis:344', III: 'Liber_Usualis:749' };
   const pickOrd = (code) => {
     const ids = ord?.parts?.[code];
-    return Array.isArray(ids) && ids.length ? String(ids[0]) : undefined;
+    if (!Array.isArray(ids) || !ids.length) return undefined;
+    if (code === 'cr') {
+      const pref = ord?.credo_preference;
+      const wanted = pref && CREDO_ID[pref];
+      if (wanted) {
+        const hit = ids.find((id) => String(id) === wanted);
+        if (hit) return String(hit);
+      }
+    }
+    return String(ids[0]);
   };
   const pickProp = (office) => {
     const it = (prop || []).find((x) => x.office === office);

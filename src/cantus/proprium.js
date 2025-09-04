@@ -1,18 +1,20 @@
-// src/chant/proprium.js
+// src/cantus/proprium.js
 
 // Data via search across corpora (Graduale, LU, LH)
 import { cantus as search } from "./cantus.js";
 import { norm, tokens, isPenitential } from "../aux/aux.js";
 
-/** Offices (short codes)
- * in = Introit, gr = Gradual, al = Alleluia, tr = Tract, se = Sequence,
- * of = Offertory, co = Communion
+/**
+ * Offices (short codes):
+ *  - in = Introit, gr = Gradual, al = Alleluia, tr = Tract, se = Sequence,
+ *    of = Offertory, co = Communion
  */
 const OFFICES = new Set(["in","gr","al","tr","se","of","co"]);
 
 // ---------- Season helpers ----------
 
 // ---------- Sequence rubric (1962) ----------
+/** Determine if a Sequence should be included by rubric/name. */
 export function shouldSequence(festum) {
   const name = (festum.title || festum.id || "").toLowerCase();
   const easter = /easter/; // Victimae paschali
@@ -39,6 +41,7 @@ function pickSequenceQuery(festum) {
 }
 
 // ---------- Offices to include (1962) ----------
+/** Compute the list of offices to select for a given day (EF heuristic). */
 export function propriumOffices1962(festum) {
   const offices = ["in"]; // Introit always
 
@@ -56,6 +59,7 @@ export function propriumOffices1962(festum) {
   return offices;
 }
 
+/** Search corpus by office with optional mode/source filters. */
 function searchByOffice(office, opts = {}) {
   const modes = (opts.modes || []).map(String);
   const srcs = Array.isArray(opts.source)

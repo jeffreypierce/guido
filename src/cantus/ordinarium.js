@@ -5,12 +5,21 @@ import KYRIALE from "./data/kyriale.json" with { type: "json" };
 import GR from "./data/graduale_romanum.json" with { type: "json" };
 import GR74 from "./data/graduale_romanum_1974.json" with { type: "json" };
 import LU from "./data/liber_usualis.json" with { type: "json" };
-import LH from "./data/liber_hymnarius.json" with { type: "json" };
+
+
+const ID_INDEX = (() => {
+  const m = new Map();
+  for (const rows of [GR, GR74, LU]) {
+    for (const r of rows) if (r && r.id) m.set(r.id, r);
+  }
+  return m;
+})();
 import { seasonNormalize } from "../festum/tempus.js";
 import { isPenitential, norm } from "../aux/aux.js";
 
 const RANK_WEIGHT = { t: 5, s: 4, f: 3, m: 2, o: 1 };
 
+/** Build internal mass rows from metadata. */
 function buildMassRows() {
   return Object.entries(MASSES.masses || {}).map(([key, v]) => ({
     key,
@@ -20,9 +29,11 @@ function buildMassRows() {
     ranks: v.ranks || [],
     days: v.days || [],
     bvm: !!v.bvm,
+    credos: Array.isArray(v.credos) ? v.credos.map(String) : [],
   }));
 }
 
+/** Heuristic Marian detection using id/title patterns. */
 function isMarianFeastLike(fest) {
   const id = String(fest?.feastId || fest?.id || "");
   const title = String(fest?.title || "");
@@ -30,6 +41,11 @@ function isMarianFeastLike(fest) {
   return /\bbvm\b|\bmary\b|maria|immaculate|annunciation|assumption|rosary|mother[_\s]?of[_\s]?god|heart[_\s]?of[_\s]?mary/.test(hay);
 }
 
+/**
+ * Rank Kyriale Mass candidates using tiered matching and rank weights.
+ * @param {{ season: string, rank: 't'|'s'|'f'|'m'|'o', weekday: 'dominica'|'feria', bvm?: boolean, feastId?: string, id?: string, title?: string }} festum
+ * @param {{ lenientSelection?: boolean, bvmHeuristic?: boolean }} [opts]
+ */
 function selectCandidates(festum, opts = {}) {
   const rows = buildMassRows();
   const exact = festum.season;
@@ -87,15 +103,29 @@ function selectCandidates(festum, opts = {}) {
 }
 
 /** Default Gloria/Credo heuristics */
+/**
+ * Default Gloria rubric (EF‑ish): omitted in penitential seasons.
+ * @param {{ season: string }} festum
+ */
 export function gloriaDefault(festum) {
   if (isPenitential(festum.season)) return false;
   return true;
 }
+/**
+ * Default Credo rubric: Sundays and higher feasts.
+ * @param {{ weekday: string, rank: string }} festum
+ */
 export function credoDefault(festum) {
   if (festum.weekday === 'dominica') return true;
   return festum.rank === 't' || festum.rank === 's' || festum.rank === 'f';
 }
 
+/**
+ * Select Ordinary (Mass I/XI/...) and resolve part IDs.
+ * @param {{ festum: { season: string, rank: string, weekday: 'dominica'|'feria', bvm?: boolean, feastId?: string, id?: string, title?: string } }} ctx
+ * @param {{ lenientSelection?: boolean, bvmHeuristic?: boolean, modes?: (string|number)[], source?: string|string[] }} [opts]
+ * @returns {{ selected: { roman: string, mass: number, title: string } | null, candidates: Array<{ roman: string, mass: number, title: string }>, gloria: boolean, credo: boolean, parts: Record<'ky'|'gl'|'cr'|'sa'|'ag'|'it'|'be', string[]> }}
+ */
 export default function ordinarium(ctx, opts = {}) {
   const fest = ctx?.festum || {};
   const candidates = selectCandidates(fest, opts);
@@ -103,12 +133,7 @@ export default function ordinarium(ctx, opts = {}) {
 
   const parts = {};
   if (best && KYRIALE && KYRIALE[best.key]) {
-    const k = KYRIALE[best.key] || {};
-    // Build id->row index for mode lookups when filtering
-    const IDX = new Map();
-    for (const rows of [GR, GR74, LU, LH]) {
-      for (const r of rows) if (r && r.id) IDX.set(r.id, r);
-    }
+      const k = KYRIALE[best.key] || {};
     const modes = new Set((opts.modes || []).map(String));
     const srcNeedle = (Array.isArray(opts.source) ? opts.source : (opts.source ? [opts.source] : []))
       .map((s) => norm(String(s)));
@@ -117,7 +142,7 @@ export default function ordinarium(ctx, opts = {}) {
       let filtered = ids;
       if (modes.size > 0) {
         const byMode = filtered.filter((id) => {
-          const row = IDX.get(String(id));
+          const row = ID_INDEX.get(String(id));
           const m = row?.chant?.mode != null ? String(row.chant.mode) : '';
           return modes.has(m);
         });
@@ -125,7 +150,7 @@ export default function ordinarium(ctx, opts = {}) {
       }
       if (srcNeedle.length > 0) {
         const bySrc = filtered.filter((id) => {
-          const row = IDX.get(String(id));
+          const row = ID_INDEX.get(String(id));
           const hay = norm(String(row?.source?.name || '') + ' ' + String(row?.id || ''));
           return srcNeedle.some((n) => hay.includes(n));
         });
@@ -133,13 +158,38 @@ export default function ordinarium(ctx, opts = {}) {
       }
       parts[code] = filtered;
     }
+
+    // Credo preference: use masses metadata to suggest a Credo (I/III)
+    // Map preferred labels to exemplar chant IDs (Liber Usualis)
+    const CREDO_ID = { I: 'Liber_Usualis:344', III: 'Liber_Usualis:749' };
+    let preferred = (best.credos || []).find((c) => CREDO_ID[c]);
+    // Fallback: on Sundays, prefer Credo I by convention if none specified
+    if (!preferred && fest.weekday === 'dominica') preferred = 'I';
+    if (preferred && !parts.cr?.length) {
+      const id = CREDO_ID[preferred];
+      // Apply the same mode/source filtering if present
+      let ok = true;
+      if (modes.size > 0) {
+        const row = ID_INDEX.get(String(id));
+        const m = row?.chant?.mode != null ? String(row.chant.mode) : '';
+        ok = modes.has(m);
+      }
+      if (ok && srcNeedle.length > 0) {
+        const row = ID_INDEX.get(String(id));
+        const hay = norm(String(row?.source?.name || '') + ' ' + String(row?.id || ''));
+        ok = srcNeedle.some((n) => hay.includes(n));
+      }
+      parts.cr = ok ? [id] : [id]; // still expose preference; outer filters may prune
+    }
   }
 
+  const credoPref = (best && Array.isArray(best.credos) && best.credos.find((c)=>c==='I' || c==='III')) || (fest.weekday==='dominica' ? 'I' : null);
   return {
     selected: best ? { roman: best.key, mass: best.mass, title: best.title } : null,
     candidates: candidates.slice(0, 10).map((m) => ({ roman: m.key, mass: m.mass, title: m.title })),
     gloria: opts.gloria ?? gloriaDefault(fest),
     credo: opts.credo ?? credoDefault(fest),
+    credo_preference: credoPref,
     parts,
   };
 }

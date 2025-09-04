@@ -3,28 +3,19 @@
     "ky": [
       "Liber_Usualis:344",
       "Liber_Usualis:1143",
-      "Graduale_Romanum_1974:344",
       "Graduale_Romanum_1974:15890",
-      "Graduale_Romanum:344",
-      "Graduale_Romanum:1143",
-      "Graduale_Romanum:15180"
+      "Graduale_Romanum:15177"
     ],
     "gl": [
       "Liber_Usualis:2980",
       "Liber_Usualis:8199",
-      "Graduale_Romanum_1974:2980",
-      "Graduale_Romanum:2980",
       "Graduale_Romanum:4341"
     ],
     "sa": [
-      "Liber_Usualis:300",
-      "Graduale_Romanum_1974:300",
-      "Graduale_Romanum:300"
+      "Liber_Usualis:300"
     ],
     "ag": [
-      "Liber_Usualis:2977",
-      "Graduale_Romanum_1974:2977",
-      "Graduale_Romanum:2977"
+      "Liber_Usualis:2977"
     ],
     "it": [
       "Graduale_Romanum_1974:15926"
@@ -40,63 +31,40 @@
     "ky": [
       "Liber_Usualis:309",
       "Liber_Usualis:2983",
-      "Graduale_Romanum_1974:2983",
-      "Graduale_Romanum_1974:15927",
-      "Graduale_Romanum:309",
-      "Graduale_Romanum:2983"
+      "Graduale_Romanum_1974:15927"
     ],
     "gl": [
       "Liber_Usualis:862",
-      "Liber_Usualis:4500",
-      "Graduale_Romanum_1974:862",
-      "Graduale_Romanum_1974:4500",
-      "Graduale_Romanum:862",
-      "Graduale_Romanum:4500"
+      "Liber_Usualis:4500"
     ],
     "sa": [
-      "Liber_Usualis:1279",
-      "Graduale_Romanum_1974:1279",
-      "Graduale_Romanum:1279"
+      "Liber_Usualis:1279"
     ],
     "ag": [
-      "Liber_Usualis:555",
-      "Graduale_Romanum_1974:555",
-      "Graduale_Romanum:555"
+      "Liber_Usualis:555"
     ],
     "it": [],
     "be": [
       "Liber_Usualis:7866",
       "Liber_Usualis:8245",
       "Liber_Usualis:10336",
-      "Liber_Usualis:16096",
-      "Graduale_Romanum:16096"
+      "Liber_Usualis:16096"
     ]
   },
   "III": {
     "ky": [
       "Liber_Usualis:749",
-      "Liber_Usualis:825",
-      "Graduale_Romanum_1974:749",
-      "Graduale_Romanum_1974:825",
-      "Graduale_Romanum:749",
-      "Graduale_Romanum:825"
+      "Liber_Usualis:825"
     ],
     "gl": [
       "Liber_Usualis:71",
-      "Liber_Usualis:8200",
-      "Graduale_Romanum_1974:71",
-      "Graduale_Romanum:71",
-      "Graduale_Romanum:4536"
+      "Liber_Usualis:8200"
     ],
     "sa": [
-      "Liber_Usualis:566",
-      "Graduale_Romanum_1974:566",
-      "Graduale_Romanum:566"
+      "Liber_Usualis:566"
     ],
     "ag": [
-      "Liber_Usualis:578",
-      "Graduale_Romanum_1974:578",
-      "Graduale_Romanum:578"
+      "Liber_Usualis:578"
     ],
     "it": [],
     "be": [
@@ -107,31 +75,21 @@
     "ky": [
       "Liber_Usualis:678",
       "Liber_Usualis:1061",
-      "Graduale_Romanum_1974:678",
-      "Graduale_Romanum_1974:16097",
-      "Graduale_Romanum:678",
-      "Graduale_Romanum:1061"
+      "Graduale_Romanum_1974:16097"
     ],
     "gl": [
       "Liber_Usualis:2978",
       "Liber_Usualis:8255",
-      "Graduale_Romanum_1974:2978",
-      "Graduale_Romanum:2978",
       "Graduale_Romanum:4318"
     ],
     "sa": [
-      "Liber_Usualis:2518",
-      "Graduale_Romanum_1974:2518",
-      "Graduale_Romanum:2518"
+      "Liber_Usualis:2518"
     ],
     "ag": [
-      "Liber_Usualis:264",
-      "Graduale_Romanum_1974:264",
-      "Graduale_Romanum:264"
+      "Liber_Usualis:264"
     ],
     "it": [
-      "Liber_Usualis:353",
-      "Graduale_Romanum:353"
+      "Liber_Usualis:353"
     ],
     "be": [
       "Liber_Usualis:2856"
@@ -141,122 +99,84 @@
     "ky": [
       "Liber_Usualis:474",
       "Liber_Usualis:955",
-      "Graduale_Romanum_1974:955",
-      "Graduale_Romanum_1974:16099",
-      "Graduale_Romanum:474",
-      "Graduale_Romanum:955"
+      "Graduale_Romanum_1974:16099"
     ],
     "gl": [
       "Liber_Usualis:337",
       "Liber_Usualis:8256",
-      "Graduale_Romanum_1974:337",
-      "Graduale_Romanum:337",
       "Graduale_Romanum:4332"
     ],
     "sa": [
-      "Liber_Usualis:2984",
-      "Graduale_Romanum_1974:2984",
-      "Graduale_Romanum:2984"
+      "Liber_Usualis:2984"
     ],
     "ag": [
-      "Liber_Usualis:1241",
-      "Graduale_Romanum_1974:1241",
-      "Graduale_Romanum:1241"
+      "Liber_Usualis:1241"
     ],
     "it": [
-      "Liber_Usualis:1006",
-      "Graduale_Romanum:1006"
+      "Liber_Usualis:1006"
     ],
     "be": []
   },
   "VI": {
     "ky": [
       "Liber_Usualis:2903",
-      "Liber_Usualis:2934",
-      "Graduale_Romanum_1974:2903",
-      "Graduale_Romanum_1974:2934",
-      "Graduale_Romanum:2903",
-      "Graduale_Romanum:2934"
+      "Liber_Usualis:2934"
     ],
     "gl": [
       "Liber_Usualis:321",
       "Liber_Usualis:8257",
-      "Graduale_Romanum_1974:321",
-      "Graduale_Romanum:321",
       "Graduale_Romanum:4319"
     ],
     "sa": [
-      "Liber_Usualis:431",
-      "Graduale_Romanum_1974:431",
-      "Graduale_Romanum:431"
+      "Liber_Usualis:431"
     ],
     "ag": [
-      "Liber_Usualis:387",
-      "Graduale_Romanum_1974:387",
-      "Graduale_Romanum:387"
+      "Liber_Usualis:387"
     ],
     "it": [
-      "Liber_Usualis:1160",
-      "Graduale_Romanum:1160"
+      "Liber_Usualis:1160"
     ],
     "be": []
   },
   "VII": {
     "ky": [
       "Liber_Usualis:1262",
-      "Graduale_Romanum_1974:16100",
-      "Graduale_Romanum:1262"
+      "Graduale_Romanum_1974:16100"
     ],
     "gl": [
       "Liber_Usualis:721",
-      "Liber_Usualis:8258",
-      "Graduale_Romanum_1974:721",
-      "Graduale_Romanum:721",
-      "Graduale_Romanum:4652"
+      "Liber_Usualis:8258"
     ],
     "sa": [
-      "Liber_Usualis:1089",
-      "Graduale_Romanum_1974:1089",
-      "Graduale_Romanum:1089"
+      "Liber_Usualis:1089"
     ],
     "ag": [
-      "Liber_Usualis:2985",
-      "Graduale_Romanum_1974:2985",
-      "Graduale_Romanum:2985"
+      "Liber_Usualis:2985"
     ],
     "it": [
-      "Liber_Usualis:31",
-      "Graduale_Romanum:31"
+      "Liber_Usualis:31"
     ],
     "be": []
   },
   "VIII": {
     "ky": [
       "Liber_Usualis:1184",
-      "Graduale_Romanum_1974:3966",
-      "Graduale_Romanum:1184"
+      "Graduale_Romanum_1974:3966"
     ],
     "gl": [
       "Liber_Usualis:961",
       "Liber_Usualis:8259",
-      "Graduale_Romanum_1974:961",
-      "Graduale_Romanum:961",
       "Graduale_Romanum:4624"
     ],
     "sa": [
-      "Liber_Usualis:1384",
-      "Graduale_Romanum_1974:1384",
-      "Graduale_Romanum:1384"
+      "Liber_Usualis:1384"
     ],
     "ag": [
       "Liber_Usualis:2760",
-      "Graduale_Romanum_1974:2760",
-      "Graduale_Romanum_1974:16743",
-      "Graduale_Romanum:2760"
+      "Graduale_Romanum_1974:16743"
     ],
     "it": [
-      "Liber_Usualis:832",
-      "Graduale_Romanum:832"
+      "Liber_Usualis:832"
     ],
     "be": [
       "Liber_Usualis:2901"
@@ -264,28 +184,19 @@
   },
   "IX": {
     "ky": [
-      "Liber_Usualis:2976",
-      "Graduale_Romanum_1974:2976",
-      "Graduale_Romanum:2976"
+      "Liber_Usualis:2976"
     ],
     "gl": [
-      "Liber_Usualis:2771",
-      "Graduale_Romanum_1974:2771",
-      "Graduale_Romanum:2771"
+      "Liber_Usualis:2771"
     ],
     "sa": [
-      "Liber_Usualis:587",
-      "Graduale_Romanum_1974:587",
-      "Graduale_Romanum:587"
+      "Liber_Usualis:587"
     ],
     "ag": [
-      "Liber_Usualis:707",
-      "Graduale_Romanum_1974:707",
-      "Graduale_Romanum:707"
+      "Liber_Usualis:707"
     ],
     "it": [
-      "Liber_Usualis:2989",
-      "Graduale_Romanum:2989"
+      "Liber_Usualis:2989"
     ],
     "be": [
       "Liber_Usualis:2902"
@@ -293,24 +204,16 @@
   },
   "X": {
     "ky": [
-      "Liber_Usualis:795",
-      "Graduale_Romanum_1974:795",
-      "Graduale_Romanum:795"
+      "Liber_Usualis:795"
     ],
     "gl": [
-      "Liber_Usualis:1204",
-      "Graduale_Romanum_1974:1204",
-      "Graduale_Romanum:1204"
+      "Liber_Usualis:1204"
     ],
     "sa": [
-      "Liber_Usualis:2770",
-      "Graduale_Romanum_1974:2770",
-      "Graduale_Romanum:2770"
+      "Liber_Usualis:2770"
     ],
     "ag": [
-      "Liber_Usualis:2981",
-      "Graduale_Romanum_1974:2981",
-      "Graduale_Romanum:2981"
+      "Liber_Usualis:2981"
     ],
     "it": [],
     "be": []
@@ -318,27 +221,20 @@
   "XI": {
     "ky": [
       "Liber_Usualis:2982",
-      "Graduale_Romanum_1974:10797",
-      "Graduale_Romanum:2982"
+      "Graduale_Romanum_1974:10797"
     ],
     "gl": [
       "Liber_Usualis:303",
-      "Graduale_Romanum_1974:10798",
-      "Graduale_Romanum:303"
+      "Graduale_Romanum_1974:10798"
     ],
     "sa": [
-      "Liber_Usualis:1106",
-      "Graduale_Romanum_1974:1106",
-      "Graduale_Romanum:1106"
+      "Liber_Usualis:1106"
     ],
     "ag": [
-      "Liber_Usualis:1243",
-      "Graduale_Romanum_1974:1243",
-      "Graduale_Romanum:1243"
+      "Liber_Usualis:1243"
     ],
     "it": [
-      "Liber_Usualis:856",
-      "Graduale_Romanum:856"
+      "Liber_Usualis:856"
     ],
     "be": [
       "Liber_Usualis:2920"
@@ -346,47 +242,37 @@
   },
   "XII": {
     "ky": [
-      "Liber_Usualis:2068",
-      "Graduale_Romanum:2068"
+      "Liber_Usualis:2068"
     ],
     "gl": [
-      "Liber_Usualis:2114",
-      "Graduale_Romanum:2114"
+      "Liber_Usualis:2114"
     ],
     "sa": [
-      "Liber_Usualis:1062",
-      "Graduale_Romanum:1062"
+      "Liber_Usualis:1062"
     ],
     "ag": [
-      "Liber_Usualis:759",
-      "Graduale_Romanum:759"
+      "Liber_Usualis:759"
     ],
     "it": [
-      "Liber_Usualis:37",
-      "Graduale_Romanum:37"
+      "Liber_Usualis:37"
     ],
     "be": []
   },
   "XIII": {
     "ky": [
-      "Liber_Usualis:137",
-      "Graduale_Romanum:137"
+      "Liber_Usualis:137"
     ],
     "gl": [
-      "Liber_Usualis:2107",
-      "Graduale_Romanum:2107"
+      "Liber_Usualis:2107"
     ],
     "sa": [
-      "Liber_Usualis:1067",
-      "Graduale_Romanum:1067"
+      "Liber_Usualis:1067"
     ],
     "ag": [
-      "Liber_Usualis:2886",
-      "Graduale_Romanum:2886"
+      "Liber_Usualis:2886"
     ],
     "it": [
-      "Liber_Usualis:878",
-      "Graduale_Romanum:878"
+      "Liber_Usualis:878"
     ],
     "be": [
       "Liber_Usualis:2952"
@@ -394,65 +280,52 @@
   },
   "XIV": {
     "ky": [
-      "Liber_Usualis:441",
-      "Graduale_Romanum:441"
+      "Liber_Usualis:441"
     ],
     "gl": [
-      "Liber_Usualis:908",
-      "Graduale_Romanum:908"
+      "Liber_Usualis:908"
     ],
     "sa": [
-      "Liber_Usualis:2979",
-      "Graduale_Romanum:2979"
+      "Liber_Usualis:2979"
     ],
     "ag": [
-      "Liber_Usualis:2076",
-      "Graduale_Romanum:2076"
+      "Liber_Usualis:2076"
     ],
     "it": [
-      "Liber_Usualis:2986",
-      "Graduale_Romanum:2986"
+      "Liber_Usualis:2986"
     ],
     "be": []
   },
   "XV": {
     "ky": [
-      "Liber_Usualis:393",
-      "Graduale_Romanum:393"
+      "Liber_Usualis:393"
     ],
     "gl": [
       "Liber_Usualis:2975",
-      "Graduale_Romanum_1974:8166",
-      "Graduale_Romanum:2975"
+      "Graduale_Romanum_1974:8166"
     ],
     "sa": [
-      "Liber_Usualis:386",
-      "Graduale_Romanum:386"
+      "Liber_Usualis:386"
     ],
     "ag": [
-      "Liber_Usualis:959",
-      "Graduale_Romanum:959"
+      "Liber_Usualis:959"
     ],
     "it": [
-      "Liber_Usualis:620",
-      "Graduale_Romanum:620"
+      "Liber_Usualis:620"
     ],
     "be": []
   },
   "XVI": {
     "ky": [
       "Liber_Usualis:545",
-      "Graduale_Romanum_1974:7863",
-      "Graduale_Romanum:545"
+      "Graduale_Romanum_1974:7863"
     ],
     "gl": [],
     "sa": [
-      "Liber_Usualis:2990",
-      "Graduale_Romanum:2990"
+      "Liber_Usualis:2990"
     ],
     "ag": [
-      "Liber_Usualis:1336",
-      "Graduale_Romanum:1336"
+      "Liber_Usualis:1336"
     ],
     "it": [],
     "be": []
@@ -463,38 +336,28 @@
       "Liber_Usualis:272",
       "Graduale_Romanum_1974:7641",
       "Graduale_Romanum_1974:8057",
-      "Graduale_Romanum_1974:8058",
-      "Graduale_Romanum:168",
-      "Graduale_Romanum:272"
+      "Graduale_Romanum_1974:8058"
     ],
     "gl": [],
     "sa": [
-      "Liber_Usualis:871",
-      "Graduale_Romanum:871"
+      "Liber_Usualis:871"
     ],
     "ag": [
-      "Liber_Usualis:1137",
-      "Graduale_Romanum_1974:1137",
-      "Graduale_Romanum:1137"
+      "Liber_Usualis:1137"
     ],
     "it": [],
     "be": []
   },
   "XVIII": {
     "ky": [
-      "Liber_Usualis:2522",
-      "Graduale_Romanum:2522"
+      "Liber_Usualis:2522"
     ],
     "gl": [],
     "sa": [
-      "Liber_Usualis:298",
-      "Graduale_Romanum_1974:298",
-      "Graduale_Romanum:298"
+      "Liber_Usualis:298"
     ],
     "ag": [
-      "Liber_Usualis:2412",
-      "Graduale_Romanum_1974:2412",
-      "Graduale_Romanum:2412"
+      "Liber_Usualis:2412"
     ],
     "it": [],
     "be": []
@@ -512,50 +375,26 @@
       "Liber_Usualis:2604",
       "Liber_Usualis:2614",
       "Liber_Usualis:2993",
-      "Graduale_Romanum_1974:2237",
-      "Graduale_Romanum_1974:2261",
       "Graduale_Romanum_1974:16098",
-      "Graduale_Romanum_1974:16120",
-      "Graduale_Romanum:2021",
-      "Graduale_Romanum:2237",
-      "Graduale_Romanum:2254",
-      "Graduale_Romanum:2261",
-      "Graduale_Romanum:2269",
-      "Graduale_Romanum:2363",
-      "Graduale_Romanum:2468",
-      "Graduale_Romanum:2599",
-      "Graduale_Romanum:2604",
-      "Graduale_Romanum:2614",
-      "Graduale_Romanum:2993"
+      "Graduale_Romanum_1974:16120"
     ],
     "gl": [
       "Liber_Usualis:2659",
       "Liber_Usualis:2685",
-      "Liber_Usualis:2707",
-      "Graduale_Romanum_1974:2659",
-      "Graduale_Romanum_1974:2707",
-      "Graduale_Romanum:2659",
-      "Graduale_Romanum:2685",
-      "Graduale_Romanum:2707"
+      "Liber_Usualis:2707"
     ],
     "sa": [
       "Liber_Usualis:2816",
       "Liber_Usualis:2820",
-      "Liber_Usualis:2849",
-      "Graduale_Romanum:2816",
-      "Graduale_Romanum:2820",
-      "Graduale_Romanum:2849"
+      "Liber_Usualis:2849"
     ],
     "ag": [
       "Liber_Usualis:2850",
-      "Liber_Usualis:2851",
-      "Graduale_Romanum:2850",
-      "Graduale_Romanum:2851"
+      "Liber_Usualis:2851"
     ],
     "it": [],
     "be": [
-      "Liber_Usualis:2227",
-      "Graduale_Romanum:2227"
+      "Liber_Usualis:2227"
     ]
   },
   "Requiem": {
