@@ -54,3 +54,20 @@ it("BVM feasts expose bvm=true and return masses array", () => {
   assert(c.bvm === true, "expected bvm day to set bvm=true");
   assert(Array.isArray(c.masses), "masses is array");
 });
+
+it("Lenient selection returns candidates on Good Friday (OF)", () => {
+  const L = lookup1974(2025);
+  const strict = festum(L.good_friday, { form: "1974" });
+  const lenient = festum(L.good_friday, { form: "1974", lenientSelection: true });
+  // Strict likely empty due to rank 't' not in dataset
+  assert(Array.isArray(strict.masses), "strict masses array exists");
+  assert(Array.isArray(lenient.masses), "lenient masses array exists");
+  assert(lenient.masses.length >= strict.masses.length, "lenient should not reduce candidates");
+});
+
+it("EF Marian Saturday heuristic marks bvm when enabled", () => {
+  const L = lookup1962(2025);
+  const d = new Date(L.pentecost); d.setUTCDate(d.getUTCDate() + 13); // Saturday
+  const c = festum(d, { form: "1962", bvmHeuristic: true });
+  assert(c.bvm === true, "expected bvm heuristic to mark Marian Saturday");
+});

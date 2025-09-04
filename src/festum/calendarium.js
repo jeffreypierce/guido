@@ -1,6 +1,6 @@
 // src/festum/calendarium.js
 import { toUTC } from "../aux/aux.js";
-import calendar from "./data/calendar.json" assert { type: "json" };
+import calendar from "./data/calendar.json" with { type: "json" };
 import { lookup1962, lookup1974 } from "./datum.js";
 import { season1962, season1974 } from "./tempus.js";
 
