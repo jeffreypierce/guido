@@ -1,7 +1,7 @@
 // src/festum/festum.js
 import { toUTC, stableJson, normalizeForm } from "../aux/aux.js";
 import { calendarium } from "./calendarium.js";
-import MASSES from "./data/masses.json" with { type: "json" };
+import MASSES from "./data/masses.js";
 import { seasonNormalize } from "./tempus.js";
 
 /**

@@ -1,11 +1,11 @@
 // src/cantus/cantus.js — public Cantus API facade
 
-import GR from './data/graduale_romanum.json' with { type: 'json' };
-import GR74 from './data/graduale_romanum_1974.json' with { type: 'json' };
-import LU from './data/liber_usualis.json' with { type: 'json' };
-import LH from './data/liber_hymnarius.json' with { type: 'json' };
-import AM from './data/antiphonale_monasticum.json' with { type: 'json' };
-import ALIASES from './data/aliases.json' with { type: 'json' };
+import GR from './data/graduale_romanum.js';
+import GR74 from './data/graduale_romanum_1974.js';
+import LU from './data/liber_usualis.js';
+import LH from './data/liber_hymnarius.js';
+import AM from './data/antiphonale_monasticum.js';
+import ALIASES from './data/aliases.js';
 
 const ALL = [...GR, ...GR74, ...LU, ...LH, ...AM];
 // Build a fast id->row index for canonicalization

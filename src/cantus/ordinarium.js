@@ -1,10 +1,10 @@
 // src/cantus/ordinarium.js — data-backed ordinary selector
 
-import MASSES from "../festum/data/masses.json" with { type: "json" };
-import KYRIALE from "./data/kyriale.json" with { type: "json" };
-import GR from "./data/graduale_romanum.json" with { type: "json" };
-import GR74 from "./data/graduale_romanum_1974.json" with { type: "json" };
-import LU from "./data/liber_usualis.json" with { type: "json" };
+import MASSES from "../festum/data/masses.js";
+import KYRIALE from "./data/kyriale.js";
+import GR from "./data/graduale_romanum.js";
+import GR74 from "./data/graduale_romanum_1974.js";
+import LU from "./data/liber_usualis.js";
 
 
 const ID_INDEX = (() => {
