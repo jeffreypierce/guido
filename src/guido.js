@@ -1,14 +1,15 @@
-export { festum } from "./festum/index.js";
-export { cantus, proprium, ordinarium, ordo } from "./cantus/index.js";
+
+export { festum } from "./festum/festum.js";
+export { cantus, proprium, ordinarium, ordo, hymnus } from "./cantus/cantus.js";
 export { notae } from "./notae/index.js";
-export { temper } from "./notae/temper.js";
+export { temper } from "./temperamentum/index.js";
+
 export { modus } from "./notae/modus.js";
 
-export { freq } from "./temperamentum/index.js";
-export { toMidi } from "./midi/index.js";
-export { metrics } from "./schola/index.js";
-export { table } from "./tabula/index.js";
-export { residue } from "./reliquum/index.js";
-export { words } from "./verbum/index.js";
+export { midi } from "./midi/index.js";
+export { schola } from "./schola/index.js";
+export { tabula } from "./tabula/index.js";
+export { reliquum } from "./reliquum/index.js";
+export { verbum } from "./verbum/index.js";
 
 export * as aux from "./aux/index.js";
