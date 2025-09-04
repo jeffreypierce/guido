@@ -1,4 +1,4 @@
-export { festum } from "./festum/index.js";
+export { festum } from "./festum/festum.js";
 export { cantus, proprium, ordinarium, ordo } from "./cantus/index.js";
 export { notae } from "./notae/index.js";
 export { temper } from "./notae/temper.js";

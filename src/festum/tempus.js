@@ -1,30 +1,34 @@
 // src/festum/tempus.js
-import { toUTC } from "../aux/aux";
+import { toUTC } from "../aux/aux.js";
 const tUTC = (d) =>
   Date.UTC(d.getUTCFullYear(), d.getUTCMonth(), d.getUTCDate());
 const betweenInc = (x, a, b) => x >= a && x <= b;
 const before = (x, a) => x < a;
 const onOrAfter = (x, a) => x >= a;
 
+/**
+ * Normalize EF/OF season codes into generic buckets for selection logic.
+ * @param {'ad'|'ct'|'lt'|'ea'|'ot'|'ot1'|'ot2'|'ap'|'sg'} seasonCode
+ * @returns {'ad'|'ct'|'lt'|'ea'|'ot'}
+ */
 export function seasonNormalize(seasonCode) {
-  // Map legacy or form-specific codes into generic buckets for mass selection.
   switch (seasonCode) {
-    case "pt":
-      return "ea"; // legacy Paschaltide → Eastertide
     case "ot2":
-      return "ot"; // EF → generic
     case "ap":
-      return "ot"; // EF → generic
     case "sg":
-      return "lt"; // treat pre-Lent like Lent (or "ot" if you prefer)
     case "ot1":
-      return "ot"; // OF split → generic
+      return "ot";
     default:
       return seasonCode; // ad/ct/lt/ea/ot already fine
   }
 }
 
-/** 1962 (EF) season: 'ad','ct','ot2','sg','lt','ea','ap' */
+/**
+ * EF season classifier.
+ * @param {Date|string|number} date - Date-like value; coerced to UTC.
+ * @param {import('./datum.js').Landmarks1962} L - Landmarks lookup.
+ * @returns {'ad'|'ct'|'ot2'|'sg'|'lt'|'ea'|'ap'}
+ */
 export function season1962(date, L) {
   const d = toUTC(date);
   const A = tUTC(toUTC(L.advent_sunday));
@@ -46,7 +50,13 @@ export function season1962(date, L) {
   return "ap";
 }
 
-/** 1974 (OF) season: 'ad','ct','lt','ea','ot' (optionally 'ot1'/'ot2') */
+/**
+ * OF season classifier.
+ * @param {Date|string|number} date - Date-like value; coerced to UTC.
+ * @param {import('./datum.js').Landmarks1974} L - Landmarks lookup.
+ * @param {{ splitOrdinary?: boolean }} [opts]
+ * @returns {'ad'|'ct'|'lt'|'ea'|'ot'|'ot1'|'ot2'}
+ */
 export function season1974(date, L, opts = {}) {
   const split = !!opts.splitOrdinary;
   const d = toUTC(date);

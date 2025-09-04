@@ -10,6 +10,23 @@ const mmdd = (d) => `${pad2(d.getUTCMonth() + 1)}-${pad2(d.getUTCDate())}`;
 const ymd = (d) =>
   `${d.getUTCFullYear()}-${pad2(d.getUTCMonth() + 1)}-${pad2(d.getUTCDate())}`;
 
+/**
+ * One day of the computed calendar with overlay data if any.
+ * @typedef CalendarRow
+ * @property {number} ts - UTC timestamp (00:00) for the day.
+ * @property {string} id - Calendar `id` for the feast or `feria`.
+ * @property {string} title - Feast title or "Feria".
+ * @property {'t'|'s'|'f'|'m'|'o'} rank - Rank code.
+ * @property {'ad'|'ct'|'lt'|'ea'|'ot'|'ot1'|'ot2'|'ap'|'sg'} season - Season code.
+ * @property {'fixed'|'movable'|'feria'} type - Entry source.
+ */
+
+/**
+ * Build the calendar for a given year and form.
+ * @param {number} year - Gregorian year in UTC.
+ * @param {{ form?: '1962'|'1974', splitOrdinary?: boolean, transfer?: { epiphany?: boolean, ascension?: boolean, corpusChristi?: boolean } }} [opts]
+ * @returns {CalendarRow[]} Array of day rows from Jan 1 to Dec 31.
+ */
 export function calendarium(
   year,
   { form = "1962", splitOrdinary = false, transfer = {} } = {}

@@ -1,13 +1,17 @@
 // src/festum/datum.js
-// Shared, dependency-free lookup logic for EF (1962) and OF (1974)
-// Returns keys that MATCH your calendar.json IDs, so no remapping is needed.
+// Shared, dependency-free lookup logic for EF (1962) and OF (1974).
+// Returns keys that match `calendar.json` IDs
 
 const DAY = 86400000;
 const addDays = (d, n) => new Date(new Date(d).getTime() + n * DAY);
 const previousSunday = (d) => addDays(d, -((d.getDay() + 7 - 0) % 7));
 const nextSunday = (d) => addDays(d, (7 - d.getDay()) % 7);
 
-/** Computus (Meeus/Jones/Butcher) — Gregorian Easter */
+/**
+ * Gregorian Easter (Meeus/Jones/Butcher).
+ * @param {number} year
+ * @returns {Date}
+ */
 export function pascha(year) {
   const t = Math.trunc;
   const G = year % 19;
@@ -21,7 +25,24 @@ export function pascha(year) {
   return new Date(year, m - 1, d);
 }
 
-/** Easter-anchored core shared by both forms */
+/**
+ * Easter-anchored core shared by both forms.
+ * @param {number} year
+ * @returns {{
+ *  easter_sunday: Date,
+ *  ash_wednesday: Date,
+ *  septuagesima: Date,
+ *  sexagesima: Date,
+ *  quinquagesima: Date,
+ *  palm_sunday: Date,
+ *  holy_thursday: Date,
+ *  good_friday: Date,
+ *  holy_saturday: Date,
+ *  ascension_thu: Date,
+ *  pentecost: Date,
+ *  holy_trinity: Date,
+ * }}
+ */
 function fromEaster(year) {
   const easter_sunday = pascha(year);
   const ash_wednesday = addDays(easter_sunday, -46);
@@ -52,10 +73,32 @@ function fromEaster(year) {
 }
 
 /**
+ * EF (1962) landmarks and movables keyed to `calendar.json` IDs.
+ * @typedef Landmarks1962
+ * @property {Date} christmas
+ * @property {Date} epiphany
+ * @property {Date} baptism
+ * @property {Date} advent_sunday
+ * @property {Date} ash_wednesday
+ * @property {Date} easter_sunday
+ * @property {Date} pentecost
+ * @property {Date} septuagesima
+ * @property {Date} sexagesima
+ * @property {Date} quinquagesima
+ * @property {Date} palm_sunday
+ * @property {Date} holy_thursday
+ * @property {Date} good_friday
+ * @property {Date} holy_saturday
+ * @property {Date} ascension
+ * @property {Date} holy_trinity
+ * @property {Date} corpus_christi
+ * @property {Date} sacred_heart
+ * @property {Date} christ_king
+ */
+/**
  * 1962 (EF) lookup with calendar-ID keys for movables.
- * Keys returned (subset shown): christmas, epiphany, baptism, advent_sunday,
- * ash_wednesday, easter_sunday, pentecost,
- * ✨ holy_trinity, corpus_christi, sacred_heart, ascension, christ_king, palm_sunday
+ * @param {number} year
+ * @returns {Landmarks1962}
  */
 export function lookup1962(year) {
   const core = fromEaster(year);
@@ -99,6 +142,9 @@ export function lookup1962(year) {
     quinquagesima: core.quinquagesima,
 
     // — movable feasts keyed EXACTLY like calendar.json IDs —
+    holy_thursday: core.holy_thursday,
+    good_friday: core.good_friday,
+    holy_saturday: core.holy_saturday,
     palm_sunday: core.palm_sunday,
     ascension,
     holy_trinity: core.holy_trinity,
@@ -109,8 +155,33 @@ export function lookup1962(year) {
 }
 
 /**
+ * OF (1974) landmarks and movables keyed to `calendar.json` IDs.
+ * @typedef Landmarks1974
+ * @property {Date} christmas
+ * @property {Date} epiphany
+ * @property {Date} baptism
+ * @property {Date} advent_sunday
+ * @property {Date} ash_wednesday
+ * @property {Date} easter_sunday
+ * @property {Date} pentecost
+ * @property {Date} palm_sunday
+ * @property {Date} holy_thursday
+ * @property {Date} good_friday
+ * @property {Date} holy_saturday
+ * @property {Date} ascension
+ * @property {Date} holy_trinity
+ * @property {Date} corpus_christi
+ * @property {Date} sacred_heart
+ * @property {Date} bvm_church_mom
+ * @property {Date} bvm_immaculate_heart
+ * @property {Date} christ_king
+ */
+/**
  * 1974 (OF) lookup with calendar-ID keys for movables.
- * Supports common transfers via opts.transfer: { epiphany, ascension, corpusChristi } (booleans).
+ * Supports common transfers via opts.transfer: { epiphany, ascension, corpusChristi }.
+ * @param {number} year
+ * @param {{ transfer?: { epiphany?: boolean, ascension?: boolean, corpusChristi?: boolean } }} [opts]
+ * @returns {Landmarks1974}
  */
 export function lookup1974(year, opts = {}) {
   const tr = {
@@ -122,6 +193,11 @@ export function lookup1974(year, opts = {}) {
   const core = fromEaster(year);
 
   const christmas = new Date(year, 11, 25);
+  // Holy Family: Sunday within Octave of Christmas (Dec 26–31), or Dec 30 if none
+  const dec26 = new Date(year, 11, 26);
+  const dec31 = new Date(year, 11, 31);
+  let holy_family = addDays(dec26, (7 - dec26.getDay()) % 7);
+  if (holy_family > dec31) holy_family = new Date(year, 11, 30);
 
   // Epiphany: Jan 6 or Sunday between Jan 2–8 (if transferred)
   const epiphanyFixed = new Date(year, 0, 6);
@@ -147,6 +223,11 @@ export function lookup1974(year, opts = {}) {
   // Sacred Heart (OF): Friday after Corpus Christi
   const sacred_heart = addDays(corpus_christi, 1);
 
+  // Mary, Mother of the Church (OF): Monday after Pentecost (2018+; generic rule here)
+  const bvm_church_mom = addDays(core.pentecost, 1);
+  // Immaculate Heart of Mary (OF): Saturday after Sacred Heart
+  const bvm_immaculate_heart = addDays(sacred_heart, 1);
+
   // Advent I (OF): 4th Sunday before Christmas
   const cSun = previousSunday(christmas);
   const advent_sunday = addDays(cSun, -21);
@@ -165,11 +246,17 @@ export function lookup1974(year, opts = {}) {
     pentecost: core.pentecost,
 
     // — movable feasts keyed EXACTLY like calendar.json IDs —
+    holy_family,
+    holy_thursday: core.holy_thursday,
+    good_friday: core.good_friday,
+    holy_saturday: core.holy_saturday,
     palm_sunday: core.palm_sunday,
     ascension,
     holy_trinity: core.holy_trinity,
     corpus_christi,
     sacred_heart,
+    bvm_church_mom,
+    bvm_immaculate_heart,
     christ_king,
   };
 }
