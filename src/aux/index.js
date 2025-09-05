@@ -1,5 +1,20 @@
 /** Shared, dependency-free helpers. Keep tiny & pure. */
-
+/**
+ * Normalize EF/OF season codes into generic buckets for selection logic.
+ * @param {'ad'|'ct'|'lt'|'ea'|'ot'|'ot1'|'ot2'|'ap'|'sg'} seasonCode
+ * @returns {'ad'|'ct'|'lt'|'ea'|'ot'}
+ */
+export function seasonNormalize(seasonCode) {
+  switch (seasonCode) {
+    case "ot2":
+    case "ap":
+    case "sg":
+    case "ot1":
+      return "ot";
+    default:
+      return seasonCode; // ad/ct/lt/ea/ot already fine
+  }
+}
 /**
  * Clamp a number to the [0, 1] range.
  * @param {number} n
@@ -27,15 +42,27 @@ export function toUTC(x) {
 }
 
 /**
+ * UTC-midnight timestamp (ms since epoch) for a given Date.
+ * Use with Dates normalized via UTC getters.
+ * @param {Date} d
+ * @returns {number}
+ */
+export function tsUTC(d) {
+  return Date.UTC(d.getUTCFullYear(), d.getUTCMonth(), d.getUTCDate());
+}
+
+/**
  * Normalize form code to 'EF' or 'OF'. Accepts legacy '1962'/'1974' and case-insensitive.
  * @param {string} form
  * @returns {'EF'|'OF'}
  */
 export function normalizeForm(form) {
-  const s = String(form || '').trim().toUpperCase();
-  if (s === '1962' || s === 'EF') return 'EF';
-  if (s === '1974' || s === 'OF') return 'OF';
-  return 'EF';
+  const s = String(form || "")
+    .trim()
+    .toUpperCase();
+  if (s === "1962" || s === "EF") return "EF";
+  if (s === "1974" || s === "OF") return "OF";
+  return "EF";
 }
 
 /**

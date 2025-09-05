@@ -1,8 +1,7 @@
 #!/usr/bin/env node
 // tool/build-indices.mjs — build lightweight indices from /etc sources
-// Generates:
-// - src/cantus/index/dayIndex.json — EF/OF → (YMD or MM-DD) → entry
-// - src/cantus/index/chantIndex.json — placeholder for reverse lookups (future)
+// Generates a single combined index:
+// - src/cantus/data/day.index.js — EF/OF → (YMD or MM-DD) → entry, plus potPages
 
 import fs from 'node:fs/promises';
 import path from 'node:path';
@@ -19,7 +18,7 @@ function header(title){ const line = gray('─'.repeat(Math.max(3, 60 - title.le
 
 const repoRoot = path.resolve(process.cwd());
 const etcDir = path.join(repoRoot, 'etc');
-const outDir = path.join(repoRoot, 'src', 'cantus', 'index');
+const outDir = path.join(repoRoot, 'src', 'cantus', 'data');
 
 const pad2 = (n) => (n < 10 ? `0${n}` : `${n}`);
 const MONTHS = new Map([
@@ -77,9 +76,8 @@ function parsePageHints(str) {
 
 async function main() {
   await fs.mkdir(outDir, { recursive: true });
-  const dayIndexJsonPath = path.join(outDir, 'dayIndex.json');
-  const dayIndexJsPath = path.join(outDir, 'dayIndex.js');
-  const potIndexJsPath = path.join(outDir, 'potIndex.js');
+  const dayIndexJsonPath = path.join(outDir, 'day.index.json');
+  const dayIndexJsPath = path.join(outDir, 'day.index.js');
   const EMIT_JSON = process.argv.includes('--emit-json') || process.env.EMIT_JSON === '1';
 
   header('Build: Indices');
@@ -309,8 +307,8 @@ async function main() {
       }
     }
     if (addedPOT) console.log(`${check} LU_proper_of_time → EF day pages: ${addedPOT}`);
-    // Emit micro potIndex.js for runtime seasonal/landmark pages
-    await writeModuleIfChanged(potIndexJsPath, { _meta: { generatedAt: new Date().toISOString() }, pages: POT_MAP });
+    // Attach potPages into the combined index
+    index.potPages = POT_MAP;
   } catch (e) {
     console.warn(`${warn} skip LU_proper_of_time: ${e?.message || e}`);
   }

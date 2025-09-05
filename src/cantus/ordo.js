@@ -1,7 +1,7 @@
 // src/cantus/ordo.js — selects best candidates and assembles traditional order
 
-import { proprium } from './proprium.js';
-import ordinarium from './ordinarium.js';
+import proprium from "./proprium/index.js";
+import ordinarium from "./ordinarium/index.js";
 
 /**
  * Build a simple ordo for a celebration.
@@ -20,7 +20,7 @@ import ordinarium from './ordinarium.js';
  */
 export function ordo(ctx, opts = {}) {
   const fest = ctx?.festum || {};
-  const forma = String(ctx?.forma || 'EF').toUpperCase();
+  const forma = String(ctx?.forma || "EF").toUpperCase();
 
   // Select ordinary and propers
   const ord = ordinarium(
@@ -40,14 +40,16 @@ export function ordo(ctx, opts = {}) {
   const gloria = !!ord.gloria;
   const credo = !!ord.credo;
   const isFeria = fest.weekday === "feria";
-  const penitential = (forma === "EF" || forma === "1962") && (fest.season === "sg" || fest.season === "lt");
+  const penitential =
+    (forma === "EF" || forma === "1962") &&
+    (fest.season === "sg" || fest.season === "lt");
 
   // Helpers to pick one of each
-  const CREDO_ID = { I: 'Liber_Usualis:344', III: 'Liber_Usualis:749' };
+  const CREDO_ID = { I: "Liber_Usualis:344", III: "Liber_Usualis:749" };
   const pickOrd = (code) => {
     const ids = ord?.parts?.[code];
     if (!Array.isArray(ids) || !ids.length) return undefined;
-    if (code === 'cr') {
+    if (code === "cr") {
       const pref = ord?.credo_preference;
       const wanted = pref && CREDO_ID[pref];
       if (wanted) {

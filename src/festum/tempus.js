@@ -1,7 +1,5 @@
 // src/festum/tempus.js
-import { toUTC } from "../aux/aux.js";
-const tUTC = (d) =>
-  Date.UTC(d.getUTCFullYear(), d.getUTCMonth(), d.getUTCDate());
+import { toUTC, tsUTC } from "../aux/index.js";
 const betweenInc = (x, a, b) => x >= a && x <= b;
 const before = (x, a) => x < a;
 const onOrAfter = (x, a) => x >= a;
@@ -13,13 +11,13 @@ const onOrAfter = (x, a) => x >= a;
  */
 export function seasonNormalize(seasonCode) {
   switch (seasonCode) {
-    case "ot2":
-    case "ap":
-    case "sg":
-    case "ot1":
-      return "ot";
+    case 'ot1':
+    case 'ot2':
+    case 'ap':
+    case 'sg':
+      return 'ot';
     default:
-      return seasonCode; // ad/ct/lt/ea/ot already fine
+      return seasonCode; // ad/ct/lt/ea/ot
   }
 }
 
@@ -31,14 +29,14 @@ export function seasonNormalize(seasonCode) {
  */
 export function season1962(date, L) {
   const d = toUTC(date);
-  const A = tUTC(toUTC(L.advent_sunday));
-  const C = tUTC(toUTC(L.christmas));
-  const BP = tUTC(toUTC(L.baptism));
-  const SG = tUTC(toUTC(L.septuagesima));
-  const ASH = tUTC(toUTC(L.ash_wednesday));
-  const E = tUTC(toUTC(L.easter_sunday));
-  const P = tUTC(toUTC(L.pentecost));
-  const T = tUTC(d);
+  const A = tsUTC(toUTC(L.advent_sunday));
+  const C = tsUTC(toUTC(L.christmas));
+  const BP = tsUTC(toUTC(L.baptism));
+  const SG = tsUTC(toUTC(L.septuagesima));
+  const ASH = tsUTC(toUTC(L.ash_wednesday));
+  const E = tsUTC(toUTC(L.easter_sunday));
+  const P = tsUTC(toUTC(L.pentecost));
+  const T = tsUTC(d);
 
   if (onOrAfter(T, A) && before(T, C)) return "ad";
   if (betweenInc(T, C, BP)) return "ct";
@@ -60,13 +58,13 @@ export function season1962(date, L) {
 export function season1974(date, L, opts = {}) {
   const split = !!opts.splitOrdinary;
   const d = toUTC(date);
-  const A = tUTC(toUTC(L.advent_sunday));
-  const C = tUTC(toUTC(L.christmas));
-  const BP = tUTC(toUTC(L.baptism));
-  const ASH = tUTC(toUTC(L.ash_wednesday));
-  const E = tUTC(toUTC(L.easter_sunday));
-  const P = tUTC(toUTC(L.pentecost));
-  const T = tUTC(d);
+  const A = tsUTC(toUTC(L.advent_sunday));
+  const C = tsUTC(toUTC(L.christmas));
+  const BP = tsUTC(toUTC(L.baptism));
+  const ASH = tsUTC(toUTC(L.ash_wednesday));
+  const E = tsUTC(toUTC(L.easter_sunday));
+  const P = tsUTC(toUTC(L.pentecost));
+  const T = tsUTC(d);
 
   if (onOrAfter(T, A) && before(T, C)) return "ad";
   if (betweenInc(T, C, BP)) return "ct";

@@ -1,5 +1,5 @@
 // tests/suite.hymnus.js
-import { hymnus } from '../src/cantus/cantus.js';
+import { hymnus } from '../src/cantus/index.js';
 import { festum } from '../src/festum/festum.js';
 
 banner('hymnus — basic selection');

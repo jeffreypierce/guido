@@ -1,7 +1,7 @@
 // tests/suite.proprium.index.js — verify proprium index precedence and potIndex fallback
 import { festum } from "../src/festum/festum.js";
-import proprium from "../src/cantus/proprium.js";
-import DAY from "../src/cantus/index/dayIndex.js";
+import proprium from "../src/cantus/proprium/index.js";
+import DAY from "../src/cantus/data/day.index.js";
 import { lookup1962 } from "../src/festum/datum.js";
 
 banner("proprium — index + potIndex integration");

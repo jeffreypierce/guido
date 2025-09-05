@@ -9,10 +9,12 @@ const nextSunday = (d) => addDays(d, (7 - d.getDay()) % 7);
 
 /**
  * Gregorian Easter (Meeus/Jones/Butcher).
+ * For years < 1583 (pre-Gregorian), delegates to `paschaJulian`.
  * @param {number} year
- * @returns {Date}
+ * @returns {Date} UTC Date (proleptic Gregorian civil date)
  */
 export function pascha(year) {
+  if (year < 1583) return paschaJulian(year);
   const t = Math.trunc;
   const G = year % 19;
   const C = t(year / 100);
@@ -23,6 +25,57 @@ export function pascha(year) {
   const m = 3 + t((L + 40) / 44);
   const d = L + 28 - 31 * t(m / 4);
   return new Date(year, m - 1, d);
+}
+
+/**
+ * Julian Easter (Julian computus) returned as a proleptic Gregorian UTC Date.
+ * Steps:
+ *  1) Compute Easter in the Julian calendar.
+ *  2) Convert that Julian date to JDN, then to a proleptic Gregorian Date.
+ * This matches medieval Western (Julian) computus while keeping JS Date semantics.
+ * @param {number} year
+ * @returns {Date} UTC Date corresponding to the Julian-calendar Easter
+ */
+export function paschaJulian(year) {
+  // 1) Julian computus (Meeus/Oudin Julian variant)
+  const a = year % 4;
+  const b = year % 7;
+  const c = year % 19;
+  const d = (19 * c + 15) % 30;
+  const e = (2 * a + 4 * b - d + 34) % 7;
+  const month = Math.floor((d + e + 114) / 31); // 3=March, 4=April
+  const day = ((d + e + 114) % 31) + 1;
+  // 2) Convert Julian calendar date -> JDN -> proleptic Gregorian Date
+  const jdn = julianToJdn(year, month, day);
+  return jdnToGregorianDateUTC(jdn);
+}
+
+/** Julian calendar date to JDN (Fliegel & Van Flandern). */
+function julianToJdn(year, month, day) {
+  const a = Math.floor((14 - month) / 12);
+  const y = year + 4800 - a;
+  const m = month + 12 * a - 3;
+  return (
+    day + Math.floor((153 * m + 2) / 5) + 365 * y + Math.floor(y / 4) - 32083
+  );
+}
+
+/** JDN to proleptic Gregorian Date (UTC midnight). */
+function jdnToGregorianDateUTC(jdn) {
+  // Fliegel & Van Flandern inverse for Gregorian
+
+  let l = jdn + 68569;
+  const n = Math.floor((4 * l) / 146097);
+  l = l - Math.floor((146097 * n + 3) / 4);
+  const i = Math.floor((4000 * (l + 1)) / 1461001);
+  l = l - Math.floor((1461 * i) / 4) + 31;
+  const j = Math.floor((80 * l) / 2447);
+  const day = l - Math.floor((2447 * j) / 80);
+  l = Math.floor(j / 11);
+  const month = j + 2 - 12 * l;
+  const year = 100 * (n - 49) + i + l;
+  // JS Date uses local timezone constructor; use UTC variant
+  return new Date(Date.UTC(year, month - 1, day));
 }
 
 /**

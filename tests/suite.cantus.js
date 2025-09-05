@@ -1,7 +1,7 @@
 // tests/suite.cantus.js
-import { cantus, ordo } from "../src/cantus/cantus.js";
-import { ordinarium } from "../src/cantus/cantus.js";
-import { proprium } from "../src/cantus/cantus.js";
+import { cantus, ordo } from "../src/cantus/index.js";
+import { ordinarium } from "../src/cantus/index.js";
+import { proprium } from "../src/cantus/index.js";
 import { OFFICE_LABELS, ORDINARY_LABELS, officeLabel, ordinaryLabel } from "../src/cantus/data/constants.js";
 import { festum } from "../src/festum/festum.js";
 import { lookup1962, lookup1974 } from "../src/festum/datum.js";
