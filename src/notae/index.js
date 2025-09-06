@@ -3,7 +3,7 @@
  * Parse GABC / chant input and return an object with output methods.
  * @param {any} chantsOrGabc
  * @param {{ prosody?: boolean, rubrics?: boolean, humanize?: boolean,
- *           transpose?: number, scale?: string, comma?: string, LA4?: number }} [options]
+ *           Temper?: object }} [options]
  */
 export function notae(_chantsOrGabc, _options = {}) {
   // Methods to be implemented in later steps

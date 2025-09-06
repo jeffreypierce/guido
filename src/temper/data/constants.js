@@ -1,0 +1,28 @@
+export const SOLFEGE = Object.freeze([
+  "UT",
+  "UI",
+  "RE",
+  "ME",
+  "MI",
+  "FA",
+  "FU",
+  "SOL",
+  "LE",
+  "LA",
+  "TE",
+  "TI",
+]);
+const PitchClass = [
+  "C",
+  "C#",
+  "D",
+  "Eb",
+  "E",
+  "F",
+  "F#",
+  "G",
+  "Ab",
+  "A",
+  "Bb",
+  "B",
+];

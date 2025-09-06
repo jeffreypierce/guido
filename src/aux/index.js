@@ -41,6 +41,16 @@ export function toUTC(x) {
   );
 }
 
+/** Convert a ratio to cents. */
+export function toCent(ratio) {
+  return 1200 * Math.log2(Number(ratio));
+}
+
+/** Convert cents to a ratio. */
+export function fromCent(cents) {
+  return 2 ** (Number(cents) / 1200);
+}
+
 /**
  * UTC-midnight timestamp (ms since epoch) for a given Date.
  * Use with Dates normalized via UTC getters.

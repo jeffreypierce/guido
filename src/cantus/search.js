@@ -6,7 +6,7 @@ import LU from "./data/liber_usualis.js";
 import LH from "./data/liber_hymnarius.js";
 import AM from "./data/antiphonale_monasticum.js";
 import ALIASES from "./data/aliases.js";
-import DAY_INDEX from "./data/day.index.js";
+//  import DAY_INDEX from "./data/day.index.js";
 import { norm } from "../aux/index.js";
 
 const ALL = [...GR, ...GR74, ...LU, ...LH, ...AM];

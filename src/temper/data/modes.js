@@ -761,7 +761,7 @@ export const Modes = new Map([
         mood: "joyful",
         family: "ionian",
         roman: "XI",
-        latin: "Authenticus Locris",
+        latin: "Authenticus Ionius",
         glareanus: true,
       },
       structure: {
@@ -832,7 +832,7 @@ export const Modes = new Map([
         mood: "peaceful",
         family: "",
         roman: "XII",
-        latin: "Hypolocris",
+        latin: "Hypoionius",
         glareanus: true,
       },
       structure: {
@@ -908,7 +908,7 @@ export const Modes = new Map([
         mood: "tragic",
         family: "locrian",
         roman: "XIII",
-        latin: "Authenticus Ionius",
+        latin: "Authenticus Locris",
         glareanus: true,
       },
       structure: {
@@ -979,7 +979,7 @@ export const Modes = new Map([
         mood: "ethereal",
         family: "",
         roman: "XIV",
-        latin: "Hypoionius",
+        latin: "Hyposocris",
         glareanus: true,
       },
       structure: {

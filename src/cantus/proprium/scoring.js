@@ -2,7 +2,7 @@
 import { norm, tokens } from "../../aux/index.js";
 
 // Shared category patterns
-export const catMap = {
+const catMap = {
   apostle: [/apostol/],
   evangelist: [/evangel/],
   martyr: [/martyr/, /coron/, /sanguin/, /virtut/, /tribul/],

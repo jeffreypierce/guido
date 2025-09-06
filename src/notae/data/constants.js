@@ -1,21 +1,4 @@
 // src/constants.js
-export const STEPS = Object.freeze([1, 0, 1, 0, 1, 1, 0, 1, 0, 1, 1, 1]);
-
-export const SOLFEGE = Object.freeze([
-  "UT",
-  "UI",
-  "RE",
-  "ME",
-  "MI",
-  "FA",
-  "FU",
-  "SOL",
-  "LE",
-  "LA",
-  "TE",
-  "TI",
-]);
-
 export const CLEFS = new Map([
   ["c1", -3],
   ["c2", -1],

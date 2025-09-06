@@ -31,6 +31,7 @@ import { selectCandidates } from "../cantus/ordinarium/select.js";
  * @typedef Festum
  * @property {string} feastId - Calendar `id` for the feast or `feria`.
  * @property {string} title - Title from the calendar overlay or "Feria".
+ * @property {string} titl_la - Latin title from the calendar overlay or "Feria".
  * @property {'t'|'s'|'f'|'m'|'o'} rank - Rank code (form-specific labels in constants).
  * @property {'ad'|'ct'|'lt'|'ea'|'ot'|'ot1'|'ot2'|'ap'|'sg'} season - Season code.
  * @property {'EF'|'OF'} form - Liturgical form used for classification.
@@ -127,6 +128,7 @@ export function festum(date, options = {}) {
   const res = {
     feastId: closest.id,
     title: closest.title,
+    title_la: closest.title_la,
     rank: closest.rank,
     season: closest.season,
     form,
