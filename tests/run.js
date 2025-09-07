@@ -71,37 +71,37 @@ if (suites.length === 0) {
   process.exit(1);
 }
 
-header("Loading test suites");
-for (const f of suites) {
-  console.log(`${bullet} ${f}`);
-  const p = path.join(__dirname, f);
-  await import(url.pathToFileURL(p).href);
-}
-console.log("");
-
-header("Running tests");
-let pass = 0,
-  fail = 0;
+let pass = 0, fail = 0;
 const t0 = process.hrtime.bigint();
 
-for (const t of tests) {
-  const s0 = process.hrtime.bigint();
-  try {
-    await t.fn();
-    const dt = Number(process.hrtime.bigint() - s0) / 1e6;
-    console.log(`${check} ${t.name} ${ms(dt)}`);
-    pass++;
-  } catch (e) {
-    const dt = Number(process.hrtime.bigint() - s0) / 1e6;
-    console.error(`${cross} ${t.name} ${ms(dt)}\n  ${red(e.message)}`);
-    if (e.stack) {
-      const lines = String(e.stack)
-        .split("\n")
-        .slice(1, 3)
-        .map((s) => s.trim());
-      if (lines.length) console.error("  " + dim(lines.join("\n  ")));
+for (const f of suites) {
+  const p = path.join(__dirname, f);
+  // Capture starting index to group tests per suite file
+  const startIndex = tests.length;
+  console.log(`${bullet} ${f}`);
+  await import(url.pathToFileURL(p).href);
+
+  // Run only the tests that were registered by this suite
+  const slice = tests.slice(startIndex);
+  for (const t of slice) {
+    const s0 = process.hrtime.bigint();
+    try {
+      await t.fn();
+      const dt = Number(process.hrtime.bigint() - s0) / 1e6;
+      console.log(`${check} ${t.name} ${ms(dt)}`);
+      pass++;
+    } catch (e) {
+      const dt = Number(process.hrtime.bigint() - s0) / 1e6;
+      console.error(`${cross} ${t.name} ${ms(dt)}\n  ${red(e.message)}`);
+      if (e.stack) {
+        const lines = String(e.stack)
+          .split("\n")
+          .slice(1, 3)
+          .map((s) => s.trim());
+        if (lines.length) console.error("  " + dim(lines.join("\n  ")));
+      }
+      fail++;
     }
-    fail++;
   }
 }
 

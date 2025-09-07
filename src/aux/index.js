@@ -99,6 +99,20 @@ export function tokens(s = "") {
 }
 
 /**
+ * Rotate an array by n steps (positive = left, negative = right).
+ * Returns a new array; does not mutate input.
+ * @param {any[]} arr
+ * @param {number} n
+ * @returns {any[]}
+ */
+export function rotate(arr, n) {
+  const a = Array.isArray(arr) ? arr : [];
+  if (!a.length) return a.slice();
+  const k = ((Number(n) % a.length) + a.length) % a.length;
+  return a.slice(k).concat(a.slice(0, k));
+}
+
+/**
  * Whether a season is penitential (Lent or Pre-Lent).
  * @param {string} season
  * @returns {boolean}
@@ -154,3 +168,6 @@ export function roman(v) {
     return;
   }
 }
+
+export const round = (num, p = 3) =>
+  Math.round((num + Number.EPSILON) * 10 ** p) / 10 ** p;

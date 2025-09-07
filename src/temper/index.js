@@ -1,82 +1,17 @@
 import { scala } from "./scala.js";
 import { Modes } from "./data/modes.js";
 import HandData from "./data/hand.js";
-import { roman, toCent, fromCent } from "../aux/index.js";
+import {
+  STEPS,
+  PITCH_CLASS,
+  NAME_TO_CHROMA,
+  SOLFEGE_TO_CHROMA,
+  CHROMA_TO_SOLFEGE_BASE,
+  INTERVAL_CLASS_12,
+} from "./data/constants.js";
+import { roman, rotate } from "../aux/index.js";
 
 // Internal helpers kept local to chant use-cases
-
-// Diatonic selection with both B and Bb available (chant practice)
-// 1 = in gamut, 0 = excluded; index 0 = C, 9 = A
-const STEPS = [1, 0, 1, 0, 1, 1, 0, 1, 0, 1, 1, 1];
-
-const PITCH_CLASS = [
-  "C",
-  "C#",
-  "D",
-  "Eb",
-  "E",
-  "F",
-  "F#",
-  "G",
-  "Ab",
-  "A",
-  "Bb",
-  "B",
-];
-const NAME_TO_CHROMA = new Map([
-  ["C", 0],
-  ["B#", 0],
-  ["C#", 1],
-  ["Db", 1],
-  ["D", 2],
-  ["D#", 3],
-  ["Eb", 3],
-  ["E", 4],
-  ["Fb", 4],
-  ["E#", 5],
-  ["F", 5],
-  ["F#", 6],
-  ["Gb", 6],
-  ["G", 7],
-  ["G#", 8],
-  ["Ab", 8],
-  ["A", 9],
-  ["A#", 10],
-  ["Bb", 10],
-  ["B", 11],
-  ["Cb", 11],
-]);
-
-const SOLFEGE_TO_CHROMA = new Map([
-  ["DO", 0],
-  ["UT", 0], // medieval usage
-  ["UI", 1],
-  ["DI", 1],
-  ["RE", 2],
-  ["ME", 3],
-  ["MI", 4],
-  ["FA", 5],
-  ["FU", 6],
-  ["SOL", 7],
-  ["SO", 7],
-  ["LE", 8],
-  ["LA", 9],
-  ["TE", 10],
-  ["TI", 11],
-  ["SI", 11], // fixed-do (Latin)
-]);
-
-// base fixed-do for diatonic pcs
-const CHROMA_TO_SOLFEGE_BASE = new Map([
-  [0, "UT"],
-  [2, "RE"],
-  [4, "MI"],
-  [5, "FA"],
-  [7, "SOL"],
-  [9, "LA"],
-  [10, "TE"],
-  [11, "TI"],
-]);
 
 // Build a MIDI -> hand entries index once for Guidonian lookups
 const HAND_BY_MIDI = (() => {
@@ -88,11 +23,6 @@ const HAND_BY_MIDI = (() => {
   }
   return m;
 })();
-
-function rotate(arr, n) {
-  const k = ((n % arr.length) + arr.length) % arr.length;
-  return arr.slice(k).concat(arr.slice(0, k));
-}
 
 // Cache for diatonic degree maps keyed by finalis (0..11)
 const STEP_MAP_CACHE = new Map();
@@ -114,6 +44,16 @@ function stepMapFor(finalis = 0) {
   }
   STEP_MAP_CACHE.set(f, map);
   return map;
+}
+
+const SCALE_CACHE = new Map();
+function getScale(name = "just", options = {}) {
+  const key = `${String(name)}::${JSON.stringify(options || {})}`;
+  const cached = SCALE_CACHE.get(key);
+  if (cached) return cached;
+  const sc = scala(name, options);
+  SCALE_CACHE.set(key, sc);
+  return sc;
 }
 
 function normalizeMode(m) {
@@ -164,59 +104,7 @@ function toMidi(chroma, octave) {
   // MIDI standard: C-1 = 0, A4 = 69
   return (octave + 1) * 12 + (((chroma % 12) + 12) % 12);
 }
-
-function resolveFinalis(opts) {
-  if (!opts || typeof opts === "number") return 0;
-  if (typeof opts.finalis === "number") return ((opts.finalis % 12) + 12) % 12;
-  if (opts.mode != null) {
-    const mk = normalizeMode(opts.mode) || "I";
-    const modus = Modes.get(mk);
-    const isAuthentic = Boolean(opts.authentic ?? true);
-    const base = isAuthentic ? modus?.structure?.final : modus?.structure?.root;
-    const tr = (opts.transpose | 0) % 12;
-    if (typeof base === "number") return ((base + tr) % 12 + 12) % 12;
-  }
-  return 0;
-}
-
-function finalizeNote({ kind, input, chroma, octave, midi, solfege, stepFinalis }) {
-  const c = typeof chroma === "number" ? ((chroma % 12) + 12) % 12 : undefined;
-  let o = typeof octave === "number" ? octave : undefined;
-  let m = typeof midi === "number" ? midi : undefined;
-  if (typeof c === "number" && typeof o === "number" && typeof m !== "number") {
-    m = toMidi(c, o);
-  }
-  if (typeof m === "number" && (typeof c !== "number" || typeof o !== "number")) {
-    const chromaFromMidi = ((m % 12) + 12) % 12;
-    const octaveFromMidi = Math.floor(m / 12) - 1;
-    chroma = typeof c === "number" ? c : chromaFromMidi;
-    octave = typeof o === "number" ? o : octaveFromMidi;
-  } else {
-    chroma = c;
-    octave = o;
-  }
-  const name = typeof chroma === "number" ? toName(chroma, octave) : undefined;
-  const baseSolfege = typeof chroma === "number" ? CHROMA_TO_SOLFEGE_BASE.get(chroma) : undefined;
-  const hand = typeof m === "number" ? toHand(m) : undefined;
-  let step;
-  if (typeof chroma === "number") {
-    const stepMap = stepMapFor(stepFinalis ?? 0);
-    step = stepMap.get(chroma);
-  }
-  return {
-    kind,
-    input,
-    chroma,
-    octave,
-    midi: m,
-    name,
-    solfege: solfege || baseSolfege,
-    hand,
-    step,
-  };
-}
-
-const toHand = (midi) => {
+function toHand(midi) {
   const choices = HAND_BY_MIDI.get(midi);
   if (!choices || !choices.length) return undefined;
   // prefer naturale, then durum, then molle
@@ -230,7 +118,175 @@ const toHand = (midi) => {
   }
   const { id, hexachord, syllable, hand_position } = choices[0];
   return { id, hexachord, syllable, position: hand_position };
-};
+}
+
+// --- Shared context + temperament helpers ---
+
+function resolveContext(opts = {}) {
+  const o = typeof opts === "object" && opts ? opts : {};
+  const mk = o.mode != null ? normalizeMode(o.mode) : undefined;
+  const modus = mk ? Modes.get(mk) : undefined;
+  const isAuthentic = o.authentic ?? true;
+  const baseFinal = modus
+    ? isAuthentic
+      ? modus?.structure?.final
+      : modus?.structure?.root
+    : undefined;
+  const transpose = Number.isFinite(o.transpose) ? o.transpose | 0 : 0;
+  const explicitFinalis = Number.isFinite(o.finalis)
+    ? ((o.finalis % 12) + 12) % 12
+    : undefined;
+  const finalis =
+    explicitFinalis ??
+    (typeof baseFinal === "number"
+      ? (((baseFinal + transpose) % 12) + 12) % 12
+      : 0);
+
+  const scaleName = o.scale || "just";
+  const scaleOptions = o.scaleOptions || {};
+  const sc = getScale(scaleName, scaleOptions);
+  const cents = sc?.cents || [];
+  const bendRange = Number(o.bendRange ?? (o.pitchBend && o.pitchBend.range));
+  return {
+    finalis,
+    transpose,
+    scaleName: sc?.name || scaleName,
+    scaleOptions,
+    cents,
+    bendRange,
+  };
+}
+
+function getCentsOffset(chroma, ctx) {
+  if (typeof chroma !== "number") return undefined;
+  const { finalis, transpose, cents } = ctx || {};
+  if (!Array.isArray(cents) || cents.length < 12) return undefined;
+  const step = (12 + chroma - (finalis ?? 0) - (transpose ?? 0)) % 12;
+  const c = Number(cents[step]);
+  if (!Number.isFinite(c)) return undefined;
+  return c - step * 100;
+}
+
+function resolveFinalis(opts) {
+  if (!opts || typeof opts === "number") return 0;
+  if (typeof opts.finalis === "number") return ((opts.finalis % 12) + 12) % 12;
+  if (opts.mode != null) {
+    const mk = normalizeMode(opts.mode) || "I";
+    const modus = Modes.get(mk);
+    const isAuthentic = Boolean(opts.authentic ?? true);
+    const base = isAuthentic ? modus?.structure?.final : modus?.structure?.root;
+    const tr = (opts.transpose | 0) % 12;
+    if (typeof base === "number") return (((base + tr) % 12) + 12) % 12;
+  }
+  return 0;
+}
+
+function finalizeNote({
+  kind,
+  input,
+  chroma,
+  octave,
+  midi,
+  solfege,
+  stepFinalis,
+}) {
+  // Normalize primitives once
+  let c = typeof chroma === "number" ? ((chroma % 12) + 12) % 12 : undefined;
+  let o = typeof octave === "number" ? octave : undefined;
+  let m = typeof midi === "number" ? midi : undefined;
+
+  // Derive missing midi from chroma+octave, or vice-versa from midi
+  if (c != null && o != null && m == null) m = toMidi(c, o);
+  if (m != null && (c == null || o == null)) {
+    c = ((m % 12) + 12) % 12;
+    o = Math.floor(m / 12) - 1;
+  }
+
+  // Build derived fields using normalized values
+  const name = c != null ? toName(c, o) : undefined;
+  const baseSolfege = c != null ? CHROMA_TO_SOLFEGE_BASE.get(c) : undefined;
+  const hand = m != null ? toHand(m) : undefined;
+  const step = stepMapFor(stepFinalis ?? 0).get(c);
+
+  return {
+    kind,
+    input,
+    chroma: c,
+    octave: o,
+    midi: m,
+    name,
+    solfege: solfege || baseSolfege,
+    hand,
+    step,
+  };
+}
+
+function transposeOutput(out, semis = 0, stepFinalis = 0, bendOpts = {}) {
+  const t = Number(semis) | 0 || 0;
+  if (
+    !t ||
+    !out ||
+    typeof out.midi !== "number" ||
+    typeof out.chroma !== "number"
+  )
+    return out;
+  const origChroma = out.chroma;
+  const midi = out.midi + t;
+  const chroma = (((out.chroma + t) % 12) + 12) % 12;
+  const octave = Math.floor(midi / 12) - 1;
+  const name = toName(chroma, octave);
+  const fixedSolfege = CHROMA_TO_SOLFEGE_BASE.get(chroma) || out.solfege;
+  const movableSolfege = CHROMA_TO_SOLFEGE_BASE.get(origChroma) || out.solfege;
+  const hand = toHand(midi);
+  const step = stepMapFor(stepFinalis ?? 0).get(chroma);
+  const res = {
+    ...out,
+    chroma,
+    octave,
+    midi,
+    name,
+    solfege: { fixed: fixedSolfege, movable: movableSolfege },
+    hand,
+    step,
+  };
+  // Recompute pitch bend in the transposed context if requested
+  if (
+    bendOpts &&
+    Number(
+      bendOpts.bendRange ?? (bendOpts.pitchBend && bendOpts.pitchBend.range)
+    ) > 0
+  ) {
+    const pb = computePitchBend(chroma, midi, bendOpts);
+    if (pb) res.pitchBend = pb;
+  }
+  return res;
+}
+
+function computePitchBend(chroma, midi, ctx = {}) {
+  if (typeof chroma !== "number" || typeof midi !== "number") return undefined;
+  const full = resolveContext(ctx);
+  const bendRange = Number(full.bendRange);
+  if (!(bendRange > 0)) return undefined;
+  const offsetCents = getCentsOffset(chroma, full);
+  if (!Number.isFinite(offsetCents)) return undefined;
+  const offsetSemis = offsetCents / 100;
+  // 14-bit pitch bend: 0..16383, center=8192
+  const center = 8192;
+  let value14 = Math.round(center + center * (offsetSemis / bendRange));
+  if (value14 < 0) value14 = 0;
+  if (value14 > 16383) value14 = 16383;
+  const lsb = value14 & 0x7f;
+  const msb = (value14 >> 7) & 0x7f;
+  return {
+    value14,
+    msb,
+    lsb,
+    range: bendRange,
+    semitones: offsetSemis,
+    cents: offsetCents,
+    scale: full.scaleName,
+  };
+}
 
 /**
  * Parse a flexible note input into a normalized object.
@@ -249,6 +305,8 @@ export function note(input, opts = {}) {
       : opts.defaultOctave
     : 4;
   const stepFinalis = resolveFinalis(opts);
+  const ctx = resolveContext(opts);
+  let out;
 
   // Number or numeric string -> MIDI
   if (
@@ -258,7 +316,7 @@ export function note(input, opts = {}) {
     input > 0
   ) {
     const midi = Number(input);
-    return finalizeNote({ kind: "midi", input, midi, stepFinalis });
+    out = finalizeNote({ kind: "midi", input, midi, stepFinalis });
   }
 
   // Object with {chroma, octave}
@@ -267,7 +325,14 @@ export function note(input, opts = {}) {
     const c = Number(chroma);
     const o = typeof octave === "number" ? octave : defaultOctave;
     const midi = toMidi(c, o);
-    return finalizeNote({ kind: "object", input, chroma: c, octave: o, midi, stepFinalis });
+    out = finalizeNote({
+      kind: "object",
+      input,
+      chroma: c,
+      octave: o,
+      midi,
+      stepFinalis,
+    });
   }
 
   if (typeof input === "string") {
@@ -283,7 +348,15 @@ export function note(input, opts = {}) {
       const octave = mName[3] !== undefined ? Number(mName[3]) : defaultOctave;
       if (typeof chroma === "number") {
         const midi = toMidi(chroma, octave);
-        return finalizeNote({ kind: "name", input, chroma, octave, midi, stepFinalis });
+        out = finalizeNote({
+          kind: "name",
+          input,
+          chroma,
+          octave,
+          midi,
+          stepFinalis,
+        });
+        // continue to unified exit
       }
     }
 
@@ -299,11 +372,31 @@ export function note(input, opts = {}) {
         if (acc === "b") chroma = (chroma + 11) % 12;
         const octave = mSol[3] !== undefined ? Number(mSol[3]) : defaultOctave;
         const midi = toMidi(chroma, octave);
-        return finalizeNote({ kind: "solfege", input, chroma, octave, midi, solfege: syl, stepFinalis });
+        out = finalizeNote({
+          kind: "solfege",
+          input,
+          chroma,
+          octave,
+          midi,
+          solfege: syl,
+          stepFinalis,
+        });
+        // continue to unified exit
       }
     }
   }
-
+  // Unified exit: attach pitch bend once if applicable
+  if (out) {
+    if (
+      ctx.bendRange > 0 &&
+      typeof out.chroma === "number" &&
+      typeof out.midi === "number"
+    ) {
+      const rawOpts = (typeof opts === "object" && opts) || {};
+      out.pitchBend = computePitchBend(out.chroma, out.midi, rawOpts);
+    }
+    return out;
+  }
   // Fallback: unknown
   return {
     kind: "unknown",
@@ -312,6 +405,185 @@ export function note(input, opts = {}) {
     octave: undefined,
     midi: undefined,
     name: undefined,
+  };
+}
+
+function medievalIntervalInfo(semitones, semitonesMod12) {
+  if (typeof semitones !== "number" || typeof semitonesMod12 !== "number")
+    return undefined;
+  const absSemi = Math.abs(semitones);
+  const mod = ((Math.abs(semitonesMod12) % 12) + 12) % 12;
+  const octaves = Math.floor(absSemi / 12);
+  const compound = absSemi >= 12;
+  let latin, greek, degree, quality;
+  switch (mod) {
+    case 0:
+      if (absSemi === 0) {
+        latin = "Unisonus";
+        degree = 1;
+        quality = "perfect";
+      } else {
+        latin = "Octava";
+        greek = "Diapason";
+        degree = 8;
+        quality = "perfect";
+      }
+      break;
+    case 1:
+      latin = "Semitonium";
+      degree = 2;
+      quality = "minor";
+      break;
+    case 2:
+      latin = "Tonus";
+      degree = 2;
+      quality = "major";
+      break;
+    case 3:
+      latin = "Tertia minor";
+      degree = 3;
+      quality = "minor";
+      break;
+    case 4:
+      latin = "Tertia maior";
+      degree = 3;
+      quality = "maior";
+      break;
+    case 5:
+      latin = "Quarta";
+      greek = "Diatessaron";
+      degree = 4;
+      quality = "perfect";
+      break;
+    case 6:
+      latin = "Tritonus";
+      degree = 4;
+      quality = "augmented";
+      break;
+    case 7:
+      latin = "Quinta";
+      greek = "Diapente";
+      degree = 5;
+      quality = "perfect";
+      break;
+    case 8:
+      latin = "Sexta minor";
+      degree = 6;
+      quality = "minor";
+      break;
+    case 9:
+      latin = "Sexta maior";
+      degree = 6;
+      quality = "maior";
+      break;
+    case 10:
+      latin = "Septima minor";
+      degree = 7;
+      quality = "minor";
+      break;
+    case 11:
+      latin = "Septima maior";
+      degree = 7;
+      quality = "maior";
+      break;
+  }
+  return { latin, greek, degree, quality, compound, octaves };
+}
+
+/**
+ * Compare two notes and describe the interval between them.
+ * Accepts any inputs that `note()` accepts, or pre-normalized note objects.
+ * Options: same as `note()` for context (mode/finalis/transpose/scale/scaleOptions).
+ */
+export function interval(a, b, opts = {}) {
+  const A = a && typeof a === "object" && "kind" in a ? a : note(a, opts);
+  const B = b && typeof b === "object" && "kind" in b ? b : note(b, opts);
+
+  const ctx = resolveContext(opts);
+
+  const haveMidi = typeof A.midi === "number" && typeof B.midi === "number";
+  const haveChroma =
+    typeof A.chroma === "number" && typeof B.chroma === "number";
+  const haveOct = typeof A.octave === "number" && typeof B.octave === "number";
+
+  let semitones;
+  if (haveMidi) {
+    semitones = B.midi - A.midi;
+  } else if (haveChroma && haveOct) {
+    semitones = (B.octave - A.octave) * 12 + (B.chroma - A.chroma);
+  }
+
+  const chromaDiff = haveChroma
+    ? (((B.chroma - A.chroma) % 12) + 12) % 12
+    : undefined;
+  const semitonesMod12 = haveChroma
+    ? chromaDiff
+    : typeof semitones === "number"
+    ? ((semitones % 12) + 12) % 12
+    : undefined;
+  const etCents = typeof semitones === "number" ? semitones * 100 : undefined;
+
+  // Tempered cents using scale and finalis context
+  let temperedCents, deviationCents, temperedCentsMod12;
+  if (haveChroma) {
+    const offA = getCentsOffset(A.chroma, ctx);
+    const offB = getCentsOffset(B.chroma, ctx);
+    if (Number.isFinite(offA) && Number.isFinite(offB)) {
+      if (typeof semitones === "number") {
+        temperedCents = semitones * 100 + (offB - offA);
+        deviationCents = temperedCents - semitones * 100;
+      }
+      if (typeof semitonesMod12 === "number") {
+        const base = semitonesMod12 * 100 + (offB - offA);
+        temperedCentsMod12 = ((base % 1200) + 1200) % 1200;
+      }
+    }
+  }
+
+  // Simple interval class names by semitones modulo 12
+  const clazz =
+    typeof semitonesMod12 === "number"
+      ? INTERVAL_CLASS_12[semitonesMod12]
+      : undefined;
+  const medieval =
+    typeof semitones === "number" && typeof semitonesMod12 === "number"
+      ? medievalIntervalInfo(semitones, semitonesMod12)
+      : undefined;
+
+  // Fallback to ET values if temperament offsets unavailable
+  if (typeof temperedCents !== "number" && typeof etCents === "number") {
+    temperedCents = etCents;
+    temperedCentsMod12 =
+      typeof semitonesMod12 === "number" ? semitonesMod12 * 100 : undefined;
+    deviationCents = 0;
+  }
+
+  return {
+    from: {
+      name: A.name,
+      chroma: A.chroma,
+      octave: A.octave,
+      midi: A.midi,
+      step: A.step,
+    },
+    to: {
+      name: B.name,
+      chroma: B.chroma,
+      octave: B.octave,
+      midi: B.midi,
+      step: B.step,
+    },
+    class: clazz,
+    semitones,
+    semitonesMod12,
+    et: { cents: etCents },
+    tempered: {
+      scale: ctx.scaleName,
+      cents: temperedCents,
+      centsMod12: temperedCentsMod12,
+      deviationCents,
+    },
+    medieval,
   };
 }
 
@@ -330,12 +602,13 @@ class Temper {
     const transpose = (opts.transpose | 0) % 12; // chromatic transposition in semitones
 
     // temperament (12 pitch-class ratios within the octave)
-    const sc = scala(opts?.scale || "just", opts.scaleOptions || {});
-    const ratios = sc?.ratios || [];
-    if (ratios.length !== 12) {
-      console.error(`scale ${opts.scale} is not vaild`);
+    const sc = getScale(opts?.scale || "just", opts.scaleOptions || {});
+    let ratios = Array.isArray(sc?.ratios) ? sc.ratios.slice() : [];
+    if (ratios.length < 12) {
+      console.error(`scale ${opts.scale} is not valid`);
       return null;
     }
+    if (ratios.length > 12) ratios = ratios.slice(0, 12);
     // Select diatonic+Bb/B gamut relative to the finalis (mode) and build table
     const steps = rotate(STEPS, finalis);
     const LA = (12 + 9 - finalis - transpose) % 12; // anchor so A0 aligns to A pitch-class
@@ -384,7 +657,79 @@ class Temper {
     const k = ((pc % 12) + 12) % 12;
     return PITCH_CLASS[k];
   }
+
+  /** Parse/annotate a note using this Temper's context (mode, transpose, scale). */
+  note(input, opts = {}) {
+    const merged = {
+      // Context defaults from this Temper (let resolveFinalis derive finalis from mode+transpose)
+      mode: this.meta?.mode,
+      authentic: this.meta?.authentic,
+      transpose: this.meta?.transpose | 0,
+      scale: this.meta?.scale,
+      // Allow call-site overrides
+      ...opts,
+    };
+    const base = note(input, merged);
+    const stepFinalis = resolveFinalis(merged);
+    const transposed = transposeOutput(
+      base,
+      merged.transpose | 0,
+      stepFinalis,
+      merged
+    );
+    // Build frequency using ET anchor LA4 with temperament offset (no redundant details)
+    if (typeof transposed.midi === "number") {
+      const LA4 = this.meta?.LA4 || 440;
+      const etFreq = LA4 * 2 ** ((transposed.midi - 69) / 12);
+      const off =
+        getCentsOffset(transposed.chroma, resolveContext(merged)) || 0;
+      transposed.frequency = etFreq * 2 ** (off / 1200);
+    }
+    // Simplify pitchBend info, keep only bytes and declared range (for tests/consumers)
+    if (transposed.pitchBend) {
+      const { msb, lsb, value14, range } = transposed.pitchBend;
+      transposed.pitchBend = { value14, msb, lsb, range };
+    }
+    // Collapse hand to ID only if present
+    if (transposed.hand && transposed.hand.id)
+      transposed.hand = transposed.hand.id;
+    // Move provenance into meta
+    transposed.meta = {
+      input: base.input,
+      mode: this.meta?.mode,
+      scale: this.meta?.scale,
+      transpose: this.meta?.transpose | 0,
+    };
+    // Remove top-level kind and input for cleaner shape
+    delete transposed.kind;
+    delete transposed.input;
+    return transposed;
+  }
+
+  // Back-compat alias
+  nota(input, opts = {}) {
+    return this.note(input, opts);
+  }
+
+  /** Describe the interval between two notes using this Temper's context. */
+  interval(a, b, opts = {}) {
+    const merged = {
+      // Let finalis be derived from mode+transpose
+      mode: this.meta?.mode,
+      authentic: this.meta?.authentic,
+      transpose: this.meta?.transpose | 0,
+      scale: this.meta?.scale,
+      ...opts,
+    };
+    return interval(a, b, merged);
+  }
+}
+// Default singleton instance with defaults
+const defaultTemper = new Temper({});
+
+// Factory to create custom instances without exposing the class
+export function temper(opts = {}) {
+  return new Temper(opts);
 }
 
-export default Temper;
-export { Temper };
+export default defaultTemper;
