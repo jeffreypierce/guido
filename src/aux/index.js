@@ -1,10 +1,22 @@
-/** Shared, dependency-free helpers. Keep tiny & pure. */
+/**
+ * Normalize form code to 'EF' or 'OF'. Accepts legacy 'EF'/'1974' and case-insensitive.
+ * @param {string} form
+ * @returns {'EF'|'OF'}
+ */
+export function normalizeForm(form) {
+  const s = String(form || "")
+    .trim()
+    .toUpperCase();
+  if (s === "1962" || s === "EF") return "EF";
+  if (s === "1974" || s === "OF") return "OF";
+  return "EF";
+}
 /**
  * Normalize EF/OF season codes into generic buckets for selection logic.
  * @param {'ad'|'ct'|'lt'|'ea'|'ot'|'ot1'|'ot2'|'ap'|'sg'} seasonCode
  * @returns {'ad'|'ct'|'lt'|'ea'|'ot'}
  */
-export function seasonNormalize(seasonCode) {
+export function normalizeSeason(seasonCode) {
   switch (seasonCode) {
     case "ot2":
     case "ap":
@@ -59,20 +71,6 @@ export function fromCent(cents) {
  */
 export function tsUTC(d) {
   return Date.UTC(d.getUTCFullYear(), d.getUTCMonth(), d.getUTCDate());
-}
-
-/**
- * Normalize form code to 'EF' or 'OF'. Accepts legacy 'EF'/'1974' and case-insensitive.
- * @param {string} form
- * @returns {'EF'|'OF'}
- */
-export function normalizeForm(form) {
-  const s = String(form || "")
-    .trim()
-    .toUpperCase();
-  if (s === "EF" || s === "EF") return "EF";
-  if (s === "1974" || s === "OF") return "OF";
-  return "EF";
 }
 
 /**

@@ -1,5 +1,7 @@
+import { normalizeForm, normalizeSeason } from "../aux/index.js";
+
 // src/festum/data/constants.js
-export const RANKS_1962 = Object.freeze({
+export const RANKS_EF = Object.freeze({
   t: "Triduum",
   s: "Solemnity (I class)",
   f: "Feast (II class)",
@@ -7,17 +9,17 @@ export const RANKS_1962 = Object.freeze({
   o: "Commemoration / Optional Memorial",
 });
 
-export const SEASONS_1962 = Object.freeze({
+export const SEASONS_EF = Object.freeze({
   ad: "Advent",
   ct: "Christmastide",
-  ot2: "Time after Epiphany",
+  ot: "Time after Epiphany",
   sg: "Septuagesima",
   lt: "Lent",
   ea: "Eastertide",
   ap: "Time after Pentecost",
 });
 
-export const RANKS_1974 = Object.freeze({
+export const RANKS_OF = Object.freeze({
   t: "Sacred Triduum",
   s: "Solemnity",
   f: "Feast",
@@ -25,7 +27,7 @@ export const RANKS_1974 = Object.freeze({
   o: "Optional Memorial",
 });
 
-export const SEASONS_1974 = Object.freeze({
+export const SEASONS_OF = Object.freeze({
   ad: "Advent",
   ct: "Christmastide",
   lt: "Lent",
@@ -40,8 +42,8 @@ export const SEASONS_1974 = Object.freeze({
  * @returns {string}
  */
 export function rankLabel(code, form = "EF") {
-  const F = String(form || "").toUpperCase();
-  const map = F === "OF" || F === "1974" ? RANKS_1974 : RANKS_1962;
+  const F = normalizeForm(form);
+  const map = F === "OF" ? RANKS_OF : RANKS_EF;
   return map[code] || code;
 }
 
@@ -52,9 +54,9 @@ export function rankLabel(code, form = "EF") {
  * @returns {string}
  */
 export function seasonLabel(code, form = "EF") {
-  const F = String(form || "").toUpperCase();
-  const map = F === "OF" || F === "1974" ? SEASONS_1974 : SEASONS_1962;
-  if ((F === "OF" || F === "1974") && (code === "ot1" || code === "ot2"))
-    return "Ordinary Time";
-  return map[code] || code;
+  const F = normalizeForm(form);
+  const map = F === "OF" ? SEASONS_OF : SEASONS_EF;
+  const c = normalizeSeason(code);
+  if (F === "OF" && code === "ot") return "Ordinary Time";
+  return map[c] || code;
 }

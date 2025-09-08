@@ -1,13 +1,22 @@
 // src/festum/index.js
-import { toUTC, stableJson, normalizeForm } from "../aux/index.js";
+import {
+  toUTC,
+  stableJson,
+  normalizeForm,
+  normalizeSeason,
+} from "../aux/index.js";
 import { calendarium } from "./calendarium.js";
-import { seasonNormalize } from "./tempus.js";
-import { selectCandidates } from "./select.js";
+import { selectMasses } from "./missa.js";
 
-/**
- * Identifier of a Kyriale mass (e.g., 1–18).
- * @typedef {number} MassId
- */
+function isMarianFeast(fest) {
+  const id = String(fest?.feastId || fest?.id || "");
+  const title = String(fest?.title || "");
+  const titleLa = String(fest?.title_la || "");
+  const hay = (id + " " + title + " " + titleLa).toLowerCase();
+  return /\bbvm\b|\bmary\b|maria|immaculate|annunciation|assumption|rosary|mother[_\s]?of[_\s]?god|heart[_\s]?of[_\s]?mary/.test(
+    hay
+  );
+}
 
 /**
  * A full mass entry returned when `verbose` is enabled.
@@ -35,7 +44,7 @@ import { selectCandidates } from "./select.js";
  * @property {'t'|'s'|'f'|'m'|'o'} rank - Rank code (form-specific labels in constants).
  * @property {'ad'|'ct'|'lt'|'ea'|'ot'|'ot1'|'ot2'|'ap'|'sg'} season - Season code.
  * @property {'EF'|'OF'} form - Liturgical form used for classification.
- * @property {'dominica'|'feria'} weekday - Sunday vs weekday heuristic for selection.
+ * @property {'dominica'|'feria'} dow - Day of week;, Sunday vs weekday, used for mass selection.
  * @property {boolean} bvm - True if the day is identified as BVM-related (heuristic).
  * @property {MassId[]} masses - Sorted list of candidate mass IDs.
  * @property {FullMass[]} [massesDetailed] - Present only when `options.verbose` is truthy; includes full selection metadata.
@@ -46,73 +55,57 @@ import { selectCandidates } from "./select.js";
  * @param {Date|string|number} date - Any Date-like value; coerced to UTC-midnight.
  * @param {
  *   form?: 'EF'|'OF'
- *   splitOrdinary?: boolean,
  *   transfer?: { epiphany?: boolean, ascension?: boolean, corpusChristi?: boolean },
- *   lenientSelection?: boolean,  // enable relaxed fallback tiers if strict has no matches
  *   verbose?: boolean,           // include `massesDetailed` with full ranking info
  * } [options]
  * @returns {Festum}
  *
  */
 
-export function isMarianFeast(fest) {
-  const id = String(fest?.feastId || fest?.id || "");
-  const title = String(fest?.title || "");
-  const titleLa = String(fest?.title_la || "");
-  const hay = (id + " " + title + " " + titleLa).toLowerCase();
-  return /\bbvm\b|\bmary\b|maria|immaculate|annunciation|assumption|rosary|mother[_\s]?of[_\s]?god|heart[_\s]?of[_\s]?mary/.test(
-    hay
-  );
-}
-
 export function festum(date, options = {}) {
   const form = normalizeForm(options.form ?? "EF");
   const day = toUTC(date);
   const year = day.getUTCFullYear();
+  const transfer = stableJson(options.transfer || {});
 
   // Build or reuse year calendar for the selected form
-  const cacheKey = `${year}|${form}|${
-    options.splitOrdinary ? 1 : 0
-  }|${stableJson(options.transfer || {})}`;
-
-  const _calCache = festum._calCache || (festum._calCache = new Map());
-  let cr = _calCache.get(cacheKey);
+  const cacheKey = `${year}|${form}|${transfer}`;
+  const cal = festum.cal || (festum.cal = new Map());
+  let cr = cal.get(cacheKey);
   if (!cr) {
     cr = calendarium(year, {
       form,
-      splitOrdinary: !!options.splitOrdinary,
-      transfer: options.transfer || {},
+      transfer,
     });
-    _calCache.set(cacheKey, cr);
+    cal.set(cacheKey, cr);
   }
 
-  // Pick the exact (or nearest) row
   const ts = day.getTime();
-  let closest = cr.find((row) => row.ts === ts);
+  let closest = cr.find((f) => f.ts === ts);
+  // Fallback to nearest
   if (!closest) {
-    // Fallback to nearest to be resilient to unexpected gaps
     closest = cr.reduce(
-      (best, row) =>
-        Math.abs(row.ts - ts) < Math.abs(best.ts - ts) ? row : best,
+      (best, fi) => (Math.abs(fi.ts - ts) < Math.abs(best.ts - ts) ? fi : best),
       cr[0]
     );
   }
 
-  const dow = new Date(closest.ts).getUTCDay();
-  const weekday = dow === 0 ? "dominica" : "feria";
-  const bvm =
-    isMarianFeast({ ...closest }) ||
-    (dow === 6 && seasonNormalize(closest.season) === "ot"); // marian saturday
+  const weekday = new Date(closest.ts).getUTCDay();
+  const dow = weekday === 0 ? "dominica" : "feria";
+  const bvm = closest.bvm
+    ? closest.bvm
+    : isMarianFeast({ ...closest }) ||
+      (weekday === 6 && normalizeSeason(closest.season) === "ot"); // marian saturday
 
-  const candidates = selectCandidates({ ...closest, weekday, bvm });
+  const candidates = selectMasses({ ...closest, dow, bvm });
 
   const toFull = (m) => ({
     roman: m.key,
     mass: m.mass,
     title: m.title,
     credos: m.credos,
-    tier: m._tier,
-    rankWeight: m._rankWeight,
+    tier: m.tier,
+    rankWeight: m.rankWeight,
     seasons: m.seasons,
     ranks: m.ranks,
     days: m.days,
@@ -130,7 +123,7 @@ export function festum(date, options = {}) {
     rank: closest.rank,
     season: closest.season,
     form,
-    weekday,
+    dow,
     bvm,
     masses: massesIds,
   };

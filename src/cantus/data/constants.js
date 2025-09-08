@@ -34,12 +34,24 @@ export const ORDINARY_LABELS = Object.freeze({
 
 /** Canonical processing order for ordinary parts. */
 export const ORDINARY_CODES = Object.freeze([
-  'ky','gl','cr','sa','ag','it','be'
+  "ky",
+  "gl",
+  "cr",
+  "sa",
+  "ag",
+  "it",
+  "be",
 ]);
 
 /** Canonical set of proper office codes relevant to Mass. */
-export const PROPER_OFFICE_CODES = Object.freeze([
-  'in','gr','al','tr','se','of','co'
+export const OFFICE_CODES = Object.freeze([
+  "in",
+  "gr",
+  "al",
+  "tr",
+  "se",
+  "of",
+  "co",
 ]);
 
 /** Human label for an office code. */

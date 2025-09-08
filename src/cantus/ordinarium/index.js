@@ -15,7 +15,6 @@ const ID_INDEX = (() => {
 
 import { isPenitential, norm } from "../../aux/index.js";
 import { ORDINARY_CODES } from "../data/constants.js";
-import selectCandidates from "../../festum/select.js";
 
 export function gloriaDefault(festum) {
   return !isPenitential(festum.season);
@@ -28,7 +27,7 @@ export function credoDefault(festum) {
 
 export default function ordinarium(ctx, opts = {}) {
   const fest = ctx?.festum || {};
-  const candidates = selectCandidates(fest, opts);
+  const candidates = ctx?.masses;
   const best = candidates[0] || null;
 
   const parts = {};

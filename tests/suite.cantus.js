@@ -9,12 +9,12 @@ import {
   ordinaryLabel,
 } from "../src/cantus/data/constants.js";
 import { festum } from "../src/festum/index.js";
-import { lookup1962, lookup1974 } from "../src/festum/datum.js";
+import { lookupEF, lookupOF } from "../src/festum/datum.js";
 
 banner("cantus — ordo assembly");
 
 it("OF Sunday includes Gloria and Alleluia", () => {
-  const L = lookup1974(2025);
+  const L = lookupOF(2025);
   const f = festum("2025-06-15", { form: "OF" }); // OT Sunday
   const o = ordo({ festum: f, forma: "OF" });
   const ordOffices = o.ordinary.map((x) => x.office);
@@ -28,7 +28,7 @@ it("OF Sunday includes Gloria and Alleluia", () => {
 });
 
 it("EF Lent feria omits Gloria and uses Tract", () => {
-  const L = lookup1962(2025);
+  const L = lookupEF(2025);
   // Pick a weekday in Lent (Ash Wednesday + 2 days = Friday)
   const d = new Date(L.ash_wednesday);
   d.setUTCDate(d.getUTCDate() + 2);
@@ -48,7 +48,7 @@ it("EF Lent feria omits Gloria and uses Tract", () => {
 });
 
 it("ordo uses preferred Credo when available (OF Eastertide)", () => {
-  const L = lookup1974(2025);
+  const L = lookupOF(2025);
   const d = new Date(L.easter_sunday);
   d.setUTCDate(d.getUTCDate() + 7);
   const f = festum(d, { form: "1974" });
@@ -165,7 +165,7 @@ it("proprium respects source filter (LU)", () => {
 banner("cantus — ordinarium");
 
 it("Eastertide Sunday (OF) yields a selected mass and Kyrie parts", () => {
-  const L = lookup1974(2025);
+  const L = lookupOF(2025);
   const secondSunday = new Date(L.easter_sunday);
   secondSunday.setUTCDate(secondSunday.getUTCDate() + 7);
   const f = festum(secondSunday, { form: "OF" });
@@ -180,7 +180,7 @@ it("Eastertide Sunday (OF) yields a selected mass and Kyrie parts", () => {
 });
 
 it("EF Lent feria defaults gloria=false", () => {
-  const L = lookup1962(2025);
+  const L = lookupEF(2025);
   const d = new Date(L.ash_wednesday);
   d.setUTCDate(d.getUTCDate() + 2); // Friday in Lent
   const f = festum(d, { form: "EF" });
@@ -189,7 +189,7 @@ it("EF Lent feria defaults gloria=false", () => {
 });
 
 it("Good Friday lenient selection produces some candidates", () => {
-  const L = lookup1974(2025);
+  const L = lookupOF(2025);
   const f = festum(L.good_friday, { form: "OF" });
   const strict = ordinarium({ festum: f });
   const lenient = ordinarium({ festum: f }, { lenientSelection: true });
@@ -202,7 +202,7 @@ it("Good Friday lenient selection produces some candidates", () => {
 });
 
 it("ordinarium sets credo_preference and provides a Credo when applicable", () => {
-  const L = lookup1974(2025);
+  const L = lookupOF(2025);
   const secondSunday = new Date(L.easter_sunday);
   secondSunday.setUTCDate(secondSunday.getUTCDate() + 7);
   const f = festum(secondSunday, { form: "OF" });

@@ -1,5 +1,5 @@
 // tests/suite.datum.js
-import { pascha, lookup1962, lookup1974 } from "../src/festum/datum.js";
+import { pascha, lookupEF, lookupOF } from "../src/festum/datum.js";
 
 banner("datum — lookups & transfers");
 
@@ -20,7 +20,7 @@ function sameDay(a, b) {
 
 it("Easter core relations hold for multiple years (EF)", () => {
   for (const y of [2024, 2025, 2030, 2038]) {
-    const L = lookup1962(y);
+    const L = lookupEF(y);
     // Pentecost = Easter + 49
     assert(
       sameDay(L.pentecost, addDays(L.easter_sunday, 49)),
@@ -41,10 +41,10 @@ it("Easter core relations hold for multiple years (EF)", () => {
 
 it("Transfers (1974): Ascension/Corpus/Epiphany toggle works", () => {
   const y = 2025;
-  const L0 = lookup1974(y, {
+  const L0 = lookupOF(y, {
     transfer: { epiphany: false, ascension: false, corpusChristi: false },
   });
-  const L1 = lookup1974(y, {
+  const L1 = lookupOF(y, {
     transfer: { epiphany: true, ascension: true, corpusChristi: true },
   });
   // Ascension: Thursday vs Sunday (3-day shift)
@@ -75,7 +75,7 @@ it("Transfers (1974): Ascension/Corpus/Epiphany toggle works", () => {
 
 it("Holy Family (OF): Sunday within Dec 26–31 or Dec 30 fallback", () => {
   const y = 2025;
-  const L = lookup1974(y);
+  const L = lookupOF(y);
   const hf = new Date(L.holy_family);
   const mm = hf.getUTCMonth();
   const dd = hf.getUTCDate();
@@ -87,7 +87,7 @@ it("Holy Family (OF): Sunday within Dec 26–31 or Dec 30 fallback", () => {
 
 it("Mother of the Church and Immaculate Heart derived from Pentecost/ Sacred Heart", () => {
   const y = 2025;
-  const L = lookup1974(y);
+  const L = lookupOF(y);
   // Mother of the Church = Pentecost + 1 day
   const mom = new Date(L.bvm_church_mom);
   const p1 = new Date(L.pentecost);

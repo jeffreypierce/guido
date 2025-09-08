@@ -10,9 +10,9 @@ import {
   scoreProper,
   selectProper,
 } from "./scoring.js";
-import { PROPER_OFFICE_CODES } from "../data/constants.js";
+import { OFFICE_CODES } from "../data/constants.js";
 
-const OFFICES = new Set(PROPER_OFFICE_CODES);
+const OFFICES = new Set(OFFICE_CODES);
 
 /** Determine if a Sequence should be included by rubric/name (EF heuristics). */
 export function shouldSequence(festum) {
@@ -106,7 +106,7 @@ export function proprium(ctx, opts = {}) {
       const m = String(s).match(/\d{1,4}/);
       return m ? Number(m[0]) : null;
     };
-    const MASS_OFFICES = new Set(PROPER_OFFICE_CODES);
+    const MASS_OFFICES = new Set(OFFICE_CODES);
     const byPage = new Map();
     for (const r of LU) {
       const code = String(r?.office?.code || "").toLowerCase();

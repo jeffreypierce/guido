@@ -1,6 +1,6 @@
 // Shared Kyriale mass candidate selection (moved from former kyriale/select.js)
 import MASSES from "./data/masses.js";
-import { seasonNormalize } from "../aux/index.js";
+import { normalizeSeason } from "../aux/index.js";
 
 const RANK_WEIGHT = { t: 5, s: 4, f: 3, m: 2, o: 1 };
 
@@ -19,11 +19,11 @@ function buildMassRows() {
   }));
 }
 
-export function selectCandidates(festum, opts = {}) {
+export function selectMasses(festum, opts = {}) {
   const rows = buildMassRows();
   const exact = festum.season;
-  const generic = seasonNormalize(exact);
-  const weekday = festum.weekday;
+  const generic = normalizeSeason(exact);
+  const dow = festum.dow;
   let bvmFlag = !!festum.bvm;
 
   const tiers = [];
@@ -32,7 +32,7 @@ export function selectCandidates(festum, opts = {}) {
       (m) =>
         (m.seasons.includes(exact) || m.seasons.includes(generic)) &&
         m.ranks.includes(festum.rank) &&
-        m.days.includes(weekday) &&
+        m.days.includes(dow) &&
         (!bvmFlag || m.bvm === true)
     )
   );
@@ -42,22 +42,27 @@ export function selectCandidates(festum, opts = {}) {
         (m) =>
           (m.seasons.includes(exact) || m.seasons.includes(generic)) &&
           m.ranks.includes(festum.rank) &&
-          m.days.includes(weekday)
+          m.days.includes(dow)
       )
     );
   }
   // more lenient selection if neede
-  tiers.push(
-    rows.filter(
-      (m) =>
-        (m.seasons.includes(exact) || m.seasons.includes(generic)) &&
-        m.days.includes(weekday)
-    )
-  );
-  tiers.push(
-    rows.filter((m) => m.seasons.includes(exact) || m.seasons.includes(generic))
-  );
-  tiers.push(rows.slice());
+
+  if (tiers.length < 1) {
+    tiers.push(
+      rows.filter(
+        (m) =>
+          (m.seasons.includes(exact) || m.seasons.includes(generic)) &&
+          m.days.includes(dow)
+      )
+    );
+    tiers.push(
+      rows.filter(
+        (m) => m.seasons.includes(exact) || m.seasons.includes(generic)
+      )
+    );
+    tiers.push(rows.slice());
+  }
 
   const seen = new Set();
   const collected = [];
@@ -66,18 +71,18 @@ export function selectCandidates(festum, opts = {}) {
       if (seen.has(m.key)) continue;
       seen.add(m.key);
       const rw = Math.max(0, ...m.ranks.map((r) => RANK_WEIGHT[r] || 0));
-      collected.push({ ...m, _tier: i, _rankWeight: rw });
+      collected.push({ ...m, tier: i, rankWeight: rw });
     }
   });
 
   collected.sort(
     (a, b) =>
-      a._tier - b._tier ||
-      b._rankWeight - a._rankWeight ||
+      a.tier - b.tier ||
+      b.rankWeight - a.rankWeight ||
       a.mass - b.mass ||
       a.key.localeCompare(b.key)
   );
   return collected;
 }
 
-export default selectCandidates;
+export default selectMasses;

@@ -2,7 +2,7 @@
 import { festum } from "../src/festum/index.js";
 import proprium from "../src/cantus/proprium/index.js";
 import DAY from "../src/cantus/data/day.index.js";
-import { lookup1962 } from "../src/festum/datum.js";
+import { lookupEF } from "../src/festum/datum.js";
 
 banner("proprium — index + potIndex integration");
 
@@ -33,7 +33,7 @@ it("uses dayIndex propers when available", () => {
 });
 
 it("potIndex fallback produces candidates for a landmark (Epiphany)", () => {
-  const L = lookup1962(2025);
+  const L = lookupEF(2025);
   const dt = L.epiphany; // fixed EF landmark
   const F = festum(new Date(dt), { form: "EF" });
   const items = proprium({ festum: F }, { useIndex: true });

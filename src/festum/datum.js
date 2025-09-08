@@ -1,5 +1,3 @@
-// src/festum/datum.js
-// Shared, dependency-free lookup logic for EF (EF) and OF (1974).
 // Returns keys that match `calendar.json` IDs
 
 const DAY = 86400000;
@@ -148,9 +146,9 @@ function fromEaster(year) {
 /**
  * EF (EF) lookup with calendar-ID keys for movables.
  * @param {number} year
- * @returns {Landmarks1962}
+ * @returns {LandmarksEF}
  */
-export function lookup1962(year) {
+export function lookupEF(year) {
   const core = fromEaster(year);
 
   const christmas = new Date(year, 11, 25);
@@ -231,9 +229,9 @@ export function lookup1962(year) {
  * Supports common transfers via opts.transfer: { epiphany, ascension, corpusChristi }.
  * @param {number} year
  * @param {{ transfer?: { epiphany?: boolean, ascension?: boolean, corpusChristi?: boolean } }} [opts]
- * @returns {Landmarks1974}
+ * @returns {LandmarksOF}
  */
-export function lookup1974(year, opts = {}) {
+export function lookupOF(year, opts = {}) {
   const tr = {
     ascension: false,
     epiphany: false,
