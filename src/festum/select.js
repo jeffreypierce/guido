@@ -1,18 +1,8 @@
 // Shared Kyriale mass candidate selection (moved from former kyriale/select.js)
-import MASSES from "../../festum/data/masses.js";
-import { seasonNormalize } from "../../aux/index.js";
+import MASSES from "./data/masses.js";
+import { seasonNormalize } from "../aux/index.js";
 
 const RANK_WEIGHT = { t: 5, s: 4, f: 3, m: 2, o: 1 };
-
-export function isMarianFeastLike(fest) {
-  const id = String(fest?.feastId || fest?.id || "");
-  const title = String(fest?.title || "");
-  const titleLa = String(fest?.title_la || "");
-  const hay = (id + " " + title + " " + titleLa).toLowerCase();
-  return /\bbvm\b|\bmary\b|maria|immaculate|annunciation|assumption|rosary|mother[_\s]?of[_\s]?god|heart[_\s]?of[_\s]?mary/.test(
-    hay
-  );
-}
 
 function buildMassRows() {
   return Object.entries(MASSES.masses || {}).map(([key, v]) => ({
@@ -35,7 +25,6 @@ export function selectCandidates(festum, opts = {}) {
   const generic = seasonNormalize(exact);
   const weekday = festum.weekday;
   let bvmFlag = !!festum.bvm;
-  if (!bvmFlag && opts.bvmHeuristic) bvmFlag = isMarianFeastLike(festum);
 
   const tiers = [];
   tiers.push(
@@ -57,21 +46,18 @@ export function selectCandidates(festum, opts = {}) {
       )
     );
   }
-  if (opts.lenientSelection) {
-    tiers.push(
-      rows.filter(
-        (m) =>
-          (m.seasons.includes(exact) || m.seasons.includes(generic)) &&
-          m.days.includes(weekday)
-      )
-    );
-    tiers.push(
-      rows.filter(
-        (m) => m.seasons.includes(exact) || m.seasons.includes(generic)
-      )
-    );
-    tiers.push(rows.slice());
-  }
+  // more lenient selection if neede
+  tiers.push(
+    rows.filter(
+      (m) =>
+        (m.seasons.includes(exact) || m.seasons.includes(generic)) &&
+        m.days.includes(weekday)
+    )
+  );
+  tiers.push(
+    rows.filter((m) => m.seasons.includes(exact) || m.seasons.includes(generic))
+  );
+  tiers.push(rows.slice());
 
   const seen = new Set();
   const collected = [];

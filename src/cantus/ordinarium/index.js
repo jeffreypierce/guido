@@ -15,7 +15,7 @@ const ID_INDEX = (() => {
 
 import { isPenitential, norm } from "../../aux/index.js";
 import { ORDINARY_CODES } from "../data/constants.js";
-import selectCandidates from "./select.js";
+import selectCandidates from "../../festum/select.js";
 
 export function gloriaDefault(festum) {
   return !isPenitential(festum.season);

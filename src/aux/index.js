@@ -62,7 +62,7 @@ export function tsUTC(d) {
 }
 
 /**
- * Normalize form code to 'EF' or 'OF'. Accepts legacy '1962'/'1974' and case-insensitive.
+ * Normalize form code to 'EF' or 'OF'. Accepts legacy 'EF'/'1974' and case-insensitive.
  * @param {string} form
  * @returns {'EF'|'OF'}
  */
@@ -70,7 +70,7 @@ export function normalizeForm(form) {
   const s = String(form || "")
     .trim()
     .toUpperCase();
-  if (s === "1962" || s === "EF") return "EF";
+  if (s === "EF" || s === "EF") return "EF";
   if (s === "1974" || s === "OF") return "OF";
   return "EF";
 }

@@ -61,7 +61,7 @@ export const SOLFEGE_TO_CHROMA = new Map([
 ]);
 
 // base fixed-do for diatonic pcs
-export const CHROMA_TO_SOLFEGE_BASE = new Map([
+export const CHROMA_TO_SOLFEGE = new Map([
   [0, "UT"],
   [2, "RE"],
   [4, "MI"],
@@ -72,18 +72,36 @@ export const CHROMA_TO_SOLFEGE_BASE = new Map([
   [11, "TI"],
 ]);
 
-// Interval class labels by semitone distance modulo 12
-export const INTERVAL_CLASS_12 = [
-  "P1",
-  "m2",
-  "M2",
-  "m3",
-  "M3",
-  "P4",
-  "TT",
-  "P5",
-  "m6",
-  "M6",
-  "m7",
-  "M7",
+export const INTERVAL = [
+  // 0..11 (mod 12)
+  {
+    latin: "Octava",
+    alias: "Diapason",
+    degree: 8,
+    quality: "perfect",
+    class: "P1",
+  }, // 0 (overridden to Unisonus when absSemi === 0)
+  { latin: "Semitonium", degree: 2, quality: "minor", class: "m2" }, // 1
+  { latin: "Tonus", degree: 2, quality: "major", class: "M2" }, // 2
+  { latin: "Tertia minor", degree: 3, quality: "minor", class: "m3" }, // 3
+  { latin: "Tertia maior", degree: 3, quality: "major", class: "M3" }, // 4
+  {
+    latin: "Quarta",
+    alias: "Diatessaron",
+    degree: 4,
+    quality: "perfect",
+    class: "P4",
+  }, // 5
+  { latin: "Tritonus", degree: 4, quality: "augmented", class: "TT" }, // 6
+  {
+    latin: "Quinta",
+    alias: "Diapente",
+    degree: 5,
+    quality: "perfect",
+    class: "P5",
+  }, // 7
+  { latin: "Sexta minor", degree: 6, quality: "minor", class: "m6" }, // 8
+  { latin: "Sexta maior", degree: 6, quality: "major", class: "M6" }, // 9
+  { latin: "Septima minor", degree: 7, quality: "minor", class: "m7" }, // 10
+  { latin: "Septima maior", degree: 7, quality: "major", class: "M7" }, // 11
 ];

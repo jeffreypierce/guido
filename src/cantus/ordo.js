@@ -8,13 +8,13 @@ import ordinarium from "./ordinarium/index.js";
  * Uses only `ctx.festum` and `ctx.forma` to decide penitential behavior and ordering.
  * Does not select specific chants; leaves room for higher-level modules to fill in.
  *
- * @param {{ festum: { season: string, weekday: 'dominica'|'feria' }, forma?: 'EF'|'OF'|'1962'|'1974' }} ctx
+ * @param {{ festum: { season: string, weekday: 'dominica'|'feria' }, forma?: 'EF'|'OF'|'EF'|'1974' }} ctx
  * @param {{}} [opts]
  * @returns {{ mass_label?: string, ordinary: Array<{kind:'ordinary', office:string}>, propers: Array<{kind:'proper', office:string}>, sequence: Array<{kind:'ordinary'|'proper', office:string}> }}
  */
 /**
  * Build a one-per-office ordo in traditional order.
- * @param {{ festum: { season: string, weekday: 'dominica'|'feria', bvm?: boolean, id?: string, title?: string }, forma?: 'EF'|'OF'|'1962'|'1974' }} ctx
+ * @param {{ festum: { season: string, weekday: 'dominica'|'feria', bvm?: boolean, id?: string, title?: string }, forma?: 'EF'|'OF'|'EF'|'1974' }} ctx
  * @param {{ lenientSelection?: boolean, bvmHeuristic?: boolean, modes?: (string|number)[], source?: string|string[] }} [opts]
  * @returns {{ mass_label?: string, sequence: Array<{ kind: 'ordinary'|'proper', office: string, id?: string }>, ordinary: Array<{ kind:'ordinary', office:string, id?: string }>, propers: Array<{ kind:'proper', office:string, id?: string }> }}
  */
@@ -41,7 +41,7 @@ export function ordo(ctx, opts = {}) {
   const credo = !!ord.credo;
   const isFeria = fest.weekday === "feria";
   const penitential =
-    (forma === "EF" || forma === "1962") &&
+    (forma === "EF" || forma === "EF") &&
     (fest.season === "sg" || fest.season === "lt");
 
   // Helpers to pick one of each

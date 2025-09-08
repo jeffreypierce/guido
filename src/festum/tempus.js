@@ -11,11 +11,11 @@ const onOrAfter = (x, a) => x >= a;
  */
 export function seasonNormalize(seasonCode) {
   switch (seasonCode) {
-    case 'ot1':
-    case 'ot2':
-    case 'ap':
-    case 'sg':
-      return 'ot';
+    case "ot1":
+    case "ot2":
+    case "ap":
+    case "sg":
+      return "ot";
     default:
       return seasonCode; // ad/ct/lt/ea/ot
   }
@@ -28,7 +28,7 @@ export function seasonNormalize(seasonCode) {
  * @returns {'ad'|'ct'|'ot2'|'sg'|'lt'|'ea'|'ap'}
  */
 export function season1962(date, L) {
-  const d = toUTC(date);
+  const T = tsUTC(toUTC(date));
   const A = tsUTC(toUTC(L.advent_sunday));
   const C = tsUTC(toUTC(L.christmas));
   const BP = tsUTC(toUTC(L.baptism));
@@ -36,7 +36,6 @@ export function season1962(date, L) {
   const ASH = tsUTC(toUTC(L.ash_wednesday));
   const E = tsUTC(toUTC(L.easter_sunday));
   const P = tsUTC(toUTC(L.pentecost));
-  const T = tsUTC(d);
 
   if (onOrAfter(T, A) && before(T, C)) return "ad";
   if (betweenInc(T, C, BP)) return "ct";

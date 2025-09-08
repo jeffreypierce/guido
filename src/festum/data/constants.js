@@ -1,4 +1,3 @@
-
 // src/festum/data/constants.js
 export const RANKS_1962 = Object.freeze({
   t: "Triduum",
@@ -37,11 +36,11 @@ export const SEASONS_1974 = Object.freeze({
 /**
  * Human label for a rank code in the given form.
  * @param {'t'|'s'|'f'|'m'|'o'} code
- * @param {'EF'|'OF'|'1962'|'1974'} [form='EF']
+ * @param {'EF'|'OF'|'EF'|'1974'} [form='EF']
  * @returns {string}
  */
 export function rankLabel(code, form = "EF") {
-  const F = String(form || '').toUpperCase();
+  const F = String(form || "").toUpperCase();
   const map = F === "OF" || F === "1974" ? RANKS_1974 : RANKS_1962;
   return map[code] || code;
 }
@@ -49,11 +48,11 @@ export function rankLabel(code, form = "EF") {
 /**
  * Human label for a season code in the given form.
  * @param {'ad'|'ct'|'lt'|'ea'|'ot'|'ot1'|'ot2'|'ap'|'sg'} code
- * @param {'EF'|'OF'|'1962'|'1974'} [form='EF']
+ * @param {'EF'|'OF'|'EF'|'1974'} [form='EF']
  * @returns {string}
  */
 export function seasonLabel(code, form = "EF") {
-  const F = String(form || '').toUpperCase();
+  const F = String(form || "").toUpperCase();
   const map = F === "OF" || F === "1974" ? SEASONS_1974 : SEASONS_1962;
   if ((F === "OF" || F === "1974") && (code === "ot1" || code === "ot2"))
     return "Ordinary Time";

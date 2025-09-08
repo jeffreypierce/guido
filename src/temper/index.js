@@ -6,14 +6,14 @@ import {
   PITCH_CLASS,
   NAME_TO_CHROMA,
   SOLFEGE_TO_CHROMA,
-  CHROMA_TO_SOLFEGE_BASE,
-  INTERVAL_CLASS_12,
+  CHROMA_TO_SOLFEGE,
+  INTERVAL,
 } from "./data/constants.js";
 import { roman, rotate } from "../aux/index.js";
 
 // Internal helpers kept local to chant use-cases
 
-// Build a MIDI -> hand entries index once for Guidonian lookups
+// // Build a MIDI -> hand entries index once for Guidonian lookups
 const HAND_BY_MIDI = (() => {
   const m = new Map();
   for (const e of HandData) {
@@ -24,7 +24,7 @@ const HAND_BY_MIDI = (() => {
   return m;
 })();
 
-// Cache for diatonic degree maps keyed by finalis (0..11)
+// // Cache for diatonic degree maps keyed by finalis (0..11)
 const STEP_MAP_CACHE = new Map();
 function stepMapFor(finalis = 0) {
   const f = ((finalis % 12) + 12) % 12;
@@ -204,8 +204,8 @@ function finalizeNote({
 
   // Build derived fields using normalized values
   const name = c != null ? toName(c, o) : undefined;
-  const baseSolfege = c != null ? CHROMA_TO_SOLFEGE_BASE.get(c) : undefined;
-  const hand = m != null ? toHand(m) : undefined;
+  const baseSolfege = c != null ? CHROMA_TO_SOLFEGE.get(c) : undefined;
+  const hand = m != null ? toHand(m)?.id : undefined;
   const step = stepMapFor(stepFinalis ?? 0).get(c);
 
   return {
@@ -235,9 +235,9 @@ function transposeOutput(out, semis = 0, stepFinalis = 0, bendOpts = {}) {
   const chroma = (((out.chroma + t) % 12) + 12) % 12;
   const octave = Math.floor(midi / 12) - 1;
   const name = toName(chroma, octave);
-  const fixedSolfege = CHROMA_TO_SOLFEGE_BASE.get(chroma) || out.solfege;
-  const movableSolfege = CHROMA_TO_SOLFEGE_BASE.get(origChroma) || out.solfege;
-  const hand = toHand(midi);
+  const fixedSolfege = CHROMA_TO_SOLFEGE.get(chroma) || out.solfege;
+  const movableSolfege = CHROMA_TO_SOLFEGE.get(origChroma) || out.solfege;
+  const hand = toHand(midi)?.id;
   const step = stepMapFor(stepFinalis ?? 0).get(chroma);
   const res = {
     ...out,
@@ -295,7 +295,7 @@ function computePitchBend(chroma, midi, ctx = {}) {
  * or { chroma, octave }.
  * This is a minimal scaffold; we can enrich the payload later.
  */
-export function note(input, opts = {}) {
+function note(input, opts = {}) {
   // Support shorthand second arg as number: note(x, 4)
   const defaultOctave = Number.isInteger(
     typeof opts === "number" ? opts : opts.defaultOctave
@@ -361,7 +361,7 @@ export function note(input, opts = {}) {
     }
 
     // Solfege like do4, RE, mib3, sol#5
-    const mSol = /^([a-zA-Z]+)([#b♯♭]?)(-?\d+)?$/.exec(s.toLowerCase());
+    const mSol = /^([a-zA-Z]+)([#b♯♭]?)(-?\d+)?$/.exec(s);
     if (mSol) {
       const syl = mSol[1].toUpperCase();
       const acc = normalizeAcc(mSol[2] || "");
@@ -415,79 +415,19 @@ function medievalIntervalInfo(semitones, semitonesMod12) {
   const mod = ((Math.abs(semitonesMod12) % 12) + 12) % 12;
   const octaves = Math.floor(absSemi / 12);
   const compound = absSemi >= 12;
-  let latin, greek, degree, quality;
-  switch (mod) {
-    case 0:
-      if (absSemi === 0) {
-        latin = "Unisonus";
-        degree = 1;
-        quality = "perfect";
-      } else {
-        latin = "Octava";
-        greek = "Diapason";
-        degree = 8;
-        quality = "perfect";
-      }
-      break;
-    case 1:
-      latin = "Semitonium";
-      degree = 2;
-      quality = "minor";
-      break;
-    case 2:
-      latin = "Tonus";
-      degree = 2;
-      quality = "major";
-      break;
-    case 3:
-      latin = "Tertia minor";
-      degree = 3;
-      quality = "minor";
-      break;
-    case 4:
-      latin = "Tertia maior";
-      degree = 3;
-      quality = "maior";
-      break;
-    case 5:
-      latin = "Quarta";
-      greek = "Diatessaron";
-      degree = 4;
-      quality = "perfect";
-      break;
-    case 6:
-      latin = "Tritonus";
-      degree = 4;
-      quality = "augmented";
-      break;
-    case 7:
-      latin = "Quinta";
-      greek = "Diapente";
-      degree = 5;
-      quality = "perfect";
-      break;
-    case 8:
-      latin = "Sexta minor";
-      degree = 6;
-      quality = "minor";
-      break;
-    case 9:
-      latin = "Sexta maior";
-      degree = 6;
-      quality = "maior";
-      break;
-    case 10:
-      latin = "Septima minor";
-      degree = 7;
-      quality = "minor";
-      break;
-    case 11:
-      latin = "Septima maior";
-      degree = 7;
-      quality = "maior";
-      break;
+
+  const base = INTERVAL[mod] || {};
+  let { latin, alias, degree, quality } = base;
+
+  // Special-case: true unison vs generic octave class
+  if (mod === 0 && absSemi === 0) {
+    latin = "Unisonus";
+    alias = undefined;
+    degree = 1;
+    quality = "perfect";
   }
-  return { latin, greek, degree, quality, compound, octaves };
+
+  return { latin, alias, degree, quality, compound, octaves };
 }
 
 /**
@@ -495,7 +435,7 @@ function medievalIntervalInfo(semitones, semitonesMod12) {
  * Accepts any inputs that `note()` accepts, or pre-normalized note objects.
  * Options: same as `note()` for context (mode/finalis/transpose/scale/scaleOptions).
  */
-export function interval(a, b, opts = {}) {
+function interval(a, b, opts = {}) {
   const A = a && typeof a === "object" && "kind" in a ? a : note(a, opts);
   const B = b && typeof b === "object" && "kind" in b ? b : note(b, opts);
 
@@ -541,9 +481,9 @@ export function interval(a, b, opts = {}) {
   }
 
   // Simple interval class names by semitones modulo 12
-  const clazz =
+  const cls =
     typeof semitonesMod12 === "number"
-      ? INTERVAL_CLASS_12[semitonesMod12]
+      ? INTERVAL[semitonesMod12].class
       : undefined;
   const medieval =
     typeof semitones === "number" && typeof semitonesMod12 === "number"
@@ -559,30 +499,11 @@ export function interval(a, b, opts = {}) {
   }
 
   return {
-    from: {
-      name: A.name,
-      chroma: A.chroma,
-      octave: A.octave,
-      midi: A.midi,
-      step: A.step,
-    },
-    to: {
-      name: B.name,
-      chroma: B.chroma,
-      octave: B.octave,
-      midi: B.midi,
-      step: B.step,
-    },
-    class: clazz,
-    semitones,
-    semitonesMod12,
-    et: { cents: etCents },
-    tempered: {
-      scale: ctx.scaleName,
-      cents: temperedCents,
-      centsMod12: temperedCentsMod12,
-      deviationCents,
-    },
+    from: A,
+    to: B,
+    class: cls,
+    cents: temperedCents,
+    deviationCents,
     medieval,
   };
 }

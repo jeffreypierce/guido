@@ -24,7 +24,7 @@ const ymd = (d) =>
 /**
  * Build the calendar for a given year and form.
  * @param {number} year - Gregorian year in UTC.
- * @param {{ form?: 'EF'|'OF'|'1962'|'1974', splitOrdinary?: boolean, transfer?: { epiphany?: boolean, ascension?: boolean, corpusChristi?: boolean } }} [opts]
+ * @param {{ form?: 'EF'|'OF'|'EF'|'1974', splitOrdinary?: boolean, transfer?: { epiphany?: boolean, ascension?: boolean, corpusChristi?: boolean } }} [opts]
  * @returns {CalendarRow[]} Array of day rows from Jan 1 to Dec 31.
  */
 export function calendarium(
@@ -40,8 +40,8 @@ export function calendarium(
   for (const e of calendar) {
     const hasMD =
       Number.isInteger(e?.month) && Number.isInteger(e?.day) && e.day > 0;
-    const isFixed = e?.type === "fixed" || (e?.type == null && hasMD);
-    const isMovable = e?.type === "movable" || (e?.type == null && !hasMD);
+    const isFixed = e?.type === "fixed" || hasMD;
+    const isMovable = e?.type === "movable" || !hasMD;
 
     if (isFixed) {
       // JSON uses 0-based month; ensure valid day
@@ -64,7 +64,8 @@ export function calendarium(
   const end = new Date(Date.UTC(year, 11, 31));
   const days = [];
   for (let d = new Date(start); d <= end; d = new Date(d.getTime() + DAY)) {
-    const season = F === "OF" ? season1974(d, L, { splitOrdinary }) : season1962(d, L);
+    const season =
+      F === "OF" ? season1974(d, L, { splitOrdinary }) : season1962(d, L);
     const base = {
       ts: d.getTime(),
       id: "feria",

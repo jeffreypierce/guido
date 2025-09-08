@@ -1,5 +1,5 @@
 // src/festum/datum.js
-// Shared, dependency-free lookup logic for EF (1962) and OF (1974).
+// Shared, dependency-free lookup logic for EF (EF) and OF (1974).
 // Returns keys that match `calendar.json` IDs
 
 const DAY = 86400000;
@@ -46,8 +46,7 @@ export function paschaJulian(year) {
   const month = Math.floor((d + e + 114) / 31); // 3=March, 4=April
   const day = ((d + e + 114) % 31) + 1;
   // 2) Convert Julian calendar date -> JDN -> proleptic Gregorian Date
-  const jdn = julianToJdn(year, month, day);
-  return jdnToGregorianDateUTC(jdn);
+  return julianToGregorian(year, month, day);
 }
 
 /** Julian calendar date to JDN (Fliegel & Van Flandern). */
@@ -55,18 +54,21 @@ function julianToJdn(year, month, day) {
   const a = Math.floor((14 - month) / 12);
   const y = year + 4800 - a;
   const m = month + 12 * a - 3;
-  return day + Math.floor((153 * m + 2) / 5) + 365 * y + Math.floor(y / 4) - 32083;
+  return (
+    day + Math.floor((153 * m + 2) / 5) + 365 * y + Math.floor(y / 4) - 32083
+  );
 }
 
-/** JDN to proleptic Gregorian Date (UTC midnight). */
-function jdnToGregorianDateUTC(jdn) {
+/** JDN to proleptic Gregorian Date */
+function julianToGregorian(y, m, d) {
+  const jdn = julianToJdn(y, m, d);
   let l = jdn + 68569;
-  const n = Math.floor(4 * l / 146097);
+  const n = Math.floor((4 * l) / 146097);
   l = l - Math.floor((146097 * n + 3) / 4);
-  const i = Math.floor(4000 * (l + 1) / 1461001);
-  l = l - Math.floor(1461 * i / 4) + 31;
-  const j = Math.floor(80 * l / 2447);
-  const day = l - Math.floor(2447 * j / 80);
+  const i = Math.floor((4000 * (l + 1)) / 1461001);
+  l = l - Math.floor((1461 * i) / 4) + 31;
+  const j = Math.floor((80 * l) / 2447);
+  const day = l - Math.floor((2447 * j) / 80);
   l = Math.floor(j / 11);
   const month = j + 2 - 12 * l;
   const year = 100 * (n - 49) + i + l;
@@ -121,7 +123,7 @@ function fromEaster(year) {
 }
 
 /**
- * EF (1962) landmarks and movables keyed to `calendar.json` IDs.
+ * EF (EF) landmarks and movables keyed to `calendar.json` IDs.
  * @typedef Landmarks1962
  * @property {Date} christmas
  * @property {Date} epiphany
@@ -144,7 +146,7 @@ function fromEaster(year) {
  * @property {Date} christ_king
  */
 /**
- * 1962 (EF) lookup with calendar-ID keys for movables.
+ * EF (EF) lookup with calendar-ID keys for movables.
  * @param {number} year
  * @returns {Landmarks1962}
  */

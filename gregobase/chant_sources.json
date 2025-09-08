@@ -3083,13 +3083,13 @@
   { "chant_id": 1960, "source": 3, "page": "483", "sequence": 1, "extent": 1 },
   { "chant_id": 1961, "source": 3, "page": "1304", "sequence": 1, "extent": 1 },
   {
-    "chant_id": 1962,
+    "chant_id": EF,
     "source": 3,
     "page": "1583B",
     "sequence": 2,
     "extent": 1
   },
-  { "chant_id": 1962, "source": 3, "page": "420", "sequence": 1, "extent": 1 },
+  { "chant_id": EF, "source": 3, "page": "420", "sequence": 1, "extent": 1 },
   { "chant_id": 1963, "source": 3, "page": "420", "sequence": 1, "extent": 1 },
   { "chant_id": 1963, "source": 3, "page": "431", "sequence": 3, "extent": 2 },
   { "chant_id": 1965, "source": 3, "page": "966", "sequence": 2, "extent": 1 },

@@ -1,13 +1,7 @@
 
 // tests/suite.calendarium.js
 import { calendarium } from "../src/festum/calendarium.js";
-import fs from "node:fs/promises";
-import path from "node:path";
-import url from "node:url";
-
-const __dirname = path.dirname(url.fileURLToPath(import.meta.url));
-const calPath = path.join(__dirname, "../src/festum/data/calendar.json");
-const cal = JSON.parse(await fs.readFile(calPath, "utf8"));
+import cal from "../src/festum/data/calendar.js";
 import { lookup1962, lookup1974 } from "../src/festum/datum.js";
 
 banner("calendarium — fixed & movable overlay");

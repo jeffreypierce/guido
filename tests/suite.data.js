@@ -12,9 +12,8 @@ const ALLOWED_SEASONS = new Set(["ad","ct","lt","ea","ot","ot1","ot2","ap","sg",
 const ALLOWED_RANKS = new Set(["t","s","f","m","o"]);
 const ALLOWED_DAYS = new Set(["dominica","feria"]);
 
-// Use the primary masses dataset (read via fs for compatibility with older Node)
-const massesPath = path.join(__dirname, "../src/festum/data/masses.json");
-const massesData = JSON.parse(await fs.readFile(massesPath, "utf8"));
+// Use the primary masses dataset (JS module in this repo)
+import massesData from "../src/festum/data/masses.js";
 
 it("masses entries have normalized codes", () => {
   const all = [];
@@ -31,9 +30,8 @@ it("masses entries have normalized codes", () => {
   }
 });
 
-// Calendar IDs present
-const calendarPath = path.join(__dirname, "../src/festum/data/calendar.json");
-const calendar = JSON.parse(await fs.readFile(calendarPath, "utf8"));
+// Calendar IDs present (import JS module instead of JSON file)
+import calendar from "../src/festum/data/calendar.js";
 import { lookup1962, lookup1974 } from "../src/festum/datum.js";
 
 function ids(arr){ return new Set(arr.filter(Boolean).map(e => e.id)); }

@@ -65,7 +65,7 @@ function scoreHymn(festum, row) {
 /**
  * hymnus({ festum, form, hour }, opts?)
  * - Selects a hymn (LH primary; AM optional) for the given festum and hour.
- * @param {{ festum: { title?: string, title_la?: string, id?: string, season: string }, form?: 'EF'|'OF'|'1962'|'1974', hour?: string }} ctx
+ * @param {{ festum: { title?: string, title_la?: string, id?: string, season: string }, form?: 'EF'|'OF'|'EF'|'1974', hour?: string }} ctx
  * @param {{ modes?: (string|number)[], source?: string|string[], includeAM?: boolean }} [opts]
  * @returns {{ selected: any|null, candidates: any[], hour?: string }}
  */
