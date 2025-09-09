@@ -1,4 +1,4 @@
-export { cantus } from "./search.js";
+export { cantus } from "./cantus.js";
 export { default as proprium } from "./proprium/index.js";
 export { default as ordinarium } from "./ordinarium/index.js";
 export { default as ordo } from "./ordo.js";

@@ -18,8 +18,22 @@ function buildMassRows() {
     notes: v.notes || "",
   }));
 }
-
-export function selectMasses(festum, opts = {}) {
+/*
+ * @typedef FullMass
+ * @property {string} roman
+ * @property {number} mass
+ * @property {string} title
+ * @property {string[]} credos
+ * @property {number} tier - 0=strict; higher numbers are more lenient tiers
+ * @property {number} rankWeight - Rank weight used in sorting (t=5, s=4, f=3, m=2, o=1)
+ * @property {string[]} seasons
+ * @property {('t'|'s'|'f'|'m'|'o')[]} ranks
+ * @property {('dominica'|'feria')[]} days
+ * @property {boolean} bvm
+ * @property {string[]} aliases
+ * @property {string} notes
+ */
+export default function selectMasses(festum) {
   const rows = buildMassRows();
   const exact = festum.season;
   const generic = normalizeSeason(exact);
@@ -84,5 +98,3 @@ export function selectMasses(festum, opts = {}) {
   );
   return collected;
 }
-
-export default selectMasses;

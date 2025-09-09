@@ -1,6 +1,6 @@
 // src/cantus/proprium/index.js
 
-import { cantus as search } from "../search.js";
+import { cantus as search } from "../cantus.js";
 import DAY_INDEX from "../data/day.index.js";
 import LU from "../data/liber_usualis.js";
 import { norm, tokens, isPenitential } from "../../aux/index.js";

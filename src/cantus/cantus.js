@@ -10,13 +10,14 @@ import ALIASES from "./data/aliases.js";
 import { norm } from "../aux/index.js";
 
 const ALL = [...GR, ...GR74, ...LU, ...LH, ...AM];
-// Build a fast id->row index for canonicalization
+
+// lightweight indexes for common filters
 const ID_INDEX = (() => {
   const m = new Map();
   for (const r of ALL) if (r && r.id) m.set(String(r.id), r);
   return m;
 })();
-// Hoisted lightweight indexes for common filters
+
 const BY_OFFICE = (() => {
   const m = new Map();
   for (const r of ALL) {
@@ -40,7 +41,6 @@ const BY_MODE = (() => {
   return m;
 })();
 
-// Reverse alias map (canonical -> [aliasIds]) hoisted once
 const REV_ALIAS = (() => {
   const m = new Map();
   for (const [a, c] of Object.entries(ALIASES)) {
@@ -115,6 +115,7 @@ export function cantus(q = {}) {
   const out = [];
   const seenCanonical = new Set();
   const friendlySource = (id) => String(id).split(":")[0].replace(/_/g, " ");
+
   for (const r of base) {
     const officeCode = String(r?.office?.code || "").toLowerCase();
     const mode = r?.chant?.mode != null ? String(r.chant.mode) : "";

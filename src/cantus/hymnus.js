@@ -1,6 +1,6 @@
 // src/search/hymnus.js — hymn selection (OF/EF), initial heuristic implementation
 
-import { cantus } from "./search.js";
+import { cantus } from "./cantus.js";
 import { norm, tokens } from "../aux/index.js";
 
 function categoryTags(festum) {
