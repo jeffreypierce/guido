@@ -8,13 +8,13 @@ import ordinarium from "./ordinarium/index.js";
  * Uses only `ctx.festum` and `ctx.forma` to decide penitential behavior and ordering.
  * Does not select specific chants; leaves room for higher-level modules to fill in.
  *
- * @param {{ festum: { season: string, weekday: 'dominica'|'feria' }, forma?: 'EF'|'OF'|'EF'|'1974' }} ctx
+ * @param {{ festum: { season: string, dow: 'dominica'|'feria' }, forma?: 'EF'|'OF'|'EF'|'1974' }} ctx
  * @param {{}} [opts]
  * @returns {{ mass_label?: string, ordinary: Array<{kind:'ordinary', office:string}>, propers: Array<{kind:'proper', office:string}>, sequence: Array<{kind:'ordinary'|'proper', office:string}> }}
  */
 /**
  * Build a one-per-office ordo in traditional order.
- * @param {{ festum: { season: string, weekday: 'dominica'|'feria', bvm?: boolean, id?: string, title?: string }, forma?: 'EF'|'OF'|'EF'|'1974' }} ctx
+ * @param {{ festum: { season: string, dow: 'dominica'|'feria', bvm?: boolean, id?: string, title?: string }, forma?: 'EF'|'OF'|'1974' }} ctx
  * @param {{ lenientSelection?: boolean, bvmHeuristic?: boolean, modes?: (string|number)[], source?: string|string[] }} [opts]
  * @returns {{ mass_label?: string, sequence: Array<{ kind: 'ordinary'|'proper', office: string, id?: string }>, ordinary: Array<{ kind:'ordinary', office:string, id?: string }>, propers: Array<{ kind:'proper', office:string, id?: string }> }}
  */
@@ -39,13 +39,20 @@ export function ordo(ctx, opts = {}) {
 
   const gloria = !!ord.gloria;
   const credo = !!ord.credo;
-  const isFeria = fest.weekday === "feria";
+  const isFeria = fest.dow === "feria";
   const penitential =
     (forma === "EF" || forma === "EF") &&
     (fest.season === "sg" || fest.season === "lt");
 
   // Helpers to pick one of each
-  const CREDO_ID = { I: "Liber_Usualis:344", III: "Liber_Usualis:749" };
+  const CREDO_ID = {
+    I: "Liber_Usualis:344",
+    II: "Liber_Usualis:2983",
+    III: "Liber_Usualis:749",
+    IV: "Liber_Usualis:678",
+    V: "Liber_Usualis:955",
+    VI: "Liber_Usualis:2934",
+  };
   const pickOrd = (code) => {
     const ids = ord?.parts?.[code];
     if (!Array.isArray(ids) || !ids.length) return undefined;

@@ -2,6 +2,7 @@
 
 import { cantus } from "./cantus.js";
 import { norm, tokens } from "../aux/index.js";
+import { normalizeSelectionInputs, filterByMode } from "./filters.js";
 
 function categoryTags(festum) {
   const la = norm(festum.title_la || festum.title || "");
@@ -65,25 +66,28 @@ function scoreHymn(festum, row) {
 /**
  * hymnus({ festum, form, hour }, opts?)
  * - Selects a hymn (LH primary; AM optional) for the given festum and hour.
- * @param {{ festum: { title?: string, title_la?: string, id?: string, season: string }, form?: 'EF'|'OF'|'EF'|'1974', hour?: string }} ctx
+ * @param {{ festum: { title?: string, title_la?: string, id?: string, season: string }, form?: 'EF'|'OF', hour?: string }} ctx
  * @param {{ modes?: (string|number)[], source?: string|string[], includeAM?: boolean }} [opts]
  * @returns {{ selected: any|null, candidates: any[], hour?: string }}
  */
 export function hymnus(ctx, opts = {}) {
   const festum = ctx?.festum || {};
   const hour = ctx?.hour || "vespers2";
-  const sources = Array.isArray(opts.source)
-    ? opts.source
-    : opts.source
-    ? [opts.source]
-    : ["LH"];
-  const offices = ["hy"];
-  const modes = opts.modes || [];
-  const cand = [];
+  const base = normalizeSelectionInputs(opts, {
+    offices: ["hy"],
+    source: ["LH"],
+  });
+  const sources = base.source.length ? base.source : ["LH"];
+  const offices = base.offices.length ? base.offices : ["hy"];
+  const modes = base.modes;
+  const incipit = base.incipit || undefined;
+  let cand = [];
   for (const src of sources)
-    cand.push(...cantus({ offices, modes, source: src }));
+    cand.push(...cantus({ offices, source: src, incipit }));
   if (opts.includeAM && !sources.includes("AM"))
-    cand.push(...cantus({ offices, modes, source: "AM" }));
+    cand.push(...cantus({ offices, source: "AM", incipit }));
+  // Apply shared mode policy
+  cand = filterByMode(cand, modes);
   const scored = cand
     .map((r) => ({ row: r, score: scoreHymn(festum, r) }))
     .sort(

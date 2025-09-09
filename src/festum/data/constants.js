@@ -60,3 +60,32 @@ export function seasonLabel(code, form = "EF") {
   if (F === "OF" && code === "ot") return "Ordinary Time";
   return map[c] || code;
 }
+/**
+ * Normalize form code to 'EF' or 'OF'. Accepts legacy 'EF'/'1974' and case-insensitive.
+ * @param {string} form
+ * @returns {'EF'|'OF'}
+ */
+export function normalizeForm(form) {
+  const s = String(form || "")
+    .trim()
+    .toUpperCase();
+  if (s === "1962" || s === "EF") return "EF";
+  if (s === "1974" || s === "OF") return "OF";
+  return "EF";
+}
+/**
+ * Normalize EF/OF season codes into generic buckets for selection logic.
+ * @param {'ad'|'ct'|'lt'|'ea'|'ot'|'ot1'|'ot2'|'ap'|'sg'} seasonCode
+ * @returns {'ad'|'ct'|'lt'|'ea'|'ot'}
+ */
+export function normalizeSeason(seasonCode) {
+  switch (seasonCode) {
+    case "ot2":
+    case "ap":
+    case "sg":
+    case "ot1":
+      return "ot";
+    default:
+      return seasonCode; // ad/ct/lt/ea/ot already fine
+  }
+}

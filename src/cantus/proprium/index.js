@@ -4,6 +4,7 @@ import { cantus as search } from "../cantus.js";
 import DAY_INDEX from "../data/day.index.js";
 import LU from "../data/liber_usualis.js";
 import { norm, tokens, isPenitential } from "../../aux/index.js";
+import { normalizeSelectionInputs, filterByMode } from "../filters.js";
 import {
   categoryTags,
   countCategoryHits,
@@ -66,13 +67,16 @@ export function propriumOffices1962(festum) {
 }
 
 function searchByOffice(office, opts = {}) {
-  const modes = (opts.modes || []).map(String);
-  const srcs = Array.isArray(opts.source)
-    ? opts.source
-    : opts.source
-    ? [opts.source]
-    : ["Graduale_Romanum", "Graduale_Romanum_1974", "Liber Usualis"]; // default corpus
-  return search({ offices: [office], modes, source: srcs });
+  const base = normalizeSelectionInputs(opts, {
+    source: ["Graduale_Romanum", "Graduale_Romanum_1974", "Liber Usualis"],
+  });
+  const srcs = base.source.length
+    ? base.source
+    : ["Graduale_Romanum", "Graduale_Romanum_1974", "Liber Usualis"];
+  const incipit = base.incipit || undefined;
+  // Do NOT pass modes to cantus; apply shared policy after search
+  const rows = search({ offices: [office], source: srcs, incipit });
+  return filterByMode(rows, base.modes);
 }
 
 export function findPropersCandidates(festum, office, opts = {}) {

@@ -96,7 +96,7 @@ export default {
       ranks: ["s", "f", "m", "o"],
       days: ["feria", "dominica"],
       bvm: true,
-      credos: [],
+      credos: ["IV"],
       aliases: [],
       notes:
         "Mass of the Blessed Virgin Mary; often for BVM feasts and Saturdays.",
@@ -185,7 +185,7 @@ export default {
       ranks: ["m", "o", "f"],
       days: ["dominica"],
       bvm: false,
-      credos: [],
+      credos: ["IV"],
       aliases: [],
       notes: "For Sundays of Advent and Lent.",
     },

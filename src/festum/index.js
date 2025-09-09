@@ -1,1 +1,3 @@
-export { festum, calendarium } from "./festum.js";
+export { default as festum } from "./festum.js";
+export { calendarium } from "./calendarium.js";
+export { pascha } from "./datum.js";

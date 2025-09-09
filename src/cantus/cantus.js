@@ -6,6 +6,7 @@ import LU from "./data/liber_usualis.js";
 import LH from "./data/liber_hymnarius.js";
 import AM from "./data/antiphonale_monasticum.js";
 import ALIASES from "./data/aliases.js";
+import { SOURCE_ALIASES } from "./filters.js";
 //  import DAY_INDEX from "./data/day.index.js";
 import { norm } from "../aux/index.js";
 
@@ -51,13 +52,7 @@ const REV_ALIAS = (() => {
   return m;
 })();
 
-const SOURCE_ALIASES = new Map([
-  ["GR", "Graduale Romanum"],
-  ["GR1974", "Graduale Romanum 1974"],
-  ["LU", "Liber Usualis"],
-  ["LH", "Liber Hymnarius"],
-  ["AM", "Antiphonale Monasticum"],
-]);
+// Source aliases centralized in filters.js
 
 /**
  * Search chants across Graduale Romanum (1908/1974), Liber Usualis, and Liber Hymnarius.

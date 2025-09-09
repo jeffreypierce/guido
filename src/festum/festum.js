@@ -6,7 +6,7 @@ import {
   normalizeSeason,
 } from "../aux/index.js";
 import { calendarium } from "./calendarium.js";
-import { selectMasses } from "./missa.js";
+import selectMasses from "./missa.js";
 
 function isMarianFeast(fest) {
   const id = String(fest?.feastId || fest?.id || "");
@@ -96,8 +96,6 @@ export default function festum(date, options = {}) {
     notes: m.notes,
   });
 
-  const massesIds = candidates.map((c) => c.mass);
-
   const res = {
     feastId: closest.id,
     title: closest.title,
@@ -107,7 +105,7 @@ export default function festum(date, options = {}) {
     form,
     dow,
     bvm,
-    masses: massesIds,
+    masses: candidates.map((c) => c.mass),
   };
 
   if (options.verbose) res.massesDetailed = candidates.map(toFull);
